@@ -1,0 +1,478 @@
+{
+  "01_initial_request": {
+    "target_name": "Genotypic fitness landscape of San Salvador Island pupfishes",
+    "input_data": "Whole-genome sequencing data of 139 hybrids from field fitness experiments",
+    "user_intent": "To identify the genomic basis of fitness and measure the accessibility of adaptive walks on the fitness landscape to understand speciation and novelty evolution",
+    "quantifiable_goal": "Identification of 132 fitness-associated SNPs and quantification of adaptive walk accessibility on genotypic fitness networks"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Research requires whole-genome sequencing data from hybrid pupfishes to identify fitness-associated genetic variants. [Gap] Need to obtain genomic data from field experiment hybrids. [Decision] To achieve genomic characterization, chose to use Illumina NovaSeq to perform whole-genome resequencing on 139 hybrid samples, expecting to obtain raw sequencing reads with approximately 10x coverage.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Illumina NovaSeq",
+        "version": ""
+      },
+      "parameters": {
+        "sample_count": "139 hybrids",
+        "coverage": "approximately 10x raw coverage",
+        "source": "field experiments from 2011 and 2016"
+      },
+      "observation": "Raw sequencing reads obtained from 139 hybrid samples (86 survivors, 56 deaths) from two independent field experiments across six field enclosures",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Raw sequencing reads need to be aligned to reference genome for variant calling. [Gap] Need to map reads to pupfish reference genome. [Decision] To achieve read alignment, chose to use bwa-mem to perform mapping to C. brontotheroides reference genome, expecting to obtain aligned BAM files.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "bwa-mem",
+        "version": "0.7.2"
+      },
+      "parameters": {
+        "reference_genome": "C. brontotheroides reference genome",
+        "genome_size": "1.16 Gb",
+        "scaffold_N50": "32 Mb"
+      },
+      "observation": "Raw reads mapped to reference genome for downstream variant calling",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Aligned reads need variant calling to identify SNPs. [Gap] Need to genotype samples and filter variants. [Decision] To achieve variant identification, chose to use GATK HaplotypeCaller to perform SNP calling with hard-filtering criteria, expecting to obtain filtered VCF file with high-quality SNPs.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "GATK HaplotypeCaller",
+        "version": ""
+      },
+      "parameters": {
+        "filtering_criteria": "QD<2.0; QUAL<20; FS<60; MQRankSum<-12.5; ReadPosRankSum<-8",
+        "additional_filters": "--maf 0.05; --min-alleles 2; --max-alleles 2; --min-meanDP 7; --max-meanDP 100; --max-missing 0.85"
+      },
+      "observation": "SNPs called and filtered using GATK best practices and VCFtools filtering",
+      "valid": true,
+      "references": [
+        {
+          "citation": "DePristo et al., 2011",
+          "relevance": "GATK best practices for variant calling"
+        },
+        {
+          "citation": "Danecek et al., 2011",
+          "relevance": "VCFtools filtering approach"
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Need to reduce linkage disequilibrium among SNPs for independent analysis. [Gap] Need to remove SNPs in strong LD. [Decision] To achieve LD pruning, chose to use plink to perform linkage disequilibrium filtering, expecting to obtain LD-pruned SNP dataset.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "plink",
+        "version": "1.9"
+      },
+      "parameters": {
+        "LD_pruning": "--indep-pairwise 10[kb] 50 0.5",
+        "retained_SNPs": "1,129,771 SNPs"
+      },
+      "observation": "1,129,771 SNPs retained across 139 hybrid samples after LD pruning",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Purcell et al., 2007",
+          "relevance": "PLINK tool for genome-wide association and population-based linkage analyses"
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Need to characterize population structure and genetic variation among hybrids and parental species. [Gap] Need to visualize genetic differentiation. [Decision] To achieve population structure analysis, chose to use plink PCA to perform principal components analysis on genetic variation, expecting to obtain principal component axes showing population differentiation.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "plink",
+        "version": "1.90"
+      },
+      "parameters": {
+        "analysis_type": "PCA of genetic variation",
+        "variance_explained_PC1": "22.7%",
+        "variance_explained_PC2": "15.9%"
+      },
+      "observation": "PCA strongly differentiated pupfishes sampled from Little Lake/Osprey Lake and Crescent Pond (PC1) and among species within each lake (PC2)",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Need to estimate admixture proportions in hybrids. [Gap] Need to quantify ancestry from parental species. [Decision] To achieve ancestry estimation, chose to use ADMIXTURE to perform unsupervised admixture analysis with K=3, expecting to obtain admixture proportions for each hybrid individual.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "ADMIXTURE",
+        "version": "1.3.0"
+      },
+      "parameters": {
+        "K_value": "3",
+        "analysis_type": "unsupervised",
+        "populations": "generalist, molluscivore, scale-eater"
+      },
+      "observation": "Admixture proportions estimated for hybrids; genome-wide ancestry not consistently associated with fitness",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Alexander et al., 2009",
+          "relevance": "ADMIXTURE algorithm for ancestry estimation"
+        },
+        {
+          "citation": "Alexander and Lange, 2011",
+          "relevance": "Enhancements to ADMIXTURE algorithm"
+        }
+      ]
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] Need to test supervised ancestry assignment with known parental populations. [Gap] Need to validate ancestry estimates with prior population assignments. [Decision] To achieve supervised ancestry estimation, chose to use ADMIXTURE to perform supervised admixture analysis with parental species assigned a priori, expecting to obtain refined admixture proportions.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "ADMIXTURE",
+        "version": "1.3.0"
+      },
+      "parameters": {
+        "K_value": "3",
+        "analysis_type": "supervised",
+        "assignment": "generalist, molluscivore, and scale-eater parents a priori assigned to one of three populations"
+      },
+      "observation": "Similar results obtained as unsupervised analysis; genome-wide ancestry not consistently associated with fitness",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 8,
+      "thought": "[Background] Need to identify SNPs associated with fitness in field experiments. [Gap] Need to perform genome-wide association mapping accounting for relatedness. [Decision] To achieve fitness-associated SNP identification, chose to use GEMMA to perform linear mixed model association testing, expecting to obtain SNPs significantly associated with composite fitness.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "GEMMA",
+        "version": "0.98.1"
+      },
+      "parameters": {
+        "model_type": "linear mixed model (LMM)",
+        "covariates": "lake and experiment",
+        "kinship_matrix": "estimated among all 139 hybrid samples",
+        "MAF_threshold": "greater than 5%",
+        "SNPs_analyzed": "933,520 SNPs",
+        "significance_thresholds": "FDR < 0.05 or Bonferroni correction p < 0.05"
+      },
+      "observation": "132 SNPs identified significantly associated with composite fitness, including 13 remaining significant at Bonferroni-corrected threshold",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Zhou and Stephens, 2012",
+          "relevance": "GEMMA for genome-wide efficient mixed-model analysis"
+        }
+      ]
+    },
+    {
+      "step_index": 9,
+      "thought": "[Background] Need to characterize functional implications of fitness-associated SNPs. [Gap] Need to identify enriched biological processes. [Decision] To achieve functional annotation, chose to use ShinyGO to perform gene ontology enrichment analysis, expecting to obtain enriched GO terms for fitness-associated genes.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "ShinyGO",
+        "version": "0.61"
+      },
+      "parameters": {
+        "database": "human gene functions from Ensembl",
+        "enrichment_threshold": "FDR < 0.05",
+        "ontology_type": "biological process"
+      },
+      "observation": "Gene ontologies significantly enriched for synaptic signaling and chemical synaptic transmission (FDR < 0.01)",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ge et al., 2020",
+          "relevance": "ShinyGO for gene-set enrichment analysis"
+        }
+      ]
+    },
+    {
+      "step_index": 10,
+      "thought": "[Background] Need to measure morphological traits for fitness landscape estimation. [Gap] Need quantitative morphological data for all hybrids and parents. [Decision] To achieve morphological characterization, chose to use DLTdv8 to perform digital landmarking of photographs, expecting to obtain 31 morphological trait measurements.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "DLTdv8",
+        "version": ""
+      },
+      "parameters": {
+        "traits_measured": "31 external morphological traits",
+        "samples": "139 hybrids and 69 parental individuals",
+        "measurements": "27 linear distances and 3 angles"
+      },
+      "observation": "31 morphological traits measured for all hybrids and parental individuals from Crescent Pond and Little Lake",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Hedrick, 2008",
+          "relevance": "DLTdv8 software for kinematic measurements"
+        }
+      ]
+    },
+    {
+      "step_index": 11,
+      "thought": "[Background] Need to reduce morphological dimensions for fitness landscape visualization. [Gap] Need discriminant axes distinguishing species. [Decision] To achieve dimensionality reduction, chose to use MASS lda function to perform linear discriminant analysis, expecting to obtain two LD axes distinguishing generalist, molluscivore, and scale-eater.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MASS lda",
+        "version": ""
+      },
+      "parameters": {
+        "input_traits": "31 morphological traits",
+        "output_axes": "two linear discriminant (LD) axes",
+        "species": "generalist, molluscivore, and scale-eater"
+      },
+      "observation": "Two LD axes estimated that best distinguished the three species; used to predict LD scores for 139 sequenced hybrids",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 12,
+      "thought": "[Background] Need to estimate phenotypic fitness landscapes from morphology and fitness data. [Gap] Need to model nonlinear fitness surfaces. [Decision] To achieve fitness landscape estimation, chose to use mgcv GAM to perform generalized additive modeling with thin-plate splines, expecting to obtain best-fit adaptive landscape models.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "mgcv",
+        "version": "1.8.28"
+      },
+      "parameters": {
+        "model_type": "generalized additive model (GAM)",
+        "spline_type": "thin-plate spline for two LD axes",
+        "fixed_effects": "lake and experiment",
+        "model_selection": "AICc",
+        "threshold": "ΔAICc > 4 for substantially worse fit"
+      },
+      "observation": "Models including fitness-associated SNPs invariably favored over morphology-only models (ΔAICc > 8.6); predicted complex nonlinear fitness landscape",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Wood, 2011",
+          "relevance": "mgcv package for semiparametric generalized linear models"
+        }
+      ]
+    },
+    {
+      "step_index": 13,
+      "thought": "[Background] Need to assess robustness of fitness landscape estimates to sampling uncertainty. [Gap] Need to quantify uncertainty in landscape features. [Decision] To achieve uncertainty quantification, chose to use bootstrapping to perform resampling with replacement, expecting to obtain distribution of predicted fitness values across landscape slices.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "bootstrapping",
+        "version": ""
+      },
+      "parameters": {
+        "replicates": "10,000",
+        "resampling": "hybrids with replacement",
+        "slices": "divided fitness landscape into thirds for each LD axis",
+        "prediction_points": "30 points along each LD axis"
+      },
+      "observation": "Fitness peaks and valleys frequently recovered across 10,000 bootstrap replicates; landscapes often more complex with increased curvature",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 14,
+      "thought": "[Background] Need to construct genotypic fitness networks from adaptive alleles. [Gap] Need to visualize haplotype relationships and fitness. [Decision] To achieve network construction, chose to use igraph to perform genotypic fitness network building from adaptive alleles, expecting to obtain network with nodes as haplotypes and edges as mutational neighbors.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "igraph",
+        "version": "1.2.4.1"
+      },
+      "parameters": {
+        "input_SNPs": "1498 candidate adaptive alleles",
+        "FST_threshold": "> 0.95",
+        "selective_sweep_detection": "SweeD and OmegaPlus",
+        "node_encoding": "0/1/2 format (homozygous reference/heterozygote/homozygous alternate)",
+        "edge_definition": "mutational neighbors (single mutational step)"
+      },
+      "observation": "Genotypic fitness networks constructed depicting hybrids and parental species in genotypic space with nodes representing SNP haplotypes",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Csardi and Nepusz, 2006",
+          "relevance": "igraph software package for complex network research"
+        },
+        {
+          "citation": "Richards et al., 2021",
+          "relevance": "Candidate adaptive alleles identification"
+        }
+      ]
+    },
+    {
+      "step_index": 15,
+      "thought": "[Background] Need to visualize high-dimensional genotypic fitness network structure. [Gap] Full genotypic space too large to visualize completely. [Decision] To achieve network visualization, chose to use random SNP sampling to perform reduced network construction with 10 SNPs sampled 100 times, expecting to obtain visualizable network showing species relationships.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "random sampling",
+        "version": ""
+      },
+      "parameters": {
+        "SNP_count": "10 SNPs",
+        "sampling_iterations": "100 times",
+        "edge_distance": "up to five mutational steps away",
+        "edge_width": "proportional to mutational distance"
+      },
+      "observation": "Generalists and molluscivores closer on genotypic fitness network than either is to scale-eaters; scale-eaters appear isolated separated by 12.6±0.091 mutational steps from generalists",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 16,
+      "thought": "[Background] Need to quantify mutational distances between species on fitness networks. [Gap] Need statistical comparison of inter-species distances. [Decision] To achieve distance quantification, chose to use Tukey's HSD test to perform pairwise comparisons of mutational steps, expecting to obtain significant differences in distances between species pairs.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Tukey's HSD test",
+        "version": ""
+      },
+      "parameters": {
+        "correction": "false discovery rate (FDR) correction",
+        "comparisons": "all pairwise species comparisons"
+      },
+      "observation": "All pairwise comparisons significant; molluscivores separated from generalists by 5.37±0.103 steps, scale-eaters by 16.3±0.060 steps from molluscivores",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 17,
+      "thought": "[Background] Need to test how different sources of genetic variation affect evolutionary accessibility. [Gap] Need to compare networks from standing variation, introgression, and de novo mutations. [Decision] To achieve accessibility comparison, chose to use random permutation to generate 5000 datasets of 5 SNPs from different variation sources, expecting to obtain distributions of accessibility metrics for comparison.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "random permutation",
+        "version": ""
+      },
+      "parameters": {
+        "datasets": "5000",
+        "SNP_count": "5 SNPs per dataset",
+        "variation_sources": "standing genetic variation, adaptive introgression, de novo mutation, and combinations",
+        "requirement": "at least one SNP of each source present in combination samples"
+      },
+      "observation": "5000 genotypic fitness networks constructed from random samples for each source of genetic variation",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 18,
+      "thought": "[Background] Need to statistically compare accessibility between molluscivore and scale-eater networks. [Gap] Need to quantify relative accessibility differences. [Decision] To achieve accessibility comparison, chose to use logistic regression to model association between summary statistics and species, expecting to obtain odds ratios comparing molluscivore to scale-eater networks.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "logistic regression",
+        "version": ""
+      },
+      "parameters": {
+        "response_variable": "species (scale-eater=0, molluscivore=1)",
+        "predictors": "accessibility measures",
+        "significance_test": "likelihood ratio test",
+        "output": "odds ratios with 95% CI"
+      },
+      "observation": "Molluscivore genotypes significantly more accessible to generalists than scale-eaters (OR for accessible paths: 2.095, 95% CI: 1.934-2.274)",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 19,
+      "thought": "[Background] Need to test relationship between landscape ruggedness and path length. [Gap] Need to quantify how peak number affects accessibility. [Decision] To achieve ruggedness-path relationship analysis, chose to use Poisson regression to model number of peaks predicting shortest accessible path length, expecting to obtain coefficient showing ruggedness effect.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Poisson regression",
+        "version": ""
+      },
+      "parameters": {
+        "model": "glm(Min. Distance to Peak ~ Number of Peaks, family = 'poisson')",
+        "significance": "p < 0.0001",
+        "coefficient": "β = -0.088",
+        "95%_CI": "-0.095 to -0.081"
+      },
+      "observation": "Increasing landscape ruggedness significantly decreased length of accessible paths to nearest local peak",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ferretti et al., 2018",
+          "relevance": "Definition of fitness peaks as genotypes with no fitter neighbors"
+        }
+      ]
+    },
+    {
+      "step_index": 20,
+      "thought": "[Background] Need to compare accessibility across different sources of adaptive genetic variation. [Gap] Need to test if introgression and de novo mutations increase accessibility compared to standing variation. [Decision] To achieve source comparison, chose to use likelihood ratio test with FDR correction to compare networks from different variation sources, expecting to obtain significance values for accessibility differences.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "likelihood ratio test",
+        "version": ""
+      },
+      "parameters": {
+        "baseline": "standing genetic variation (SGV)",
+        "comparisons": "introgression, de novo mutation, and combinations vs SGV",
+        "correction": "FDR (Benjamini and Hochberg, 1995)",
+        "significance_threshold": "p < 0.0001"
+      },
+      "observation": "Genotypic trajectories from introgressed or de novo adaptive mutations significantly more accessible than standing genetic variation alone; adaptive introgression and de novo mutations reduced fitness landscape ruggedness",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Benjamini and Hochberg, 1995",
+          "relevance": "FDR correction for multiple testing"
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Field fitness experiments with whole-genome sequencing of hybrids, genome-wide association mapping, genotypic fitness network construction, and evolutionary accessibility analysis",
+    "metrics": {
+      "fitness_associated_SNPs": {
+        "value": "132",
+        "unit": "SNPs",
+        "interpretation": "SNPs significantly associated with composite fitness identified through GEMMA LMM analysis"
+      },
+      "Bonferroni_significant_SNPs": {
+        "value": "13",
+        "unit": "SNPs",
+        "interpretation": "SNPs remaining significant at conservative Bonferroni-corrected threshold"
+      },
+      "genotyped_SNPs": {
+        "value": "1129771",
+        "unit": "SNPs",
+        "interpretation": "LD-pruned SNPs genotyped with average coverage of 9.79x per individual"
+      },
+      "hybrid_samples": {
+        "value": "139",
+        "unit": "individuals",
+        "interpretation": "Hybrids from two independent field experiments (86 survivors, 56 deaths)"
+      },
+      "accessible_paths_OR_molluscivore": {
+        "value": "2.095",
+        "unit": "odds ratio",
+        "interpretation": "Molluscivore networks had significantly more accessible paths than scale-eater networks (95% CI: 1.934-2.274)"
+      },
+      "path_length_OR_molluscivore": {
+        "value": "0.253",
+        "unit": "odds ratio",
+        "interpretation": "Molluscivore accessible paths significantly shorter than scale-eater paths (95% CI: 0.231-0.277)"
+      },
+      "ruggedness_OR_molluscivore": {
+        "value": "0.604",
+        "unit": "odds ratio",
+        "interpretation": "Molluscivore networks significantly less rugged with fewer peaks than scale-eater networks (95% CI: 0.575-0.634)"
+      },
+      "introgression_accessibility_OR": {
+        "value": "1.879",
+        "unit": "odds ratio",
+        "interpretation": "Scale-eater networks from introgression had significantly more accessible paths than standing variation alone (95% CI: 1.743-2.041)"
+      },
+      "bootstrap_replicates": {
+        "value": "10000",
+        "unit": "replicates",
+        "interpretation": "Bootstrap replicates confirming robustness of fitness landscape features"
+      },
+      "mutational_steps_generalist_to_scale_eater": {
+        "value": "12.6",
+        "unit": "steps (mean ± SE: 0.091)",
+        "interpretation": "Scale-eaters separated from generalist cluster by mean mutational steps"
+      }
+    },
+    "final_verdict": "Research objective achieved: Successfully identified 132 fitness-associated SNPs and quantified adaptive walk accessibility on genotypic fitness networks. Results demonstrate that scale-eating specialists are most isolated on fitness networks, and that adaptive introgression and de novo mutations reduce landscape ruggedness while increasing accessibility of genotypic fitness paths from generalist to specialists, supporting the hypothesis that hybridization alters fitness landscape shape during adaptive radiation."
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "01_initial_request": {
+    "target_name": "Multi-domain proteins",
+    "input_data": "Paramagnetic NMR restraints (PCSs and RDCs) produced through anisotropic metals",
+    "user_intent": "Characterize conformational states of multi-domain proteins to understand biological function",
+    "quantifiable_goal": "Reconstruction of a conformational ensemble with associated statistical weights consistent with experimental observables"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Multi-domain proteins have flexible linkers making structural characterization challenging. Individual domain structures may be available in PDB. [Gap] Need to refine domain structures with accurate orientation of internuclear vectors for RDC analysis. [Decision] To achieve accurate domain structures, chose to use Xplor-NIH to perform structural refinement on individual domains using PCSs and RDCs from metal-bearing domains, expecting to obtain refined domain structures with accurate internuclear vector orientations.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Xplor-NIH",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "PCSs and RDCs from metal-bearing domains",
+        "restraints": "paramagnetic NMR restraints as distance and angular constraints",
+        "starting_structure": "available structures from X-ray crystallography or NMR"
+      },
+      "observation": "Refined structure of metal-bearing domain with accurate orientation of internuclear vectors related to RDCs",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Banci et al. 2004; Bertini et al. 2009",
+          "relevance": "Provides evidence for using Xplor-NIH with paramagnetic restraints for structure refinement"
+        },
+        {
+          "citation": "Hou et al. 2021",
+          "relevance": "Example application in linear Ub2 study where individual Ub structures were refined using paramagnetic data with Xplor-NIH"
+        }
+      ]
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Alternative structure refinement tools exist beyond Xplor-NIH. [Gap] Need to consider other options for structural refinement depending on available data and starting structures. [Decision] To achieve structural refinement, chose to use CYANA to perform structure calculation with PCSs and RDCs as restraints, expecting to obtain refined domain structures.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "CYANA",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "PCSs and/or RDCs",
+        "restraints": "paramagnetic NMR restraints",
+        "starting_structure": "available structures or de novo"
+      },
+      "observation": "Refined domain structures using CYANA with paramagnetic restraints",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Banci et al. 1996; Bertini et al. 2001",
+          "relevance": "Provides evidence for using CYANA with paramagnetic restraints for structure refinement"
+        }
+      ]
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Rosetta can be used when metal-bearing domain structure was never characterized in advance. [Gap] Need to concurrently determine Δχ tensor and metal positions during structure calculation. [Decision] To achieve structure determination without prior characterization, chose to use Rosetta to perform structure calculation with additional NMR restraints such as backbone dihedral-angle restraints, expecting to obtain structure with concurrently determined Δχ tensor and metal positions.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Rosetta",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "PCSs and RDCs",
+        "additional_restraints": "backbone dihedral-angle restraints",
+        "concurrent_determination": "Δχ tensor and metal positions"
+      },
+      "observation": "Structure of metal-bearing domain with concurrently determined Δχ tensor and metal positions",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Schmitz et al. 2012; Kuenze et al. 2019",
+          "relevance": "Provides evidence for using Rosetta with paramagnetic restraints for structure determination"
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] REFMAC5 enables joint structural refinement combining X-ray data and paramagnetic NMR restraints. [Gap] Need to integrate multiple data sources for improved structural accuracy. [Decision] To achieve joint refinement, chose to use REFMAC5 to perform structural refinement in combination of X-ray data and paramagnetic NMR restraints, expecting to obtain refined structures with improved accuracy.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "REFMAC5",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "X-ray data and paramagnetic NMR restraints",
+        "restraints": "PCSs and RDCs"
+      },
+      "observation": "Joint refined structures from X-ray and paramagnetic NMR data",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Murshudov et al. 2011; Rinaldelli et al. 2014; Kovalevskiy et al. 2018; Carlon et al. 2019b",
+          "relevance": "Provides evidence for using REFMAC5 for joint X-ray/NMR structure refinement"
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Once individual domain structures are refined, need to assemble entire multi-domain molecule. [Gap] Need fast docking for domain assembly. [Decision] To achieve domain assembly, chose to use AIDA to perform fast docking for assembling refined individual domains into multi-domain molecule, expecting to obtain assembled multi-domain structure model.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "AIDA",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "refined structures of individual domains",
+        "operation": "fast docking for domain assembly"
+      },
+      "observation": "Assembled multi-domain structure model (e.g., linear Ub2 from two Ub domains)",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Xu et al. 2015, 2014",
+          "relevance": "Provides evidence for using AIDA for domain assembly in multi-domain proteins"
+        },
+        {
+          "citation": "Hou et al. 2021",
+          "relevance": "Example application where structure model of linear Ub2 was obtained by assembling two Ubs with AIDA"
+        }
+      ]
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Alternative domain assembly tools exist beyond AIDA. [Gap] Need to consider other options for assembling isolated domains into multi-domain molecule. [Decision] To achieve domain assembly, chose to use pyDockTET to perform assembly of structures of isolated domains into multi-domain molecule, expecting to obtain assembled multi-domain structure.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "pyDockTET",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "structures of isolated domains",
+        "operation": "assemble structures into multi-domain molecule"
+      },
+      "observation": "Assembled multi-domain structure from isolated domains",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Cheng et al. 2008",
+          "relevance": "Provides evidence for using pyDockTET for domain assembly"
+        }
+      ]
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] Rosetta can also be used for domain assembly. [Gap] Need alternative assembly approach. [Decision] To achieve domain assembly, chose to use Rosetta to perform assembly of structures of isolated domains into multi-domain molecule, expecting to obtain assembled multi-domain structure.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Rosetta",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "structures of isolated domains",
+        "operation": "assemble structures into multi-domain molecule"
+      },
+      "observation": "Assembled multi-domain structure from isolated domains",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Wollacott et al. 2007",
+          "relevance": "Provides evidence for using Rosetta for domain assembly"
+        }
+      ]
+    },
+    {
+      "step_index": 8,
+      "thought": "[Background] Need to generate conformational pool with sufficient number of structures for ensemble reconstruction. [Gap] Need unbiased and sufficient sampling from entire conformational space. [Decision] To achieve conformational pool generation, chose to use RanCh to perform randomization of backbone torsion angles of linker residues while treating domains as rigid, expecting to obtain conformational pool with topologically allowed conformations maintaining chain connectivity.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "RanCh",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "assembled multi-domain structure",
+        "operation": "randomize backbone torsion angles of linker residues",
+        "domain_treatment": "rigid domains",
+        "constraint": "topologically allowed space and chain connectivity",
+        "secondary_structure_consideration": "quasi-Ramachandran space for residues in alpha helices or beta sheets"
+      },
+      "observation": "Conformational pool with sufficient number of structures from entire conformational space",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Bernadó et al. 2007; Tria et al. 2015",
+          "relevance": "Provides evidence for using RanCh for conformational pool generation"
+        },
+        {
+          "citation": "Bernadó and Svergun 2012",
+          "relevance": "Provides evidence for native-like model consideration in RanCh"
+        }
+      ]
+    },
+    {
+      "step_index": 9,
+      "thought": "[Background] MESMER has PDB Generator module for pool generation. [Gap] Need alternative tool for pool generation when linker residues are not in secondary structures. [Decision] To achieve conformational pool generation, chose to use MESMER PDB Generator module to perform pool generation for cases where linker residues are placed neither in alpha helices nor in beta sheets, expecting to obtain conformational pool.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MESMER",
+        "version": ""
+      },
+      "parameters": {
+        "module": "PDB Generator module",
+        "input_data": "assembled multi-domain structure",
+        "constraint": "linker residues not in alpha helices or beta sheets"
+      },
+      "observation": "Conformational pool generated by MESMER",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ihms and Foster 2015",
+          "relevance": "Provides evidence for using MESMER PDB Generator module for pool generation"
+        },
+        {
+          "citation": "Hou et al. 2021",
+          "relevance": "Example application where conformational pool was generated by MESMER for linear Ub2"
+        }
+      ]
+    },
+    {
+      "step_index": 10,
+      "thought": "[Background] Molecular dynamics can sample more physically realistic conformations. [Gap] Need to incorporate physical realism in conformational sampling. [Decision] To achieve more realistic conformational sampling, chose to use Molecular Dynamics (MD) to perform sampling of physically realistic set of conformations, expecting to obtain conformational pool with physically realistic conformations.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Molecular Dynamics",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "assembled multi-domain structure",
+        "operation": "sampling physically realistic conformations"
+      },
+      "observation": "Conformational pool with physically realistic conformations from MD sampling",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ihms and Foster 2015",
+          "relevance": "Provides evidence for using MD for conformational sampling in ensemble reconstruction"
+        }
+      ]
+    },
+    {
+      "step_index": 11,
+      "thought": "[Background] Need to calculate magnetic susceptibility parameters (Δχ tensors and metal position) for all structures in conformational pool using PCSs and RDCs from metal-bearing domains. [Gap] Need to fit experimental data to determine tensor parameters. [Decision] To achieve tensor parameter calculation, chose to use NUMBAT to perform Δχ tensor and metal position fitting using PCSs from metal-bearing domains, expecting to obtain magnetic susceptibility parameters for all structures.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "NUMBAT",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "PCSs from metal-bearing domains",
+        "output": "Δχ tensor and metal positions",
+        "fitting_target": "available structure with firmly established programs"
+      },
+      "observation": "Δχ tensor and metal positions determined from PCSs of metal-bearing domain",
+      "valid": true,
+      "references": [
+        {
+          "citation": "John et al. 2005; Schmitz et al. 2008",
+          "relevance": "Provides evidence for using NUMBAT for PCS analysis and tensor fitting"
+        }
+      ]
+    },
+    {
+      "step_index": 12,
+      "thought": "[Background] FANTEN can fit both PCSs and RDCs simultaneously. [Gap] Need alternative tool for combined tensor fitting. [Decision] To achieve tensor parameter calculation, chose to use FANTEN to perform Δχ tensor and metal coordinate fitting using both PCSs and RDCs, expecting to obtain magnetic susceptibility parameters.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "FANTEN",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "PCSs and RDCs",
+        "output": "Δχ tensors and metal coordinates",
+        "fitting_target": "atomic coordinates of biomolecules"
+      },
+      "observation": "Δχ tensors and metal coordinates fitted from PCSs and RDCs",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Rinaldelli et al. 2015",
+          "relevance": "Provides evidence for using FANTEN for magnetic anisotropy-induced NMR data analysis"
+        }
+      ]
+    },
+    {
+      "step_index": 13,
+      "thought": "[Background] PARAMAGPY can fit tensors using both PCSs and RDCs. [Gap] Need alternative tool for tensor fitting. [Decision] To achieve tensor parameter calculation, chose to use PARAMAGPY to perform Δχ tensor and metal coordinate fitting using PCSs and RDCs respectively, expecting to obtain magnetic susceptibility parameters.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "PARAMAGPY",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "PCSs and RDCs",
+        "output": "Δχ tensors and metal coordinates",
+        "fitting_target": "atomic coordinates of biomolecules"
+      },
+      "observation": "Δχ tensors and metal coordinates fitted from PCSs and RDCs",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Orton et al. 2020",
+          "relevance": "Provides evidence for using PARAMAGPY for fitting magnetic susceptibility tensors"
+        }
+      ]
+    },
+    {
+      "step_index": 14,
+      "thought": "[Background] PALES is available for RDC analysis specifically. [Gap] Need tool specialized for RDC analysis. [Decision] To achieve tensor parameter calculation for RDCs, chose to use PALES to perform RDC analysis and prediction of molecular alignment from structure, expecting to obtain RDC-derived tensor parameters.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "PALES",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "RDCs",
+        "operation": "prediction of molecular alignment from structure"
+      },
+      "observation": "RDC-derived tensor parameters from PALES analysis",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Zweckstetter 2008",
+          "relevance": "Provides evidence for using PALES for RDC analysis and molecular alignment prediction"
+        }
+      ]
+    },
+    {
+      "step_index": 15,
+      "thought": "[Background] PATI is available for RDC analysis. [Gap] Need alternative tool for RDC analysis. [Decision] To achieve tensor parameter calculation for RDCs, chose to use PATI to perform RDC analysis, expecting to obtain RDC-derived tensor parameters.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "PATI",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "RDCs",
+        "operation": "RDC analysis"
+      },
+      "observation": "RDC-derived tensor parameters from PATI analysis",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Berlin et al. 2009",
+          "relevance": "Provides evidence for using PATI for RDC analysis"
+        }
+      ]
+    },
+    {
+      "step_index": 16,
+      "thought": "[Background] REDCAT is available for RDC analysis. [Gap] Need alternative tool for RDC analysis. [Decision] To achieve tensor parameter calculation for RDCs, chose to use REDCAT to perform residual dipolar coupling analysis, expecting to obtain RDC-derived tensor parameters.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "REDCAT",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "RDCs",
+        "operation": "residual dipolar coupling analysis"
+      },
+      "observation": "RDC-derived tensor parameters from REDCAT analysis",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Valafar and Prestegard 2004",
+          "relevance": "Provides evidence for using REDCAT for residual dipolar coupling analysis"
+        }
+      ]
+    },
+    {
+      "step_index": 17,
+      "thought": "[Background] MODULE is available for RDC analysis. [Gap] Need alternative tool for RDC analysis. [Decision] To achieve tensor parameter calculation for RDCs, chose to use MODULE to perform RDC analysis, expecting to obtain RDC-derived tensor parameters.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MODULE",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "RDCs",
+        "operation": "RDC analysis"
+      },
+      "observation": "RDC-derived tensor parameters from MODULE analysis",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Dosset et al. 2001",
+          "relevance": "Provides evidence for using MODULE for RDC analysis"
+        }
+      ]
+    },
+    {
+      "step_index": 18,
+      "thought": "[Background] Need to back-calculate PCSs and RDCs for metal-free domains of all structures in generated pool using magnetic susceptibility parameters obtained from metal-bearing domains. [Gap] Need tool for predicting paramagnetic data for other nuclei. [Decision] To achieve back-calculation of paramagnetic data, chose to use PyParaTools to perform prediction of PCSs and RDCs for metal-free domains using corresponding magnetic susceptibility parameters, expecting to obtain predicted paramagnetic data for all structures in pool.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "PyParaTools",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "magnetic susceptibility parameters from metal-bearing domains, conformational pool structures",
+        "output": "predicted PCSs and RDCs for metal-free domains",
+        "url": "http://comp-bio.anu.edu.au/mscook/PPT/"
+      },
+      "observation": "Back-calculated PCSs and RDCs for metal-free domains of all structures in conformational pool",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ihms and Foster 2015",
+          "relevance": "Provides evidence for using PyParaTools in reweighting programs such as MESMER"
+        }
+      ]
+    },
+    {
+      "step_index": 19,
+      "thought": "[Background] Need to reconstruct conformational ensembles satisfying experimental PCSs and RDCs. MESMER can identify and select ensembles fulfilling multiple experimental data. [Gap] Need to find optimal ensemble with minimal subset of conformations. [Decision] To achieve ensemble reconstruction, chose to use MESMER to perform iterative selection of optimal ensemble via genetic algorithm minimizing discrimination between experimental and back-calculated data, expecting to obtain minimal ensemble with associated statistical weights.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MESMER",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "K types of predicted data (PCSs, RDCs, etc.) for Z structures in conformational pool",
+        "algorithm": "genetic algorithm",
+        "ensemble_pool_size": "N ensembles with M components",
+        "iteration_criteria": "until poorest-fitting ensemble has reasonable agreement or RSD less than pre-set value",
+        "weight_constraint": "total sum of weight in one ensemble slightly less or more than 1 acceptable",
+        "dataset_scaling": "relative scale for each experimental dataset pre-set to inverse of average fitness from individual fits"
+      },
+      "observation": "Minimal ensemble comprising conformations with associated weights proportional to their putative population (e.g., seven conformations for linear Ub2)",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ihms and Foster 2015",
+          "relevance": "Provides evidence for using MESMER for minimal ensemble solutions to multiple experimental restraints"
+        },
+        {
+          "citation": "Hou et al. 2021",
+          "relevance": "Example application where MESMER selected minimal ensemble for linear Ub2"
+        },
+        {
+          "citation": "Delhommel et al. 2017",
+          "relevance": "Application to PDZ domains"
+        }
+      ]
+    },
+    {
+      "step_index": 20,
+      "thought": "[Background] SES is an alternative global-fit approach for ensemble reconstruction. [Gap] Need deterministic solution without problem-specific tuning parameters. [Decision] To achieve ensemble reconstruction, chose to use SES (Sparse Ensemble Selection) to perform recovery of representative conformational ensemble from multiple experimental datasets with deterministic solution, expecting to obtain ensemble that fits experimental observables best.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "SES",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "multiple experimental datasets",
+        "algorithm": "global-fit approach",
+        "tuning_parameters": "none required",
+        "solution_type": "deterministic"
+      },
+      "observation": "Representative conformational ensemble from multiple experimental datasets with deterministic solution",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Berlin et al. 2013; Ravera et al. 2016",
+          "relevance": "Provides evidence for using SES for recovering representative conformational ensemble"
+        },
+        {
+          "citation": "Medeiros Selegato et al. 2021",
+          "relevance": "Reports direct relation between SES and MaxOcc results"
+        }
+      ]
+    },
+    {
+      "step_index": 21,
+      "thought": "[Background] MaxOcc calculates maximum allowed probability of all considered structures rather than finding best ensemble. [Gap] Need to estimate maximum probabilities of single conformations or regions. [Decision] To achieve conformational probability estimation, chose to use MaxOcc (MATLAB script) to perform calculation of maximum occurrence for each conformation by increasing weight until no acceptable ensemble can explain experimental data, expecting to obtain MaxOcc values for all conformations indicating likelihood of being visited.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MaxOcc",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "K types of experimental data concatenated into length-J column vector, K types of predicted data from Z structures concatenated into J×Z prediction matrix",
+        "normalization": "dividing data by square of their sum",
+        "operation": "repeated fitting calculation by increasing weight of single conformation",
+        "output": "MaxOcc value (maximum allowed weight for each conformation)"
+      },
+      "observation": "MaxOcc values for all conformations indicating which are more likely to be visited by molecules due to intrinsic dynamics (e.g., top 1,000 conformers for linear Ub2)",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Bertini et al. 2010, 2012",
+          "relevance": "Provides evidence for using MaxOcc for maximum occurrence analysis"
+        },
+        {
+          "citation": "Andralojc et al. 2016; Gigli et al. 2018",
+          "relevance": "Provides evidence for MaxOcc MATLAB script implementation"
+        },
+        {
+          "citation": "Hou et al. 2021",
+          "relevance": "Example application where MaxOcc was used for linear Ub2 conformational analysis"
+        }
+      ]
+    },
+    {
+      "step_index": 22,
+      "thought": "[Background] MaxOR and MinOR are natural extensions of MaxOcc for estimating specific combinations of conformations. [Gap] Need to estimate maximum and minimum occurrence of defined regions. [Decision] To achieve regional conformational probability estimation, chose to use MaxOR and MinOR to perform estimation of maximum and minimum occurrence of defined regions comprised of multiple conformations, expecting to obtain occurrence probabilities for conformational regions.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MaxOR/MinOR",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "defined regions comprised of multiple conformations",
+        "operation": "estimation of maximum and minimum occurrence"
+      },
+      "observation": "Maximum and minimum occurrence values for defined conformational regions",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Andralojc et al. 2014, 2016",
+          "relevance": "Provides evidence for using MaxOR and MinOR for regional occurrence estimation"
+        }
+      ]
+    },
+    {
+      "step_index": 23,
+      "thought": "[Background] Need to validate ensemble reconstruction results against experimental binding data. [Gap] Need to correlate conformational sampling with functional binding affinities. [Decision] To achieve functional validation, chose to use dissociation constant (Kd) measurements to perform correlation analysis between MaxOcc rank changes and binding affinities for Ub-binding proteins, expecting to obtain insight into binding mode and conformational selection mechanism.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Dissociation Constant Measurement",
+        "version": ""
+      },
+      "parameters": {
+        "input_data": "linear Ub2 wild-type and mutants (E16Rp, E18Rp)",
+        "binding_partner": "HOIL-1L-NZF",
+        "measurement": "Kd values"
+      },
+      "observation": "Kd increased by over 14-fold for E16Rp and decreased by fivefold for E18Rp, correlating with MaxOcc rank changes of bound conformer",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Hou et al. 2021",
+          "relevance": "Example application showing correlation between conformational sampling perturbation and binding affinities"
+        },
+        {
+          "citation": "Sato et al. 2011",
+          "relevance": "Provides PDB code 3b0a for HOIL-1L-NZF complex with linear Ub2"
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Paramagnetic NMR restraints (PCSs and RDCs) combined with ensemble reconstruction approaches (MESMER, MaxOcc) validated against experimental binding affinity measurements",
+    "metrics": {
+      "ensemble_size": {
+        "value": "7",
+        "unit": "conformations",
+        "interpretation": "Minimal ensemble selected by MESMER for linear Ub2 with associated statistical weights proportional to population"
+      },
+      "Kd_change_E16Rp": {
+        "value": "14",
+        "unit": "fold increase",
+        "interpretation": "Dissociation constant increased for E16Rp mutant, correlating with decreased MaxOcc of bound conformer"
+      },
+      "Kd_change_E18Rp": {
+        "value": "5",
+        "unit": "fold decrease",
+        "interpretation": "Dissociation constant decreased for E18Rp mutant, correlating with increased MaxOcc of bound conformer"
+      },
+      "MaxOcc_conformers_analyzed": {
+        "value": "1000",
+        "unit": "conformers",
+        "interpretation": "Top 1,000 conformers calculated and sorted by MaxOcc values for linear Ub2"
+      },
+      "paramagnetic_restraint_range": {
+        "value": "40",
+        "unit": "Angstrom",
+        "interpretation": "Long-range distance and/or orientation constraints available through paramagnetic NMR"
+      }
+    },
+    "final_verdict": "The research objective was achieved. The paper successfully demonstrates reconstruction of conformational ensembles with associated statistical weights consistent with experimental paramagnetic NMR observables (PCSs and RDCs). The linear Ub2 example shows that ensemble reconstruction approaches (MESMER, MaxOcc) can characterize conformational states of multi-domain proteins, and the correlation between MaxOcc rank changes and binding affinity measurements (Kd) validates the biological relevance of the reconstructed ensembles for understanding protein function."
+  }
+}

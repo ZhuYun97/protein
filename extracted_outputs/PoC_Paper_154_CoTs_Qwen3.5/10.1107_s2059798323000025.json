@@ -1,0 +1,162 @@
+{
+  "01_initial_request": {
+    "target_name": "Quantum Mechanical Restraint (QMR) procedure",
+    "input_data": "Ligand structure, neighboring protein residues, and water molecules in the binding pocket",
+    "user_intent": "To generate accurate ligand geometry restraints for macromolecular crystallographic refinement that account for the binding environment without the high computational cost of optimizing the entire macromolecule",
+    "quantifiable_goal": "Significantly reduce computing expense compared with optimizing the entire macromolecule while providing better restraints than in the GeoStd library"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Ligand restraints need testing on suitable models to evaluate performance. [Gap] A specific dataset of protein-ligand complexes with defined properties is missing. [Decision] To achieve dataset creation, chose to use PDB screening process to perform filtering on PDB entries, expecting to obtain 1712 models with 2334 ligands.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "PDB screening process",
+        "version": ""
+      },
+      "parameters": {
+        "resolution_cutoff": "up to at least 3 Angstrom",
+        "molecular_weight": "less than 2000 kDa",
+        "excluded_components": "RNA/DNA",
+        "map_model_correlation": "at least 0.7",
+        "non_H_atoms": "between eight and 40",
+        "total_charge": "-1, 0 or +1",
+        "rmsd_thresholds": "0.2 Angstrom for bonds, 5 degrees for angle or 30 degrees for torsion angles"
+      },
+      "observation": "Filtered set of test cases containing 2334 ligands in 1712 models.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Berman et al., 2000",
+          "relevance": "Source of protein models (Protein Data Bank)."
+        }
+      ]
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Baseline performance of standard restraints is needed for comparison. [Gap] Current standard restraints (GeoStd) performance on this dataset is unknown. [Decision] To achieve baseline establishment, chose to use phenix.refine to perform benchmark refinement on 1712 models, expecting to obtain GeoStd r.m.s.d. values.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "phenix.refine",
+        "version": "dev-4753"
+      },
+      "parameters": {
+        "macrocycles": "10",
+        "restraints": "GeoStd library",
+        "geometry_weight": "optimization",
+        "ADP_refinement": "isotropic for resolution worse than 1.5A, mixed for 1.5-1.2A, anisotropic for better than 1.2A"
+      },
+      "observation": "Benchmark r.m.s.d. values of bond lengths, angles and torsions for each ligand extracted.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Afonine et al., 2012",
+          "relevance": "Describes the phenix.refine program used for refinement."
+        },
+        {
+          "citation": "Moriarty & Adams, manuscript in preparation",
+          "relevance": "Describes the GeoStd library used for standard restraints."
+        }
+      ]
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] QMR restraints need to be generated to account for the binding environment. [Gap] Ligand geometry needs optimization in situ including neighboring residues. [Decision] To achieve restraint generation, chose to use QMR procedure to perform QM minimization on ligand clusters, expecting to obtain QMR restraints.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "QMR procedure",
+        "version": "dev-4753"
+      },
+      "parameters": {
+        "cutoff_radius": "3.5 Angstrom",
+        "QM_method": "PM7 method of MOPAC",
+        "termination": "charge-neutral moieties",
+        "protonation": "ligand cluster correctly protonated"
+      },
+      "observation": "Optimized ligand geometry used to generate target values for geometric restraints.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Stewart, 1990, 2016",
+          "relevance": "Describes MOPAC and PM7 method used for QM minimization."
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Performance of QMR restraints needs to be evaluated against the baseline. [Gap] Performance of QMR vs GeoStd is unknown. [Decision] To achieve evaluation, chose to use phenix.refine to perform QMR refinement on 1712 models, expecting to obtain QMR r.m.s.d. values.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "phenix.refine",
+        "version": "dev-4753"
+      },
+      "parameters": {
+        "macrocycles": "10",
+        "restraints": "QMR restraints",
+        "geometry_weight": "optimization",
+        "ADP_refinement": "same as benchmark refinements"
+      },
+      "observation": "QMR refinement r.m.s.d. values of bond lengths, angles and torsions for each ligand extracted.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Afonine et al., 2012",
+          "relevance": "Describes the phenix.refine program used for refinement."
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Statistical comparison is needed to confirm improvement. [Gap] Statistical significance of differences between GeoStd and QMR is unknown. [Decision] To achieve comparison, chose to use Statistical analysis to perform t-test and r.m.s.d. comparison on refinement results, expecting to obtain performance metrics.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Statistical analysis",
+        "version": ""
+      },
+      "parameters": {
+        "resolution_bins": "0.8-1.4A, 1.4-2A, 2-3A",
+        "test_type": "t-test",
+        "metrics": "mean r.m.s.d. for valence angles and torsion angles"
+      },
+      "observation": "QMR restraints show systematically lower valence-angle and torsion-angle r.m.s.d. values compared to GeoStd.",
+      "valid": true,
+      "references": []
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Comparison of r.m.s.d. values (bond, angle, torsion) between GeoStd and QMR refinements across resolution bins using t-tests.",
+    "metrics": {
+      "torsion_angle_rmsd_geostd": {
+        "value": "50-60",
+        "unit": "degrees",
+        "interpretation": "Mean torsion-angle r.m.s.d. for GeoStd restraints across all resolution bins."
+      },
+      "torsion_angle_rmsd_qmr": {
+        "value": "10-20",
+        "unit": "degrees",
+        "interpretation": "Mean torsion-angle r.m.s.d. for QMR restraints, showing significant improvement."
+      },
+      "valence_angle_improvement": {
+        "value": "up to 2",
+        "unit": "degrees",
+        "interpretation": "Maximum improvement in valence-angle r.m.s.d. observed in more than 1500 ligands."
+      },
+      "ligand_instances": {
+        "value": ">2330",
+        "unit": "instances",
+        "interpretation": "Total number of ligand instances tested."
+      },
+      "protein_ligand_models": {
+        "value": ">1700",
+        "unit": "models",
+        "interpretation": "Total number of protein-ligand models tested."
+      },
+      "qmr_minimization_time": {
+        "value": "15",
+        "unit": "minutes",
+        "interpretation": "Typical running time of QMR minimization on an M1 MacBookPro, indicating reduced expense compared to full macromolecule optimization."
+      }
+    },
+    "final_verdict": "The research objective was achieved. The QMR procedure significantly reduces computing expense compared with optimizing the entire macromolecule (15 min per ligand cluster) while providing better restraints than the GeoStd library (lower r.m.s.d. for valence and torsion angles)."
+  }
+}

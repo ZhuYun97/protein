@@ -1,0 +1,883 @@
+{
+    "input_path": "/mnt/dhwfile/raise/user/zhuyun/protein_data_pipeline/input_pdfs/case_pdfs/case1.pdf",
+    "page_index": 2,
+    "page_count": 18,
+    "width": 1191,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Article",
+            "block_bbox": [
+                75,
+                51,
+                176,
+                82
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "global_block_id": 30,
+            "global_group_id": 30,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    51.0
+                ],
+                [
+                    176.0,
+                    51.0
+                ],
+                [
+                    176.0,
+                    82.0
+                ],
+                [
+                    75.0,
+                    82.0
+                ]
+            ]
+        },
+        {
+            "block_label": "abstract",
+            "block_content": "which resulted in short near ideal loops. To further encode structural specificity, we incorporated buried, long-range hydrogen-bonding networks. The resulting 1,615 family-wide hallucinated TNF2 scaffolds provided more shape-complementary binding pockets for DTZ than did native small-molecule-binding proteins (Fig. 1e). This method samples protein backbones that are closer to native TNF2-like proteins (Fig. 1f) and that have better scaffold quality metrics than those produced in a previous non-deep-learning energy-based approach $ ^{21} $ (Fig. 1g).",
+            "block_bbox": [
+                72,
+                93,
+                594,
+                291
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "global_block_id": 31,
+            "global_group_id": 31,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    93.0
+                ],
+                [
+                    594.0,
+                    93.0
+                ],
+                [
+                    594.0,
+                    291.0
+                ],
+                [
+                    72.0,
+                    291.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "De novo design of luciferases for DTZ",
+            "block_bbox": [
+                73,
+                325,
+                425,
+                349
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "global_block_id": 32,
+            "global_group_id": 32,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    325.0
+                ],
+                [
+                    425.0,
+                    325.0
+                ],
+                [
+                    425.0,
+                    349.0
+                ],
+                [
+                    73.0,
+                    349.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Computational enzyme design generally starts from an ideal active site or theozyme consisting of protein functional groups surrounding the reaction transition state that is then matched into a set of existing scaffolds $ ^{5,2} $. However, the detailed catalytic geometry of native marine luciferases is not well understood because only a handful of apo structures and no holo structures with luciferin substrates have been solved (at the time of this study) $ ^{22-24} $. Both quantum chemistry calculations $ ^{25,26} $ and experimental data $ ^{27,28} $ suggest that the chemiluminescent reaction proceeds through an anionic species and that the polarity of the surroundings can substantially alter the free energy of the subsequent single-electron transfer (SET) process with triplet molecular oxygen ( $ ^{3}O_{2} $). Guided by these data (Extended Data Fig. 1), we sought to design a shape-complementary catalytic site that stabilizes the anionic state of DTZ and lowers the SET energy barrier, assuming that the downstream dioxetane light emitter thermolysis steps are spontaneous. To stabilize the anionic state, we focused on the placement of the positively charged guanidinium group of an arginine residue to stabilize the developing negative charge on the imidazopyrazinone group.",
+            "block_bbox": [
+                72,
+                353,
+                594,
+                762
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "global_block_id": 33,
+            "global_group_id": 33,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    353.0
+                ],
+                [
+                    594.0,
+                    353.0
+                ],
+                [
+                    594.0,
+                    762.0
+                ],
+                [
+                    72.0,
+                    762.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "To computationally design such active sites into large numbers of hallucinated NTF2 scaffolds, we first generated an ensemble of anionic DTZ conformers (Fig. 1b). Next, around each conformer, we used the RifGen method $ ^{29,30} $ to enumerate rotamer interaction fields (RIFs) on three-dimensional grids consisting of millions of placements of amino acid side chains making hydrogen-bonding and nonpolar interactions with DTZ (Fig. 1c). An arginine guanidinium group was placed adjacent to the N1 atom of the imidazopyrazinone group to stabilize the negative charge. RifDock was then used to dock each DTZ conformer and associated RIF in the central cavity of each scaffold to maximize protein–DTZ interactions. An average of eight side-chain rotamers, including an arginine residue to stabilize the anionic imidazopyrazinone core, were positioned in each pocket (Supplementary Fig. 2a). For the top 50,000 docks with the most favourable side chain–DTZ interactions, we optimized the remainder of the sequence using RosettaDesign (Fig. 1d) for high-affinity binding to DTZ with a bias towards the naturally observed sequence variation to ensure foldability. During the design process, pre-defined hydrogen-bond networks (HBNets) in the scaffolds were kept intact for structural specificity and stability, and interactions of these HBNet side chains with DTZ were explicitly required in the RifDock step to ensure the preorganization of residues that are essential for catalysis. In the first sequence-design step, the identities of all RIF and HBNet residues were kept fixed, and the surrounding residues were optimized to hold the side chain–DTZ interactions in place and maintain structural specificity. In the second sequence-design step, the RIF residue identities (except the arginine) were also allowed to vary, as Rosetta can identify apolar and aromatic packing interactions that were missed in the RIF owing to binning effects. During sequence design, the scaffold backbone, side chains and DTZ substrate were allowed to relax in Cartesian space. After sequence optimization, the designs were filtered on the basis of ligand-binding energy, protein–ligand hydrogen bonds, shape complementarity and contact molecular surface, and 7,648 designs were selected and ordered as pooled oligos for experimental screening.",
+            "block_bbox": [
+                72,
+                761,
+                595,
+                1495
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "global_block_id": 34,
+            "global_group_id": 34,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    761.0
+                ],
+                [
+                    595.0,
+                    761.0
+                ],
+                [
+                    595.0,
+                    1495.0
+                ],
+                [
+                    72.0,
+                    1495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Identification of active luciferases",
+            "block_bbox": [
+                606,
+                110,
+                936,
+                133
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "global_block_id": 35,
+            "global_group_id": 35,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    110.0
+                ],
+                [
+                    936.0,
+                    110.0
+                ],
+                [
+                    936.0,
+                    133.0
+                ],
+                [
+                    606.0,
+                    133.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Oligonucleotides encoding the two halves of each design were assembled into full-length genes and cloned into an Escherichia coli expression vector (see Supplementary Methods). A colony-based screening method was used to directly image active luciferase colonies from the library and the activities of selected clones were confirmed using a 96-well plate expression (Extended Data Fig. 2). Three active designs were identified; we refer to the most active of these as LuxSit (from the Latin lux sit, 'let light exist'), which at 117 residues (13.9 kDa) is, to our knowledge, smaller than any previously described luciferase. Biochemical analysis, including SDS–PAGE and size-exclusion chromatography (Fig. 2a,b and Extended Data Fig. 3), indicated that LuxSit is highly expressed in E. coli, soluble and monomeric. Circular dichroism (CD) spectroscopy showed a strong far-ultraviolet CD signature, suggesting an organized α-β structure. CD melting experiments showed that the protein is not fully unfolded at 95 °C, and that the full structure is regained when the temperature is dropped (Fig. 2c). Incubation of LuxSit with DTZ resulted in luminescence with an emission peak at around 480 nm (Fig. 2d), consistent with the DTZ chemiluminescence spectrum. Although we were not able to determine the crystal structure of LuxSit, the structure predicted by AlphaFold2 (ref. 3) is very close to the design model at the backbone level (root-mean-square deviation (RMSD) = 1.35 Å) and over the side chains interacting with the substrate (Fig. 2e). The designed LuxSit active site contains Tyr14–His98 and Asp18–Arg65 dyads, with the imidazole nitrogen atoms of His98 making hydrogen-bond interactions with Tyr14 and the O1 atom of DTZ (Fig. 2f). The centre of the Arg65 guanidinium cation is 4.2 Å from the N1 atom of DTZ and Asp18 forms a bidentate hydrogen bond to the guanidinium group and backbone N–H of Arg65 (Fig. 2g).",
+            "block_bbox": [
+                604,
+                136,
+                1128,
+                744
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "global_block_id": 36,
+            "global_group_id": 36,
+            "block_polygon_points": [
+                [
+                    604.0,
+                    136.0
+                ],
+                [
+                    1128.0,
+                    136.0
+                ],
+                [
+                    1128.0,
+                    744.0
+                ],
+                [
+                    604.0,
+                    744.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "De novo design of luciferases for h-CTZ",
+            "block_bbox": [
+                606,
+                776,
+                976,
+                800
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "global_block_id": 37,
+            "global_group_id": 37,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    776.0
+                ],
+                [
+                    976.0,
+                    776.0
+                ],
+                [
+                    976.0,
+                    800.0
+                ],
+                [
+                    606.0,
+                    800.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "We next sought to apply the knowledge gained from designing LuxSit to create 2-deoxycoelenterazine (h-CTZ)-specific luciferases. Because the molecular shape of h-CTZ is different from that of DTZ, we created an additional set of NTF2 superfamily scaffolds (see Supplementary Methods) with matching pocket shapes and high model confidence (AlphaFold2-predicted local-distance difference test (pLDDT) > 92). We then installed catalytic sites in these scaffolds and designed the first shell-protein side chain–h-CTZ interactions using the histidine and arginine substrate interaction geometries that were most successful in the first round for DTZ. To design the remainder of the sequence, we used ProteinMPNN $ ^{32} $, which can result in better stability, solubility and accuracy than RosettaDesign. After filtering on the basis of the AlphaFold2-predicted pLDDT, Cα RMSD, contact molecular surface and Rosetta-computed binding energies (see Supplementary Methods), we selected and experimentally expressed 46 designs in E. coli and identified 2 (HTZ3-D2 and HTZ3-G4) that had luciferase activity with the h-CTZ luciferin substrate. Both designs were highly soluble, monodisperse and monomeric, and the luciferase activities were of the same order of magnitude as LuxSit (Extended Data Fig. 4). The success rate increased from 3/7,648 to 2/46 sequences in the second round, probably owing to the knowledge of active-site geometry from the first round and the increased robustness of the ProteinMPNN method of sequence design.",
+            "block_bbox": [
+                604,
+                805,
+                1127,
+                1302
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "global_block_id": 38,
+            "global_group_id": 38,
+            "block_polygon_points": [
+                [
+                    604.0,
+                    805.0
+                ],
+                [
+                    1127.0,
+                    805.0
+                ],
+                [
+                    1127.0,
+                    1302.0
+                ],
+                [
+                    604.0,
+                    1302.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Optimization of luciferase activity",
+            "block_bbox": [
+                607,
+                1335,
+                937,
+                1360
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "global_block_id": 39,
+            "global_group_id": 39,
+            "block_polygon_points": [
+                [
+                    607.0,
+                    1335.0
+                ],
+                [
+                    937.0,
+                    1335.0
+                ],
+                [
+                    937.0,
+                    1360.0
+                ],
+                [
+                    607.0,
+                    1360.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "To better understand the contributions to the catalysis of LuxSit, the most active of our designs, we constructed a site-saturation mutagenesis (SSM) library in which each residue in the substrate-binding pocket was mutated to every other amino acid one at a time (see Supplementary Methods), and determined the effect of each mutation on luciferase activity. Figure 2f–i shows the amino acid preferences at key positions.",
+            "block_bbox": [
+                605,
+                1362,
+                1127,
+                1495
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "global_block_id": 40,
+            "global_group_id": 40,
+            "block_polygon_points": [
+                [
+                    605.0,
+                    1362.0
+                ],
+                [
+                    1127.0,
+                    1362.0
+                ],
+                [
+                    1127.0,
+                    1495.0
+                ],
+                [
+                    605.0,
+                    1495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "776",
+            "block_bbox": [
+                77,
+                1524,
+                110,
+                1542
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "global_block_id": 41,
+            "global_group_id": 41,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    1524.0
+                ],
+                [
+                    109.0,
+                    1524.0
+                ],
+                [
+                    109.0,
+                    1541.0
+                ],
+                [
+                    77.0,
+                    1541.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Nature | Vol 614 | 23 February 2023",
+            "block_bbox": [
+                123,
+                1523,
+                395,
+                1544
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "global_block_id": 42,
+            "global_group_id": 42,
+            "block_polygon_points": [
+                [
+                    123.0,
+                    1523.0
+                ],
+                [
+                    394.0,
+                    1523.0
+                ],
+                [
+                    394.0,
+                    1543.0
+                ],
+                [
+                    123.0,
+                    1543.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5957041382789612,
+                "coordinate": [
+                    75,
+                    51,
+                    176,
+                    82
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        75.0,
+                        51.0
+                    ],
+                    [
+                        176.0,
+                        51.0
+                    ],
+                    [
+                        176.0,
+                        82.0
+                    ],
+                    [
+                        75.0,
+                        82.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 0,
+                "label": "abstract",
+                "score": 0.6499536633491516,
+                "coordinate": [
+                    72,
+                    93,
+                    594,
+                    291
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        72.0,
+                        93.0
+                    ],
+                    [
+                        594.0,
+                        93.0
+                    ],
+                    [
+                        594.0,
+                        291.0
+                    ],
+                    [
+                        72.0,
+                        291.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.829762876033783,
+                "coordinate": [
+                    73,
+                    325,
+                    425,
+                    349
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        73.0,
+                        325.0
+                    ],
+                    [
+                        425.0,
+                        325.0
+                    ],
+                    [
+                        425.0,
+                        349.0
+                    ],
+                    [
+                        73.0,
+                        349.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9664751291275024,
+                "coordinate": [
+                    72,
+                    353,
+                    594,
+                    762
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        72.0,
+                        353.0
+                    ],
+                    [
+                        594.0,
+                        353.0
+                    ],
+                    [
+                        594.0,
+                        762.0
+                    ],
+                    [
+                        72.0,
+                        762.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9685200452804565,
+                "coordinate": [
+                    72,
+                    761,
+                    595,
+                    1495
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        72.0,
+                        761.0
+                    ],
+                    [
+                        595.0,
+                        761.0
+                    ],
+                    [
+                        595.0,
+                        1495.0
+                    ],
+                    [
+                        72.0,
+                        1495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8279432058334351,
+                "coordinate": [
+                    606,
+                    110,
+                    936,
+                    133
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        606.0,
+                        110.0
+                    ],
+                    [
+                        936.0,
+                        110.0
+                    ],
+                    [
+                        936.0,
+                        133.0
+                    ],
+                    [
+                        606.0,
+                        133.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9724547863006592,
+                "coordinate": [
+                    604,
+                    136,
+                    1128,
+                    744
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        604.0,
+                        136.0
+                    ],
+                    [
+                        1128.0,
+                        136.0
+                    ],
+                    [
+                        1128.0,
+                        744.0
+                    ],
+                    [
+                        604.0,
+                        744.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.4544847011566162,
+                "coordinate": [
+                    876,
+                    439,
+                    919,
+                    459
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        876,
+                        439
+                    ],
+                    [
+                        876,
+                        458
+                    ],
+                    [
+                        918,
+                        458
+                    ],
+                    [
+                        918,
+                        439
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8307596445083618,
+                "coordinate": [
+                    606,
+                    776,
+                    976,
+                    800
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        606.0,
+                        776.0
+                    ],
+                    [
+                        976.0,
+                        776.0
+                    ],
+                    [
+                        976.0,
+                        800.0
+                    ],
+                    [
+                        606.0,
+                        800.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9685922265052795,
+                "coordinate": [
+                    604,
+                    805,
+                    1127,
+                    1302
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        604.0,
+                        805.0
+                    ],
+                    [
+                        1127.0,
+                        805.0
+                    ],
+                    [
+                        1127.0,
+                        1302.0
+                    ],
+                    [
+                        604.0,
+                        1302.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8372694849967957,
+                "coordinate": [
+                    607,
+                    1335,
+                    937,
+                    1360
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        607.0,
+                        1335.0
+                    ],
+                    [
+                        937.0,
+                        1335.0
+                    ],
+                    [
+                        937.0,
+                        1360.0
+                    ],
+                    [
+                        607.0,
+                        1360.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9512461423873901,
+                "coordinate": [
+                    605,
+                    1362,
+                    1127,
+                    1495
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        605.0,
+                        1362.0
+                    ],
+                    [
+                        1127.0,
+                        1362.0
+                    ],
+                    [
+                        1127.0,
+                        1495.0
+                    ],
+                    [
+                        605.0,
+                        1495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7206767797470093,
+                "coordinate": [
+                    77,
+                    1524,
+                    110,
+                    1542
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        77.0,
+                        1524.0
+                    ],
+                    [
+                        109.0,
+                        1524.0
+                    ],
+                    [
+                        109.0,
+                        1541.0
+                    ],
+                    [
+                        77.0,
+                        1541.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8237776756286621,
+                "coordinate": [
+                    123,
+                    1523,
+                    395,
+                    1544
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        123.0,
+                        1523.0
+                    ],
+                    [
+                        394.0,
+                        1523.0
+                    ],
+                    [
+                        394.0,
+                        1543.0
+                    ],
+                    [
+                        123.0,
+                        1543.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

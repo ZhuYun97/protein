@@ -1,0 +1,1096 @@
+{
+    "input_path": "/mnt/dhwfile/raise/user/zhuyun/protein_data_pipeline/input_pdfs/case_pdfs/case1.pdf",
+    "page_index": 1,
+    "page_count": 18,
+    "width": 1191,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "a",
+            "block_bbox": [
+                231,
+                99,
+                246,
+                115
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "global_block_id": 16,
+            "global_group_id": 16,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    99.0
+                ],
+                [
+                    245.0,
+                    99.0
+                ],
+                [
+                    245.0,
+                    114.0
+                ],
+                [
+                    231.0,
+                    114.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                224,
+                98,
+                889,
+                623
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "global_block_id": 17,
+            "global_group_id": 17,
+            "block_polygon_points": [
+                [
+                    230,
+                    98
+                ],
+                [
+                    224,
+                    114
+                ],
+                [
+                    230,
+                    607
+                ],
+                [
+                    332,
+                    622
+                ],
+                [
+                    883,
+                    622
+                ],
+                [
+                    877,
+                    114
+                ],
+                [
+                    416,
+                    114
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "b",
+            "block_bbox": [
+                230,
+                354,
+                246,
+                371
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "global_block_id": 18,
+            "global_group_id": 18,
+            "block_polygon_points": [
+                [
+                    230,
+                    354
+                ],
+                [
+                    230,
+                    370
+                ],
+                [
+                    245,
+                    370
+                ],
+                [
+                    245,
+                    354
+                ]
+            ]
+        },
+        {
+            "block_label": "chart",
+            "block_content": "",
+            "block_bbox": [
+                230,
+                635,
+                445,
+                821
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "global_block_id": 19,
+            "global_group_id": 19,
+            "block_polygon_points": [
+                [
+                    230.0,
+                    635.0
+                ],
+                [
+                    445.0,
+                    635.0
+                ],
+                [
+                    445.0,
+                    821.0
+                ],
+                [
+                    230.0,
+                    821.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                443,
+                638,
+                629,
+                810
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "global_block_id": 20,
+            "global_group_id": 20,
+            "block_polygon_points": [
+                [
+                    449,
+                    638
+                ],
+                [
+                    443,
+                    688
+                ],
+                [
+                    443,
+                    711
+                ],
+                [
+                    449,
+                    769
+                ],
+                [
+                    455,
+                    785
+                ],
+                [
+                    461,
+                    801
+                ],
+                [
+                    467,
+                    809
+                ],
+                [
+                    628,
+                    809
+                ],
+                [
+                    628,
+                    778
+                ],
+                [
+                    623,
+                    655
+                ],
+                [
+                    617,
+                    638
+                ],
+                [
+                    473,
+                    638
+                ],
+                [
+                    460,
+                    638
+                ]
+            ]
+        },
+        {
+            "block_label": "chart",
+            "block_content": "",
+            "block_bbox": [
+                653,
+                655,
+                910,
+                821
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "global_block_id": 21,
+            "global_group_id": 21,
+            "block_polygon_points": [
+                [
+                    653.0,
+                    655.0
+                ],
+                [
+                    910.0,
+                    655.0
+                ],
+                [
+                    910.0,
+                    821.0
+                ],
+                [
+                    653.0,
+                    821.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": "☐ Native small-molecule-binding proteins ☐ DL-optimized scaffolds\n☐ Native NTF2-like proteins ☐ Energy-optimized scaffolds",
+            "block_bbox": [
+                380,
+                824,
+                754,
+                871
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "global_block_id": 22,
+            "global_group_id": 22,
+            "block_polygon_points": [
+                [
+                    380.0,
+                    824.0
+                ],
+                [
+                    754.0,
+                    824.0
+                ],
+                [
+                    754.0,
+                    871.0
+                ],
+                [
+                    380.0,
+                    871.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Fig. 1 | Generation of idealized scaffolds and computational design of de novo luciferases. a, Family-wide hallucination. Sequences encoding proteins with the desired topology are optimized by Markov chain Monte Carlo (MCMC) sampling with a multicomponent loss function. Structurally conserved regions (peach) are evaluated on the basis of consistency with input residue–residue distance and orientation distributions obtained from 85 experimental structures of NTF2-like proteins, whereas variable non-ideal regions (teal) are evaluated on the basis of the confidence of predicted inter-residue geometries calculated as the KL divergence between network predictions and the background distribution. The sequence-space MCMC sampling incorporates both sequence changes and insertions and deletions (see Supplementary Methods) to guide the hallucinated sequence towards encoding structures with the desired folds. Hydrogen-bonding networks are incorporated into the designed structures to increase structural specificity. b–d, The design of luciferase active sites. b, Generation of luciferase",
+            "block_bbox": [
+                73,
+                882,
+                586,
+                1183
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "global_block_id": 23,
+            "global_group_id": 23,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    882.0
+                ],
+                [
+                    586.0,
+                    882.0
+                ],
+                [
+                    586.0,
+                    1183.0
+                ],
+                [
+                    73.0,
+                    1183.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "substrate (DTZ) conformers. c, Generation of a Rotamer Interaction Field (RIF) to stabilize anionic DTZ and form hydrophobic packing interactions. d, Docking of the RIF into the hallucinated scaffolds, and optimization of substrate–scaffold interactions using position-specific score matrices (PSSM)-biased sequence design. e, Selection of the NTF2 topology. The RIF was docked into 4,000 native small-molecule-binding proteins, excluding proteins that bind the luciferin substrate using more than five loop residues. Most of the top hits were from the NTF2-like protein superfamily (pink dashes). Using the family-wide hallucination scaffold generation protocol, we generated 1,615 scaffolds and found that these yielded better predicted RIF binding energies than the native proteins. f,g, Our DL-optimized scaffolds sample more within the space of the native structures (f) and have stronger sequence-to-structure relationships (more confident AlphaFold2 structure predictions) (g) than native or previous non-deep-learning energy-optimized scaffolds.",
+            "block_bbox": [
+                606,
+                881,
+                1124,
+                1164
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "global_block_id": 24,
+            "global_group_id": 24,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    881.0
+                ],
+                [
+                    1124.0,
+                    881.0
+                ],
+                [
+                    1124.0,
+                    1164.0
+                ],
+                [
+                    606.0,
+                    1164.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Family-wide hallucination",
+            "block_bbox": [
+                75,
+                1250,
+                327,
+                1272
+            ],
+            "block_id": 9,
+            "block_order": 1,
+            "group_id": 9,
+            "global_block_id": 25,
+            "global_group_id": 25,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    1250.0
+                ],
+                [
+                    327.0,
+                    1250.0
+                ],
+                [
+                    327.0,
+                    1272.0
+                ],
+                [
+                    75.0,
+                    1272.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Native NTF2 structures have a range of pocket sizes and shapes but also contain features that are not ideal, such as long loops that compromise stability. To create large numbers of ideal NTF2-like structures, we developed a deep-learning-based 'family-wide hallucination' approach that integrates unconstrained de novo design $ ^{17,18} $ and Rosetta sequence-design approaches $ ^{19} $ to enable the generation of an essentially unlimited number of proteins that have a desired fold (Fig. 1a). The family-wide hallucination approach used the de novo sequence and structure discovery capability of unconstrained protein hallucination $ ^{17,18} $ for loop and variable regions, and structure-guided sequence optimization for core regions. We used the trRosetta structure prediction neural network $ ^{20} $, which is effective in identifying experimentally successful de-novo-designed proteins and hallucinating new globular proteins of diverse topologies. Starting from the sequences of 2,000 naturally occurring NTF2s, we carried out Monte Carlo searches in sequence space, at each step making a sequence change and predicting the structure using trRosetta. As the loss function guiding search, we used the confidence of the neural network in the predicted structure (as in our previous free hallucination study) supplemented with a topology-specific loss function over core residue pair geometries (see Supplementary Methods); in the loop regions, we also allowed the number of residues to vary.",
+            "block_bbox": [
+                72,
+                1277,
+                594,
+                1495
+            ],
+            "block_id": 10,
+            "block_order": 2,
+            "group_id": 10,
+            "global_block_id": 26,
+            "global_group_id": 26,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    1277.0
+                ],
+                [
+                    594.0,
+                    1277.0
+                ],
+                [
+                    594.0,
+                    1495.0
+                ],
+                [
+                    72.0,
+                    1495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "",
+            "block_bbox": [
+                605,
+                1235,
+                1128,
+                1495
+            ],
+            "block_id": 11,
+            "block_order": 3,
+            "group_id": 10,
+            "global_block_id": 27,
+            "global_group_id": 27,
+            "block_polygon_points": [
+                [
+                    605.0,
+                    1235.0
+                ],
+                [
+                    1128.0,
+                    1235.0
+                ],
+                [
+                    1128.0,
+                    1495.0
+                ],
+                [
+                    605.0,
+                    1495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Nature | Vol 614 | 23 February 2023",
+            "block_bbox": [
+                807,
+                1523,
+                1078,
+                1544
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "global_block_id": 28,
+            "global_group_id": 28,
+            "block_polygon_points": [
+                [
+                    807.0,
+                    1523.0
+                ],
+                [
+                    1077.0,
+                    1523.0
+                ],
+                [
+                    1077.0,
+                    1543.0
+                ],
+                [
+                    807.0,
+                    1543.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "775",
+            "block_bbox": [
+                1093,
+                1525,
+                1125,
+                1543
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "global_block_id": 29,
+            "global_group_id": 29,
+            "block_polygon_points": [
+                [
+                    1093.0,
+                    1525.0
+                ],
+                [
+                    1124.0,
+                    1525.0
+                ],
+                [
+                    1124.0,
+                    1542.0
+                ],
+                [
+                    1093.0,
+                    1542.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.35263991355895996,
+                "coordinate": [
+                    231,
+                    99,
+                    246,
+                    115
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        231.0,
+                        99.0
+                    ],
+                    [
+                        245.0,
+                        99.0
+                    ],
+                    [
+                        245.0,
+                        114.0
+                    ],
+                    [
+                        231.0,
+                        114.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.6157916188240051,
+                "coordinate": [
+                    250,
+                    111,
+                    880,
+                    341
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        250.0,
+                        111.0
+                    ],
+                    [
+                        880.0,
+                        111.0
+                    ],
+                    [
+                        880.0,
+                        341.0
+                    ],
+                    [
+                        250.0,
+                        341.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.4168573021888733,
+                "coordinate": [
+                    224,
+                    98,
+                    889,
+                    623
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        230,
+                        98
+                    ],
+                    [
+                        224,
+                        114
+                    ],
+                    [
+                        230,
+                        607
+                    ],
+                    [
+                        332,
+                        622
+                    ],
+                    [
+                        883,
+                        622
+                    ],
+                    [
+                        877,
+                        114
+                    ],
+                    [
+                        416,
+                        114
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.32185378670692444,
+                "coordinate": [
+                    230,
+                    354,
+                    246,
+                    371
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        230,
+                        354
+                    ],
+                    [
+                        230,
+                        370
+                    ],
+                    [
+                        245,
+                        370
+                    ],
+                    [
+                        245,
+                        354
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.5764602422714233,
+                "coordinate": [
+                    232,
+                    348,
+                    888,
+                    624
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        232,
+                        364
+                    ],
+                    [
+                        232,
+                        608
+                    ],
+                    [
+                        358,
+                        623
+                    ],
+                    [
+                        887,
+                        616
+                    ],
+                    [
+                        887,
+                        348
+                    ],
+                    [
+                        465,
+                        348
+                    ],
+                    [
+                        458,
+                        348
+                    ],
+                    [
+                        286,
+                        348
+                    ],
+                    [
+                        256,
+                        356
+                    ],
+                    [
+                        249,
+                        356
+                    ]
+                ]
+            },
+            {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.6043957471847534,
+                "coordinate": [
+                    230,
+                    635,
+                    445,
+                    821
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        230.0,
+                        635.0
+                    ],
+                    [
+                        445.0,
+                        635.0
+                    ],
+                    [
+                        445.0,
+                        821.0
+                    ],
+                    [
+                        230.0,
+                        821.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.5530923008918762,
+                "coordinate": [
+                    443,
+                    638,
+                    629,
+                    810
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        449,
+                        638
+                    ],
+                    [
+                        443,
+                        688
+                    ],
+                    [
+                        443,
+                        711
+                    ],
+                    [
+                        449,
+                        769
+                    ],
+                    [
+                        455,
+                        785
+                    ],
+                    [
+                        461,
+                        801
+                    ],
+                    [
+                        467,
+                        809
+                    ],
+                    [
+                        628,
+                        809
+                    ],
+                    [
+                        628,
+                        778
+                    ],
+                    [
+                        623,
+                        655
+                    ],
+                    [
+                        617,
+                        638
+                    ],
+                    [
+                        473,
+                        638
+                    ],
+                    [
+                        460,
+                        638
+                    ]
+                ]
+            },
+            {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.6582600474357605,
+                "coordinate": [
+                    653,
+                    655,
+                    910,
+                    821
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        653.0,
+                        655.0
+                    ],
+                    [
+                        910.0,
+                        655.0
+                    ],
+                    [
+                        910.0,
+                        821.0
+                    ],
+                    [
+                        653.0,
+                        821.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.4069417119026184,
+                "coordinate": [
+                    380,
+                    824,
+                    754,
+                    871
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        380.0,
+                        824.0
+                    ],
+                    [
+                        754.0,
+                        824.0
+                    ],
+                    [
+                        754.0,
+                        871.0
+                    ],
+                    [
+                        380.0,
+                        871.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8483734130859375,
+                "coordinate": [
+                    73,
+                    882,
+                    586,
+                    1183
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        73.0,
+                        882.0
+                    ],
+                    [
+                        586.0,
+                        882.0
+                    ],
+                    [
+                        586.0,
+                        1183.0
+                    ],
+                    [
+                        73.0,
+                        1183.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7488452792167664,
+                "coordinate": [
+                    606,
+                    881,
+                    1124,
+                    1164
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        606.0,
+                        881.0
+                    ],
+                    [
+                        1124.0,
+                        881.0
+                    ],
+                    [
+                        1124.0,
+                        1164.0
+                    ],
+                    [
+                        606.0,
+                        1164.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8356941938400269,
+                "coordinate": [
+                    75,
+                    1250,
+                    327,
+                    1272
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        75.0,
+                        1250.0
+                    ],
+                    [
+                        327.0,
+                        1250.0
+                    ],
+                    [
+                        327.0,
+                        1272.0
+                    ],
+                    [
+                        75.0,
+                        1272.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9603891968727112,
+                "coordinate": [
+                    72,
+                    1277,
+                    594,
+                    1495
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        72.0,
+                        1277.0
+                    ],
+                    [
+                        594.0,
+                        1277.0
+                    ],
+                    [
+                        594.0,
+                        1495.0
+                    ],
+                    [
+                        72.0,
+                        1495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9641813039779663,
+                "coordinate": [
+                    605,
+                    1235,
+                    1128,
+                    1495
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        605.0,
+                        1235.0
+                    ],
+                    [
+                        1128.0,
+                        1235.0
+                    ],
+                    [
+                        1128.0,
+                        1495.0
+                    ],
+                    [
+                        605.0,
+                        1495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8181402683258057,
+                "coordinate": [
+                    807,
+                    1523,
+                    1078,
+                    1544
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        807.0,
+                        1523.0
+                    ],
+                    [
+                        1077.0,
+                        1523.0
+                    ],
+                    [
+                        1077.0,
+                        1543.0
+                    ],
+                    [
+                        807.0,
+                        1543.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6899713277816772,
+                "coordinate": [
+                    1093,
+                    1525,
+                    1125,
+                    1543
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        1093.0,
+                        1525.0
+                    ],
+                    [
+                        1124.0,
+                        1525.0
+                    ],
+                    [
+                        1124.0,
+                        1542.0
+                    ],
+                    [
+                        1093.0,
+                        1542.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

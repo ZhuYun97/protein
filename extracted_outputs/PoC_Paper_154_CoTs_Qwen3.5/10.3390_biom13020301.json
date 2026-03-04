@@ -1,0 +1,399 @@
+{
+  "01_initial_request": {
+    "target_name": "Amino acid antiporters (including ASCT1, ASCT2, LAT1, LAT2, y+LAT1, y+LAT2, asc-1, xCT)",
+    "input_data": "Xenopus laevis oocytes expressing amino acid antiporters and 12C/13C-labelled amino acid mixtures",
+    "user_intent": "To systematically investigate whether substrate specificity of amino acid antiporters differs between inward and outward facing conformations (asymmetric antiport)",
+    "quantifiable_goal": "Quantification of bidirectional amino acid transport fluxes to determine substrate specificity symmetry"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] mRNA for various transporters needs to be isolated from specific cell lines or tissues. [Gap] Pure mRNA is required for cDNA synthesis. [Decision] To achieve mRNA isolation, chose to use RNeasy Mini kit to perform RNA extraction on human brain, 143B, and A549 cells, expecting to obtain total RNA.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "RNeasy Mini kit",
+        "version": "Qiagen 74104"
+      },
+      "parameters": {
+        "input_material": "human brain tissue, 143B cells, A549 lung adenocarcinoma cells",
+        "yield_determination": "SpectraMax QuickDrop (Molecular Devices)"
+      },
+      "observation": "Total RNA yield determined.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Total RNA has been extracted. [Gap] cDNA is needed for PCR amplification. [Decision] To achieve cDNA synthesis, chose to use SuperScript II reverse transcriptase to perform reverse transcription on 2 micrograms of total RNA, expecting to obtain single stranded DNA.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "SuperScript II reverse transcriptase",
+        "version": "Invitrogen; 18064014"
+      },
+      "parameters": {
+        "input_RNA": "2 micrograms",
+        "duration": "two hours"
+      },
+      "observation": "Single stranded DNA produced.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] cDNA is available. [Gap] Coding DNA needs to be amplified with overlapping regions for cloning. [Decision] To achieve DNA amplification, chose to use Pfu or Taq DNA polymerases to perform PCR with primers designed for Gibson cloning, expecting to obtain PCR products.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Pfu or Taq DNA polymerases",
+        "version": "Promega; M7741 or Qiagen; 201203"
+      },
+      "parameters": {
+        "primer_design": "overlapping regions homologous to pGHJ cut at EcoRI site",
+        "separation": "gel electrophoresis",
+        "extraction_kit": "Monarch DNA gel extraction kit (New England BioLabs; T1020S)"
+      },
+      "observation": "PCR products separated and extracted.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Broer, S. et al., 1997 [27]",
+          "relevance": "Describes the pGHJ oocyte vector used for cloning."
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] PCR inserts and linearized vector are prepared. [Gap] Inserts need to be ligated into the vector. [Decision] To achieve cloning, chose to use Gibson assembly cloning kit to perform ligation of insert into pGHJ vector, expecting to obtain plasmids.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Gibson assembly cloning kit",
+        "version": "New England BioLabs"
+      },
+      "parameters": {
+        "vector_amount": "70 ng linearised pGHJ",
+        "insert_ratio": "two-fold molar excess",
+        "restriction_enzyme": "EcoRI-HF (New England BioLabs; R3101S)"
+      },
+      "observation": "Clones with plasmids of expected size propagated.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Bacterial clones are grown. [Gap] Plasmid DNA needs to be purified for transcription. [Decision] To achieve plasmid purification, chose to use Wizard Plus SV Miniprep DNA purification system to isolate plasmids, expecting to obtain pure plasmid DNA.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Wizard Plus SV Miniprep DNA purification system",
+        "version": "Promega; A1223"
+      },
+      "parameters": {
+        "verification": "Sanger sequencing at Biomolecular Resource Facility (ANU)"
+      },
+      "observation": "Plasmids isolated and verified.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Verified plasmids are available. [Gap] cRNA is needed for oocyte injection. [Decision] To achieve cRNA synthesis, chose to use mMessage mMachine T7 transcription kit to perform in vitro transcription on linearized plasmids, expecting to obtain capped RNA.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "mMessage mMachine T7 transcription kit",
+        "version": "Invitrogen"
+      },
+      "parameters": {
+        "linearization_enzyme": "SalI-HF (New England BioLabs; R3138T)",
+        "temperature": "37°C",
+        "duration": "two hours",
+        "purification": "phenol chloroform method and ethanol precipitation"
+      },
+      "observation": "Capped RNA (cRNA) containing coding sequence of human amino acid exchanger produced.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Broer, A. et al., 2001 [25]; Broer, A. et al., 2000 [26]",
+          "relevance": "Previous cloning descriptions for LAT1, LAT2, y+LAT2."
+        }
+      ]
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] cRNA is ready. [Gap] Oocytes need to be prepared for injection. [Decision] To achieve oocyte defolliculation, chose to use Collagenase B to treat ovaries, expecting to obtain Stage V oocytes.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Collagenase B",
+        "version": "Roche"
+      },
+      "parameters": {
+        "concentration": "0.6 mg/mL",
+        "duration": "approximately 12 h",
+        "temperature": "16-19 °C",
+        "buffer": "OR2- (82.3 mM NaCl, 2.5 mM KCl, 1 mM MgCl2, 1 mM NaHPO4, 5 mM HEPES; pH 7.8)"
+      },
+      "observation": "Stage V oocytes selected.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "ANU Animal Experimentation Ethics Committee (A2020/28)",
+          "relevance": "Ethical approval for frog surgery and oocyte preparation."
+        }
+      ]
+    },
+    {
+      "step_index": 8,
+      "thought": "[Background] Stage V oocytes are selected. [Gap] Transporter mRNA needs to be introduced into oocytes. [Decision] To achieve expression, chose to use Microinjector to perform microinjection of cRNA into oocytes, expecting to obtain cRNA-expressing oocytes.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Microinjector",
+        "version": ""
+      },
+      "parameters": {
+        "injection_volume": "40 nL",
+        "cRNA_amount": "5-15 ng depending on transporter (e.g., 10 ng hASCT2, 5 ng hLAT1)",
+        "recovery_buffer": "OR2+ with gentamycin (50 µg/mL)"
+      },
+      "observation": "Oocytes microinjected with cRNA.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 9,
+      "thought": "[Background] Oocytes are injected. [Gap] Transporters need time to express on the membrane. [Decision] To achieve protein expression, chose to use Oocyte Incubation to maintain oocytes in buffer, expecting to obtain functional transporters on the membrane.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Oocyte Incubation",
+        "version": ""
+      },
+      "parameters": {
+        "duration": "five days (three days for LAT1 and LAT2)",
+        "buffer": "OR2+ with gentamycin"
+      },
+      "observation": "Expression proceeded before flux experiments.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 10,
+      "thought": "[Background] Oocytes express transporters. [Gap] Intracellular amino acid pool needs to be elevated for exchange experiments. [Decision] To achieve preloading, chose to use Amino Acid Preloading Incubation to incubate oocytes in 12C amino acid mix, expecting to obtain elevated intracellular neutral and cationic amino acids.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Amino Acid Preloading Incubation",
+        "version": ""
+      },
+      "parameters": {
+        "concentration": "1 mM 12C amino acids (except glutamate and aspartate)",
+        "duration": "2 hours",
+        "buffer": "ND96-based solution"
+      },
+      "observation": "Elevated intracellular pool of neutral and cationic amino acids generated.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Taylor, M.A. & Smith, L.D., 1987 [31]; Meier, C. et al., 2002 [16]",
+          "relevance": "Reports on oocyte amino acid pools."
+        }
+      ]
+    },
+    {
+      "step_index": 11,
+      "thought": "[Background] Oocytes are preloaded with 12C amino acids. [Gap] Bidirectional flux needs to be measured using labelled substrates. [Decision] To achieve flux measurement, chose to use Stable Isotope Flux Incubation to incubate oocytes in 13C amino acid mix, expecting to obtain trans-stimulation of transport activity.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Stable Isotope Flux Incubation",
+        "version": ""
+      },
+      "parameters": {
+        "concentration": "0.1 mM 13C/15N amino acids",
+        "duration": "30 min",
+        "buffer": "ND96",
+        "label_source": "Cambridge Isotope Laboratories; MSK-CAA-1"
+      },
+      "observation": "Trans-stimulation of transport activity allowed to proceed.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 12,
+      "thought": "[Background] Flux incubation is complete. [Gap] Metabolites need to be extracted from oocytes and supernatant. [Decision] To achieve metabolite isolation, chose to use Methanol/Chloroform Extraction to homogenize oocytes, expecting to obtain aqueous fraction containing amino acids.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Methanol/Chloroform Extraction",
+        "version": ""
+      },
+      "parameters": {
+        "methanol_concentration": "60% (v/v)",
+        "volume": "600 µL methanol, 200 µL chloroform",
+        "vortex_speed": "3200 rpm",
+        "duration": "five minutes"
+      },
+      "observation": "Aqueous fraction transferred for drying.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 13,
+      "thought": "[Background] Aqueous extracts are dried. [Gap] Amino acids need derivatization for LC-MS detection (except cysteine). [Decision] To achieve derivatization, chose to use Butylation Reagents to react with amino acids, expecting to obtain butylated amino acids.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Butylation Reagents",
+        "version": ""
+      },
+      "parameters": {
+        "reagent": "n-butanol:acetyl chloride (4:1)",
+        "temperature": "65°C",
+        "duration": "25 min",
+        "internal_standards": "[13C-U] [15N-U] amino acids"
+      },
+      "observation": "Samples derivatized for LC-MS.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Das, A. et al., 2022 [28]",
+          "relevance": "Previously described method with modifications."
+        }
+      ]
+    },
+    {
+      "step_index": 14,
+      "thought": "[Background] Samples are derivatized. [Gap] Amino acids need quantification. [Decision] To achieve quantification, chose to use UltiMate 3000 UHPLC + Q-Exactive Plus to perform LC-MS analysis on C18 column, expecting to obtain amino acid concentrations.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "UltiMate 3000 UHPLC + Q-Exactive Plus",
+        "version": "Thermo Fisher"
+      },
+      "parameters": {
+        "column": "Kinetex 1.7 µm C18 100 Å 100 x 2.1 mm",
+        "temperature": "35°C",
+        "runtime": "21.5 min",
+        "ionization": "positive",
+        "resolution": "70,000 at 200 m/z"
+      },
+      "observation": "Quantification of cystine and all proteinogenic amino acids except cysteine.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 15,
+      "thought": "[Background] Cysteine was not detected well with butylation. [Gap] Cysteine needs specific derivatization. [Decision] To achieve cysteine detection, chose to use N-ethylmaleimide (NEM) to react with sulfhydryl group, expecting to obtain derivatized cysteine.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "N-ethylmaleimide (NEM)",
+        "version": ""
+      },
+      "parameters": {
+        "concentration": "10 mM NEM",
+        "duration": "ten minutes",
+        "internal_standard": "N-ethyl-d5-maleimide"
+      },
+      "observation": "Cysteine derivatized.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Sutton, T.R. et al., 2018 [29]",
+          "relevance": "Adapted method for thiol redox metabolome."
+        }
+      ]
+    },
+    {
+      "step_index": 16,
+      "thought": "[Background] Cysteine is derivatized. [Gap] Cysteine needs quantification. [Decision] To achieve quantification, chose to use UltiMate 3000 UHPLC + Q-Exactive Plus to perform LC-MS analysis on HILIC column, expecting to obtain cysteine concentrations.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "UltiMate 3000 UHPLC + Q-Exactive Plus",
+        "version": "Thermo Fisher"
+      },
+      "parameters": {
+        "column": "SeQuant ZIC cHILIC 3 µm 100 Å 150 x 2.1 mm",
+        "runtime": "15 min",
+        "flow_rate": "0.4 mL/min",
+        "resolution": "70,000 at 200 m/z"
+      },
+      "observation": "Cysteine separation and detection.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Guan, X. et al., 2003 [46]",
+          "relevance": "Method for cysteine detection after blocking sulfhydryl group."
+        }
+      ]
+    },
+    {
+      "step_index": 17,
+      "thought": "[Background] LC-MS data suggests asymmetric flux for some substrates. [Gap] Specific asymmetric fluxes need validation with radiolabels. [Decision] To achieve validation, chose to use Scintillation Counter to perform radiolabelled flux experiments with 14C-substrates, expecting to obtain transport rates.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Scintillation Counter",
+        "version": "PerkinElmer TriCarb 4910 TR or Hidex 300 SL"
+      },
+      "parameters": {
+        "substrates": "14C-glutamine, 14C-proline, 14C-aspartate",
+        "concentration": "0.025-0.1 mM",
+        "fluid": "Ultima Gold scintillation fluid",
+        "lysis": "10% SDS"
+      },
+      "observation": "Confirmed asymmetric flux for Gln (LAT2), Pro/Gly/Asp (ASCT1).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Pingitore, P. et al., 2013 [19]",
+          "relevance": "Previous report of asymmetric antiport for ASCT2."
+        },
+        {
+          "citation": "Scalise, M. et al., 2015 [15]",
+          "relevance": "Cysteine as modulator of ASCT2."
+        }
+      ]
+    },
+    {
+      "step_index": 18,
+      "thought": "[Background] LC-MS raw data is acquired. [Gap] Data needs processing for quantification. [Decision] To achieve data processing, chose to use Xcalibur software suite to integrate area under the curve, expecting to obtain analyte ratios.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Xcalibur software suite",
+        "version": "Thermo Fisher"
+      },
+      "parameters": {
+        "method": "integrating the area under the curve (AUC)"
+      },
+      "observation": "AUC ratios calculated.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 19,
+      "thought": "[Background] AUC ratios are available. [Gap] Concentrations need to be calculated using standards. [Decision] To achieve quantification, chose to use Skyline to process data against calibration curves, expecting to obtain transport rates.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Skyline",
+        "version": "MacCoss Lab Software 22.2"
+      },
+      "parameters": {
+        "reference": "[30]",
+        "formula": "Rates calculated using oocyte number and volumes"
+      },
+      "observation": "Quantities expressed as rates.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Pino, L.K. et al., 2020 [30]",
+          "relevance": "Skyline ecosystem for quantitative mass spectrometry."
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "LC-MS stable isotope tracing and Radiolabelled flux assays",
+    "metrics": {
+      "net_import_export_rates": {
+        "value": "pmol/oocyte/30 min",
+        "unit": "pmol/oocyte/30 min",
+        "interpretation": "Quantified bidirectional fluxes for 20 amino acids across 8 antiporters"
+      },
+      "symmetry_assessment": {
+        "value": "Largely symmetric",
+        "unit": "qualitative",
+        "interpretation": "Most antiporters equalize substrate pools; exceptions found for y+LAT1/2 (Na+ coupled) and ASCT1/2 (Gly/Pro/Asp)"
+      }
+    },
+    "final_verdict": "The initial objective was achieved. Antiporters were found to be largely symmetric in substrate specificity, with specific exceptions (y+LAT1, y+LAT2, ASCT1, ASCT2) displaying asymmetric transport modes often linked to ion coupling or allosteric effects."
+  }
+}

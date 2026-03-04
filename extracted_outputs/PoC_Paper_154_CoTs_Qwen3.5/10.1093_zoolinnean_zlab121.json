@@ -1,0 +1,501 @@
+{
+  "01_initial_request": {
+    "target_name": "Radomaniola gastropod genus",
+    "input_data": "Multilocus genetic sequences and morphological data (shell and anatomical traits) from various populations",
+    "user_intent": "To investigate the mode of morphological evolution (morphostatic radiation) and resolve taxonomic uncertainties within Radomaniola",
+    "quantifiable_goal": "Brownian motion rate of morphological evolution and a time-calibrated species tree"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Radomaniola taxonomy is uncertain with 19 recognized species based mostly on shell morphology. [Gap] Specimens from across the distributional range are needed to assess diversity. [Decision] To achieve comprehensive sampling, chose to use Field collection to perform specimen gathering on 53 sites across the Balkan and Apennine Peninsulas, expecting to obtain preserved snail samples.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Field collection",
+        "version": ""
+      },
+      "parameters": {
+        "sites": "53 sites",
+        "preservation": "80 and 96% ethanol",
+        "permits": "URN. 517-07-1-1-1-16-3, R. 07/1.30/625-282/16"
+      },
+      "observation": "Specimens obtained from 53 sites, spanning the entire distributional range of Radomaniola except Turkey.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Boeters et al., 2017",
+          "relevance": "Provides distributional range information for sampling strategy."
+        }
+      ]
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Specimens collected and preserved in ethanol. [Gap] Genomic DNA is required for phylogenetic analysis. [Decision] To achieve DNA extraction, chose to use DNeasy Blood & Tissue kit / CTAB protocol to perform total genomic DNA extraction on 92 whole snails, expecting to obtain purified DNA.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "DNeasy Blood & Tissue kit",
+        "version": ""
+      },
+      "parameters": {
+        "protocol": "hexadecyltrimethylammonium bromide (CTAB) protocol",
+        "sample_count": "92 whole snails"
+      },
+      "observation": "Total genomic DNA extracted from 92 individuals.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Wilke et al., 2006",
+          "relevance": "Describes the CTAB protocol used for DNA extraction."
+        }
+      ]
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Genomic DNA extracted. [Gap] Specific gene fragments need amplification for sequencing. [Decision] To achieve gene amplification, chose to use PCR to perform amplification of COI, 16S, and 28S gene fragments using specific primer pairs, expecting to obtain amplified DNA products.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "PCR",
+        "version": ""
+      },
+      "parameters": {
+        "primers_COI": "COIF14 and COR722b",
+        "primers_16S": "16Sar-L and 16Sbr-H",
+        "primers_28S": "F63.2 and LSU3",
+        "annealing_temperature": "50 °C for COI and 16S"
+      },
+      "observation": "Gene fragments amplified for COI (658 bp), 16S (510 bp), and 28S (1052 bp).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Folmer et al., 1994",
+          "relevance": "Source for COIF14 primer."
+        },
+        {
+          "citation": "Wilke & Davis, 2000",
+          "relevance": "Source for COR722b primer."
+        },
+        {
+          "citation": "Palumbi et al., 1991",
+          "relevance": "Source for 16S primers."
+        },
+        {
+          "citation": "Park & Foighil, 2000",
+          "relevance": "Source for 28S primers."
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] PCR products obtained. [Gap] Nucleotide sequences need to be determined. [Decision] To achieve sequencing, chose to use ABI 3730 XL sequencer to perform sequencing using Big Dye Terminator kit v.3.1, expecting to obtain raw sequence data.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "ABI 3730 XL sequencer",
+        "version": ""
+      },
+      "parameters": {
+        "kit": "Big Dye Terminator kit v.3.1",
+        "manufacturer": "Life Technologies"
+      },
+      "observation": "Forward and reverse sequences generated for all gene fragments.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Raw sequences generated. [Gap] Sequences need assembly and editing to remove ambiguous ends. [Decision] To achieve sequence assembly, chose to use SEQUENCHER v.4.1.4 to perform assembly and editing of forward and reverse strands, expecting to obtain contiguous consensus sequences.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "SEQUENCHER",
+        "version": "v.4.1.4"
+      },
+      "parameters": {
+        "operation": "assemble and edit",
+        "trimming": "ambiguous ends were trimmed"
+      },
+      "observation": "Resulting strands assembled and deposited in GenBank.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Consensus sequences obtained. [Gap] COI gene fragments need alignment for phylogenetic analysis. [Decision] To achieve alignment, chose to use MEGA v.7.0.14 to perform manual alignment of COI gene fragments, expecting to obtain aligned COI dataset.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MEGA",
+        "version": "v.7.0.14"
+      },
+      "parameters": {
+        "method": "manual alignment",
+        "gene": "COI"
+      },
+      "observation": "COI gene fragments aligned manually.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Kumar et al., 2016",
+          "relevance": "Describes MEGA v.7 software."
+        }
+      ]
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] COI aligned. [Gap] Ribosomal DNA fragments (16S and 28S) need alignment. [Decision] To achieve alignment, chose to use MAFFT v.7.402 to perform alignment with default settings for gap penalties, expecting to obtain aligned rDNA datasets.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MAFFT",
+        "version": "v.7.402"
+      },
+      "parameters": {
+        "gap_opening_penalty": "1.53",
+        "genes": "16S and 28S",
+        "settings": "default settings for gap penalties"
+      },
+      "observation": "Ribosomal DNA fragments aligned.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Katoh & Standley, 2013",
+          "relevance": "Describes MAFFT software."
+        }
+      ]
+    },
+    {
+      "step_index": 8,
+      "thought": "[Background] Alignments complete. [Gap] Best-fitting models of nucleotide substitution need identification. [Decision] To achieve model selection, chose to use jModelTest v.2.1.7 to perform model testing using corrected Akaike information criterion (AICc), expecting to obtain preferred substitution models.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "jModelTest",
+        "version": "v.2.1.7"
+      },
+      "parameters": {
+        "criterion": "corrected Akaike information criterion (AICc)",
+        "models_selected": "HKY+I+G, GTR+I+G, TPM2uf+I+G, TIM2+I+G"
+      },
+      "observation": "Preferred substitution models identified for each gene partition.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Darriba et al., 2012",
+          "relevance": "Describes jModelTest 2."
+        },
+        {
+          "citation": "Akaike, 1974",
+          "relevance": "Source for AICc criterion."
+        }
+      ]
+    },
+    {
+      "step_index": 9,
+      "thought": "[Background] Substitution models selected. [Gap] Maximum likelihood phylogenetic trees need inference. [Decision] To achieve phylogeny inference, chose to use RAxML BlackBox webserver to perform ML analyses with ten random starting trees, expecting to obtain ML trees with branch supports.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "RAxML BlackBox",
+        "version": ""
+      },
+      "parameters": {
+        "starting_trees": "ten random starting trees",
+        "support": "rapid bootstrapping (BS) with an automatic cut-off"
+      },
+      "observation": "ML trees inferred with branch support values (BS).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Kozlov et al., 2019",
+          "relevance": "Describes RAxML-NG webserver."
+        },
+        {
+          "citation": "Stamatakis et al., 2008",
+          "relevance": "Describes rapid bootstrapping."
+        }
+      ]
+    },
+    {
+      "step_index": 10,
+      "thought": "[Background] ML trees inferred. [Gap] Bayesian inference trees needed for comparison and support. [Decision] To achieve phylogeny inference, chose to use MrBayes v.3.2.7a to perform Bayesian inference through two independent runs of four MCMCs, expecting to obtain Bayesian trees with posterior probabilities.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MrBayes",
+        "version": "v.3.2.7a"
+      },
+      "parameters": {
+        "runs": "two independent runs",
+        "chains": "four Metropolis-coupled Markov chains (MCMCs)",
+        "generations": "five million generations",
+        "sampling_frequency": "1000",
+        "burn-in": "10%"
+      },
+      "observation": "Bayesian trees inferred with branch support values (BPPs).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ronquist et al., 2012",
+          "relevance": "Describes MrBayes 3.2."
+        }
+      ]
+    },
+    {
+      "step_index": 11,
+      "thought": "[Background] Phylogenetic trees available. [Gap] Species diversity needs assessment via distance-based method. [Decision] To achieve species delimitation, chose to use ABGD Web interface to perform automatic barcode gap discovery, expecting to obtain groups representing hypothetical species.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "ABGD",
+        "version": ""
+      },
+      "parameters": {
+        "Pmin": "0.001",
+        "Pmax": "0.01",
+        "steps": "10",
+        "relative_gap_width": "1.00",
+        "Nb_bins": "20",
+        "distance_matrix": "uncorrected p-distance"
+      },
+      "observation": "28 putative species identified with a barcode gap of 0.9%.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Puillandre et al., 2012",
+          "relevance": "Describes ABGD method."
+        }
+      ]
+    },
+    {
+      "step_index": 12,
+      "thought": "[Background] COI sequences available. [Gap] Ultrametric trees needed for bGMYC input. [Decision] To achieve tree inference for delimitation, chose to use BEAST v.1.8.4 to perform phylogeny inference calibrated in relative time, expecting to obtain 100 post-burn-in phylogenies.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "BEAST",
+        "version": "v.1.8.4"
+      },
+      "parameters": {
+        "generations": "75 million generations",
+        "sampling": "every 2000th tree",
+        "burn-in": "10%",
+        "calibration": "relative time (rate of one substitution per site per unit of time)"
+      },
+      "observation": "100 random post-burn-in phylogenies inferred.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Drummond et al., 2012",
+          "relevance": "Describes BEAST 1.7/1.8."
+        }
+      ]
+    },
+    {
+      "step_index": 13,
+      "thought": "[Background] Ultrametric trees obtained. [Gap] Species delimitation via GMYC model needed. [Decision] To achieve species delimitation, chose to use bGMYC (R v.4.1.0) to perform Bayesian GMYC analysis, expecting to obtain species groups based on time threshold.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "bGMYC",
+        "version": ""
+      },
+      "parameters": {
+        "environment": "R v.4.1.0",
+        "generations": "30,000 MCMC generations",
+        "sampling": "every 50th generation",
+        "burn-in": "10,000",
+        "input": "100 random post-burn-in phylogenies"
+      },
+      "observation": "30 groups retrieved as the most likely model.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reid & Carstens, 2012",
+          "relevance": "Describes Bayesian GMYC implementation."
+        }
+      ]
+    },
+    {
+      "step_index": 14,
+      "thought": "[Background] Phylogenies available. [Gap] Species delimitation via PTP model needed. [Decision] To achieve species delimitation, chose to use bPTP Webserver to perform Bayesian PTP analysis, expecting to obtain species groups based on substitutions.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "bPTP",
+        "version": ""
+      },
+      "parameters": {
+        "input": "RAxML tree pruned of identical haplotypes and outgroups",
+        "parameters": "default parameters"
+      },
+      "observation": "28 species suggested.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Zhang et al., 2013",
+          "relevance": "Describes PTP model."
+        }
+      ]
+    },
+    {
+      "step_index": 15,
+      "thought": "[Background] bPTP results available. [Gap] Multi-rate PTP delimitation needed for accuracy. [Decision] To achieve species delimitation, chose to use mPTP v.0.1.1 to perform multi-rate PTP analysis, expecting to obtain species groups accommodating multiple thresholds.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "mPTP",
+        "version": "v.0.1.1"
+      },
+      "parameters": {
+        "option": "-multi",
+        "min_branch_length": "0.0000001",
+        "generations": "one million generations",
+        "sampling": "every 10,000",
+        "burn-in": "100,000"
+      },
+      "observation": "11 species suggested.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Kapli et al., 2017",
+          "relevance": "Describes multi-rate PTP method."
+        }
+      ]
+    },
+    {
+      "step_index": 16,
+      "thought": "[Background] Taxonomic units identified by total evidence. [Gap] Time-calibrated species tree needed for trait evolution analysis. [Decision] To achieve species tree inference, chose to use *BEAST (BEAST v.1.8.4) to perform multispecies coalescent analysis with external substitution rate calibration, expecting to obtain a time-calibrated MCC tree.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "*BEAST",
+        "version": "BEAST v.1.8.4"
+      },
+      "parameters": {
+        "clock_model": "uncorrelated log-normal model (relaxed)",
+        "substitution_rate": "0.81±0.24% substitutions per lineage per million years",
+        "tree_prior": "birth–death model",
+        "generations": "100 million generations",
+        "sampling": "every 2000 steps",
+        "burn-in": "10%"
+      },
+      "observation": "Time-calibrated species tree generated showing divergence ~5.5 Mya for Radomaniola s.s.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Heled & Drummond, 2010",
+          "relevance": "Describes *BEAST method."
+        },
+        {
+          "citation": "Delicado et al., 2013",
+          "relevance": "Source for external substitution rate."
+        }
+      ]
+    },
+    {
+      "step_index": 17,
+      "thought": "[Background] Species tree available. [Gap] Morphological data needed for trait evolution analysis. [Decision] To achieve data collection, chose to use Keyence VHX2000E digital microscope to perform measurements of 40 continuous traits on shells and soft bodies, expecting to obtain morphometric dataset.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Keyence VHX2000E digital microscope",
+        "version": ""
+      },
+      "parameters": {
+        "software": "VHX-2000 Communication software v.2.3.5.0",
+        "traits": "40 continuous traits (11 shell, 29 anatomical)",
+        "samples": "445 shells, 197 soft bodies"
+      },
+      "observation": "Morphometric data collected for 40 traits across species.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Keyence Corporation, 2009–2012",
+          "relevance": "Software documentation."
+        }
+      ]
+    },
+    {
+      "step_index": 18,
+      "thought": "[Background] Morphometric data collected. [Gap] Brownian motion rate needs estimation. [Decision] To achieve rate estimation, chose to use mvMORPH v.1.1.4 to perform BM model fitting with ML, expecting to obtain starting values for Bayesian analysis.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "mvMORPH",
+        "version": "v.1.1.4"
+      },
+      "parameters": {
+        "model": "Brownian motion (BM)",
+        "method": "Maximum Likelihood (ML)",
+        "environment": "R"
+      },
+      "observation": "ML estimates obtained for BM model parameters.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Clavel et al., 2015",
+          "relevance": "Describes mvMORPH package."
+        }
+      ]
+    },
+    {
+      "step_index": 19,
+      "thought": "[Background] ML estimates available. [Gap] Bayesian inference of rates needed to incorporate uncertainty. [Decision] To achieve rate estimation, chose to use spBayes v.0.4.3 to perform MCMC sampling using ML estimates as starting values, expecting to obtain posterior distributions of rates.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "spBayes",
+        "version": "v.0.4.3"
+      },
+      "parameters": {
+        "generations": "12,500 generations",
+        "burn-in": "50%",
+        "priors": "normal priors with mean equal to ML estimates"
+      },
+      "observation": "Bayesian inference of rates and correlation completed.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Finley et al., 2015",
+          "relevance": "Describes spBayes package."
+        }
+      ]
+    },
+    {
+      "step_index": 20,
+      "thought": "[Background] BM rates estimated. [Gap] Mode of morphological evolution needs comparison across models. [Decision] To achieve mode comparison, chose to use mvMORPH v.1.1.4 to perform fitting of ten evolutionary models (BM, OU, EB, etc.) and compare via AICc, expecting to identify best-supported mode.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "mvMORPH",
+        "version": "v.1.1.4"
+      },
+      "parameters": {
+        "models": "ten models (BM, OU, OUshift, EB, BMshift, Pkappa, WN, etc.)",
+        "comparison": "AICc",
+        "trees": "MCC tree and 100 post-burn-in posterior trees"
+      },
+      "observation": "Shell and radula found to evolve toward a single optimum (OU); genitalia evolved rapidly (WN).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Clavel et al., 2015",
+          "relevance": "Describes mvMORPH package."
+        },
+        {
+          "citation": "Thomas & Freckleton, 2012",
+          "relevance": "Source for AICc threshold simulations."
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Phylogenetic comparative methods and molecular species delimitation congruence",
+    "metrics": {
+      "brownian_motion_rate": {
+        "value": "Variable across traits",
+        "unit": "sigma^2",
+        "interpretation": "Female genitalia evolved 18 times faster than nervous system; shell evolution constrained."
+      },
+      "divergence_time": {
+        "value": "~5.5",
+        "unit": "Mya",
+        "interpretation": "Radomaniola s.s. clade started to diverge ~5.5 Mya (HPD 8.5-3.0 Mya)."
+      },
+      "species_count": {
+        "value": "21",
+        "unit": "species groups",
+        "interpretation": "21 species groups recognized through total evidence approach."
+      },
+      "model_fit": {
+        "value": "OU",
+        "unit": "AICc weight",
+        "interpretation": "Shell and radula evolution best fit by Ornstein-Uhlenbeck model (single optimum)."
+      }
+    },
+    "final_verdict": "The initial objective was achieved. A time-calibrated species tree was inferred, and the mode of morphological evolution was resolved, revealing morphostatic radiation for shell traits constrained by a single optimum, while anatomical traits diverged rapidly."
+  }
+}

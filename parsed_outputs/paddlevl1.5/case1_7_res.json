@@ -1,0 +1,979 @@
+{
+    "input_path": "/mnt/dhwfile/raise/user/zhuyun/protein_data_pipeline/input_pdfs/case_pdfs/case1.pdf",
+    "page_index": 7,
+    "page_count": 18,
+    "width": 1191,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Reporting summary",
+            "block_bbox": [
+                75,
+                114,
+                244,
+                136
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "global_block_id": 155,
+            "global_group_id": 155,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    114.0
+                ],
+                [
+                    243.0,
+                    114.0
+                ],
+                [
+                    243.0,
+                    135.0
+                ],
+                [
+                    75.0,
+                    135.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Further information on research design is available in the Nature Portfolio Reporting Summary linked to this article.",
+            "block_bbox": [
+                73,
+                137,
+                590,
+                184
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "global_block_id": 156,
+            "global_group_id": 156,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    137.0
+                ],
+                [
+                    590.0,
+                    137.0
+                ],
+                [
+                    590.0,
+                    184.0
+                ],
+                [
+                    73.0,
+                    184.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Data availability",
+            "block_bbox": [
+                75,
+                218,
+                238,
+                240
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "global_block_id": 157,
+            "global_group_id": 157,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    218.0
+                ],
+                [
+                    237.0,
+                    218.0
+                ],
+                [
+                    237.0,
+                    239.0
+                ],
+                [
+                    75.0,
+                    239.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Source data for Figs. 2–4 are available online. The gene sequence for LuxSit-i has been deposited to GenBank under the accession number OP820699. See Supplementary Data for design models of LuxSit and LuxSit-i. Codon-optimized plasmids encoding LuxSit-i for bacterial and mammalian expression are available through Addgene. Source data are provided with this paper.",
+            "block_bbox": [
+                73,
+                246,
+                594,
+                377
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "global_block_id": 158,
+            "global_group_id": 158,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    246.0
+                ],
+                [
+                    594.0,
+                    246.0
+                ],
+                [
+                    594.0,
+                    377.0
+                ],
+                [
+                    73.0,
+                    377.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Code availability",
+            "block_bbox": [
+                75,
+                412,
+                240,
+                434
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "global_block_id": 159,
+            "global_group_id": 159,
+            "block_polygon_points": [
+                [
+                    74.99998474121094,
+                    412.0
+                ],
+                [
+                    238.9999542236328,
+                    412.0
+                ],
+                [
+                    238.9999542236328,
+                    433.0
+                ],
+                [
+                    74.99998474121094,
+                    433.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Rosetta macromolecular modelling suite (https://www.rosettacommons.org) is freely available to academic and non-commercial users. Commercial licences for the suite are available through the University of Washington Technology Transfer Office. The source code for RIF docking implementation is freely available at https://github.com/rifdock/rifdock. All relevant scripts and an accompanying Jupiter notebook for family-wide hallucination scaffold generation are available here: https://files.ipd.uw.edu/pub/luxSit/scaffold_generation.tar.gz. All generated scaffolds are available here: https://files.ipd.uw.edu/pub/luxSit/scaffolds.tar.gz. Computational design scripts for the luciferase libraries are available here: https://files.ipd.uw.edu/pub/luxSit/luciferase_designs_methods.zip.",
+            "block_bbox": [
+                73,
+                438,
+                593,
+                700
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "global_block_id": 160,
+            "global_group_id": 160,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    438.0
+                ],
+                [
+                    593.0,
+                    438.0
+                ],
+                [
+                    593.0,
+                    700.0
+                ],
+                [
+                    73.0,
+                    700.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Acknowledgements We thank B. Wicky and R. Kibler for assistance on CD measurements; X. Li for help with mass spectrometry analysis of proteins; D. Feldman for the initial investigation of cell imaging; L. Milles for optimizing the golden gate assembly protocol; and the National Natural Science Foundation of China (22103060) for providing computational resources that were used in quantum mechanics and MD simulations. Some figure panels were partially created with BioRender.com (Fig. 4e and Extended Data Figs. 2 and 10c). Research reported in this publication was partially supported by the National Institute of Biomedical Imaging and Bioengineering of the National Institutes of Health under award number K99EB031913. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. We acknowledge funding from the Howard Hughes Medical Institute (Y.K., B.C. and D.B.); the Henrietta and Aubrey Davis Endowed Professorship in the University of Washington Department of Biochemistry (D.B.); the NIH Pathway to Independence Award (A.H.-W.Y., K99EB031913); the United World Antiviral Research Network (UWANR) (one of the Centers for Research in Emerging Infectious Diseases; CREIDs) NIAID 1101 AI151698-01 (D.B. and A.H.-W.Y.); the Audacious Project at the Institute for Protein Design (D.B. and A.H.-W.Y.); the Open Philanthropy Project Improving Protein Design Fund (D.B.); the Novo Nordisk Foundation (C.N., NNF18OC0030446), a Washington Research Foundation Fellowship (S.P.); E. and W. Schmidt, by recommendation of the Schmidt Futures program (D.T., G.R.L., J.Z.Z., L.C., S.H., M.D., L.C. and D.B.); and the National Science Foundation (K.N.H., D.E. and P.M., CHE-1764328, and OCI-1053575 to XSEDE).",
+            "block_bbox": [
+                73,
+                745,
+                588,
+                828
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "global_block_id": 161,
+            "global_group_id": 161,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    745.0
+                ],
+                [
+                    588.0,
+                    745.0
+                ],
+                [
+                    588.0,
+                    828.0
+                ],
+                [
+                    73.0,
+                    828.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "",
+            "block_bbox": [
+                607,
+                95,
+                1122,
+                338
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 6,
+            "global_block_id": 162,
+            "global_group_id": 162,
+            "block_polygon_points": [
+                [
+                    607.0,
+                    95.0
+                ],
+                [
+                    1122.0,
+                    95.0
+                ],
+                [
+                    1122.0,
+                    338.0
+                ],
+                [
+                    607.0,
+                    338.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Author contributions D.B. supervised this work. A.H.-W.Y. conceived the project and performed the experimental characterization. A.H.-W.Y. K. and C.N. conceptualized and investigated the initial design strategies and A.H.-W.Y. performed the computational design of luciferases. C.N. conceptualized and implemented the family-wide hallucination pipeline. C.N., D.T., S.J.P. and I.A. performed the scaffold design. S.J.P. performed the ProteinMPNN sequence design of NTF2 scaffolds. K.H.N. mentored D.E. and P.M. for MD and quantum mechanics calculations and contributed to the writing of the mechanistic parts of the manuscript. G.R.L. developed the computational SSM simulation. J.Z.Z. prepared mammalian cells and performed microscopy imaging. B.C. and L.C. integrated the tuning file function into RifDock. J.D. developed ProteinMPNN. S.H. helped assemble the designed library. M.D. and L.C. assisted with protein expression and purification. A.H.-W.Y. C.N. and D.B. wrote the initial manuscript. All authors discussed the results and contributed to the final manuscript.",
+            "block_bbox": [
+                607,
+                359,
+                1123,
+                569
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "global_block_id": 163,
+            "global_group_id": 163,
+            "block_polygon_points": [
+                [
+                    607.0,
+                    359.0
+                ],
+                [
+                    1123.0,
+                    359.0
+                ],
+                [
+                    1123.0,
+                    569.0
+                ],
+                [
+                    607.0,
+                    569.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Competing interests A.H.-W.Y., C.N., Y.K., D.T., S.J.P., I.A. and D.B. are co-inventors in several provisional patent applications (application numbers 63/300171, 63/300178, 63/381922 and 63/381924 submitted by the University of Washington) covering the de novo luciferases and protein scaffolds described in this Article. A.H.-W.Y., C.N., J.Z. and D.B. are stockholders of Monod Bio, a company that aims to develop the inventions described in this manuscript. The remaining authors declare no competing interests.",
+            "block_bbox": [
+                607,
+                583,
+                1113,
+                682
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "global_block_id": 164,
+            "global_group_id": 164,
+            "block_polygon_points": [
+                [
+                    607.0,
+                    583.0
+                ],
+                [
+                    1113.0,
+                    583.0
+                ],
+                [
+                    1113.0,
+                    682.0
+                ],
+                [
+                    607.0,
+                    682.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Additional information",
+            "block_bbox": [
+                609,
+                698,
+                743,
+                714
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "global_block_id": 165,
+            "global_group_id": 165,
+            "block_polygon_points": [
+                [
+                    609.0,
+                    698.0
+                ],
+                [
+                    742.0,
+                    698.0
+                ],
+                [
+                    742.0,
+                    713.0
+                ],
+                [
+                    609.0,
+                    713.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Supplementary information The online version contains supplementary material available at https://doi.org/10.1038/s41586-023-05696-3.",
+            "block_bbox": [
+                608,
+                715,
+                1115,
+                745
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "global_block_id": 166,
+            "global_group_id": 166,
+            "block_polygon_points": [
+                [
+                    608.0,
+                    715.0
+                ],
+                [
+                    1115.0,
+                    715.0
+                ],
+                [
+                    1115.0,
+                    745.0
+                ],
+                [
+                    608.0,
+                    745.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Correspondence and requests for materials should be addressed to Andy Hsien-Wei Yeh or David Baker.",
+            "block_bbox": [
+                608,
+                747,
+                1113,
+                777
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "global_block_id": 167,
+            "global_group_id": 167,
+            "block_polygon_points": [
+                [
+                    608.0,
+                    747.0
+                ],
+                [
+                    1113.0,
+                    747.0
+                ],
+                [
+                    1113.0,
+                    777.0
+                ],
+                [
+                    608.0,
+                    777.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Peer review information Nature thanks the anonymous reviewers for their contribution to the peer review of this work. Peer reviewer reports are available.",
+            "block_bbox": [
+                609,
+                779,
+                1115,
+                811
+            ],
+            "block_id": 13,
+            "block_order": 14,
+            "group_id": 13,
+            "global_block_id": 168,
+            "global_group_id": 168,
+            "block_polygon_points": [
+                [
+                    609.0,
+                    779.0
+                ],
+                [
+                    1115.0,
+                    779.0
+                ],
+                [
+                    1115.0,
+                    811.0
+                ],
+                [
+                    609.0,
+                    811.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Reprints and permissions information is available at http://www.nature.com/reprints.",
+            "block_bbox": [
+                608,
+                810,
+                1078,
+                828
+            ],
+            "block_id": 14,
+            "block_order": 15,
+            "group_id": 14,
+            "global_block_id": 169,
+            "global_group_id": 169,
+            "block_polygon_points": [
+                [
+                    608,
+                    810
+                ],
+                [
+                    608,
+                    827
+                ],
+                [
+                    1077,
+                    827
+                ],
+                [
+                    1077,
+                    810
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.796894907951355,
+                "coordinate": [
+                    75,
+                    114,
+                    244,
+                    136
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        75.0,
+                        114.0
+                    ],
+                    [
+                        243.0,
+                        114.0
+                    ],
+                    [
+                        243.0,
+                        135.0
+                    ],
+                    [
+                        75.0,
+                        135.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8628175258636475,
+                "coordinate": [
+                    73,
+                    137,
+                    590,
+                    184
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        73.0,
+                        137.0
+                    ],
+                    [
+                        590.0,
+                        137.0
+                    ],
+                    [
+                        590.0,
+                        184.0
+                    ],
+                    [
+                        73.0,
+                        184.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.808571457862854,
+                "coordinate": [
+                    75,
+                    218,
+                    238,
+                    240
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        75.0,
+                        218.0
+                    ],
+                    [
+                        237.0,
+                        218.0
+                    ],
+                    [
+                        237.0,
+                        239.0
+                    ],
+                    [
+                        75.0,
+                        239.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9428378939628601,
+                "coordinate": [
+                    73,
+                    246,
+                    594,
+                    377
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        73.0,
+                        246.0
+                    ],
+                    [
+                        594.0,
+                        246.0
+                    ],
+                    [
+                        594.0,
+                        377.0
+                    ],
+                    [
+                        73.0,
+                        377.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8164998888969421,
+                "coordinate": [
+                    75,
+                    412,
+                    240,
+                    434
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        74.99998474121094,
+                        412.0
+                    ],
+                    [
+                        238.9999542236328,
+                        412.0
+                    ],
+                    [
+                        238.9999542236328,
+                        433.0
+                    ],
+                    [
+                        74.99998474121094,
+                        433.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9569294452667236,
+                "coordinate": [
+                    73,
+                    438,
+                    593,
+                    700
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        73.0,
+                        438.0
+                    ],
+                    [
+                        593.0,
+                        438.0
+                    ],
+                    [
+                        593.0,
+                        700.0
+                    ],
+                    [
+                        73.0,
+                        700.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5023530721664429,
+                "coordinate": [
+                    73,
+                    745,
+                    588,
+                    828
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        73.0,
+                        745.0
+                    ],
+                    [
+                        588.0,
+                        745.0
+                    ],
+                    [
+                        588.0,
+                        828.0
+                    ],
+                    [
+                        73.0,
+                        828.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9551825523376465,
+                "coordinate": [
+                    607,
+                    95,
+                    1122,
+                    338
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        607.0,
+                        95.0
+                    ],
+                    [
+                        1122.0,
+                        95.0
+                    ],
+                    [
+                        1122.0,
+                        338.0
+                    ],
+                    [
+                        607.0,
+                        338.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9512630105018616,
+                "coordinate": [
+                    607,
+                    359,
+                    1123,
+                    569
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        607.0,
+                        359.0
+                    ],
+                    [
+                        1123.0,
+                        359.0
+                    ],
+                    [
+                        1123.0,
+                        569.0
+                    ],
+                    [
+                        607.0,
+                        569.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9308008551597595,
+                "coordinate": [
+                    607,
+                    583,
+                    1113,
+                    682
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        607.0,
+                        583.0
+                    ],
+                    [
+                        1113.0,
+                        583.0
+                    ],
+                    [
+                        1113.0,
+                        682.0
+                    ],
+                    [
+                        607.0,
+                        682.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7321375012397766,
+                "coordinate": [
+                    609,
+                    698,
+                    743,
+                    714
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        609.0,
+                        698.0
+                    ],
+                    [
+                        742.0,
+                        698.0
+                    ],
+                    [
+                        742.0,
+                        713.0
+                    ],
+                    [
+                        609.0,
+                        713.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8454107046127319,
+                "coordinate": [
+                    608,
+                    715,
+                    1115,
+                    745
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        608.0,
+                        715.0
+                    ],
+                    [
+                        1115.0,
+                        715.0
+                    ],
+                    [
+                        1115.0,
+                        745.0
+                    ],
+                    [
+                        608.0,
+                        745.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8758877515792847,
+                "coordinate": [
+                    608,
+                    747,
+                    1113,
+                    777
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        608.0,
+                        747.0
+                    ],
+                    [
+                        1113.0,
+                        747.0
+                    ],
+                    [
+                        1113.0,
+                        777.0
+                    ],
+                    [
+                        608.0,
+                        777.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8064616918563843,
+                "coordinate": [
+                    609,
+                    779,
+                    1115,
+                    811
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        609.0,
+                        779.0
+                    ],
+                    [
+                        1115.0,
+                        779.0
+                    ],
+                    [
+                        1115.0,
+                        811.0
+                    ],
+                    [
+                        609.0,
+                        811.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7474295496940613,
+                "coordinate": [
+                    608,
+                    810,
+                    1078,
+                    828
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        608,
+                        810
+                    ],
+                    [
+                        608,
+                        827
+                    ],
+                    [
+                        1077,
+                        827
+                    ],
+                    [
+                        1077,
+                        810
+                    ]
+                ]
+            }
+        ]
+    }
+}

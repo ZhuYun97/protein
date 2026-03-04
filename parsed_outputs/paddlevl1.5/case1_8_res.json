@@ -1,0 +1,376 @@
+{
+    "input_path": "/mnt/dhwfile/raise/user/zhuyun/protein_data_pipeline/input_pdfs/case_pdfs/case1.pdf",
+    "page_index": 8,
+    "page_count": 18,
+    "width": 1191,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Article",
+            "block_bbox": [
+                76,
+                51,
+                175,
+                83
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "global_block_id": 170,
+            "global_group_id": 170,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    51.0
+                ],
+                [
+                    175.0,
+                    51.0
+                ],
+                [
+                    175.0,
+                    83.0
+                ],
+                [
+                    76.0,
+                    83.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                111,
+                99,
+                1080,
+                551
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "global_block_id": 171,
+            "global_group_id": 171,
+            "block_polygon_points": [
+                [
+                    111.0,
+                    99.0
+                ],
+                [
+                    1080.0,
+                    99.0
+                ],
+                [
+                    1080.0,
+                    551.0
+                ],
+                [
+                    111.0,
+                    551.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Extended Data Fig. 1 | Proposed catalytic mechanism of coelenterazine-utilizing luciferases. Density functional theory (DFT) calculation suggested that the formation of an anionic state is the essential electron source for the activation of triplet oxygen (³O₂). Supported by both theoretical²⁵,²⁶ and experimental evidence²⁷,²⁸, the next oxygenation process is likely through a single-electron transfer (SET) mechanism in which the surrounding reaction field could highly influence the change of Gibbs free energy (ΔG_SET). Finally, the thermolysis of a dioxetane light emitter intermediate can produce photons via the mechanism of gradually reversible charge-transfer-induced luminescence.",
+            "block_bbox": [
+                74,
+                566,
+                589,
+                749
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "global_block_id": 172,
+            "global_group_id": 172,
+            "block_polygon_points": [
+                [
+                    74.0,
+                    566.0
+                ],
+                [
+                    589.0,
+                    566.0
+                ],
+                [
+                    589.0,
+                    749.0
+                ],
+                [
+                    74.0,
+                    749.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "(GRCTIL), which is generally exergonic. As all the historical pieces of evidence are based on calculations in the virtual solvents or chemiluminescence in ideal organic solvents, the detailed mechanism of a luciferase-catalysed luminescence reaction has remained unclear. We proposed that the key step of the enzyme is to promote the formation of an anionic state and create a suitable environment to facilitate efficient SET. Hence, the goal of this study is to design an enzyme reaction field surrounding the substrate to stabilize the anionic substrate state and alter the local proton activity, solvent polarity, and hydrophobicity for the efficient activation of  $ {}^{3}O_{2} $.",
+            "block_bbox": [
+                606,
+                566,
+                1126,
+                748
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "global_block_id": 173,
+            "global_group_id": 173,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    566.0
+                ],
+                [
+                    1126.0,
+                    566.0
+                ],
+                [
+                    1126.0,
+                    748.0
+                ],
+                [
+                    606.0,
+                    748.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6183983087539673,
+                "coordinate": [
+                    76,
+                    51,
+                    175,
+                    83
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        76.0,
+                        51.0
+                    ],
+                    [
+                        175.0,
+                        51.0
+                    ],
+                    [
+                        175.0,
+                        83.0
+                    ],
+                    [
+                        76.0,
+                        83.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9515637159347534,
+                "coordinate": [
+                    111,
+                    99,
+                    1080,
+                    551
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        111.0,
+                        99.0
+                    ],
+                    [
+                        1080.0,
+                        99.0
+                    ],
+                    [
+                        1080.0,
+                        551.0
+                    ],
+                    [
+                        111.0,
+                        551.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8239203095436096,
+                "coordinate": [
+                    74,
+                    566,
+                    589,
+                    749
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        74.0,
+                        566.0
+                    ],
+                    [
+                        589.0,
+                        566.0
+                    ],
+                    [
+                        589.0,
+                        749.0
+                    ],
+                    [
+                        74.0,
+                        749.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.46673595905303955,
+                "coordinate": [
+                    258,
+                    626,
+                    288,
+                    646
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        258,
+                        626
+                    ],
+                    [
+                        258,
+                        645
+                    ],
+                    [
+                        287,
+                        645
+                    ],
+                    [
+                        287,
+                        626
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.6824904084205627,
+                "coordinate": [
+                    465,
+                    687,
+                    511,
+                    706
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        465.0,
+                        687.0
+                    ],
+                    [
+                        510.0,
+                        687.0
+                    ],
+                    [
+                        510.0,
+                        705.0
+                    ],
+                    [
+                        465.0,
+                        705.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7237959504127502,
+                "coordinate": [
+                    606,
+                    566,
+                    1126,
+                    748
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        606.0,
+                        566.0
+                    ],
+                    [
+                        1126.0,
+                        566.0
+                    ],
+                    [
+                        1126.0,
+                        748.0
+                    ],
+                    [
+                        606.0,
+                        748.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.4523656964302063,
+                "coordinate": [
+                    758,
+                    727,
+                    775,
+                    746
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        758,
+                        727
+                    ],
+                    [
+                        758,
+                        745
+                    ],
+                    [
+                        774,
+                        745
+                    ],
+                    [
+                        774,
+                        727
+                    ]
+                ]
+            }
+        ]
+    }
+}

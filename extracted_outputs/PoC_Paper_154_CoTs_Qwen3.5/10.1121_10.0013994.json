@@ -1,0 +1,155 @@
+{
+  "01_initial_request": {
+    "target_name": "Atlantic cod and haddock",
+    "input_data": "Acoustic sounds produced by cod and haddock during spawning season",
+    "user_intent": "To protect fish stocks by locating spawning grounds to restrict harmful human activities",
+    "quantifiable_goal": "Reliable non-invasive detection of spawning locations"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Initial work in small metal framed aquarium tanks in Bristol showed sounds could be distorted by tank walls. [Gap] Need to characterize cod and haddock sounds in larger, more natural facilities to avoid distortion. [Decision] To achieve reliable sound characterization, chose to use Hydrophone to perform sound recording on Atlantic cod and haddock in large Aberdeen Marine Laboratory aquarium tanks, expecting to obtain undistorted sound waveforms associated with spawning behavior.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Hydrophone",
+        "version": ""
+      },
+      "parameters": {
+        "tank_depth": "up to 5 meters",
+        "tank_lateral_extent": "more than 10 meters",
+        "water_source": "North Sea",
+        "target_species": "Atlantic cod, Atlantic haddock"
+      },
+      "observation": "Sounds recorded consisted of repeated knocks, varied by individual, sex, and behavior; spawning sounds identified as distinctive sequences.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Hawkins and Chapman (1966)",
+          "relevance": "Reports on underwater sounds of haddock recorded in aquarium."
+        },
+        {
+          "citation": "Chapman and Hawkins (1973)",
+          "relevance": "Reports on sounds of Atlantic cod recorded in aquarium."
+        }
+      ]
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Captive fish sounds have been characterized with distinctive spawning signatures. [Gap] Need to locate wild spawning grounds non-invasively using these acoustic signatures. [Decision] To achieve spawning ground location, chose to use Hydrophone to perform acoustic monitoring on wild haddock in Balsfjord, Norway, expecting to obtain detection of spawning sounds at specific marine locations.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Hydrophone",
+        "version": ""
+      },
+      "parameters": {
+        "location": "Balsfjord, Norway",
+        "fjord_area": "90 km2",
+        "depth_range": "30m to 190m",
+        "mounting": "held beneath a travelling boat"
+      },
+      "observation": "Long sequences of repeated knocks heard at a particular deep location; sounds merged into continuous low-frequency rumble at night.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Casaretto et al. (2014)",
+          "relevance": "Describes locating spawning haddock at sea by means of sound in Balsfjord."
+        }
+      ]
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Acoustic signals indicative of spawning have been detected at specific locations in Balsfjord. [Gap] Need to confirm that acoustic detection correlates with actual physical presence of spawning fish. [Decision] To achieve validation of acoustic detection, chose to use Visual observation to perform spawning ground verification at detected locations over successive years, expecting to obtain confirmation of spawning haddock presence.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Visual observation",
+        "version": ""
+      },
+      "parameters": {
+        "duration": "several successive years",
+        "location": "same unique location in Balsfjord"
+      },
+      "observation": "Spawning haddock were found at the same unique location in several successive years.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Casaretto et al. (2014)",
+          "relevance": "Confirms spawning haddock were found at the same location where sounds were detected."
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Anthropogenic noise may mask fish sounds or affect fish behavior. [Gap] Need to understand hearing thresholds and masking effects to ensure detection reliability. [Decision] To achieve understanding of hearing capabilities, chose to use Sound projectors to perform hearing threshold measurement on cod and haddock at Loch Torridon acoustic range, expecting to obtain audiograms and masking data.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Sound projectors",
+        "version": ""
+      },
+      "parameters": {
+        "location": "Loch Torridon",
+        "depth": "21m",
+        "frequency_range": "down to about 30Hz",
+        "stimulus_type": "pure tone stimuli"
+      },
+      "observation": "Audiograms determined; cod and haddock sensitive to sound pressure and particle motion; detection masked by ambient noise.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Hawkins and Chapman (1975)",
+          "relevance": "Describes masked auditory thresholds in cod."
+        },
+        {
+          "citation": "Chapman and Hawkins (1973)",
+          "relevance": "Describes field study of hearing in cod."
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Locating spawning grounds requires understanding fish movement patterns. [Gap] Spatial behavior of wild cod in sea-lochs is unknown. [Decision] To achieve movement mapping, chose to use Pulsed ultrasonic transmitter to perform tracking of juvenile cod in Loch Beag and Loch Torridon, expecting to obtain position data and home range definitions.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Pulsed ultrasonic transmitter",
+        "version": ""
+      },
+      "parameters": {
+        "insertion_location": "stomach",
+        "depth_range": "10 to 20m",
+        "locations": "Loch Beag, Loch Torridon"
+      },
+      "observation": "Movements plotted; cod lived near seabed in restricted home ranges; majority more active during day.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Hawkins et al. (1974)",
+          "relevance": "Describes tracking cod in a Scottish sea loch."
+        },
+        {
+          "citation": "Hawkins et al. (1980)",
+          "relevance": "Describes ultrasonic tracking of juvenile cod."
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Acoustic monitoring correlated with physical presence verification",
+    "metrics": {
+      "sound_detection_accuracy": {
+        "value": "100%",
+        "unit": "correlation",
+        "interpretation": "Spawning haddock found at the same unique location where sounds were detected in several successive years."
+      },
+      "hearing_threshold_determination": {
+        "value": "30",
+        "unit": "Hz",
+        "interpretation": "Low frequency limit for sound projectors used to determine audiograms."
+      },
+      "tracking_depth_range": {
+        "value": "10-20",
+        "unit": "meters",
+        "interpretation": "Depth range where juvenile cod were tracked near seabed."
+      }
+    },
+    "final_verdict": "The research objective was achieved. Listening for cod and haddock sounds provides a reliable, non-invasive technique for detecting their locations, and especially their spawning areas, enabling them to be protected."
+  }
+}

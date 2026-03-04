@@ -1,0 +1,362 @@
+{
+    "input_path": "/mnt/dhwfile/raise/user/zhuyun/protein_data_pipeline/input_pdfs/case_pdfs/case1.pdf",
+    "page_index": 15,
+    "page_count": 18,
+    "width": 1191,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "a",
+            "block_bbox": [
+                88,
+                96,
+                108,
+                116
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "global_block_id": 268,
+            "global_group_id": 268,
+            "block_polygon_points": [
+                [
+                    88.0,
+                    96.0
+                ],
+                [
+                    107.0,
+                    96.0
+                ],
+                [
+                    107.0,
+                    115.0
+                ],
+                [
+                    88.0,
+                    115.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                74,
+                94,
+                1110,
+                1051
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "global_block_id": 269,
+            "global_group_id": 269,
+            "block_polygon_points": [
+                [
+                    86,
+                    94
+                ],
+                [
+                    80,
+                    1050
+                ],
+                [
+                    853,
+                    1050
+                ],
+                [
+                    1092,
+                    1027
+                ],
+                [
+                    1109,
+                    102
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Extended Data Fig. 8 | Free-energy profile of DTZ chemiluminescence and MD simulations of proposed protein-intermediate complexes. a, The free-energy profile calculated by density functional theory (DFT) shows triplet oxygen can react directly with the anionic species of DTZ (Int1) through the reactant complex Int2 and TSI. The dioxetane intermediate Int3 then cleaves in an open shell singlet transition state  $ ^{055} $TS2 to form excited intermediate Int4, which rapidly extrudes  $ CO_{2} $ and forms the emissive product Int5. Note: either Int4* or Int5* emit in the observed region, but the lifetime of Int4* is very short and likely completely converts to Int5* before emission. b, Int2 and Int3 were docked into both LuxSit and LuxSit-i and the binding were evaluated by molecular dynamics (MD). The distances between His98 to O1 (top row) and Arg6 to N1 (bottom row) of the substrate were plotted throughout 500 ns MD",
+            "block_bbox": [
+                73,
+                1068,
+                592,
+                1310
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "global_block_id": 270,
+            "global_group_id": 270,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    1068.0
+                ],
+                [
+                    592.0,
+                    1068.0
+                ],
+                [
+                    592.0,
+                    1310.0
+                ],
+                [
+                    73.0,
+                    1310.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "simulations. LuxSit-i (blue trace) binds Int2' (middle) considerably better than LuxSit does (red trace), suggesting that the mutations of LuxSit-i provide a binding pocket more complementary to TSL. This binding orientation brings N1 of the substrate much closer to Arg65, providing better charge stabilization for the high energy transition state. c, Docking of the peroxide anion form of bis-CTZ into the pocket of LuxSit-i; blue overlay represents DTZ in the original design model. During MD simulation, the added benzylic carbon of bis-CTZ (green trace) disrupts the shape complementarity between LuxSit-i and the transition states (TS1 and TS2), reducing the charge stabilization by Arg65. This charge stabilization is necessary for the reaction to proceed, explaining the high substrate specificity of LuxSit-i for DTZ over bis-CTZ.",
+            "block_bbox": [
+                606,
+                1068,
+                1123,
+                1290
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "global_block_id": 271,
+            "global_group_id": 271,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    1068.0
+                ],
+                [
+                    1123.0,
+                    1068.0
+                ],
+                [
+                    1123.0,
+                    1290.0
+                ],
+                [
+                    606.0,
+                    1290.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.37416619062423706,
+                "coordinate": [
+                    88,
+                    96,
+                    108,
+                    116
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        88.0,
+                        96.0
+                    ],
+                    [
+                        107.0,
+                        96.0
+                    ],
+                    [
+                        107.0,
+                        115.0
+                    ],
+                    [
+                        88.0,
+                        115.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.3029199242591858,
+                "coordinate": [
+                    83,
+                    98,
+                    1113,
+                    599
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        83,
+                        122
+                    ],
+                    [
+                        89,
+                        583
+                    ],
+                    [
+                        1095,
+                        598
+                    ],
+                    [
+                        1112,
+                        426
+                    ],
+                    [
+                        1101,
+                        106
+                    ],
+                    [
+                        125,
+                        98
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.695457398891449,
+                "coordinate": [
+                    74,
+                    94,
+                    1110,
+                    1051
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        86,
+                        94
+                    ],
+                    [
+                        80,
+                        1050
+                    ],
+                    [
+                        853,
+                        1050
+                    ],
+                    [
+                        1092,
+                        1027
+                    ],
+                    [
+                        1109,
+                        102
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.898672878742218,
+                "coordinate": [
+                    73,
+                    1068,
+                    592,
+                    1310
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        73.0,
+                        1068.0
+                    ],
+                    [
+                        592.0,
+                        1068.0
+                    ],
+                    [
+                        592.0,
+                        1310.0
+                    ],
+                    [
+                        73.0,
+                        1310.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.48905912041664124,
+                "coordinate": [
+                    269,
+                    1188,
+                    299,
+                    1209
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        269,
+                        1188
+                    ],
+                    [
+                        269,
+                        1208
+                    ],
+                    [
+                        298,
+                        1208
+                    ],
+                    [
+                        298,
+                        1188
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.9060739278793335,
+                "coordinate": [
+                    606,
+                    1068,
+                    1123,
+                    1290
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        606.0,
+                        1068.0
+                    ],
+                    [
+                        1123.0,
+                        1068.0
+                    ],
+                    [
+                        1123.0,
+                        1290.0
+                    ],
+                    [
+                        606.0,
+                        1290.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

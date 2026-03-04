@@ -1,0 +1,214 @@
+{
+  "01_initial_request": {
+    "target_name": "Fitness Landscapes and Epistasis",
+    "input_data": "Existing fitness landscape theory and empirical datasets from literature",
+    "user_intent": "To review the role of epistasis in adaptation and integrate evolutionary theory with empirical data",
+    "quantifiable_goal": "N/A (Review Article); Objective is conceptual integration and identification of future directions"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Fitness landscape theory quantifies the relationship between genotype and fitness. [Gap] The specific impact of tunable epistasis on evolutionary trajectories needs theoretical characterization. [Decision] To achieve conceptual integration, chose to use Theoretical Model Analysis to perform evaluation of the Rough Mount Fuji (RMF) model on genotype-fitness mappings, expecting to obtain expectations on peak accessibility and trajectory constraints.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Theoretical Model Analysis",
+        "version": ""
+      },
+      "parameters": {
+        "model_type": "Rough Mount Fuji (RMF) model",
+        "loci_count": "L=10 loci",
+        "genotype_space": "2^L = 1,024 genotypes",
+        "epistasis_range": "additive to house-of-cards",
+        "simulation_count": "1,000 simulations of random adaptive walks"
+      },
+      "observation": "Epistasis introduces potential for parallel fitness evolution toward different adapted genotypes; increasing number of peaks decreases length of adaptive trajectories and makes evolution more repeatable.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Aita et al. 2000",
+          "relevance": "Introduction of the RMF model"
+        },
+        {
+          "citation": "Kauffman & Levin 1987",
+          "relevance": "House-of-cards landscape definition"
+        },
+        {
+          "citation": "Szendro et al. 2013",
+          "relevance": "Recovery of features of experimental fitness landscapes by RMF"
+        }
+      ]
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Phenotype-fitness models offer a complementary perspective to probabilistic models. [Gap] How epistasis arises from nonlinear phenotype-fitness maps needs clarification. [Decision] To achieve conceptual integration, chose to use Theoretical Model Analysis to perform evaluation of Fisher's Geometric Model (FGM) on phenotype-fitness mappings, expecting to obtain insights on distance-dependent epistasis.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Theoretical Model Analysis",
+        "version": ""
+      },
+      "parameters": {
+        "model_type": "Fisher's Geometric Model (FGM)",
+        "fitness_function": "Gaussian fitness function",
+        "selection_type": "stabilizing selection for an optimum phenotype",
+        "mutation_effect": "jumps in a random direction"
+      },
+      "observation": "Mutations additive on phenotypic level can be epistatic on fitness level; strong epistasis occurs when mutations find themselves on nearby genetic backgrounds close to the phenotypic optimum.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Fisher 1930",
+          "relevance": "Original formulation of FGM"
+        },
+        {
+          "citation": "Martin et al. 2007",
+          "relevance": "FGM defined with explicit genotype-phenotype map"
+        },
+        {
+          "citation": "Tenaillon 2014",
+          "relevance": "Review of FGM"
+        }
+      ]
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Recent advances enable empirical assessment of fitness landscapes. [Gap] Prevalence of epistasis in controlled laboratory settings needs evaluation. [Decision] To achieve integration of theory and data, chose to use Empirical Data Synthesis to perform review of engineered fitness landscape studies on microbial genotypes, expecting to obtain evidence on epistasis frequency and trajectory accessibility.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Empirical Data Synthesis",
+        "version": ""
+      },
+      "parameters": {
+        "study_systems": "E. coli beta-lactamase, S. cerevisiae Hsp90",
+        "genotype_counts": "32 combinations of five mutations, 640 genotypes",
+        "measurement_type": "competitive fitness, colony size",
+        "accessibility_finding": "18 out of 120 possible evolutionary trajectories accessible (Weinreich et al. 2006)"
+      },
+      "observation": "Epistasis is common; diminishing-returns epistasis is pervasive; evolutionary trajectory is constrained by epistasis; 85% of substitutions depending on genetic background (Pokusaeva et al. 2019).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Weinreich et al. 2006",
+          "relevance": "Landmark study of beta-lactamase mutations"
+        },
+        {
+          "citation": "Khan et al. 2011",
+          "relevance": "Competition experiments of adaptive substitutions"
+        },
+        {
+          "citation": "Pokusaeva et al. 2019",
+          "relevance": "Large dataset spanning four million genotypes"
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Epistasis footprint may exist in natural evolutionary trajectories. [Gap] Evidence for epistatic adaptive trajectories in the wild is limited. [Decision] To achieve integration of theory and data, chose to use Empirical Data Synthesis to perform review of wild evolutionary trajectory studies on viral and insect proteins, expecting to obtain evidence on contingency and hybrid incompatibility.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Empirical Data Synthesis",
+        "version": ""
+      },
+      "parameters": {
+        "study_systems": "Human influenza nucleoprotein, Monarch butterfly toxin resistance, Pupfish ecotypes",
+        "methods": "reverse genetics, CRISPR-Cas9-based genome editing, field enclosures",
+        "timeframe": "1968 to 2007 (Influenza NP)"
+      },
+      "observation": "Strong positive epistasis for toxin tolerance found; order of substitutions constrained by epistasis; hybrid incompatibilities mapped revealing hundreds of pairwise incompatibilities.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Gong et al. 2013",
+          "relevance": "Dissection of epistatic evolutionary trajectory of influenza NP"
+        },
+        {
+          "citation": "Karageorgi et al. 2019",
+          "relevance": "Convergent evolutionary trajectory of toxin resistance"
+        },
+        {
+          "citation": "Martin & Wainwright 2013",
+          "relevance": "Phenotype-fitness landscape of pupfish hybrids"
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Fitness landscapes may change across environments. [Gap] Knowledge on environment-dependent epistasis (GxGxE) is limited. [Decision] To achieve integration of theory and data, chose to use Empirical Data Synthesis to perform review of environment-dependent fitness landscape studies on microbial and insect populations, expecting to obtain evidence on landscape ruggedness variation.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Empirical Data Synthesis",
+        "version": ""
+      },
+      "parameters": {
+        "study_systems": "E. coli, S. cerevisiae, Stick insects, Stickleback",
+        "environments": "eight different environments, antibiotic dose gradients, fungicide presence",
+        "interaction_type": "genotype-by-genotype-by-environment interactions (GxGxE)"
+      },
+      "observation": "Fitness landscapes differ significantly across environments in terms of absolute effect sizes, location and number of peaks and valleys; epistasis is both strong and environment specific.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Hall et al. 2019",
+          "relevance": "Environment changes epistasis to alter trade-offs"
+        },
+        {
+          "citation": "Das et al. 2020",
+          "relevance": "Predictable properties of fitness landscapes induced by adaptational tradeoffs"
+        },
+        {
+          "citation": "Li & Zhang 2018",
+          "relevance": "Multi-environment fitness landscapes of a tRNA gene"
+        }
+      ]
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Ecological factors may smoothen the fitness landscape in the wild. [Gap] Open challenges exist in integrating ecological factors into fitness landscape theory. [Decision] To achieve identification of future directions, chose to use Conceptual Integration to perform synthesis of ecological and evolutionary dynamics on fitness landscapes, expecting to obtain a framework for future research.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Conceptual Integration",
+        "version": ""
+      },
+      "parameters": {
+        "focus_areas": "diploid/recombining populations, changing environments, ecological interactions",
+        "theoretical_concepts": "fitness seascape, holey fitness landscape, realized epistasis"
+      },
+      "observation": "Genomes may carry information about ecological history; environment-dependent epistasis could leave a footprint in genomes; need for interdisciplinary research integrating molecular, systems, and ecology viewpoints.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Mustonen & Lässig 2009",
+          "relevance": "Fitness seascape concept"
+        },
+        {
+          "citation": "Gavrilets 2004",
+          "relevance": "Holey fitness landscape model"
+        },
+        {
+          "citation": "Das et al. 2021",
+          "relevance": "Genotype carrying information about ecological history"
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Literature Synthesis and Theoretical Integration",
+    "metrics": {
+      "trajectory_accessibility": {
+        "value": "18 out of 120",
+        "unit": "possible evolutionary trajectories",
+        "interpretation": "Only a fraction of paths are accessible due to epistasis (Weinreich et al. 2006)"
+      },
+      "background_dependence": {
+        "value": "85%",
+        "unit": "of substitutions",
+        "interpretation": "Substitutions depend on genetic background, indicating ubiquitous epistasis (Pokusaeva et al. 2019)"
+      },
+      "epistasis_prevalence": {
+        "value": "common",
+        "unit": "qualitative",
+        "interpretation": "Epistasis is frequent and depends on fitness measure, mutations, and environment"
+      }
+    },
+    "final_verdict": "The review successfully integrates evolutionary theory with empirical data, confirming that epistasis is prevalent, often environment-dependent, and constrains adaptation, thereby achieving the objective of conceptual integration and identification of future directions."
+  }
+}

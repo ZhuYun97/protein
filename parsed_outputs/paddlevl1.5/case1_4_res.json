@@ -1,0 +1,1269 @@
+{
+    "input_path": "/mnt/dhwfile/raise/user/zhuyun/protein_data_pipeline/input_pdfs/case_pdfs/case1.pdf",
+    "page_index": 4,
+    "page_count": 18,
+    "width": 1191,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article",
+            "block_bbox": [
+                77,
+                52,
+                174,
+                82
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "global_block_id": 68,
+            "global_group_id": 68,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    52.0
+                ],
+                [
+                    174.0,
+                    52.0
+                ],
+                [
+                    174.0,
+                    82.0
+                ],
+                [
+                    77.0,
+                    82.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "a",
+            "block_bbox": [
+                81,
+                99,
+                97,
+                113
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "global_block_id": 69,
+            "global_group_id": 69,
+            "block_polygon_points": [
+                [
+                    81.0,
+                    99.0
+                ],
+                [
+                    96.0,
+                    99.0
+                ],
+                [
+                    96.0,
+                    112.0
+                ],
+                [
+                    81.0,
+                    112.0
+                ]
+            ]
+        },
+        {
+            "block_label": "chart",
+            "block_content": "",
+            "block_bbox": [
+                84,
+                97,
+                389,
+                413
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "global_block_id": 70,
+            "global_group_id": 70,
+            "block_polygon_points": [
+                [
+                    84,
+                    97
+                ],
+                [
+                    84,
+                    255
+                ],
+                [
+                    84,
+                    412
+                ],
+                [
+                    388,
+                    412
+                ],
+                [
+                    383,
+                    97
+                ],
+                [
+                    270,
+                    97
+                ],
+                [
+                    233,
+                    97
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "b",
+            "block_bbox": [
+                400,
+                97,
+                416,
+                114
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "global_block_id": 71,
+            "global_group_id": 71,
+            "block_polygon_points": [
+                [
+                    400.0,
+                    97.0
+                ],
+                [
+                    415.0,
+                    97.0
+                ],
+                [
+                    415.0,
+                    113.0
+                ],
+                [
+                    400.0,
+                    113.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                420,
+                124,
+                585,
+                387
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "global_block_id": 72,
+            "global_group_id": 72,
+            "block_polygon_points": [
+                [
+                    420.0,
+                    124.0
+                ],
+                [
+                    585.0,
+                    124.0
+                ],
+                [
+                    585.0,
+                    387.0
+                ],
+                [
+                    420.0,
+                    387.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "c",
+            "block_bbox": [
+                82,
+                426,
+                96,
+                441
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "global_block_id": 73,
+            "global_group_id": 73,
+            "block_polygon_points": [
+                [
+                    82.0,
+                    426.0
+                ],
+                [
+                    95.0,
+                    426.0
+                ],
+                [
+                    95.0,
+                    440.0
+                ],
+                [
+                    82.0,
+                    440.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                93,
+                428,
+                585,
+                695
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "global_block_id": 74,
+            "global_group_id": 74,
+            "block_polygon_points": [
+                [
+                    93,
+                    444
+                ],
+                [
+                    93,
+                    694
+                ],
+                [
+                    584,
+                    694
+                ],
+                [
+                    584,
+                    428
+                ],
+                [
+                    105,
+                    428
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Fig. 3 | Characterization of de novo luciferase activity in vitro and in human cells. a, Substrate concentration dependence of LuxSit, LuxSit-f and LuxSit-i activity. Numbers indicate the signal-to-background (S/N) ratio at Vmax (photons s⁻¹ molecule⁻¹). Data are mean ± s.d. (n = 3). b, Luminescence images acquired by a BioRad Imager (top) or an Apple iPhone 8 camera (bottom). Tubes from left to right: DTZ only; DTZ plus 100 nM purified LuxSit; and DTZ plus 100 nM purified LuxSit-i, showing the high efficiency of photon production. c, Fluorescence and luminescence microscopic images of live HEK293T cells transiently expressing LuxSit-i-mTagBFP2; LuxSit-i activity can be detected at single-cell resolution. Left, fluorescence channel representing the mTagBFP2 signal. Right, total luminescence photons were collected during a course of a 10-s exposure without excitation light, immediately after adding 25 μM DTZ. Insets, negative control, untransfected cells with DTZ. Scale bars, 20 μm; 40× magnification.",
+            "block_bbox": [
+                72,
+                705,
+                593,
+                988
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "global_block_id": 75,
+            "global_group_id": 75,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    705.0
+                ],
+                [
+                    593.0,
+                    705.0
+                ],
+                [
+                    593.0,
+                    988.0
+                ],
+                [
+                    72.0,
+                    988.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "LuxSit-fare in the low-micromolar range (Fig. 3a) and the luminescent signal decays over time owing to fast catalytic turnover (Extended Data Fig. 7a). LuxSit-i is a very efficient enzyme, with a catalytic efficiency ( $ k_{cat}/K_{m} $) of  $ 10^{6} $ M $ ^{-1} $ s $ ^{-1} $. The luminescence signal is readily visible to the naked eye (Fig. 3b), and the photon flux (photons per second) is 38% greater than that of the native Renilla reniformis luciferase (RLuc) (Supplementary Table 2). The DTZ luminescent reaction catalysed by LuxSit-i is pH-dependent (Extended Data Fig. 7b), consistent with the proposed mechanism. We used a combination of density functional theory (DFT) calculations and molecular dynamics (MD) simulations to investigate the basis for LuxSit activity in more detail; the results support the anion-stabilization mechanism (Extended Data Fig. 8a and Supplementary Fig. 3a) and suggest that LuxSit-i provides better DTZ transition-state charge stabilization than LuxSit (Extended Data Fig. 8b).",
+            "block_bbox": [
+                72,
+                1039,
+                594,
+                1365
+            ],
+            "block_id": 8,
+            "block_order": 1,
+            "group_id": 8,
+            "global_block_id": 76,
+            "global_group_id": 76,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    1039.0
+                ],
+                [
+                    594.0,
+                    1039.0
+                ],
+                [
+                    594.0,
+                    1365.0
+                ],
+                [
+                    72.0,
+                    1365.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Cell imaging and multiplexed bioassay",
+            "block_bbox": [
+                74,
+                1400,
+                441,
+                1425
+            ],
+            "block_id": 9,
+            "block_order": 2,
+            "group_id": 9,
+            "global_block_id": 77,
+            "global_group_id": 77,
+            "block_polygon_points": [
+                [
+                    74.0,
+                    1400.0
+                ],
+                [
+                    441.0,
+                    1400.0
+                ],
+                [
+                    441.0,
+                    1425.0
+                ],
+                [
+                    74.0,
+                    1425.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "As luciferases are commonly used genetic tags and reporters for cell biological studies, we evaluated the expression and function of LuxSit-i in live mammalian cells. HEK293T cells expressing LuxSit-i-mTagBFP2 showed DTZ-specific luminescence (Fig. 3c), which was maintained after targeting of LuxSit-i-mTagBFP2 to the nucleus, membrane and mitochondria (Extended Data Fig. 9). Native and previously engineered luciferases are quite promiscuous, with activity on many luciferin substrates (Fig. 4a and Supplementary Fig. 4); this is possibly a result of their large and open pockets (a luciferase with high specificity to one luciferin substrate has been difficult to control even with extensive directed evolution $ ^{33,34} $). By contrast, LuxSit-i exhibited exquisite specificity for its target luciferin, with 50-fold selectivity for DTZ over bis-CTZ (which differs only in one benzylic carbon; MD simulations suggest that this arises from greater transition-state shape complementarity (Extended Data Fig. 8b,c and Supplementary Fig. 3b,c)), 28-fold selectivity over 8pyDTZ (differing only in one nitrogen atom) and more than 100-fold selectivity over other luciferin substrates (Fig. 4b). One of our active design for h-CTZ (HTZ3-G4) was also highly specific for its target substrate (Fig. 4c and Extended Data Fig. 4d). Overall, the specificity of our designed luciferases is much greater than that of native luciferases $ ^{35,36} $ or previously engineered luciferases $ ^{37} $ (Supplementary Table 5).",
+            "block_bbox": [
+                72,
+                1427,
+                593,
+                1493
+            ],
+            "block_id": 10,
+            "block_order": 3,
+            "group_id": 10,
+            "global_block_id": 78,
+            "global_group_id": 78,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    1427.0
+                ],
+                [
+                    593.0,
+                    1427.0
+                ],
+                [
+                    593.0,
+                    1493.0
+                ],
+                [
+                    72.0,
+                    1493.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "",
+            "block_bbox": [
+                606,
+                94,
+                1127,
+                504
+            ],
+            "block_id": 11,
+            "block_order": 4,
+            "group_id": 10,
+            "global_block_id": 79,
+            "global_group_id": 79,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    94.0
+                ],
+                [
+                    1127.0,
+                    94.0
+                ],
+                [
+                    1127.0,
+                    504.0
+                ],
+                [
+                    606.0,
+                    504.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "We reasoned that the high substrate specificity of LuxSit-i could allow the multiplexing of luminescent reporters through substrate-specific or spectrally resolved luminescent signals (Fig. 4d and Extended Data Fig. 10a,b). To investigate this possibility, we placed LuxSit-i downstream of the NF-κB response element and RLuc downstream of the cAMP response element (Fig. 4e). The addition of activators (TNF) of the NF-κB signaling pathway resulted in luminescence when cells were incubated with DTZ, while the luminescence of PP-CTZ (the substrate of RLuc) was observed only when the cAMP-PKA pathway was activated (Fig. 4f). Because DTZ and PP-CTZ emit luminescence at different wavelengths, they can in principle be combined and the two signals can be deconvoluted through spectral analysis. Indeed, we observed that activating the NF-κB signaling resulted in luminescence at the DTZ wavelength, while the addition of cAMP-PKA pathway activators (FSK) generated luminescence at the PP-CTZ wavelength, allowing us to simultaneously assess the activation of the two signaling pathways in the same sample with either cell lysates (Fig. 4g) or intact HEK293T cells (Extended Data Fig. 10c–e) by providing both substrates together. Thus, the high substrate specificity of LuxSit-i enables multiplexed reporting of diverse cellular responses.",
+            "block_bbox": [
+                606,
+                503,
+                1127,
+                937
+            ],
+            "block_id": 12,
+            "block_order": 5,
+            "group_id": 12,
+            "global_block_id": 80,
+            "global_group_id": 80,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    503.0
+                ],
+                [
+                    1127.0,
+                    503.0
+                ],
+                [
+                    1127.0,
+                    937.0
+                ],
+                [
+                    606.0,
+                    937.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Conclusion",
+            "block_bbox": [
+                607,
+                971,
+                723,
+                993
+            ],
+            "block_id": 13,
+            "block_order": 6,
+            "group_id": 13,
+            "global_block_id": 81,
+            "global_group_id": 81,
+            "block_polygon_points": [
+                [
+                    606.9999389648438,
+                    971.0
+                ],
+                [
+                    721.9999389648438,
+                    971.0
+                ],
+                [
+                    721.9999389648438,
+                    992.0
+                ],
+                [
+                    606.9999389648438,
+                    992.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Computational enzyme design has been constrained by the number of available scaffolds, which limits the extent to which catalytic configurations and enzyme-substrate shape complementarity can be achieved $ ^{14-16} $. The use of deep learning to produce large numbers of de-novo-designed scaffolds here eliminates this restriction, and the more accurate RoseTTAfold (ref. $ ^{38} $) and AlphaFold2 (ref. $ ^{31} $) should enable protein scaffolds to be generated even more effectively through family-wide hallucination and other approaches $ ^{18,39} $. The diversity of shapes and sizes of scaffold pockets enabled us to consider a range of catalytic geometries and to maximize reaction intermediate-enzyme shape complementarity; to our knowledge, no native luciferases have folds similar to LuxSit, and the enzyme has high specificity for a fully synthetic luciferin substrate that does not exist in nature. With the incorporation of three substitutions that provide a more complementary pocket to stabilize the transition state, LuxSit-i has higher activity than any previous de-novo-designed enzyme, with a  $ k_{cat}/K_{m} $ ( $ 10^{6} $ M $ ^{-1} $ s $ ^{-1} $) in the range of native luciferases. This is a notable advance for computational enzyme design, as tens of rounds of directed evolution were required to obtain catalytic efficiencies in this range for a designed retroaldolase, and the structure was remodelled considerably $ ^{40} $; by contrast, the predicted differences in ligand-side-chain interactions between LuxSit and LuxSit-i are very subtle (Supplementary Fig. 2b; achieving such high activities directly from the computer remains a",
+            "block_bbox": [
+                606,
+                999,
+                1127,
+                1494
+            ],
+            "block_id": 14,
+            "block_order": 7,
+            "group_id": 14,
+            "global_block_id": 82,
+            "global_group_id": 82,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    999.0
+                ],
+                [
+                    1127.0,
+                    999.0
+                ],
+                [
+                    1127.0,
+                    1494.0
+                ],
+                [
+                    606.0,
+                    1494.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "778",
+            "block_bbox": [
+                77,
+                1524,
+                109,
+                1542
+            ],
+            "block_id": 15,
+            "block_order": null,
+            "group_id": 15,
+            "global_block_id": 83,
+            "global_group_id": 83,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    1524.0
+                ],
+                [
+                    108.0,
+                    1524.0
+                ],
+                [
+                    108.0,
+                    1541.0
+                ],
+                [
+                    77.0,
+                    1541.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Nature | Vol 614 | 23 February 2023",
+            "block_bbox": [
+                124,
+                1523,
+                394,
+                1544
+            ],
+            "block_id": 16,
+            "block_order": null,
+            "group_id": 16,
+            "global_block_id": 84,
+            "global_group_id": 84,
+            "block_polygon_points": [
+                [
+                    124.0,
+                    1523.0
+                ],
+                [
+                    393.0,
+                    1523.0
+                ],
+                [
+                    393.0,
+                    1543.0
+                ],
+                [
+                    124.0,
+                    1543.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6988309025764465,
+                "coordinate": [
+                    77,
+                    52,
+                    174,
+                    82
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        77.0,
+                        52.0
+                    ],
+                    [
+                        174.0,
+                        52.0
+                    ],
+                    [
+                        174.0,
+                        82.0
+                    ],
+                    [
+                        77.0,
+                        82.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3023231327533722,
+                "coordinate": [
+                    81,
+                    99,
+                    97,
+                    113
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        81.0,
+                        99.0
+                    ],
+                    [
+                        96.0,
+                        99.0
+                    ],
+                    [
+                        96.0,
+                        112.0
+                    ],
+                    [
+                        81.0,
+                        112.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.7874829769134521,
+                "coordinate": [
+                    84,
+                    97,
+                    389,
+                    413
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        84,
+                        97
+                    ],
+                    [
+                        84,
+                        255
+                    ],
+                    [
+                        84,
+                        412
+                    ],
+                    [
+                        388,
+                        412
+                    ],
+                    [
+                        383,
+                        97
+                    ],
+                    [
+                        270,
+                        97
+                    ],
+                    [
+                        233,
+                        97
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.35407406091690063,
+                "coordinate": [
+                    400,
+                    97,
+                    416,
+                    114
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        400.0,
+                        97.0
+                    ],
+                    [
+                        415.0,
+                        97.0
+                    ],
+                    [
+                        415.0,
+                        113.0
+                    ],
+                    [
+                        400.0,
+                        113.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.6232432126998901,
+                "coordinate": [
+                    420,
+                    124,
+                    585,
+                    387
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        420.0,
+                        124.0
+                    ],
+                    [
+                        585.0,
+                        124.0
+                    ],
+                    [
+                        585.0,
+                        387.0
+                    ],
+                    [
+                        420.0,
+                        387.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3641776740550995,
+                "coordinate": [
+                    82,
+                    426,
+                    96,
+                    441
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        82.0,
+                        426.0
+                    ],
+                    [
+                        95.0,
+                        426.0
+                    ],
+                    [
+                        95.0,
+                        440.0
+                    ],
+                    [
+                        82.0,
+                        440.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.6907577514648438,
+                "coordinate": [
+                    93,
+                    428,
+                    585,
+                    695
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        93,
+                        444
+                    ],
+                    [
+                        93,
+                        694
+                    ],
+                    [
+                        584,
+                        694
+                    ],
+                    [
+                        584,
+                        428
+                    ],
+                    [
+                        105,
+                        428
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.9253020286560059,
+                "coordinate": [
+                    72,
+                    705,
+                    593,
+                    988
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        72.0,
+                        705.0
+                    ],
+                    [
+                        593.0,
+                        705.0
+                    ],
+                    [
+                        593.0,
+                        988.0
+                    ],
+                    [
+                        72.0,
+                        988.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.623343288898468,
+                "coordinate": [
+                    491,
+                    748,
+                    519,
+                    767
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        491,
+                        758
+                    ],
+                    [
+                        491,
+                        766
+                    ],
+                    [
+                        518,
+                        766
+                    ],
+                    [
+                        518,
+                        748
+                    ],
+                    [
+                        497,
+                        748
+                    ],
+                    [
+                        497,
+                        757
+                    ],
+                    [
+                        496,
+                        758
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9596570730209351,
+                "coordinate": [
+                    72,
+                    1039,
+                    594,
+                    1365
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        72.0,
+                        1039.0
+                    ],
+                    [
+                        594.0,
+                        1039.0
+                    ],
+                    [
+                        594.0,
+                        1365.0
+                    ],
+                    [
+                        72.0,
+                        1365.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.6984367966651917,
+                "coordinate": [
+                    131,
+                    1105,
+                    188,
+                    1127
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        131,
+                        1105
+                    ],
+                    [
+                        131,
+                        1126
+                    ],
+                    [
+                        187,
+                        1126
+                    ],
+                    [
+                        187,
+                        1105
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.409542441368103,
+                "coordinate": [
+                    211,
+                    1105,
+                    280,
+                    1126
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        211.0,
+                        1105.0
+                    ],
+                    [
+                        279.0,
+                        1105.0
+                    ],
+                    [
+                        279.0,
+                        1125.0
+                    ],
+                    [
+                        211.0,
+                        1125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8275123238563538,
+                "coordinate": [
+                    74,
+                    1400,
+                    441,
+                    1425
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        74.0,
+                        1400.0
+                    ],
+                    [
+                        441.0,
+                        1400.0
+                    ],
+                    [
+                        441.0,
+                        1425.0
+                    ],
+                    [
+                        74.0,
+                        1425.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9196195006370544,
+                "coordinate": [
+                    72,
+                    1427,
+                    593,
+                    1493
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        72.0,
+                        1427.0
+                    ],
+                    [
+                        593.0,
+                        1427.0
+                    ],
+                    [
+                        593.0,
+                        1493.0
+                    ],
+                    [
+                        72.0,
+                        1493.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9658344388008118,
+                "coordinate": [
+                    606,
+                    94,
+                    1127,
+                    504
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        606.0,
+                        94.0
+                    ],
+                    [
+                        1127.0,
+                        94.0
+                    ],
+                    [
+                        1127.0,
+                        504.0
+                    ],
+                    [
+                        606.0,
+                        504.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9619094133377075,
+                "coordinate": [
+                    606,
+                    503,
+                    1127,
+                    937
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        606.0,
+                        503.0
+                    ],
+                    [
+                        1127.0,
+                        503.0
+                    ],
+                    [
+                        1127.0,
+                        937.0
+                    ],
+                    [
+                        606.0,
+                        937.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7969390749931335,
+                "coordinate": [
+                    607,
+                    971,
+                    723,
+                    993
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        606.9999389648438,
+                        971.0
+                    ],
+                    [
+                        721.9999389648438,
+                        971.0
+                    ],
+                    [
+                        721.9999389648438,
+                        992.0
+                    ],
+                    [
+                        606.9999389648438,
+                        992.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9684395790100098,
+                "coordinate": [
+                    606,
+                    999,
+                    1127,
+                    1494
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        606.0,
+                        999.0
+                    ],
+                    [
+                        1127.0,
+                        999.0
+                    ],
+                    [
+                        1127.0,
+                        1494.0
+                    ],
+                    [
+                        606.0,
+                        1494.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.7604175806045532,
+                "coordinate": [
+                    989,
+                    1320,
+                    1121,
+                    1342
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        989,
+                        1320
+                    ],
+                    [
+                        989,
+                        1341
+                    ],
+                    [
+                        1120,
+                        1341
+                    ],
+                    [
+                        1120,
+                        1320
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7167534232139587,
+                "coordinate": [
+                    77,
+                    1524,
+                    109,
+                    1542
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        77.0,
+                        1524.0
+                    ],
+                    [
+                        108.0,
+                        1524.0
+                    ],
+                    [
+                        108.0,
+                        1541.0
+                    ],
+                    [
+                        77.0,
+                        1541.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8168389797210693,
+                "coordinate": [
+                    124,
+                    1523,
+                    394,
+                    1544
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        124.0,
+                        1523.0
+                    ],
+                    [
+                        393.0,
+                        1523.0
+                    ],
+                    [
+                        393.0,
+                        1543.0
+                    ],
+                    [
+                        124.0,
+                        1543.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

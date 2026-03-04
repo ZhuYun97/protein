@@ -1,0 +1,735 @@
+{
+  "01_initial_request": {
+    "target_name": "GPR110 (ADGRF1) receptor",
+    "input_data": "GPR110 C-terminal fragment constructs, G-protein subunits (Gq, Gs, Gi, G12, G13), Sf9 insect cells",
+    "user_intent": "Elucidate the structural mechanism of GPR110 self-activation by stalk peptide and investigate G-protein coupling selectivity",
+    "quantifiable_goal": "High-resolution cryo-EM structures (2.66–3.09 Å) and quantitative measurements of G-protein coupling activity (e.g., reporter assay RLU, BRET ratios)"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] GPR110 C-terminal fragment constructs needed for structural studies. [Gap] Expression constructs must be designed for baculovirus system. [Decision] To achieve protein expression, chose to use pFastBac1 baculovirus expression vector to perform cloning of GPR110 gene (residues 567-873) with LgBiT fusion, expecting to obtain expression-ready construct.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "pFastBac1 baculovirus expression vector",
+        "version": ""
+      },
+      "parameters": {
+        "gene_region": "residues 567-873",
+        "fusion_tag": "LgBiT",
+        "cleavage_site": "TEV cutting site",
+        "additional_tag": "2x maltose-binding protein (MBP)"
+      },
+      "observation": "GPR110 CTF construct successfully cloned for baculovirus expression",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] G-protein subunits needed for complex formation. [Gap] Multiple Gα subunit constructs required for different coupling studies. [Decision] To achieve G-protein complex assembly, chose to use pFastBac plasmid to perform cloning of Gβ1 HiBiT fusion, mini-Gαq, mini-Gαs, Gα12, Gα13, and Gαi constructs, expecting to obtain expression-ready G-protein constructs.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "pFastBac plasmid",
+        "version": ""
+      },
+      "parameters": {
+        "Gβ_construct": "HiBiT fusion of human Gβ1",
+        "Gαq_construct": "mini-Gαq from ghrelin receptor/Gq complex",
+        "Gαs_construct": "mini-Gαs from melanocortin receptor 1/Gs complex",
+        "Gαi_construct": "dominant-negative human Gαi (G203A, A326S)",
+        "Gα12_construct": "GGSGG linker swapped with Gαi AHD domain, first 19 residues substituted with first 18 residues of Gαi",
+        "Gα13_construct": "AHD swapped with Gαi AHD, first 19 residues replaced with first 18 residues of Gαi"
+      },
+      "observation": "G-protein subunit constructs successfully cloned",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 15 (VIP1R paper)",
+          "relevance": "Gβ1 HiBiT fusion cloning strategy"
+        },
+        {
+          "citation": "Reference 16 (ghrelin receptor/Gq complex)",
+          "relevance": "mini-Gαq construct source"
+        },
+        {
+          "citation": "Reference 17 (melanocortin receptor 1/Gs complex)",
+          "relevance": "mini-Gαs construct source"
+        },
+        {
+          "citation": "Reference 18",
+          "relevance": "dominant-negative Gαi construct"
+        }
+      ]
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Protein expression required for complex purification. [Gap] Receptor and G-protein subunits need to be co-expressed. [Decision] To achieve complex formation, chose to use Baculovirus expression system to perform co-infection of Sf9 cells with receptor, Gα, Gβ, and Gγ, expecting to obtain expressed protein complexes.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Baculovirus expression system",
+        "version": ""
+      },
+      "parameters": {
+        "cell_type": "Spodoptera frugiperda (Sf9) cells",
+        "cell_density": "2×10^6 cells per ml",
+        "infection_ratio": "1:100 (virus volume vs cells volume)",
+        "harvest_time": "48 h post-infection",
+        "additional_component_Gs_Gq": "Nb35",
+        "additional_component_Gi_G12_G13": "scFv16"
+      },
+      "observation": "GPR110/G-protein complexes successfully expressed in Sf9 cells",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Nb35 nanobody needed for Gs and Gq complex stabilization. [Gap] Nb35 must be expressed separately. [Decision] To achieve Nb35 production, chose to use E. coli BL21 expression system to perform Nb35 expression in periplasm, expecting to obtain purified Nb35 for complex stabilization.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "E. coli BL21 expression system",
+        "version": ""
+      },
+      "parameters": {
+        "medium": "TB culture medium",
+        "antibiotic": "100 μg/mL ampicillin",
+        "additives": "2 mM MgCl2, 0.1% (w/v) glucose",
+        "growth_temperature": "37°C, 200 rpm",
+        "induction_OD600": "0.7-0.9",
+        "inducer": "1 mM IPTG",
+        "induction_temperature": "28°C",
+        "induction_time": "4-6 h"
+      },
+      "observation": "Nb35 successfully expressed and purified by nickel affinity chromatography",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 22",
+          "relevance": "Nb35 nanobody source"
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Membrane proteins need to be solubilized for purification. [Gap] GPR110/G-protein complexes embedded in membrane must be extracted. [Decision] To achieve protein solubilization, chose to use detergent solubilization with LMNG and CHS to perform membrane extraction, expecting to obtain solubilized protein complexes.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Detergent solubilization",
+        "version": ""
+      },
+      "parameters": {
+        "buffer": "20 mM Hepes, 150 mM NaCl, 10 mM MgCl2, 20 mM KCl, 5 mM CaCl2, pH 7.5",
+        "enzyme": "0.5 mU/ml apyrase",
+        "detergent_1": "0.5% (w/v) lauryl maltose neopentylglycol (LMNG)",
+        "detergent_2": "0.1% (w/v) cholesteryl hemisuccinate TRIS salt (CHS)",
+        "temperature": "4°C",
+        "time": "2 h",
+        "centrifugation": "65,000 g at 4°C for 40 min"
+      },
+      "observation": "Membrane proteins successfully solubilized",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Solubilized proteins need affinity purification. [Gap] MBP-tagged GPR110 must be purified from cell lysate. [Decision] To achieve initial purification, chose to use amylose column chromatography to perform affinity purification of MBP-tagged receptor, expecting to obtain enriched GPR110/G-protein complexes.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Amylose column chromatography",
+        "version": ""
+      },
+      "parameters": {
+        "incubation_time": "2 h",
+        "wash_buffer": "20 mM Hepes, pH 7.5, 150 mM NaCl, 0.01% LMNG, 0.002% CHS",
+        "elution_buffer": "wash buffer plus 10 mM maltose"
+      },
+      "observation": "GPR110/G-protein complexes enriched by affinity purification",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] Affinity-purified complexes need further purification. [Gap] TEV cleavage and size separation required. [Decision] To achieve final purification, chose to use Superdex 200 Increase 10/300 GL gel filtration to perform size exclusion chromatography, expecting to obtain homogeneous GPR110/G-protein complexes.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Superdex 200 Increase 10/300 GL",
+        "version": ""
+      },
+      "parameters": {
+        "TEV_cleavage": "overnight at 4°C",
+        "buffer": "20 mM Hepes, pH 7.5, 150 mM NaCl",
+        "detergent_1": "0.00075% (w/v) LMNG",
+        "detergent_2": "0.00025% glyco-diosgenin (GDN)",
+        "detergent_3": "0.0002% (w/v) CHS",
+        "final_concentration": "about 10 mg/ml"
+      },
+      "observation": "Homogeneous GPR110/G-protein complexes obtained for cryo-EM",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 8,
+      "thought": "[Background] Purified complexes need to be prepared for cryo-EM imaging. [Gap] Samples must be vitrified on grids. [Decision] To achieve grid preparation, chose to use Vitrobot Mark IV to perform grid vitrification, expecting to obtain frozen-hydrated samples for data collection.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Vitrobot Mark IV",
+        "version": ""
+      },
+      "parameters": {
+        "sample_volume": "3 μl",
+        "sample_concentration": "~10 mg/ml",
+        "grid_type": "glow-charged quantifoil R1.2/1.3 Cu holey carbon grids",
+        "blot_force": "10",
+        "blot_time": "5 s",
+        "humidity": "100%",
+        "temperature": "4°C",
+        "vitrification_medium": "liquid ethane"
+      },
+      "observation": "Cryo-EM grids successfully prepared with evenly distributed particles",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 9,
+      "thought": "[Background] Grids need to be imaged for structure determination. [Gap] High-resolution cryo-EM data must be collected. [Decision] To achieve data collection, chose to use FEI 300kV Titan Krios TEM to perform cryo-EM imaging, expecting to obtain high-quality micrographs for structure determination.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "FEI 300kV Titan Krios TEM",
+        "version": ""
+      },
+      "parameters": {
+        "detector": "Gatan K2 direct electron detector",
+        "magnification": "64,000",
+        "pixel_size": "0.55 Å",
+        "energy_filter_slit": "20 eV",
+        "frames": "40 frames",
+        "exposure_time": "7.3 second",
+        "dose_rate": "1.5 e/Å²/s",
+        "total_dose": "60 e/Å²",
+        "defocus_range": "-1.2 to -2.2 μm"
+      },
+      "observation": "Cryo-EM images collected for all five G-protein complexes",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 10,
+      "thought": "[Background] Raw cryo-EM movies need motion correction. [Gap] Beam-induced motion must be corrected. [Decision] To achieve motion correction, chose to use MotionCor2 to perform frame alignment and binning, expecting to obtain motion-corrected micrographs.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MotionCor2",
+        "version": ""
+      },
+      "parameters": {
+        "Gq_Gs_Gi_movies": "2000-2300 raw movies",
+        "Gq_Gs_Gi_binning": "1.1 Å",
+        "G12_G13_movies": "3200-34000 raw movies",
+        "G12_G13_binning": "1.08 Å"
+      },
+      "observation": "Motion-corrected micrographs obtained for all complexes",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 35 (Zheng et al., 2017)",
+          "relevance": "MotionCor2 algorithm for beam-induced motion correction"
+        }
+      ]
+    },
+    {
+      "step_index": 11,
+      "thought": "[Background] Motion-corrected movies need CTF estimation. [Gap] Contrast transfer function parameters must be determined. [Decision] To achieve CTF estimation, chose to use CTFFIND 4.1 to perform CTF parameter estimation, expecting to obtain defocus and astigmatism values.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "CTFFIND 4.1",
+        "version": ""
+      },
+      "parameters": {
+        "input": "motion-corrected movies"
+      },
+      "observation": "CTF parameters estimated for all micrographs",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 36 (Rohou & Grigorieff, 2015)",
+          "relevance": "CTFFIND4 for defocus estimation"
+        }
+      ]
+    },
+    {
+      "step_index": 12,
+      "thought": "[Background] Particles need to be picked from micrographs. [Gap] Individual protein particles must be identified. [Decision] To achieve particle picking, chose to use crYOLO to perform automated particle picking, expecting to obtain particle coordinates for extraction.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "crYOLO",
+        "version": ""
+      },
+      "parameters": {
+        "particles_picked": "1.5-4.0 million particles"
+      },
+      "observation": "Particles picked from all micrographs",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 37 (Wagner et al., 2019)",
+          "relevance": "crYOLO for automated particle picking"
+        }
+      ]
+    },
+    {
+      "step_index": 13,
+      "thought": "[Background] Picked particles need 2D classification. [Gap] Poor quality particles must be removed. [Decision] To achieve particle cleaning, chose to use RELION 3.1 to perform reference-free 2D classification, expecting to obtain good particle classes.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "RELION",
+        "version": "3.1"
+      },
+      "parameters": {
+        "good_particles": "0.7-1.3 million particles",
+        "selection_criteria": "well-defined features"
+      },
+      "observation": "Good particle classes selected for 3D reconstruction",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 38 (Zivanov et al., 2018)",
+          "relevance": "RELION 3.1 for automated cryo-EM structure determination"
+        }
+      ]
+    },
+    {
+      "step_index": 14,
+      "thought": "[Background] Initial 3D model needed for refinement. [Gap] Ab initio reconstruction required. [Decision] To achieve initial model generation, chose to use cryoSPARC to perform ab initio reconstruction, expecting to obtain initial 3D model for classification.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "cryoSPARC",
+        "version": ""
+      },
+      "parameters": {
+        "method": "ab initio"
+      },
+      "observation": "Initial 3D model generated",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 39 (Punjani et al., 2017)",
+          "relevance": "cryoSPARC for rapid unsupervised cryo-EM structure determination"
+        }
+      ]
+    },
+    {
+      "step_index": 15,
+      "thought": "[Background] Particles need 3D classification. [Gap] Heterogeneous particles must be separated. [Decision] To achieve 3D classification, chose to use RELION 3.1 to perform 3D classification with 5 classes, expecting to obtain homogeneous particle subset.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "RELION",
+        "version": "3.1"
+      },
+      "parameters": {
+        "classes": "5 classes",
+        "best_class_particles": "~500,000 particles",
+        "selection_criteria": "clear secondary structure features"
+      },
+      "observation": "Best 3D class selected for refinement",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 38 (Zivanov et al., 2018)",
+          "relevance": "RELION 3.1 for 3D classification"
+        }
+      ]
+    },
+    {
+      "step_index": 16,
+      "thought": "[Background] Selected particles need 3D refinement. [Gap] High-resolution reconstruction required. [Decision] To achieve 3D refinement, chose to use RELION 3.1 to perform 3D refinement with Bayesian polishing and CTF refinement, expecting to obtain improved map quality.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "RELION",
+        "version": "3.1"
+      },
+      "parameters": {
+        "refinement_steps": "3D refinement, Bayesian polishing, 3D refinement, CTF refinement"
+      },
+      "observation": "Refined particle set obtained",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 40 (Zivanov et al., 2019)",
+          "relevance": "Bayesian approach to beam-induced motion correction"
+        }
+      ]
+    },
+    {
+      "step_index": 17,
+      "thought": "[Background] Refined particles need final reconstruction. [Gap] Non-uniform refinement for best resolution. [Decision] To achieve final reconstruction, chose to use cryoSPARC Non-uniform Refinement to perform final 3D refinement, expecting to obtain high-resolution cryo-EM maps.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "cryoSPARC Non-uniform Refinement",
+        "version": ""
+      },
+      "parameters": {
+        "particle_count": "260,000-500,000 particles",
+        "resolution_range": "2.66-3.09 Å",
+        "FSC_criterion": "gold standard FSC=0.143"
+      },
+      "observation": "Final cryo-EM maps obtained with resolutions: Gq 2.85 Å, Gs 2.84 Å, Gi 3.09 Å, G12 2.8 Å, G13 2.66 Å",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 39 (Punjani et al., 2017)",
+          "relevance": "cryoSPARC for structure determination"
+        }
+      ]
+    },
+    {
+      "step_index": 18,
+      "thought": "[Background] Cryo-EM maps need post-processing. [Gap] Map quality enhancement required. [Decision] To achieve map enhancement, chose to use DeepEMhancer to perform cryo-EM volume post-processing, expecting to obtain improved map quality for model building.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "DeepEMhancer",
+        "version": ""
+      },
+      "parameters": {
+        "method": "deep learning post-processing"
+      },
+      "observation": "Post-processed cryo-EM maps obtained",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 41 (Sanchez-Garcia et al., 2021)",
+          "relevance": "DeepEMhancer for cryo-EM volume post-processing"
+        }
+      ]
+    },
+    {
+      "step_index": 19,
+      "thought": "[Background] Atomic models need to be built into cryo-EM maps. [Gap] Initial models required for docking. [Decision] To achieve initial model placement, chose to use UCSF Chimera to perform model docking into electron microscopy density maps, expecting to obtain positioned initial models.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "UCSF Chimera",
+        "version": ""
+      },
+      "parameters": {
+        "initial_models": "AlphaFold structures of human GPR110 (AF-Q5T6I0-F1), Gi protein complex from D2R (PDB 6vms and 7jvr), Gs protein complex from M1R (PDB 7f4q)"
+      },
+      "observation": "Initial models docked into cryo-EM density maps",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 42 (Jumper et al., 2021)",
+          "relevance": "AlphaFold for protein structure prediction"
+        },
+        {
+          "citation": "Reference 44 (Pettersen et al., 2004)",
+          "relevance": "UCSF Chimera for visualization and docking"
+        }
+      ]
+    },
+    {
+      "step_index": 20,
+      "thought": "[Background] Docked models need manual adjustment. [Gap] Model-map fit requires refinement. [Decision] To achieve model optimization, chose to use Coot to perform iterative manual adjustment, expecting to obtain improved model-map fit.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Coot",
+        "version": ""
+      },
+      "parameters": {
+        "method": "iterative manual adjustment"
+      },
+      "observation": "Manually adjusted atomic models obtained",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 45 (Emsley & Cowtan, 2004)",
+          "relevance": "Coot for model-building"
+        }
+      ]
+    },
+    {
+      "step_index": 21,
+      "thought": "[Background] Manually adjusted models need computational refinement. [Gap] Rosetta refinement for cryo-EM data. [Decision] To achieve model refinement, chose to use Rosetta cryoEM refinement to perform relax model refinement, expecting to obtain energetically favorable models.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Rosetta cryoEM refinement",
+        "version": ""
+      },
+      "parameters": {
+        "model_type": "relax model"
+      },
+      "observation": "Rosetta-refined models obtained",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 46 (Wang et al., 2016)",
+          "relevance": "Rosetta for cryo-EM structure refinement"
+        }
+      ]
+    },
+    {
+      "step_index": 22,
+      "thought": "[Background] Rosetta-refined models need real-space refinement. [Gap] Phenix refinement for final optimization. [Decision] To achieve final refinement, chose to use Phenix real space refinement to perform model optimization against cryo-EM maps, expecting to obtain final atomic models.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Phenix real space refinement",
+        "version": ""
+      },
+      "parameters": {
+        "method": "real space refinement"
+      },
+      "observation": "Final refined atomic models obtained",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 47 (Adams et al., 2010)",
+          "relevance": "PHENIX for macromolecular structure solution"
+        }
+      ]
+    },
+    {
+      "step_index": 23,
+      "thought": "[Background] Final models need validation. [Gap] Model quality must be assessed. [Decision] To achieve model validation, chose to use MolProbity to perform all-atom structure validation, expecting to obtain validation statistics.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "MolProbity",
+        "version": ""
+      },
+      "parameters": {
+        "validation_type": "all-atom structure validation"
+      },
+      "observation": "Model statistics validated",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 48 (Chen et al., 2010)",
+          "relevance": "MolProbity for structure validation"
+        }
+      ]
+    },
+    {
+      "step_index": 24,
+      "thought": "[Background] Structural observations need functional validation. [Gap] Receptor activity must be measured. [Decision] To achieve functional validation, chose to use Dual-Glo Luciferase system to perform reporter assays (NFAT-RE, CRE, SRE, SRF-RE), expecting to obtain quantitative receptor activity measurements.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Dual-Glo Luciferase system",
+        "version": ""
+      },
+      "parameters": {
+        "cell_type": "AD293 cells",
+        "cell_density": "40,000 per well",
+        "reporter_plasmids": "SRE-Luc, CRE-Luc, SRF-RE-Luc, NFAT-RE-Luc (100 ng)",
+        "receptor_plasmid": "pcDNA3-GPR110 wild-type or mutations (10 ng)",
+        "normalization_plasmid": "phRGtk-Renilla (10 ng)",
+        "transfection_reagent": "X-tremeGENE HP (Roche) at ratio 3:1 to DNA",
+        "incubation": "37°C at 5% CO2, 24 h after transfection"
+      },
+      "observation": "Reporter assay data showing GPR110 CTF activates all 4 major G-protein signaling pathways; stalk peptide deletion abrogates activity",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 14",
+          "relevance": "Reporter assay protocols"
+        },
+        {
+          "citation": "Reference 34",
+          "relevance": "Reporter assay methods"
+        }
+      ]
+    },
+    {
+      "step_index": 25,
+      "thought": "[Background] G-protein coupling needs quantitative measurement in physiological setting. [Gap] Constitutive activity must be assessed. [Decision] To achieve coupling quantification, chose to use BRET assay with tricistronic activity sensors to perform quantitative measurement of GPR110 constitutive activity, expecting to obtain G-protein coupling strength data.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "BRET assay",
+        "version": ""
+      },
+      "parameters": {
+        "assay_type": "bioluminescence resonance energy transfer",
+        "measurement": "constitutive activity of GPCR"
+      },
+      "observation": "BRET data showing Gq, G13, and Gs have strong coupling activity; Gi has weakest coupling activity",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 54 (Schihada et al., 2021)",
+          "relevance": "BRET-based G protein biosensors"
+        }
+      ]
+    },
+    {
+      "step_index": 26,
+      "thought": "[Background] Stalk peptide interaction needs computational validation. [Gap] Hydrogen bond formation between S570stalk and H8207,39 unclear from static structure. [Decision] To achieve interaction validation, chose to use CHARMM-GUI to perform MD simulation system setup with POPC:cholesterol membrane, expecting to obtain simulation-ready system.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "CHARMM-GUI",
+        "version": ""
+      },
+      "parameters": {
+        "initial_structure": "cryo-EM structure of GPR110 (receptor only)",
+        "ICL3_break": "774-785 filled with 4 alanine residues",
+        "membrane_composition": "POPC and cholesterol at ratio 4:1",
+        "membrane_size": "65×65 Å",
+        "water_layer": "22.5 Å",
+        "ion_concentration": "0.15 M KCl",
+        "temperature": "303.15 K",
+        "force_field_protein": "FF19SB",
+        "force_field_lipid": "LIPID17",
+        "force_field_water": "TIP3P"
+      },
+      "observation": "MD simulation system prepared",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 55 (Jo et al., 2008)",
+          "relevance": "CHARMM-GUI web interface"
+        },
+        {
+          "citation": "Reference 56 (Lee et al., 2020)",
+          "relevance": "CHARMM-GUI Amber force field support"
+        }
+      ]
+    },
+    {
+      "step_index": 27,
+      "thought": "[Background] MD system needs production simulation. [Gap] S570stalk-H8207,39 hydrogen bond formation must be tested. [Decision] To achieve interaction analysis, chose to use Amber20 to perform molecular dynamics simulation with three independent 200 ns runs, expecting to obtain trajectory data for hydrogen bond analysis.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Amber20",
+        "version": ""
+      },
+      "parameters": {
+        "energy_minimization": "solvent and all atoms",
+        "heating": "to 300 K in 300 ps",
+        "equilibration": "700 ps",
+        "production_runs": "three independent runs of 200 ns",
+        "timestep": "2 fs",
+        "electrostatics": "Particle mesh Ewald algorithm",
+        "cutoff": "10 Å for short-range electrostatic and van der Waals",
+        "constraints": "SHAKE algorithm for bonds with hydrogens",
+        "temperature_control": "Langevin thermostat at 300 K",
+        "pressure_control": "Berendsen barostat at 1 atm"
+      },
+      "observation": "MD simulation shows S570stalk and H8207,39 form hydrogen bond, confirming polar interaction contribution",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 57 (Case et al., 2005)",
+          "relevance": "Amber biomolecular simulation programs"
+        }
+      ]
+    },
+    {
+      "step_index": 28,
+      "thought": "[Background] Physiological relevance needs to be tested. [Gap] Stalk peptide effect on neurons must be examined. [Decision] To achieve physiological validation, chose to use primary cortical neuron preparation to perform neurite outgrowth assay, expecting to obtain evidence of stalk peptide activation in physiological context.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Primary cortical neuron preparation",
+        "version": ""
+      },
+      "parameters": {
+        "animal_source": "Pregnant female C57BL/6 mice",
+        "pup_age": "P1 pups",
+        "digestion": "0.25% trypsin for 20 min at 37°C",
+        "medium": "DMEM with 10% FBS",
+        "seeding_density": "2.5×10^4 cells per well",
+        "coating": "poly-D-lysine-coated chamber slides",
+        "treatment_day": "day 1 in vitro for 24 h",
+        "treatments": "1 μM DHA, 100 μM stalk-peptide, or vehicle"
+      },
+      "observation": "Stalk peptide promotes neurite outgrowth similar to DHA effect",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Reference 53 (Li et al., 2022)",
+          "relevance": "Primary cortical neuron preparation method"
+        }
+      ]
+    },
+    {
+      "step_index": 29,
+      "thought": "[Background] Neurite outgrowth needs quantification. [Gap] Neurons must be visualized and measured. [Decision] To achieve neurite measurement, chose to use immunocytochemistry with anti-MAP2 antibody to perform neuron staining and imaging, expecting to obtain quantitative neurite outgrowth data.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Immunocytochemistry",
+        "version": ""
+      },
+      "parameters": {
+        "fixation": "4% Paraformaldehyde for 15 min",
+        "blocking": "0.2% Triton X-100 and 10% goat serum for 1 h",
+        "primary_antibody": "rabbit anti-MAP2 antibody (1:2000)",
+        "incubation": "overnight at 4°C",
+        "secondary_antibody": "donkey anti-rabbit (1:1000) for 1 h",
+        "nuclear_stain": "DAPI for 10 min",
+        "microscope": "Zeiss LSM880 laser scanning confocal microscope",
+        "analysis": "60-120 neurons per group using ImageJ, 5 images with 4-8 MAP2-positive neurons per image"
+      },
+      "observation": "Quantitative neurite outgrowth data showing stalk peptide effect similar to DHA",
+      "valid": true,
+      "references": []
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Cryo-EM structure determination combined with functional assays (reporter assays, BRET assay, neurite outgrowth assay)",
+    "metrics": {
+      "cryo_EM_resolution_Gq": {
+        "value": "2.85",
+        "unit": "Å",
+        "interpretation": "High-resolution structure of GPR110/Gq complex"
+      },
+      "cryo_EM_resolution_Gs": {
+        "value": "2.84",
+        "unit": "Å",
+        "interpretation": "High-resolution structure of GPR110/Gs complex"
+      },
+      "cryo_EM_resolution_Gi": {
+        "value": "3.09",
+        "unit": "Å",
+        "interpretation": "Structure of GPR110/Gi complex with weaker density on H8"
+      },
+      "cryo_EM_resolution_G12": {
+        "value": "2.8",
+        "unit": "Å",
+        "interpretation": "High-resolution structure of GPR110/G12 complex"
+      },
+      "cryo_EM_resolution_G13": {
+        "value": "2.66",
+        "unit": "Å",
+        "interpretation": "Highest resolution structure of GPR110/G13 complex"
+      },
+      "G_protein_interface_area_Gq": {
+        "value": "991",
+        "unit": "Å²",
+        "interpretation": "Receptor interface area for Gq engagement"
+      },
+      "G_protein_interface_area_Gs": {
+        "value": "1020",
+        "unit": "Å²",
+        "interpretation": "Receptor interface area for Gs engagement"
+      },
+      "G_protein_interface_area_Gi": {
+        "value": "853",
+        "unit": "Å²",
+        "interpretation": "Smallest receptor interface area, explains poor Gi coupling"
+      },
+      "G_protein_interface_area_G12": {
+        "value": "1056",
+        "unit": "Å²",
+        "interpretation": "Largest receptor interface area for G12 engagement"
+      },
+      "G_protein_interface_area_G13": {
+        "value": "988",
+        "unit": "Å²",
+        "interpretation": "Receptor interface area for G13 engagement"
+      },
+      "reporter_assay_activity": {
+        "value": "strong self-activation",
+        "unit": "RLU (relative luciferase units)",
+        "interpretation": "GPR110 CTF activates all 4 major G-protein signaling pathways; stalk peptide deletion abrogates activity"
+      },
+      "BRET_coupling_strength": {
+        "value": "Gq, G13, Gs > Gi",
+        "unit": "BRET ratio",
+        "interpretation": "Gq, G13, and Gs have strong coupling; Gi has weakest coupling, consistent with structural observations"
+      }
+    },
+    "final_verdict": "Research objective achieved: High-resolution cryo-EM structures (2.66-3.09 Å) of GPR110 in complex with all 5 G-proteins (Gq, Gs, Gi, G12, G13) were obtained. Structural mechanism of GPR110 self-activation by stalk peptide was elucidated through ligand binding pocket analysis and mutagenesis validation. G-protein coupling selectivity was investigated through systematic comparison revealing Class I (Gq/Gs) vs Class II (Gi/G12/G13) engagement patterns based on αH5 residue characteristics at position -4. Physiological relevance confirmed through BRET assay and neurite outgrowth experiments showing stalk peptide activates GPR110 in primary neurons."
+  }
+}

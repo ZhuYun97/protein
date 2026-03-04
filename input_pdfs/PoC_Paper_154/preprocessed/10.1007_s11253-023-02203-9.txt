@@ -1,0 +1,182 @@
+CONFIDENCE DISC AND SQUARE FOR THE CAUCHY DISTRIBUTIONS
+Y. Akaoka,1 K. Okamura,2,3 and Y. Otobe4
+We construct a confidence region of parameters for a sample of size $N$ from the Cauchy distributed random variables. Although the Cauchy distribution has two parameters, namely, a location parameter $\mu\in\mathbb{R}$ and a scale parameter $\sigma>0$ , we consider them simultaneously by regarding them as a single complex parameter $\gamma:=\mu+i\sigma$ . The region should be a domain in the complex plane. We give a simple and specific formula to represent the region as a disc and as a square.
+
+1. Introduction
+The Cauchy distribution is one of typical bell-shaped and stable laws that has a longer and flatter tail, which makes its mathematical handling difficult. However, for this reason, typical samples from the Cauchy distribution concentrate in its center, except for a few “outliers.” Thus, one may encounter the cases in which it is preferable to model the Cauchy distribution rather than the Gaussian distribution. From this point of view, in the preceding articles [2, 3], we have investigated estimators for the parameters of Cauchy distributions from observations. These are point estimations. However, in the present paper, we are concerned with an interval estimation, i.e., our aim is to construct confidence regions. Confidence regions are not only often used in practice but also relate to statistical hypothesis testing (see, e.g., [15, $\S7.1.2]\$ ); hence, it goes without saying its statistical importance.
+On the other hand, to the best of our knowledge, no specific regions for the Cauchy distributions are known, while few studies have examined them. One of them is a paper by Haas, Bain and Antle [6], which is based on [7]. They discussed mainly the maximal likelihood estimators for the Cauchy distributions and proposed confidence intervals for the location parameter $\mu$ . However, unfortunately, the explicit formula for the maximal likelihood estimator is known only for the case of sample sizes of 3 and 4 and, furthermore, there is no algebraic closed-form formula for the case of a sample size of 5 (see [5, 13]). If the explicit formula is unknown, then the Newton– Raphson method has been often used. Hinkley [8, (2.12)] gave confidence regions for the pair of location and scale by using the maximal likelihood estimator. It is related to the likelihood-ratio test. However, it is complicated and, thus, it is hard to imagine the specific shape of the region. Vrbik also obtained confidence regions [17] based on the maximal likelihood estimator; see also [4, 9, 10] for the related inference methods for Cauchy distributions.
+We also would like to point out that, although it is definitely true that computer-aided numerical simulations have become an efficient method for statistically testing or even constructing confidence intervals, it is not trivial to apply them for Cauchy distributions. To show this, we see, e.g., that a simple arithmetic mean of the Cauchy random variables still obeys the Cauchy distribution, which is independent of the number of sizes of the samples: here, we emphasize that the choice of a simple and nice estimator for the Cauchy distributions is a nontrivial problem. We also mention that few unbiased estimators were known so far except, e.g., the case of using MLEs [11] or trimmed average [14], which actually eliminates the outliers from the observations.
+In this situation, we would like to propose in the present paper to take the geometric mean (see Remark 2.2 for the terminology). There are several reasons why it is nicer than the other quantities. However, since this problem belongs to the theory of point estimation, we would not like here to go in this direction any further. Here, we only point out that the geometric mean has sufficiently high integrability and is unbiased (see [3] for some additional properties of the geometric mean). Moreover, since the geometric mean is an exponential of the arithmetic mean of logarithms, it is harmless to compute the quantity. However, we note that the geometric mean $\prod_{j=1}^{N}X_{j}^{1/N}$ s i a product of the $(1/N)$ th power of (probably negative) observations. Hence, we are naturally led to treating all quantities as complex numbers. In particular, $X^{p}$ , $0<|p|<1$ , and $\log X$ are all complex random variables. Therefore, we gather some basic quantities, mainly expectations of these random variables in Section 2.
+It is well known that if $X$ obeys a Cauchy distribution, then $\mathbb{E}[|X|^{p}]$ exists and, hence, $\mathbb{E}[X^{p}]$ also exists for $|p|<1$ . The explicit formula of $\mathbb{E}[|X|^{p}]$ is given by [18, (3.0.3)]. However, the derivation of [18, (3.0.3)] is very complicated. Therefore, we propose another way of evaluation of them, along with $\mathbb{E}[X^{p}]$ , in Section 2. These calculations are rather simple and direct. We also expect that, through these manipulations, it would become clear that the analysis performed in the complex plane is not a technical restriction but an essential tool for the Cauchy distributions. In particular, we hope it would be natural to regard the location parameter $\mu$ and the scale parameter $\sigma>0$ of the Cauchy distribution as a single complex parameter $\gamma=\mu+i\sigma$ but not as two distinct real parameters. Note that this idea was proposed by McCullagh [12]. Thus, our statistical inference for the parameters of the Cauchy distributions is actually a problem for a single complex parameter, i.e., we naturally consider the location parameter and the scale parameter together.
+Then we show that the central limit theorem holds for the geometric mean (Lemma 3.3) and modify it to be able to determine the confidence region (Lemma 3.4) in the complex plane. This is a standard procedure. Finally, based on the central limit theorem, we obtain the confidence region for the Cauchy parameters; as a disc in the complex plane (Theorem 3.1). In Section 4, we conclude the paper by showing several numerical examples for our confidence disc.
+We wish to express our grateful thanks to the anonymous referee for careful reading of the manuscript and helpful comments improving the paper. Especially, Corollaries 3.1 and 3.2 appeared due to his (her) suggestions.
+
+2. Auxiliary Quantities for the Cauchy Distribution
+In this section, we gather some basic quantities used in the next sections. In what follows, by $C(\mu,\sigma)$ we denote a Cauchy distribution whose location parameter is $\boldsymbol{\mu}\in\mathbb{R}$ and scale parameter is $\sigma>0$ . We also denote by $X\sim C(\mu,\sigma)$ a real-valued random variable $X\colon\Omega\rightarrow\mathbb{R}$ when the push forward measure $P_{X}\equiv P X^{-1}$ on $\mathbb{R}$ is $C(\mu,\sigma)$ , where $(\Omega,\mathbb{F},P)$ is a probability space on which the variable $X$ is defined. The expectation of $X$ with respect to $P$ is denoted by $\mathbb{E}[X]$ .
+For a noninteger real number $p\in\mathbb{R}$ , we almost surely define $X^{p}$ by $\exp\{p\log X\}$ , as usual when
+Here, the logarithmic function log is defined on a Riemann surface
+that is
+by using the ordinary $\log:R_{+}\to\mathbb{R}$ ; log is a single-valued holomorphic function. We can simply write $\log z$ as a function defined on $\mathbb{C}^{*}$ with $\log(z,\arg z)$ if there is no confusion. In this case, the logarithmic function
+has branches, i.e.,
+is a multivalued function on $\mathbb{C}^{*}$ .
+Remark 2.1. Since we have an option to choose a branch of $\log$ , the values of $1^{p}$ and $(-1)^{p}$ may differ, for instance, if $p=1/3$ ,
+Note that even if $x>0$ , $x^{p}$ may not be a real number. However, it contains an imaginary part, which does not affect any result, as we keep the arbitrariness of choosing a branch.
+We emphasize that the equalities $1^{1/3}=1$ and $(-1)^{1/3}=-1$ never hold together at the same time. If we prefer $1^{1/3}=1$ , then $(-1)^{1/3}$ is no longer real, and if we prefer $(-1)^{1/3}=-1$ then $1^{1/3}$ becomes complex. Otherwise, neither $1^{1/3}$ , nor $(-1)^{1/3}$ is real.
+Hence, it is natural to consider complex-valued random variables. For a complex-valued random variable $Z$ the expectation is defined as usual:
+We can also define the variance as a nonnegative real number:
+Moreover, we can also define the pseudovariance
+If a complex random variable $Z$ satisfies the relations
+(i) $\begin{array}{l}{{\mathbb E}[Z]=0,}\\ {\mathrm{Var}(Z)<\infty,}\end{array}$ (ii)
+and
+(iii) $\mathbb{E}[Z^{2}]=0,$
+then it is called proper. A proper random variable has a vanishing pseudovariance. We set $\gamma:=\mu+i\sigma$ and also write $C(\gamma)$ instead of $C(\mu,\sigma)$ .
+Proposition 2.1. Let $f\colon\mathbb{C}\setminus\{0\}\to\mathbb{C}$ be a holomorphic function of sublinear growth, i.e.,
+For $X\sim C(\gamma)$ , we see that $\mathbb{E}[f(X)]=f(\gamma)$ . In particular, the following assertions are true:
+$(I)\mathbb{E}[X^{p}]=\gamma^{p}f o r\ |p|<1;$ (2) $\mathbb{E}[(\log X)^{p}]=(\log\gamma)^{p}$ for all $p\geq0$ .
+Proof. Note that the probability density function for the Cauchy distribution is
+Since $\sigma>0,1/(z-\bar{\gamma})$ is holomorphic in the upper half plane. Therefore, the required assertion immediately follows from the Cauchy integral formula.
+Corollary 2.1. If $X_{1},X_{2},\ldots,X_{N}\sim C(\gamma),N\geq2$ , are independent, then:
+(1) their geometric mean is an unbiased estimator for $\gamma=\mu+i\sigma$ , i.e., $\mathbb{E}\left[\prod_{j=1}^{N}X_{j}^{1/N}\right]=\gamma;$ (2) $\exp\left\{\mathbb{E}\left[{\frac{1}{N}}\sum_{j=1}^{N}\log X_{j}\right]\right\}=\gamma.$
+Remark 2.2. In the present paper, the quantity $\prod_{j=1}^{N}X_{j}^{1/N}$ Xj1/N is called the geometric mean. Note that $\textstyle\prod_{j=1}^{N}X_{j}^{1/N}$ X1/N is not equal to ✓ $\left(\prod_{j=1}^{N}X_{j}\right)^{1/{N}}$ , which may be usually referred to as the geometric mean.
+Corollary 2.2. If $X\sim C(\gamma)$ , then:
+(1) the pseudovariances $\operatorname{PV}(X^{p})=0$ , $0<p<1/2$ , and $\mathrm{PV}(\log X)=0$ ;   
+(2) $X^{p}-\gamma^{p},0<p<1/2$ , and $\log X-\log\gamma$ are proper complex random variables.
+Proposition 2.2. If $X\sim C(\gamma)$ and $|p|<1$ , then:
+(1) $\mathbb{E}[X^{p},X>0]={\frac{\gamma^{p}-{\bar{\gamma}}^{p}}{1-e^{2p\pi i}}}=|\gamma|^{p}{\frac{\sin p(\pi-\arg\gamma)}{\sin p\pi}};$ $\mathbb{E}[|X|^{p}]=\frac{\gamma^{p}+(-\bar{\gamma})^{p}}{1+e^{p\pi i}}=|\gamma|^{p}\frac{\cos(p(\arg\gamma-\pi/2))}{\cos(p\pi/2)};$ (3) $\mathbb{E}[\log|X|]=\log|\gamma|;$ ; (4) $\mathbb{E}[(\log|X|)^{2}]=(\log|\gamma|)^{2}+\arg\gamma(\pi-\arg\gamma);$
+Fig. 1. Integral curve for $\int_{0}^{\infty}$
+Proof. We use the probability density of the Cauchy distribution in the form specified by (2.1). First, we perform integration along a curve similar to that depicted in Fig. 1. By using the Cauchy integral formula and letting $R\to\infty$ and $\varepsilon\rightarrow0$ , we clearly get
+Note that two poles $\gamma$ and $\bar{\gamma}$ stay on the same leaf but each segment in the integrals on the left-hand side stays on a different leaf. Thus, we get (1),
+To compute (2), we first note that
+As in (1), by using the Cauchy integral formula once again, we obtain
+Note that, by setting
+we finally find (2):
+Further, we note that $g(p):=\mathbb{E}[|X|^{p}]=\mathbb{E}[e^{p\log|X|}]$ is the moment generating function of $\log|X|$ . We also note that $z\mapsto\alpha^{z},\alpha\in\mathbb{C}$ , and $z\mapsto1+e^{z\pi i}$ are holomorphic. Therefore, by using the expansions
+we get the following relation:
+and, hence, $\log\gamma+\log(-\bar{\gamma})=\log(-|\gamma|^{2})=2\log|\gamma|+\pi i$ and $g^{\prime}(0)=\log|\gamma|=\mathbb{E}[\log|X|]$ yield assertion (3). The proof of (4) is routine; letting $\gamma=|\gamma|e^{i\theta}$ , $\log\gamma=\log|\gamma|+i\theta$ , and $\log(-\gamma)=\log|\gamma|+i(\theta-\pi);\log|\gamma|\in\mathbb{R}$ . Since
+we also arrive at assertion (5).
+To prove (6), we first note that
+by definition. We can now fix a primary branch, i.e.,
+Hence,
+Therefore,
+Since $\vert\log\gamma\vert^{2}=(\log\vert\gamma\vert)^{2}+(\arg\gamma)^{2}$ , we get the required assertion.   
+Proposition 2.2 is proved.
+For the geometric mean, we obtain the explicit values of covariances of the real and imaginary parts.
+Proposition 2.3. If $n\geq3$ , then
+and
+Proof. Let $\mu:=\operatorname{Re}(\gamma)$ and $\sigma:=\operatorname{Im}(\gamma)$ . By the unbiasedness, we see that
+and
+Since $X_{1},\dots,X_{n}\in\mathbb{R}$ , we have
+Since
+we see that
+Hence,
+This fact and Proposition 2.2 (3) imply that $\operatorname{Var}\left(\operatorname{Re}\left(X_{1}^{1/n}\cdot\cdot\cdot X_{n}^{1/n}\right)\right)$ and $\operatorname{Var}\left(\operatorname{Im}(X_{1}^{1/n}\dots X_{n}^{1/n})\right)$ are both equal to $\frac{r^{2}}{2}\left(\left(\frac{\cos{\left((\pi-2\arg\gamma)/n\right)}}{\cos{(\pi/n)}}\right)^{n}-1\right).$
+Since
+we see that
+Proposition 2.3 is proved.
+
+3. Central Limit Theorem and Asymptotic Confidence Disc and Square for the Geometric Mean
+To formulate a central limit theorem for the geometric mean of Cauchy random variables, we first recall that a complex random variable $Z_{0,1}$ is a standard complex normal if $\mathrm{Re}Z_{0,1}$ and $\mathrm{Im}Z_{0,1}$ are independent and both $\mathrm{Re}Z_{0,1}$ and $\ensuremath{\mathrm{Im}}Z_{0,1}$ obey $N(0,1/2)$ . Further, we assume that $X_{1},X_{2},\ldots$ are independent and identically distributed random variables with $\mathbb{E}[X_{1}]=m$ whose real and imaginary parts have the variance $v/2$ and covariance 0. Thus, we conclude that
+converges in law as $n\to\infty$ to the standard complex normal random variable [16, Example 2.18].
+It is already known from Corollary 2.2 that if $X\sim C(\gamma)$ , then $\log X-\log\gamma$ is proper, i.e., the real part and imaginary parts are independent and have the same distribution with mean value 0. In addition, in Proposition 2.2(6), it is also shown that the variance of $\log X$ is $v\equiv2\arg\gamma(\pi-\arg\gamma)$ . Therefore, we get the following central limit theorem for the logarithms of Cauchy random variables:
+Lemma 3.1. Let $X_{1},X_{2},...\sim C(\gamma)$ be independent. Then
+as $N\rightarrow\infty$ in law.
+To formulate a central limit theorem for the geometric mean around $\gamma=\mu+i\sigma$ , we need the following complex version of the delta-method [15, Theorem 1.12] whose proof is omitted because it is straightforward:
+Lemma 3.2. Let $X_{1},X_{2},\ldots$ . and let $Y$ be complex random variables satisfying
+as $n\to\infty$ in law, where $m\in\mathbb{C}$ and $\left\{b_{n}\right\}$ is a sequence of positive numbers with $b_{n}\to\infty$ . Let $f\colon\mathbb{C}\to\mathbb{C}$ be a holomorphic function in a domain containing $m\in\mathbb{C}$ . Then
+as $n\to\infty$ in law.
+Applying the complex delta-method to a complex function $f(z):=e^{z}$ , we get the following version of the central limit theorem:
+Lemma 3.3. Let $X_{1},X_{2},...\sim C(\gamma)$ be independent. Then
+as $N\to\infty$ in law.
+Unfortunately Lemma 3.3 cannot be applied to get a confidence disc for the Cauchy distributed random variables. Thus, we obtain the following version of the central limit theorem:
+Lemma 3.4. Let $X_{1},X_{2},...\sim C(\gamma)$ be independent. Also let
+and
+which is an unbiased and consistent estimator for
+Then
+as $N\rightarrow\infty$ in law.
+Proof. Since $V_{N}$ converges to $2\arg\gamma(\pi-\arg\gamma)$ and $P_{N}$ converges to $\gamma$ as $N\rightarrow\infty$ in probability, Lemma 3.3 implies the required conclusion.
+We can now present a formula for the asymptotic confidence disc.
+Theorem 3.1. Let $X_{1},X_{2},\ldots,X_{N}$ be independent Cauchy random variables with location $\mu\in\mathbb{R}$ and scale $\sigma>0$ . Also let $P_{N}$ and $V_{N}$ be as in Lemma 3.4. Then
+for $0<\alpha\leq1$ , where $R_{\alpha}=\sqrt{-\log{\alpha}}$ and $B(p,r)$ denotes a disc in $\mathbb{C}$ with center $p$ and radius $r$ .
+Proof. We first note that
+Combining this relation with Lemma 3.4, we conclude that
+which immediately yields the required assertion.
+Theorem 3.1 is proved.
+Similar arguments enable us to obtain an asymptotic confidence square, which is somewhat smaller than the disc.
+Corollary 3.1. Let $Q(p,r)$ be a square in the complex plane whose center is $r$ and the length of one side is $2r$ , namely,
+Let $\rho_{\alpha}$ be the upper $\alpha$ -quantile of the standard real normal distribution, i.e.,
+Under the same conditions as in Theorem 3.1, for $\beta=\frac{1}{2}\big(1-\sqrt{1-\alpha}\big)$ , the following relation is true:
+Proof. Recall that $Z_{0,1}$ is rotation invariant in law, i.e., for any complex number $w$ with $|w|=1$ , $Z_{0,1}$ and $w Z_{0,1}$ share the same distribution. This fact guarantees the possibility of taking the absolute value of the coefficient in relation (3.1), i.e., we have
+as $N\rightarrow\infty$ in law. Therefore, by using the same arguments and Lemma 3.4, we get
+Since $\mathrm{Re}(Z_{0,1})$ and $\mathrm{Im}(Z_{0,1})$ are independent and obey $N(0,1/2)$ , the right-hand side is equal to
+Corollary 3.1 is proved.
+We can apply the idea of Corollary 3.1 to get confidence intervals for $\mu$ and $\sigma$ , respectively.
+Corollary 3.2. Under the same conditions as in Corollary 3.1, the following relations are true:
+Fig. 2. $\mu=0,\ \sigma=1,\ N=1000,\ \alpha=0.05$ ; ten trials.
+Proof. Since
+the results follow from the same computations as in Corollary 3.1.
+
+4. Numerical Examples
+In this section, we present several numerical examples for Theorem 3.1.
+4.1. $\mu=\textbf{0}$ , $\textbf{\em{\sigma}}=\textbf{1}$ , $\ensuremath{\boldsymbol{N}}\ =\ \ensuremath{\mathbf{1000}}$ , $\mathbf{\alpha}\propto\mathbf{0.05}$ ; Ten Trials. In Fig. 2, we present ten confidence discs; the size of each samples is equal to 1,000. Namely, we generate samples of $X_{1}^{1},X_{2}^{1},\ldots,X_{1000}^{1},X_{1}^{2}$ , $X_{2}^{2},\ldots,X_{1000}^{2},\ldots,X_{1}^{10},X_{2}^{10},\ldots,X_{1000}^{10}\sim C(0,1)$ . Then we compute the geometric mean
+by the formula
+and the sample variance $V_{1000}^{i}$ is found by using (3.2). We draw ten discs $B^{1},\ldots,B^{10}$ by using these quantities and (3.3). The symbol $\cdot$ marks the true value $(\mu,\sigma)\:=\:(0,1)$ . The symbols $\mathsf{\Omega}_{\mathsf{O}}$ indicate the center of the disc containing the true value, while $\bigtriangledown$ is the point that fails.
+4.2. $\pmb{\mu=5}$ , $\pmb{\sigma}=\mathbf{1}$ , $\mathbf{\mathit{N}}=\mathbf{1000}$ , ${\pmb\alpha}={\bf0.05}$ ; Ten Trials. In Fig. 3, we also show the same size of trials and samples but $\mu=5$ and $\sigma=1$ for larger true values; we fix $\sigma=1$ to be able to easily compare with Fig. 2. Note that since arg(5 + i) = tan−1 1 , we get $\operatorname{Var}(\log X)\sim1.162$ . We also note that $\operatorname{Var}(\log X)$ is small if $|\mu|$ is large but the radius of the confidence discs increases as $|\mu|$ increases.
+Fig. 3. $\mu=5,\ \sigma=1,\ N=1000,\ \alpha=0.05$ ; ten trials.
+Fig. 4. µ = 0, $\sigma=1$ , $N=30$ , $\alpha=0.05$ ; 1000 trials.
+4.3. ${\pmb\mu}={\bf0}$ , $\sigma=1$ , $N=30$ , ${\pmb\alpha}={\bf0.05}$ , 1000 Trials. Since relation (3.3) used to compute our confidence disc is based on the central limit theorem (Theorem 3.1), we may fail to guess the parameters if $N$ is small. In Fig. 4 (here, we do not draw circles), we show the case $N=30$ with $(\mu,\sigma)=(0,1)$ . In this example computed with $\alpha=0.05$ , only 925 trials out of 1,000 contain the true value.
+4.4. Large $\pmb{\mu}$ and Small $\pmb{\sigma}$ . If $|\mu|$ is much larger than $\sigma$ , then all data may have the same sign. In this case, it is possible that the imaginary part of the geometric mean is vanishing and, hence, we can guess that $\sigma$ is zero. This case is illustrated in Fig. 5. One practical way to avoid this situation is to subtract a constant from each datum. It is clear that if we set $Y_{i}:=X_{i}-c$ , then the estimate using $Y_{i}$ ’s plus $c$ is equal to the estimate obtained for $X_{i}$ ’s. We also emphasize that subtracting a constant may decrease the absolute value of the geometric mean so that our estimated discs may become smaller, i.e., the estimation can be improved. However, it is impossible to get a suitable constant in order to make the data consisting of both positive and negative values. Therefore, practically speaking, it may be a candidate to subtract the median $\mathrm{med}(X_{1},\ldots,X_{N})$ from all $X_{i}$ ’s. As a result, the data would consist of the same numbers of positive and negative values.
+Fig. 5. $\mu=100$ , $\sigma=1$ , $N=1000$ , $\alpha=0.05$ ; ten trials.
+Fig. 6. The same data as in Fig. 5 with subtraction of the median.
+In Fig. 6, we show the result of these manipulations. However, in this case, it should be mentioned that $X_{i}-\mathrm{med}(X_{1},\dots,X_{N})$ are neither Cauchy, nor independent, although the central limit theorem may remain valid. It seems difficult for us to get a suitable random variable to subtract from each datum. Figure 6 is presented just for convenience. We do not provide any detailed mathematically reasonable explanation for this kind of manipulations.
+4.5. Outlier and Gaussian Estimation. Here, we deal with one-dimensional location-scale families and consider the problem of estimation of the location when the scale is unknown. It is common to assume that the data are Gaussian distributed if the shape of frequency has the form of a bell. However, when the data have some outliers, the use of $t$ -distributions may give an inappropriate confidence interval. It should be noted that the Cauchy distribution often gives “outliers” of this kind due to its heavy density tail; hence, it is possible to expect that the inference applicable to the Cauchy distribution is more robust.
+Here, we present a numerical example that consists of ten samples; each of these samples contains 100 values from a standard normal distribution. Then we replace each 100th datum with “5” to mimic an outlier. In Tables 1 and 2, we illustrate the corresponding differences. The left-hand parts of these tables display the original data, while their right-hand parts reflect the modified data containing the outliers.
+In Table 1, we show how this contamination affects the confidence intervals when we use the $t$ -distribution whose degree of freedom is equal to 99, while Table 2 presents the confidence intervals obtained by using Corollary 3.2. Here, the AM and GM denote the arithmetic mean and the real part of the geometric mean, respectively. It can be seen that the confidence intervals computed by using Corollary 3.2 are not so strongly affected by the outliers.
+4.6. Remark about Subtraction. As shown in Section 4.4, the procedure of subtracting the median works ell if the location is far from the origin. However, subtraction entails a delicate problem.
+Let $\mu$ and $\sigma$ be the real and imaginary parts of $\gamma$ , respectively. Consider
+There is a sequence of random variables $Y_{N}$ such that $Y_{N}\ \to\ \mu$ a.s., and $Z_{N}$ in the above relation does not converge to $\gamma$ in probability as $N\rightarrow\infty$ .
+This occurs if we set $Y_{N}:=X^{(\lfloor N/2\rfloor+1)}$ , where $\{X_{1},\ldots,X_{N}\}=\left\{X^{(1)}\leq\ldots\leq X^{(N)}\right\}$ and $\lfloor r\rfloor$ denotes the integer part of $r\in\mathbb{R}$ . In this case, we see that $Z_{N}=Y_{N}$ and, in particular, $\mathrm{Im}(Z_{N})=0$ . Note that $Y_{N}$ is the median of $\{X_{1},\ldots,X_{N}\}$ if $N$ is odd. In the above section, we have dealt with the case where $N$ is even.
+Let $I$ be a closed interval containing the location $\mu$ in its interior. Then
+Since $P(Y_{N}\in I)\rightarrow1$ as $N\rightarrow\infty$ , we conclude that
+We also have the following proposition:
+Proposition 4.1. Let $I$ be a closed interval. Then
+is uniformly integrable.
+Proof. Let $M:=\operatorname*{max}\{|\theta-\mu|:\theta\in I\}$ . Then, for every $\theta\in I$ ,
+Hence,
+Since
+we see that
+Proposition 4.1 is proved.
+On the other hand, if we set
+then, for an even number $N,Y_{N}$ is the median of $\{X_{1},\ldots,X_{N}\}$ and, by numerical computations, $Z_{N}$ is a good approximation to $\gamma$ , and we conjecture that
+However, we do not have any proofs of this fact. We do not see why the case where $Y_{N}=X^{(\lfloor N/2\rfloor+1)}$ is bad but, on the other hand, the case where
+is good, although $X^{(\lfloor N/2\rfloor+1)}$ and $(X^{(\lfloor N/2\rfloor+1)}+X^{(\lfloor N/2\rfloor)})/2$ are close to each other with high probability if $N$ is large.
+One way to resolve this delicate issue is to consider the estimator
+for some $\epsilon>0$ . This is also an unbiased estimator for $\gamma$ . This case can be handled easier due to the following proposition:
+Proposition 4.2. Let $I$ be a closed interval. Then
+converges to 0 a.s. and in $L^{1}$ as $N\rightarrow\infty$ .
+Proof. The a.s. convergence follows from the uniform law of large numbers for
+In the same manner as in the proof of Proposition 4.1, we can show that
+is uniformly integrable. Thus, we have proved the $L^{1}$ convergence.
+Proposition 4.2 is proved.
+There is also a problem in this resolution because there are many possibilities to choose $\epsilon>0$ , and we do not have any idea which $\epsilon>0$ should be taken. We do not dwell upon this issue in the present paper.
+The authors wish to express their gratitude to Dr. Th. Simon for references. The second and third authors were supported by the JSPS KAKENHI 19K14549 and 16K05196, respectively.
+A part of this paper consists of the Y. Akaoka’s master thesis.
+
+REFERENCES
+1. Y. Akaoka, Parameter Estimation Using Complex Valued Moments for Cauchy Distributions, Master Thesis, Shinshu University (2020).   
+2. Y. Akaoka, K. Okamura, and Y. Otobe, “Bahadur efficiency of the maximum likelihood estimator and one-step estimator for quasiarithmetic means of the Cauchy distribution,” Ann. Inst. Statist. Math. (2022).   
+3. Y. Akaoka, K. Okamura, and Y. Otobe, “Limit theorems for quasiarithmetic means of random variables with applications to point estimations for the Cauchy distribution,” Braz. J. Probab. Stat. (2022).   
+4. G. V. C. Freue, “The Pitman estimator of the Cauchy location parameter,” J. Statist. Plann. Inference, 137, No. 6, 1900–1913 (2007).   
+5. T. S. Ferguson, “Maximum likelihood estimates of the parameters of the Cauchy distribution for samples of size 3 and 4,” J. Amer. Statist. Assoc., 73, No. 361, 211–213 (1978).   
+6. G. Haas, L. Bain, and C. Antle, “Inferences for the Cauchy distribution based on maximum likelihood estimators,” Biometrika, 57, No. 2, 403–408 (1970).   
+7. G. N. Haas, Statistical Inferences for the Cauchy Distribution Based on Maximum Likelihood Estimators, Ph.D. Thesis, University of Missouri, Rolla (1969).   
+8. D. V. Hinkley, “Likelihood inference about location and scale parameters,” Biometrika, 65, No. 2, 253–261 (1978).   
+9. O. Y. Kravchuk and P. K. Pollett, “Hodges–Lehmann scale estimator for Cauchy distribution,” Comm. Statist. Theory Meth., 41, No. 20, 3621–3632 (2012).   
+10. J. F. Lawless, “Conditional confidence interval procedures for the location and scale parameters of the Cauchy and logistic distributions,” Biometrika, 59, No. 2, 377–386 (1972).   
+11. P. McCullagh, “On the distribution of the Cauchy maximum-likelihood estimator,” Proc. Roy. Soc. London Ser. A, 440, 475–479 (1993).   
+12. P. McCullagh, “Mo¨bius transformation and Cauchy parameter estimation,” Ann. Statist., 24, No. 2, 787–808 (1996).   
+13. K. Okamura and Y. Otobe, “Characterizations of the maximum likelihood estimator of the Cauchy distribution,” Lobachevskii J. Math., 43, No. 9, 2576–2590 (2022).   
+14. T. J. Rothenberg, F. M. Fisher, and C. B. Tilanus, “A note on estimation from a Cauchy sample,” J. Amer. Statist. Assoc., 59, No. 306, 460–463 (1964).   
+15. Jun Shao, Mathematical Statistics, 2nd ed., Springer-Verlag, New York (2003).   
+16. A. W. van der Vaart, “Asymptotic statistics,” Cambridge Series in Statistical and Probabilistic Mathematics, Cambridge Univ. Press, Cambridge (1998).   
+17. J. Vrbik, “Accurate confidence regions based on MLEs,” Adv. Appl. Stat., 32, No. 1, 33–56 (2013).   
+18. V. M. Zolotarev, One-Dimensional Stable Distributions, American Mathematical Society, Providence, RI (1986).

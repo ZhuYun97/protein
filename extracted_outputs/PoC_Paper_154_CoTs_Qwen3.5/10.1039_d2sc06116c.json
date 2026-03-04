@@ -1,0 +1,366 @@
+{
+  "01_initial_request": {
+    "target_name": "N-myristoylation-mediated protein-protein interactions",
+    "input_data": "Wild-type cells and novel myristate-based probes with diazirine and alkyne functionality",
+    "user_intent": "To develop a technology platform to profile N-myristoylation-mediated protein-protein interactions in intact cells at the whole proteome level without genetic modification",
+    "quantifiable_goal": "Identification of multiple novel interactors for myristoylated proteins such as FSP1 and DDX46"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] N-myristoylation is a lipid PTM added to more than 200 human proteins, but approaches to capture PTM-driven PPIs are limited. [Gap] Existing photoactivatable myristate analogs are not suitable for metabolic incorporation due to bulky crosslinking moieties. [Decision] To achieve probe design compatible with NMT, chose to use structural analysis based on HsNMT1:Myr-CoA complex (PDB:4C2Y) to design diazirine-modified myristate probes at specific positions along the fatty acid chain.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Structure-guided probe design",
+        "version": ""
+      },
+      "parameters": {
+        "reference_structure": "PDB:4C2Y (HsNMT1:Myr-CoA complex)",
+        "diazirine_positions": "specific positions along 14-carbon fatty acid chain",
+        "alkyne_position": "between carbons 13 and 14"
+      },
+      "observation": "Three photocrosslinkable clickable analogs designed: X3, X8, and X10 with diazirine at different positions",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Fedoryshchak et al., 2021 (this paper)",
+          "relevance": "Describes structure-guided design based on HsNMT1:Myr-CoA complex"
+        }
+      ]
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Probe design completed based on structural analysis. [Gap] Probes need to be synthesized for experimental validation. [Decision] To achieve probe availability, chose to use chemical synthesis with ketone-to-diazirine transformation at the end of synthesis for X3 probe.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Chemical synthesis",
+        "version": ""
+      },
+      "parameters": {
+        "starting_material": "10-bromodecanoic acid",
+        "reaction_1": "trimethylsilylacetylene condensation",
+        "reaction_2": "Masamune procedure for homologation",
+        "diazirine_formation": "ammonia followed by hydroxylamine-o-sulfonic acid, then iodine oxidation",
+        "yield": "20-42%"
+      },
+      "observation": "X3 probe synthesized successfully with diazirine at β-position",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] X3 synthesis completed. [Gap] X8 and X10 probes require different synthesis approach due to diazirine position. [Decision] To achieve X8/X10 probe synthesis, chose to use Pd(0) catalyzed coupling with chloroanhydrides and alkyl zinc iodides for sp2-sp3 C-C coupling.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Chemical synthesis",
+        "version": ""
+      },
+      "parameters": {
+        "coupling_method": "Pd(0) catalyzed coupling",
+        "reagents": "chloroanhydrides, alkyl zinc iodides generated from aliphatic alkyl iodides by Cu-Zn couple",
+        "ketone_precursors": "10 and 13 for X8 and X10 respectively",
+        "yield": "moderate yields"
+      },
+      "observation": "X8 and X10 probes synthesized with diazirine at positions 8 and 10 respectively",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Probes X3, X8, X10 synthesized. [Gap] Need to validate metabolic incorporation into myristoylated proteome in cells. [Decision] To achieve probe validation, chose to use metabolic labeling in HeLa cells with probe incubation followed by CuAAC ligation and in-gel fluorescence.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Metabolic labeling",
+        "version": ""
+      },
+      "parameters": {
+        "cell_type": "HeLa cells",
+        "probe_concentration": "100 μM for X3/X8/X10, 5 μM for YnMyr",
+        "incubation_time": "24h",
+        "ligation_reagent": "azido-TAMRA (AzT)",
+        "method": "CuAAC ligation"
+      },
+      "observation": "Protein labeling pattern observed for all probes without UV irradiation, resembling YnMyr labeling",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Thinon et al., Nat. Commun., 2014, 5, 4919 (ref. 31)",
+          "relevance": "Previous application of YnMyr for myristoylated proteome identification"
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Metabolic labeling completed without UV. [Gap] Need to test photocrosslinking capability of diazirine probes. [Decision] To achieve photocrosslinking, chose to use UV irradiation at 365 nm for in-cell diazirine photoactivation.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "UV irradiation",
+        "version": ""
+      },
+      "parameters": {
+        "wavelength": "365 nm",
+        "duration": "5 min",
+        "condition": "in situ irradiation"
+      },
+      "observation": "Number and intensity of fluorescent bands greatly increased upon UV irradiation, attributed to lipid-protein crosslinking",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] UV photocrosslinking completed. [Gap] Need to confirm NMT-dependence of labeling. [Decision] To achieve NMT-dependence validation, chose to use NMT inhibitor IMP-366 treatment with increasing concentrations.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Chemical inhibition",
+        "version": ""
+      },
+      "parameters": {
+        "inhibitor": "IMP-366",
+        "concentration": "increasing concentrations, 0.5 μM for proteomics",
+        "probe": "X10 representative"
+      },
+      "observation": "Majority of fluorescently labeled bands disappeared with increasing NMTi concentration, indicating NMT-dependent metabolic labeling",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Frearson et al., Nature, 2010, 464, 728-732 (ref. 40)",
+          "relevance": "IMP-366 characterized as potent and selective NMT inhibitor"
+        }
+      ]
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] NMT-dependence confirmed. [Gap] Need to validate labeling of specific NMT substrate and test enrichment. [Decision] To achieve substrate validation, chose to use streptavidin-conjugated magnetic bead enrichment with azido-TAMRA-biotin capture reagent for PSMC1 detection.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Affinity enrichment",
+        "version": ""
+      },
+      "parameters": {
+        "capture_reagent": "azido-TAMRA-biotin (AzTB)",
+        "beads": "streptavidin-conjugated magnetic beads",
+        "target_protein": "PSMC1",
+        "denaturation": "95°C for NMT1 labeling"
+      },
+      "observation": "Enrichment of PSMC1 observed with all alkynylated probes; NMT1 photocrosslinking detected only after denaturation at 95°C",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 8,
+      "thought": "[Background] Individual probe validation completed. [Gap] Need proteome-wide assessment of labeling efficiency. [Decision] To achieve proteome-wide analysis, chose to use quantitative SILAC proteomics with heavy/light media and neutravidin enrichment.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "SILAC proteomics",
+        "version": ""
+      },
+      "parameters": {
+        "heavy_media": "R10K8 (heavy arginine and lysine)",
+        "light_media": "R0K0",
+        "enrichment": "neutravidin-agarose beads",
+        "capture_reagent": "azido-arginine-biotin",
+        "NMTi_concentration": "0.5 μM IMP-366"
+      },
+      "observation": "Labeling of myristoylated proteins decreased on NMTi treatment; Pearson correlation >0.9 between YnMyr vs X10/X8, 0.84 vs X3",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 9,
+      "thought": "[Background] SILAC proteomics data generated. [Gap] Need to identify probe-modified peptides and crosslinks. [Decision] To achieve modified peptide identification, chose to use PEAKS de novo sequencing analysis package for MS/MS spectra analysis.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "PEAKS",
+        "version": ""
+      },
+      "parameters": {
+        "modification_search": "Myr' for YnMyr, Myr'-N2 for X3/X8/X10, Myr-Xlink for crosslinks",
+        "analysis_type": "de novo sequencing"
+      },
+      "observation": "121 PSMs with Myr' modification (28 known myristoylated proteins); 6-8 proteins with Myr'-N2 per diazirine probe; 140 PSMs for 33 proteins with Myr-Xlink modification",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Zhang et al., Mol. Cell. Proteomics, 2012, 11, M111.010587 (ref. 42)",
+          "relevance": "PEAKS DB software for de novo sequencing assisted database search"
+        }
+      ]
+    },
+    {
+      "step_index": 10,
+      "thought": "[Background] Proteome-wide crosslinks identified. [Gap] Need to confirm X10 as optimal substrate biochemically and structurally. [Decision] To achieve biochemical characterization, chose to use in vitro enzyme kinetics assay with CPM fluorescence detection comparing X10-CoA vs Myr-CoA.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "CPM assay",
+        "version": ""
+      },
+      "parameters": {
+        "fluorogenic_reagent": "7-diethylamino-3-(4-maleimidophenyl)-4-methylcoumarin",
+        "enzymes": "HsNMT1 and HsNMT2",
+        "substrate_peptide": "c-Src N-terminal peptide (H-GSNKSKPK-NH2)",
+        "comparison": "X10-CoA vs Myr-CoA"
+      },
+      "observation": "Catalytic efficiency of X10-CoA and Myr-CoA very similar for both NMT1 and NMT2 with small change in KM",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Goncalves et al., Anal. Biochem., 2012, 421, 342-344 (ref. 45)",
+          "relevance": "Fluorescence-based assay for N-myristoyltransferase activity"
+        }
+      ]
+    },
+    {
+      "step_index": 11,
+      "thought": "[Background] Biochemical compatibility confirmed. [Gap] Need structural validation of X10-CoA binding mode in NMT active site. [Decision] To achieve structural validation, chose to use X-ray crystallography to solve HsNMT1:X10-CoA complex structure.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "X-ray crystallography",
+        "version": ""
+      },
+      "parameters": {
+        "complex": "HsNMT1:X10-CoA",
+        "resolution": "2.37Å",
+        "PDB_accession": "5NPQ",
+        "comparison_structure": "PDB:4C2Y (HsNMT1:Myr-CoA)"
+      },
+      "observation": "X10-CoA binds at Myr-CoA binding site with diazirine at hydrogen bonding distance from T268 side-chain hydroxyl; RMSD 0.587Å over 355 Cα atoms vs native substrate complex",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 12,
+      "thought": "[Background] X10 validated as optimal probe. [Gap] Need to identify PTM-dependent PPIs for specific myristoylated proteins. [Decision] To achieve targeted PPI identification, chose to use HEK293 transfection with 20 myristoylated proteins bearing C-terminal Twin-Strep-tag followed by X10 treatment and UV crosslinking.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Transfection",
+        "version": ""
+      },
+      "parameters": {
+        "cell_type": "HEK293 cells",
+        "constructs": "20 myristoylated proteins with TST-tag",
+        "negative_control": "mCitrine-TST",
+        "probe_concentration": "100 μM X10",
+        "incubation_time": "24h",
+        "UV_irradiation": "365 nm"
+      },
+      "observation": "TST-tagged constructs most strongly enriched; no significant enrichment in mCitrine control",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 13,
+      "thought": "[Background] Transfection and crosslinking completed. [Gap] Need to enrich crosslinked interactors and eliminate non-covalent PPIs. [Decision] To achieve specific enrichment, chose to use Strep-Tactin resin enrichment with SDS denaturation prior to ligation.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Affinity enrichment",
+        "version": ""
+      },
+      "parameters": {
+        "resin": "Strep-Tactin resin",
+        "lysis_buffer": "1% SDS",
+        "denaturation": "95°C for 10 min",
+        "enrichment_temperature": "ambient temperature",
+        "digestion": "trypsin"
+      },
+      "observation": "Myristoylated TST-tagged proteins enriched; several constructs enriched putative photocrosslinked interactors",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 14,
+      "thought": "[Background] Enrichment completed. [Gap] Need quantitative proteomic analysis to identify specific interactors. [Decision] To achieve interactor identification, chose to use label-free quantification proteomics comparing fold change against combined data of 19 other protein constructs.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Label-free quantification proteomics",
+        "version": ""
+      },
+      "parameters": {
+        "quantification_method": "label-free quantification",
+        "comparison": "fold change against 19 other protein constructs × 3 biological replicates",
+        "top_hits": "DDX46 and FSP1"
+      },
+      "observation": "DDX46 and FSP1 showed highest hit rates for putative photocrosslinked interactors",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 15,
+      "thought": "[Background] DDX46 interactors identified. [Gap] Need to validate DDX46-TRA2B interaction and test myristoylation dependence. [Decision] To achieve interaction validation, chose to use co-immunoprecipitation with DDX46-TST WT and G2A myristoylation-deficient mutant.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Co-immunoprecipitation",
+        "version": ""
+      },
+      "parameters": {
+        "constructs": "DDX46-TST WT and G2A mutant",
+        "resin": "Strep-Tactin resin",
+        "detection_antibody": "TRA2B antibody",
+        "loading_control": "aTubulin"
+      },
+      "observation": "Both WT and G2A mutant interacted with TRA2B to similar extent, indicating interaction not mediated by myristoylation",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 16,
+      "thought": "[Background] DDX46 validation completed. [Gap] Need to validate FSP1-TOMM40 interaction and test myristoylation dependence. [Decision] To achieve FSP1 interaction validation, chose to use co-immunoprecipitation with FSP1-TST WT, G2A mutant, and NMT inhibitor treatment.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Co-immunoprecipitation",
+        "version": ""
+      },
+      "parameters": {
+        "constructs": "FSP1-TST WT and G2A mutant",
+        "resin": "Strep-Tactin resin",
+        "detection_antibody": "TOMM40 antibody",
+        "loading_control": "GAPDH",
+        "NMTi_treatment": "IMP-366 with WT FSP1",
+        "replicates": "n=3-4"
+      },
+      "observation": "TOMM40 co-immunoprecipitated with FSP1; interaction reduced to 22% with G2A mutant and 28% with NMTi treatment compared to WT",
+      "valid": true,
+      "references": []
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Co-immunoprecipitation with Western blot validation, quantitative SILAC proteomics, and label-free quantification proteomics",
+    "metrics": {
+      "FSP1_TOMM40_G2A_reduction": {
+        "value": "22",
+        "unit": "% of WT FSP1",
+        "interpretation": "FSP1 myristoylation essential for FSP1-TOMM40 interaction"
+      },
+      "FSP1_TOMM40_NMTi_reduction": {
+        "value": "28",
+        "unit": "% of WT FSP1",
+        "interpretation": "NMT inhibition similarly reduces FSP1-TOMM40 interaction"
+      },
+      "SILAC_correlation_YnMyr_X10": {
+        "value": ">0.9",
+        "unit": "Pearson correlation coefficient",
+        "interpretation": "X10 labels myristoylated proteins equivalently to YnMyr"
+      },
+      "SILAC_correlation_YnMyr_X3": {
+        "value": "0.84",
+        "unit": "Pearson correlation coefficient",
+        "interpretation": "X3 shows slightly lower correlation, consistent with higher background reactivity"
+      },
+      "crystal_structure_resolution": {
+        "value": "2.37",
+        "unit": "Å",
+        "interpretation": "High-resolution structure confirms X10-CoA binding mode in NMT active site"
+      },
+      "identified_myristoylated_proteins": {
+        "value": "28",
+        "unit": "proteins",
+        "interpretation": "Known myristoylated proteins identified via Myr' modification"
+      },
+      "crosslink_PSMs": {
+        "value": "140",
+        "unit": "PSMs",
+        "interpretation": "Myr-Xlink modifications identified for 33 proteins"
+      }
+    },
+    "final_verdict": "Research objective achieved. The technology platform successfully profiles N-myristoylation-mediated PPIs in wild-type cells at whole proteome level without genetic modification. Multiple novel interactors identified for FSP1 (including TOMM40) and DDX46 (including TRA2B, ACIN1, PPIG, SRRM2, TRA2A/B, ZC3H13). FSP1-TOMM40 interaction validated as myristoylation-dependent (22% remaining with G2A mutant, 28% with NMTi). X10 probe demonstrated optimal performance with Pearson correlation >0.9 vs YnMyr and confirmed binding mode via 2.37Å crystal structure (PDB:5NPQ)."
+  }
+}

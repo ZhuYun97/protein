@@ -1,0 +1,223 @@
+{
+    "input_path": "/mnt/dhwfile/raise/user/zhuyun/protein_data_pipeline/input_pdfs/case_pdfs/case1.pdf",
+    "page_index": 9,
+    "page_count": 18,
+    "width": 1191,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                118,
+                93,
+                1082,
+                744
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "global_block_id": 174,
+            "global_group_id": 174,
+            "block_polygon_points": [
+                [
+                    118.0,
+                    93.0
+                ],
+                [
+                    1082.0,
+                    93.0
+                ],
+                [
+                    1082.0,
+                    744.0
+                ],
+                [
+                    118.0,
+                    744.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Extended Data Fig. 2 | Schematic representation of colony-based luciferase screening. Computationally designed DNA sequences were purchased in an oligo array, where the fragments were amplified by PCR, assembled, and ligated into a pBAD bacterial expression vector. The plasmid library was used to transform DH10B cells. Each colony grown on the LB agar plate represented one luciferase design. The plates were sprayed with DTZ solution and imaged to identify active colonies using a ChemiDoc imager. Selected colonies were inoculated in 96-well plates, expressed, and purified to confirm individual luciferase activity. Plasmids can then be individually sequenced to point out active design models that provide insights into the design principle and enzyme functions or can be subjected to random mutagenesis for further evolution. Insert: three luciferases were identified from this screening. We refer to the most active and DTZ-specific luciferase as \"LuxSit\".",
+            "block_bbox": [
+                73,
+                769,
+                594,
+                914
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "global_block_id": 175,
+            "global_group_id": 175,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    769.0
+                ],
+                [
+                    594.0,
+                    769.0
+                ],
+                [
+                    594.0,
+                    914.0
+                ],
+                [
+                    73.0,
+                    914.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "",
+            "block_bbox": [
+                607,
+                769,
+                1105,
+                893
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 1,
+            "global_block_id": 176,
+            "global_group_id": 176,
+            "block_polygon_points": [
+                [
+                    607.0,
+                    769.0
+                ],
+                [
+                    1105.0,
+                    769.0
+                ],
+                [
+                    1105.0,
+                    893.0
+                ],
+                [
+                    607.0,
+                    893.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9550650119781494,
+                "coordinate": [
+                    118,
+                    93,
+                    1082,
+                    744
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        118.0,
+                        93.0
+                    ],
+                    [
+                        1082.0,
+                        93.0
+                    ],
+                    [
+                        1082.0,
+                        744.0
+                    ],
+                    [
+                        118.0,
+                        744.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.847274661064148,
+                "coordinate": [
+                    73,
+                    769,
+                    594,
+                    914
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        73.0,
+                        769.0
+                    ],
+                    [
+                        594.0,
+                        769.0
+                    ],
+                    [
+                        594.0,
+                        914.0
+                    ],
+                    [
+                        73.0,
+                        914.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7278519868850708,
+                "coordinate": [
+                    607,
+                    769,
+                    1105,
+                    893
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        607.0,
+                        769.0
+                    ],
+                    [
+                        1105.0,
+                        769.0
+                    ],
+                    [
+                        1105.0,
+                        893.0
+                    ],
+                    [
+                        607.0,
+                        893.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

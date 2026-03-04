@@ -1,0 +1,37 @@
+# 用户指定
+paddlevl_env/
+__pycache__/
+logs/
+request.sh
+server.sbatch
+server.sh
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# 虚拟环境（可选，若需提交则删除下面两行）
+venv/
+.venv/
+env/
+
+# 环境变量与密钥（建议勿提交）
+.env
+.env.local
+*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db

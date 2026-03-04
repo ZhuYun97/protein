@@ -1,0 +1,229 @@
+{
+  "01_initial_request": {
+    "target_name": "G protein-coupled receptors (GPCRs)",
+    "input_data": "Existing literature and experimental data on GPCR structures, signaling pathways, allosteric modulators, and regulatory proteins",
+    "user_intent": "To review and elucidate the principles, mechanisms, and topology of allosteric regulation in GPCRs, including the role of endogenous and synthetic regulators",
+    "quantifiable_goal": "Comprehensive characterization and classification of allosteric sites, regulatory mechanisms, and modulator types across specific GPCR families"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] GPCR allosteric sites were known to exist but their number and localization were difficult to estimate. [Gap] Reliable identification methods for allosteric sites within the transmembrane domain were needed. [Decision] To achieve accurate site prediction, chose to use FTMap to perform computational search on GPCR structures, expecting to obtain predictive ability metrics for allosteric sites.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "FTMap",
+        "version": ""
+      },
+      "parameters": {
+        "target_receptors": "17 GPCRs",
+        "site_location": "within the TMD",
+        "predictive_ability": "80%"
+      },
+      "observation": "Predictive ability for allosteric sites located within the TMD was 80%.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Wakefield et al., 2019 [84]",
+          "relevance": "Describes the testing of FTMap for allosteric site search in 17 GPCRs."
+        },
+        {
+          "citation": "Ivetac & McCammon, 2010 [86]",
+          "relevance": "Early application of FTMap for GPCR allosteric space mapping."
+        }
+      ]
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] FTMap had been tested for allosteric site search. [Gap] Improved predictive ability for allosteric sites was desired. [Decision] To achieve higher accuracy, chose to use FTSite (modified version of FTMap) to perform computational search on GPCR structures, expecting to obtain improved predictive ability metrics.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "FTSite",
+        "version": ""
+      },
+      "parameters": {
+        "target_receptors": "17 GPCRs",
+        "site_location": "within the TMD",
+        "predictive_ability": "88%"
+      },
+      "observation": "Predictive ability for allosteric sites located within the TMD was 88%.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Wakefield et al., 2019 [84]",
+          "relevance": "Compares FTSite predictive ability (88%) against FTMap (80%)."
+        }
+      ]
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Allosteric sites within the TMD were being mapped. [Gap] Sites located on the outer-lateral surface interacting with membrane lipids were not well identified by FTMap/FTSite. [Decision] To identify membrane-interacting sites, chose to use Molecular Dynamics methods to perform simulation on GPCR structures, expecting to obtain identification of outer-lateral allosteric sites.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Molecular Dynamics",
+        "version": ""
+      },
+      "parameters": {
+        "target_receptors": "beta2-AR, glucagon receptor, M2-muscarinic receptor, P2Y1 purinergic receptor, D2-dopamine receptor, PAR2, C5aR1",
+        "site_location": "outer-lateral surface of the TM7 bundle"
+      },
+      "observation": "Identification of allosteric sites located on the outer-lateral surface available for interaction with membrane lipids.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Renault & Giraldo, 2020 [85]",
+          "relevance": "Describes dynamical correlations revealing allosteric sites."
+        },
+        {
+          "citation": "Ding et al., 2022 [90]",
+          "relevance": "Describes intermolecular interactions at the membrane interface from MD simulations."
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Specific allosteric sites were being identified in individual receptors. [Gap] A comprehensive topology map across GPCR classes was missing. [Decision] To construct a pocketome of allosteric sites, chose to use In-silico docking of small molecules probes to perform analysis on GPCR structures, expecting to obtain a classification of allosteric sites across classes.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "In-silico docking",
+        "version": ""
+      },
+      "parameters": {
+        "structures_studied": "557 GPCR structures",
+        "receptors_studied": "113 receptors",
+        "classes": "A, B1, B2, C, D1, and F",
+        "sites_identified_class_A": "up to 11 allosteric sites... and up to 8 sites that can be considered as potential"
+      },
+      "observation": "Construction of a 'pocketome' of allosteric sites for different classes of GPCRs.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Hedderich et al., 2022 [61]",
+          "relevance": "Describes the comprehensive analysis of topology using in-silico docking."
+        }
+      ]
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] Computational predictions of allosteric sites required experimental validation. [Gap] Functional importance of specific residues in allosteric sites needed confirmation. [Decision] To validate the sodium ion-binding site, chose to use Site-directed mutagenesis to perform residue replacement on GPCR sequences, expecting to obtain evidence of NAM activity blockade.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Site-directed mutagenesis",
+        "version": ""
+      },
+      "parameters": {
+        "target_residue": "aspartic acid located in TM2",
+        "mutation": "replacement... with alanine",
+        "effect": "blocks the NAM activity of these ions"
+      },
+      "observation": "Replacement of aspartic acid with alanine blocked the NAM activity of sodium ions.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ye et al., 2018 [121]",
+          "relevance": "Describes mechanistic insights into allosteric regulation by physiological cations."
+        },
+        {
+          "citation": "Massink et al., 2015 [123]",
+          "relevance": "Describes sodium ion binding pocket mutations and receptor function."
+        }
+      ]
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Allosteric sites in TSHR were proposed based on LHR similarity. [Gap] Specific binding patterns of biased agonists needed structural explanation. [Decision] To analyze binding of biased agonists, chose to use Molecular docking to perform interaction analysis on TSHR allosteric site, expecting to obtain residue interaction patterns.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Molecular docking",
+        "version": ""
+      },
+      "parameters": {
+        "target_receptor": "TSHR",
+        "ligand": "MSq1",
+        "binding_site": "formed by TM1, TM2, TM3, and TM7",
+        "coverage": "covered from above by segments of the ECL1 and ECL2"
+      },
+      "observation": "MSq1 binds to a site formed by TM1, TM2, TM3, and TM7, revealing differences compared to MS438.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Latif et al., 2020 [340]",
+          "relevance": "Describes the Gq biased small molecule active at the TSH Receptor and docking analysis."
+        }
+      ]
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] Synthetic allosteric regulators for beta-AR were needed. [Gap] Specific intracellular allosteric antagonists were not yet identified. [Decision] To discover new modulators, chose to use DNA-encoded small-molecule library to perform screening for beta2-AR ligands, expecting to obtain compound candidates with NAM activity.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "DNA-encoded small-molecule library",
+        "version": ""
+      },
+      "parameters": {
+        "target_receptor": "beta2-AR",
+        "compound_identified": "compound 15 (Cmpd-15)",
+        "activity": "NAM activity"
+      },
+      "observation": "Development of Cmpd-15 with NAM activity for beta2-AR.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Ahn et al., 2017 [423]",
+          "relevance": "Describes isolation of small-molecule positive allosteric modulators (and Cmpd-15 NAM) from DNA-encoded libraries."
+        }
+      ]
+    },
+    {
+      "step_index": 8,
+      "thought": "[Background] Allosteric modulators were identified computationally or via screening. [Gap] Functional activity and efficacy of modulators needed biological confirmation. [Decision] To validate modulator activity, chose to use Functional Assays (AC activity/cAMP) to perform testing on cells expressing GPCRs, expecting to obtain quantitative activity metrics.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Functional Assays",
+        "version": ""
+      },
+      "parameters": {
+        "readouts": "AC activity, intracellular cAMP level, testosterone levels",
+        "efficacy_example": "IC50 of about 0.1 nM (Ladarixin)",
+        "gene_expression": "thyroglobulin, thyroperoxidase"
+      },
+      "observation": "Modulators stimulated AC activity, increased cAMP levels, or inhibited agonist effects (e.g., Ladarixin IC50 0.1 nM).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Neumann et al., 2009 [336]",
+          "relevance": "Describes small-molecule agonists stimulating thyroid function and AC activity."
+        },
+        {
+          "citation": "Bertini et al., 2012 [210]",
+          "relevance": "Describes Ladarixin potency (IC50 0.1 nM)."
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Comprehensive literature review and synthesis of computational and experimental data from 447 references",
+    "metrics": {
+      "allosteric_sites_identified": {
+        "value": "up to 11 allosteric sites... and up to 8 sites that can be considered as potential",
+        "unit": "sites per receptor (Class A)",
+        "interpretation": "Indicates multiplicity of allosteric sites in GPCRs."
+      },
+      "predictive_ability_FTMap": {
+        "value": "69",
+        "unit": "percent",
+        "interpretation": "Overall predictive ability for all allosteric sites."
+      },
+      "predictive_ability_FTSite": {
+        "value": "76",
+        "unit": "percent",
+        "interpretation": "Overall predictive ability for all allosteric sites."
+      },
+      "receptor_families_covered": {
+        "value": "5",
+        "unit": "families",
+        "interpretation": "Chemokine, PAR, TSHR, LHR, and beta-AR described in detail."
+      }
+    },
+    "final_verdict": "The review successfully elucidates the principles, mechanisms, and topology of allosteric regulation in GPCRs, achieving the objective of comprehensive characterization and classification across specific GPCR families."
+  }
+}

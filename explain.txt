@@ -1,0 +1,27 @@
+- target_name：目标产物名称（如某种蛋白质、酶或分子）
+- input_data：依赖的输入数据，即实验基于什么材料或数据集开始
+- user_intent：用户/研究者的核心需求或动机
+- quantifiable_goal：最终希望达到的可量化性质或指标
+
+- step_index: 步骤编号（从1开始）
+- thought: 严格按照模板填写："【背景】当前已知/已完成：[内容]。【问题/缺口】目前缺少/尚未解决：[内容]。【决策】为了[目标]，选择使用[工具名]对[操作对象]执行[具体操作]，预期获得[期望输出]。"
+- action: 判断该步骤是 dry_experiment（计算/模拟）还是 wet_experiment（实验室操作）
+- tool: 该步骤使用的工具或方法，包含 name 和 version（无版本号则留空字符串）
+- parameters: 该工具的参数及其取值，所有参数值必须有原文依据，不得凭空编造。请尽可能全面提取，包括但不限于：
+    * 数值与阈值：如数量（"1,615 scaffolds"）、截止值（"top 50,000"）、评分（"pLDDT > 92"）、RMSD、温度、迭代次数等
+    * 输入数据：使用的数据库、序列集合、起始结构（如 "2,000 naturally occurring NTF2s"）
+    * 筛选条件：filter 标准、评分函数、loss function 组成
+    * 算法配置：采样方式（如 MCMC）、允许的操作类型（如 insertions and deletions）
+    * 底物与靶标：操作对象的名称、构型（如 "anionic DTZ conformers"）若原文对某参数仅定性描述（如"high-affinity"）而无具体数值，仍需提取该描述作为参数值。
+- observation: 该步骤实际产生的直接结果或数据反馈
+- valid: 布尔值，判断该步骤是否为有效步骤。以下情况标记为 False：
+    * 消融实验（ablation study）中使用替代工具/方法但结果不理想
+    * 对照组实验，结果证明该方法不可行
+    * 明确被后续步骤否定或推翻的操作其余正常执行且结果符合预期的步骤标记为 True。
+- references: 支持本步骤决策的参考文献列表，每条包含：
+    * citation: 论文中提及的文献引用（如作者、年份、标题片段或编号）
+    * relevance: 该文献如何为本步骤提供依据或启发若该步骤无明确文献支持，返回空列表。
+
+- validation_technique: 使用的验证方法
+- metrics: 量化指标字典，每个指标包含 value、unit、interpretation
+- final_verdict: 是否达成初始目标的最终结论

@@ -1,0 +1,163 @@
+{
+  "01_initial_request": {
+    "target_name": "SARS-CoV-2",
+    "input_data": "Residual nasopharyngeal samples obtained on days 0, 31, and 44 from an immunocompromised patient with HIV and persistent SARS-CoV-2 infection",
+    "user_intent": "Investigate SARS-CoV-2 evolution and escape from combination monoclonal antibody treatment in an immunocompromised individual",
+    "quantifiable_goal": "Full-length viral genome sequences and identification of intrasample single-nucleotide variants (iSNVs) and consensus-level mutations associated with antibody escape"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Patient presented with persistent SARS-CoV-2 infection and newly diagnosed HIV with severe immunosuppression (CD4 count 14 cells/μL). [Gap] Need to obtain viral samples at multiple time points to track evolution. [Decision] To achieve longitudinal viral evolution tracking, chose to use nasopharyngeal swab collection to perform sample acquisition on patient, expecting to obtain residual nasopharyngeal samples at days 0, 31, and 44.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Nasopharyngeal swab collection",
+        "version": ""
+      },
+      "parameters": {
+        "sample_timepoints": "days 0, 31, and 44",
+        "sample_type": "residual nasopharyngeal samples",
+        "patient_status": "immunocompromised with HIV"
+      },
+      "observation": "Three nasopharyngeal samples obtained with SARS-CoV-2 Ct values of 25.7 (day 0), 15.2 (day 31), and 14.9 (day 44)",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] Samples collected at three time points from persistent infection. [Gap] Need to prepare viral RNA for sequencing. [Decision] To achieve full-length genome sequencing, chose to use library construction to perform viral library preparation on samples, expecting to obtain sequencing-ready libraries.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Library construction",
+        "version": ""
+      },
+      "parameters": {
+        "approaches": "2 library construction approaches",
+        "reference": "Supplementary Material and Supplementary Figure 2"
+      },
+      "observation": "Libraries constructed using 2 different approaches for all three time point samples",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] Libraries prepared from three time point samples. [Gap] Need to obtain viral genome sequences. [Decision] To achieve full-length viral genome sequences, chose to use short-read sequencing to perform genome sequencing on libraries, expecting to obtain complete SARS-CoV-2 genomes with high depth.",
+      "action": "wet_experiment",
+      "tool": {
+        "name": "Short-read sequencing",
+        "version": ""
+      },
+      "parameters": {
+        "target": "full-length viral genome",
+        "depth": "high depth",
+        "timepoints": "days 0, 31, and 44"
+      },
+      "observation": "Successfully sequenced complete SARS-CoV-2 genomes with high depth at days 0, 31, and 44",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] Complete genomes sequenced at three time points. [Gap] Need to identify within-sample viral variation. [Decision] To achieve iSNV identification, chose to use iSNV analysis method to perform intrasample single-nucleotide variant analysis on sequence data, expecting to obtain iSNV frequencies and positions.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "iSNV analysis",
+        "version": ""
+      },
+      "parameters": {
+        "method": "rigorous method for analyzing intrasample single-nucleotide variants",
+        "reference": "Supplementary Material and Supplementary Figure 2",
+        "frequency_threshold": "10% or more frequency change"
+      },
+      "observation": "78 iSNVs identified across 3 time points with variability across the genome, largest number in spike gene",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 5,
+      "thought": "[Background] iSNVs identified across time points. [Gap] Need to determine viral lineage and evolutionary relationships. [Decision] To achieve lineage classification, chose to use phylogenetic tree construction to perform sequence clustering on genomes, expecting to obtain lineage assignment and phylogenetic relationships.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Phylogenetic tree construction",
+        "version": ""
+      },
+      "parameters": {
+        "input": "complete SARS-CoV-2 genomes from days 0, 31, and 44"
+      },
+      "observation": "All sequences belonged to Delta lineage AY.119 and clustered together on phylogenetic tree",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 6,
+      "thought": "[Background] Phylogenetic analysis completed showing Delta lineage AY.119. [Gap] Need to identify consensus-level mutations and track frequency changes. [Decision] To achieve mutation tracking, chose to use mutation frequency analysis to perform consensus and iSNV frequency tracking on sequence data, expecting to obtain mutation frequencies and haplotype information.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Mutation frequency analysis",
+        "version": ""
+      },
+      "parameters": {
+        "consensus_mutations": "8 consensus-level mutations (7/8 nonsynonymous)",
+        "deletions": "4 deletions",
+        "frequency_change_threshold": "10% or more",
+        "haplotypes_identified": "2 potential haplotypes"
+      },
+      "observation": "8 consensus-level mutations arose over infection course; 12 mutations changed frequency by 10% or more; 2 potential haplotypes identified based on allele frequencies",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 7,
+      "thought": "[Background] Mutations and haplotypes identified including spike gene mutations. [Gap] Need to determine if mutations confer antibody escape. [Decision] To achieve escape mutation identification, chose to use escape mutation mapping to perform mutation-to-antibody escape comparison on spike mutations, expecting to obtain antibody escape associations.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Escape mutation mapping",
+        "version": ""
+      },
+      "parameters": {
+        "reference_study": "Starr et al. 2021 scanning mutagenesis study",
+        "antibodies": "casirivimab (REGN10933) and imdevimab (REGN10987)",
+        "mutations_analyzed": "V445A, Y453F, G476S"
+      },
+      "observation": "Spike V445A confers high degree of escape from imdevimab; spike Y453F confers moderate to high degree of escape from casirivimab; both arose between day 0 and day 31 after monoclonal antibody treatment",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Starr TN, Greaney AJ, Addetia A, et al. Prospective mapping of viral mutations that escape antibodies used to treat COVID-19. Science 2021; 371:850–4.",
+          "relevance": "Experimental study that mapped escape mutations to therapeutic antibodies using scanning mutagenesis, used to identify escape mutations in patient samples"
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Full-length viral genome sequencing with iSNV analysis and escape mutation mapping against known antibody escape data",
+    "metrics": {
+      "genome_sequences_obtained": {
+        "value": "3",
+        "unit": "complete genomes",
+        "interpretation": "Successfully sequenced complete SARS-CoV-2 genomes at days 0, 31, and 44"
+      },
+      "isnvs_identified": {
+        "value": "78",
+        "unit": "iSNVs",
+        "interpretation": "Total intrasample single-nucleotide variants identified across 3 time points"
+      },
+      "consensus_mutations": {
+        "value": "8",
+        "unit": "mutations",
+        "interpretation": "Consensus-level mutations arose over course of infection (7/8 nonsynonymous)"
+      },
+      "escape_mutations": {
+        "value": "2",
+        "unit": "spike mutations",
+        "interpretation": "V445A (imdevimab escape) and Y453F (casirivimab escape) identified, both arose after monoclonal antibody treatment"
+      },
+      "deletions": {
+        "value": "4",
+        "unit": "deletions",
+        "interpretation": "Deletions identified across the genome"
+      }
+    },
+    "final_verdict": "Research objective achieved: Full-length viral genome sequences obtained from all three time points, 78 iSNVs and 8 consensus-level mutations identified, and 2 spike mutations (V445A and Y453F) associated with antibody escape from casirivimab/imdevimab treatment were successfully identified and linked to treatment timeline"
+  }
+}

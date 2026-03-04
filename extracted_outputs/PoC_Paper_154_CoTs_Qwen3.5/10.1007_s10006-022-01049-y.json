@@ -1,0 +1,119 @@
+{
+  "01_initial_request": {
+    "target_name": "subnasal lip lift",
+    "input_data": "Literature records from PubMed, Science Direct, Scopus, Cochrane Library and EMBASE databases published until July 2020",
+    "user_intent": "To assess whether the subnasal lip lift technique improves lip aesthetics and maintains its stability in adult patients",
+    "quantifiable_goal": "Improvement in lip aesthetics based on anthropometric measures and patient satisfaction, and stability duration ranging from 12 to 59.1 months"
+  },
+  "02_agent_trajectory": [
+    {
+      "step_index": 1,
+      "thought": "[Background] Lip lift procedures exist but lack standardization of techniques and long-term stability data. [Gap] There is no consolidated evidence on whether subnasal lip lift improves aesthetics and maintains stability in adult patients. [Decision] To achieve a comprehensive assessment, chose to use Electronic Database Search to perform a systematic literature search on PubMed, Science Direct, Scopus, Cochrane Library and EMBASE, expecting to obtain relevant literature records published until July 2020.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Electronic Database Search",
+        "version": ""
+      },
+      "parameters": {
+        "databases": [
+          "PubMed",
+          "Science Direct",
+          "Scopus",
+          "Cochrane Library",
+          "EMBASE"
+        ],
+        "search_terms": "\"lip lift\" OR \"Lip lifting\" AND \"subnasal lift\" OR \"subnasal lifting\"",
+        "publication_date_cutoff": "July 2020",
+        "exclusion_criteria": "Unpublished studies or gray literature"
+      },
+      "observation": "464 articles initially found (33 in PubMed, 42 in Scopus, 158 in Science Direct, 0 in Cochrane, 231 in EMBASE).",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 2,
+      "thought": "[Background] 464 articles were identified from the database search. [Gap] Need to filter these articles to identify eligible studies based on inclusion criteria (cohorts, case series) and exclude those with insufficient information. [Decision] To achieve study selection, chose to use RYYAN ® program to perform screening of titles, abstracts, and full texts on the 464 articles, expecting to obtain a final set of eligible studies.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "RYYAN ® program",
+        "version": ""
+      },
+      "parameters": {
+        "inclusion_criteria": "Retrospective or prospective cohort studies, case control and case series",
+        "screening_process": "Titles and abstracts analysis, followed by full text evaluation",
+        "reviewers": "Two authors independently"
+      },
+      "observation": "4 studies selected (2 retrospective cohorts and 2 case series) after removing duplicates and excluding 44 full texts.",
+      "valid": true,
+      "references": []
+    },
+    {
+      "step_index": 3,
+      "thought": "[Background] 4 studies were selected for inclusion. [Gap] Need to assess the quality and risk of bias of the included studies to ensure reliability of the review. [Decision] To achieve quality assurance, chose to use Cochrane Handbook for Systematic Reviews of Interventions to perform quality assessment on the 4 included studies, expecting to obtain a quality rating for each study.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Cochrane Handbook for Systematic Reviews of Interventions",
+        "version": "6"
+      },
+      "parameters": {
+        "assessment_type": "Quality of included studies",
+        "study_types_evaluated": "Retrospective cohorts, case series"
+      },
+      "observation": "Quality assessed for 4 studies (2 retrospective cohorts and 2 case series).",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Higgins J, Thomas J, editors. Cochrane handbook for systematic reviews of interventions [Internet]. Version 6, 2019",
+          "relevance": "Provides the methodology and standards for assessing the quality of the included studies in the systematic review."
+        }
+      ]
+    },
+    {
+      "step_index": 4,
+      "thought": "[Background] 4 quality-assessed studies are available. [Gap] Need to extract specific data on lip aesthetics, patient satisfaction, and stability to answer the research question. [Decision] To achieve data synthesis, chose to use Data Extraction Protocol to perform extraction of anthropometric measures, satisfaction scores, and follow-up times on the 4 included studies, expecting to obtain quantitative and qualitative outcomes.",
+      "action": "dry_experiment",
+      "tool": {
+        "name": "Data Extraction Protocol",
+        "version": ""
+      },
+      "parameters": {
+        "data_points": "Amount of tissue removed, exposure of labial vermilion, score of upper lip/lower face, labial score/filter, patient satisfaction, follow-up time",
+        "analysis_method": "Descriptive analysis (Meta-analysis prevented due to methodology differences)"
+      },
+      "observation": "92.4% of cases were women (mean age 36.6 years). 92.1%-100% patient satisfaction. Stability maintained from 12 to 59.1 months. Improvement in lip aesthetics confirmed.",
+      "valid": true,
+      "references": [
+        {
+          "citation": "Holden PK, Sufyan AS, Perkins SW (2011); Jung JA, et al. (2019); Lee DE, et al. (2015); Pan BL (2017)",
+          "relevance": "These are the 4 included studies from which data was extracted and analyzed."
+        }
+      ]
+    }
+  ],
+  "03_success_verification": {
+    "validation_technique": "Systematic Review of Clinical Studies",
+    "metrics": {
+      "patient_satisfaction": {
+        "value": "92.1% - 100%",
+        "unit": "%",
+        "interpretation": "High degree of patient satisfaction reported across studies."
+      },
+      "stability_duration": {
+        "value": "12 to 59.1",
+        "unit": "months",
+        "interpretation": "Results maintained for varying periods with low revision rate."
+      },
+      "aesthetic_improvement": {
+        "value": "Improved",
+        "unit": "N/A",
+        "interpretation": "Confirmed by anthropometric measures (vermilion exposure, lip height, nasolabial angle)."
+      },
+      "demographic_prevalence": {
+        "value": "92.4",
+        "unit": "%",
+        "interpretation": "Percentage of cases performed in women."
+      }
+    },
+    "final_verdict": "The subnasal lip lift improves lip aesthetics and maintains its stability for a certain period of time (approximately 28 months average) in adult patients, though standardization of techniques is still needed."
+  }
+}
