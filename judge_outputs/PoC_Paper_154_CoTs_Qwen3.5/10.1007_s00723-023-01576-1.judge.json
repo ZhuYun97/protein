@@ -1,0 +1,206 @@
+{
+  "paper_id": "10.1007_s00723-023-01576-1",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 117.83,
+  "judge_result": {
+    "paper_id": "10.1007_s00723-023-01576-1",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "manually creating backbone templates using PyMol (version 2.4)... Backbone torsion angles were constrained to (φ, ψ) = (-64°, -41°) in the α contexts and (-135°, 135°) in the β context",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Each construct was capped with an N-terminal acetyl and a C-terminal amide. Glycine residues were used between the label attachment sites",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "labeling with RX using the CHARMM-GUI input generator [72, 80, 81]",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: [80], [81]",
+            "reason": "Text cites [72, 80, 81] for CHARMM-GUI usage; step omits [72]."
+          }
+        ],
+        "fix_suggestion": "Add citation [72] to references list to fully match text."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "using CREST [79] with the GFN forcefield [82, 83] and the implicit generalized Born/surface area (GBSA) water model... cartesian force constant of 0.01 hartree/bohr²",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.temperature",
+            "claim": "temperature: 298 K",
+            "reason": "Text associates 298 K with Boltzmann distribution for population approximation (Step 4), not explicitly as a CREST sampling parameter."
+          }
+        ],
+        "fix_suggestion": "Move temperature parameter to Step 4 (Boltzmann calculation) or clarify it is for subsequent weighting."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "approximate populations using the Boltzmann distribution at 298 K... rotamers cumulatively accounting for the bottom 1% of the total population were discarded",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "chiLife [84] through the dRotamerEnsemble and dSpinLabel objects... 222 kcal/mol/Å² force constant... 5 kcal/mol/rad²... RMSD... above 0.5 Å... 46 rotamers",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Lennard–Jones potential energy term is applied between all atoms of the bifunctional label that are more than 2 bonds apart",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "re-analyzed using DeerLab [85]... model-free Tikhonov regularization... homogeneous three-dimensional spin distribution model... minimum of the distance domain was 1.5 nm... r_max/nm = ∛(108 t_max/μs)... Modulation depth... 0 and less than 0.55... between 0.01 and 10",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "modeled the RX spin label on 10 site pairs... Vps75... T4 lysozyme (T4L)... riFABP... PDB: 2LZM... 2IFB... 2ZD7... MAD of 1.3 Å... MAD of 1.7 Å... MAD of 2.3 Å",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "T115–T119 of T4L... PDB: 3L2X... 1.6 Å heavy-atom... RMSD... 1.5 Å from the crystal structure spin center... ensemble of 7 conformations... 2LZM structure... nine structures",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "PDB: 2LZM",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 4.9,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "paper_id": "10.3390_chemosensors10080304",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 162.75,
+  "judge_result": {
+    "paper_id": "10.3390_chemosensors10080304",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Ma's team... proposed a two-dimensional design strategy to virtually screen putative two-photon fluorescent substrates... employed N-butyl and N-phenyl derivatives of naphthalimide (NN) as a fluorophore",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "observation",
+            "quote": "probe 16 was developed to monitor the CYP3A4 activity",
+            "page_idx": 17
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "screened using the docking of fluorescent substrates with the reverse protein-ligands of CYP450... analyze the theoretical distance from the catalytic site to the reaction site",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "probe 13 (MXMB) can be used for the selective activation process of CYP2J2",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "further investigated the match between the probe and CYP450 characteristic isoforms by molecular dynamics simulations and free energy calculations",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "probe 13 (MXMB) can be used for the selective activation process of CYP2J2 in various tumor models",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "Yang's team reported a highly selective CYP1A probe... (probe 1 (NCMN))",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "tool|observation",
+            "quote": "Ma's team has successfully developed a highly specific NIR fluorescent probe 11 (BnXPI)",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "tool|observation",
+            "quote": "Chen's team developed the CYP1A1-specific detection fluorescent probe 8 (BCy-CYP)",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "excellent selectivity (LOD = 0.036 nM)... toward CYP1A1",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "greatly improved the sensitivity (LOD = 0.026 nM)",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "CYP1A2 was nearly 25 times higher than CYP1A1",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "TPM images of a fresh rat liver slice stained with NCMN... at depth of ≈100 μm",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "observation",
+            "quote": "detect CYP1A enzyme activity at the living cells and tissues level",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "confirm the rapid and selective accumulation of CYP1B1 in HCT-15 xenograft tumors",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "visualized CYP2J2 in subcutaneous tumors of tumor-bearing mice",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "observation",
+            "quote": "quantify changes in CYP3A5 activity within... tumor-bearing mice",
+            "page_idx": 18
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 2.3,
+        "label": "partially_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 0.5,
+          "C_observation": 0.5,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "visualize and evaluate the MBI behaviors of common medicines with probe 18",
+            "page_idx": 19
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "observation",
+            "claim": "Probe 9 response depended on LC-MS/HPLC initially.",
+            "reason": "The text states Probe 9 (HBMN) enables bioanalysis using 'visible optical signal changes' (p8). The dependency on LC-MS/HPLC is explicitly attributed to Probe 12 (natural occurring probe for 3A5) on p17, not Probe 9."
+          },
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Reference [90] supports Probe 9 LC-MS dependency.",
+            "reason": "Reference [90] in the text (p17) supports the LC-MS claim for Probe 12, not Probe 9 (which is Ref [65] on p8)."
+          }
+        ],
+        "fix_suggestion": "Change 'Probe 9' to 'Probe 12' in the observation and parameters regarding LC-MS dependency, or remove the LC-MS claim for Probe 9 as the text highlights its optical signal capability."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 4.6,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [
+        8
+      ],
+      "hallucination_risk": "medium"
+    }
+  }
+}

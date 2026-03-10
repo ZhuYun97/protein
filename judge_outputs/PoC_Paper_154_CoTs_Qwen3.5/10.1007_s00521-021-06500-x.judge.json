@@ -1,0 +1,337 @@
+{
+  "paper_id": "10.1007_s00521-021-06500-x",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 83.99,
+  "judge_result": {
+    "paper_id": "10.1007_s00521-021-06500-x",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Using a certain scale factor of s to downsample the training HR images to form the corresponding LR images.",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Scale factor = 2",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Original (ground truth) image size (Y)=256x256 each",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Running bi-cubic interpolation with a predefined scale size to scale up the downsampled version of LR images",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "such that the size of both LR and HR images becomes the same",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "divide the sparse training data into C clusters using the popular K-Means algorithm",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Number of subsets of pixel pairs, K=3 (clustered using K-Means for easy illustration)",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "references",
+            "quote": "a more advanced clustering method, e.g., one of those as described in [31, 32] may be used if preferred",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "If the cardinality of the data in the ith subset n_i < alpha n_a, then this subset is deemed to be a sparse data set",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "presuming that the sufficient training data are available for subsets 1 and 3 and only sparse data are available for subset 2",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Each subset of sufficient data is fed to the standard ANFIS training process [10]",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "ANFIS can be represented as a 5-layer network",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "triangular membership functions defined by their respective three characteristic points",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "memorise all the antecedent and consequent parts of the fuzzy rules extracted from the two source ANFISs",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "total number of rules in the rule dictionary will be N = (n1 + n2)",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "general TSK rule representation [30]",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "choose L closest rule antecedents... value of L is chosen to be two [33]",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Euclidean distance metric",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "references",
+            "quote": "ANFIS interpolation [12, 26]",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "fine-tune the previously generated intermediate, interpolated ANFIS",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "tool",
+            "quote": "makes direct use of the standard ANFIS training technique as discussed in [10]",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "ANFIS whose corresponding cluster centre has the smallest distance with the testing LR pixel value is chosen",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "number of fuzzy values is specified by three. That is... small, medium and large",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "denoising filter such as Non-Local Means (NLM) [36] can be exploited to reduce the noise effects",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "popular post-processing technique, named Iterative Back Projection (IBP) [37], is employed",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "peak-signal-to-noise ratio (PSNR) and Structure SIMilarity (SSIM) are the two most commonly adopted",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "V_max... In this work, it is taken as 255",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "references",
+            "quote": "Frobenius norm [38]",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 12,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

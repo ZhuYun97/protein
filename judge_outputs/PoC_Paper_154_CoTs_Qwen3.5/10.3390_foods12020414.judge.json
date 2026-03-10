@@ -1,0 +1,374 @@
+{
+  "paper_id": "10.3390_foods12020414",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 124.07,
+  "judge_result": {
+    "paper_id": "10.3390_foods12020414",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "swell for 2h at 65°C... frozen at -18°C in the freezer for one night... thawed at room temperature for 6h and centrifuged (3500×g for 3min)... dissolved in 1% sodium chloride solution... centrifugation (4000×g for 5min)... until no blue color appeared",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Crude amylopectin (21~26 g) was isolated",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "according to basic principle in the literature [13,14]",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "hydrolyzed by lipase (20,000 U/g, 10 mg) for 24 h at 40 °C... alkali protease (20,000 U/g, 10 mg)... for 24 h at 55 °C after the pH... adjusted to 8.0... inactivated by boiling for 10 min... centrifuged (4000×g for 10 min)... no turbidity when a drop in AgNO3 was added",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The purified amylopectins (23~26 g wet weight, corresponding to 6~7 g dry weight) were prepared",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "according to [15]",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "mixed with 65% ethanol at the ratio of 1:30 (g/v)... stirring for 2 h at 40 °C... centrifugation at 4000×g for 10 min... 0.1% NaOH... extraction temperature and time were 30 °C and 120 min... condensation were 50 °C and 12 h... dialyzed to remove the sodium and hydroxide ions",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "21.5 g wet/2.2 g dry weight of ASG was obtained",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "using a reference method, with certain modification [16]... based on [17]",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "starches, at a wet weight of 1 g... mixed with ASG at a wet weight of 0.3 g... stirred with a small bamboo skewer at 37 °C for 2 h",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The wet mixtures were used to determine the contents of disulfide bonds",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Empty reference list in trajectory",
+            "reason": "Source text Section 2.2.4 does not provide specific citations for this mixing method"
+          }
+        ],
+        "fix_suggestion": "No fix needed; consistent with source text which lacks citations for this step."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "gelatinized for 20 min at 95 °C... autoclaved at 120 °C for 30 min... retrograded at 4 °C for 7 d",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The wet mixtures were used to determine the contents of disulfide bonds",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Empty reference list in trajectory",
+            "reason": "Source text Section 2.2.5 does not provide specific citations for this retrogradation method"
+          }
+        ],
+        "fix_suggestion": "No fix needed; consistent with source text which lacks citations for this step."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "solution A: Tris-Gly (pH 8.0), 1.0418 g Tris, 0.6756 g glycine and 0.1489 g EDTA... solution B: Tris-Gly-8M urea, with 48.048 g urea... solution C: DTNB... 4 mg/mL... kept at 25 °C for 1 h... centrifugation (12,000×g) for 10 min... absorbance at 412 nm",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "disulfide bond contents of alkali-soluble glutenin increased from 0.04 to 0.31, 0.24, 0.08, 0.18 and 0.29 μmol/g... after cold storage, they changed to 0.55, 0.16, 0.26, 0.07 and 0.19 μmol/g",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "references",
+            "quote": "according to the method described by Zhu et al. (2019) [18], with some modifications [19]",
+            "page_idx": 3
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "HPSEC... MALLS, DAWN HELEOS II... RI; Wyatt Technologies... 200 mL injection loop... Styrage® HMW 6E DMF 250 and 1000... at 45 °C... DMSO with 50 mM NaNO3... flow rate of 0.6 mL/min... calibrated by Dextran standards (T40 and T2000)",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Mw values... are 0.035, 0.022, 0.038, 0.006 and 0.020×10^8 g/mol... There is no correlation between the Mw values and disulfide bond contents",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "references",
+            "quote": "[20]",
+            "page_idx": 4
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "HPAEC-PAD... amylopectins (100 mg) were dispersed in 50 mL of 4.0 M potassium hydroxide... pH... adjusted to 6.0... hydrolysis of pullulanase (0.1 mL, 0.5 U) at 45 °C for 24 h... inactivated by boiling for 10 min and centrifuged at 20,000×g... filtered through a 0.5 μm membrane filter",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "wheat amylopectin has the highest proportion of 9–12 residues... Only the wheat and mung bean amylopectins have chains containing more than 15 glucose residues",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "references",
+            "quote": "[21]",
+            "page_idx": 4
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "KBr... dried at 120 °C for 2 h... blended with KBr (1%, w/w) at the rate of 1:60 (w/w)... transmission mode at 27 °C... amide I band (1600–1700 cm−1)... intermolecular β-sheets at 1612–1620 cm−1... Peakfit software",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Through mixing with amylopectins, the α-helix, β-turn and intramolecular aggregation extended β-sheet contents of ASG increase... During retrogradation, the reduction in the α-helix contents could be regarded as an indicator of disulfide bond content increase",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "references",
+            "quote": "calculated according to [18]... [37]",
+            "page_idx": 4
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "JEOL ECZ600R 600 MHz spectrometer... 13C frequency was 150.87 kHz... 90° pulse width of 2.4 μs... spinning rate of MAS was set at 15 kHz... 5 mm rotors",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "31.5 ppm (hydroxyproline (HYP) Cβ)... covalent bond between the two amino acids... glutathione disulfide (GSSG) is generated",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "references",
+            "quote": "According to [40]... [41]",
+            "page_idx": 9
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "D/MAX-2500 Advance diffractometer (Rigaku)... 200 mA and 40 kV... 3° to 60°... step size was 0.02°... counting time was 0.8 s",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "positive/negative correlation between the peak intensity of the angles at 2θ=20°/23° and the disulfide bond contents... diffraction angles at 2θ17.38° and 20.10° remain",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "references",
+            "quote": "[46]",
+            "page_idx": 13
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "mean ± S.D.... two-sample t-tests of variance with Excel... Dunnett's test (p<0.05)... determined in triplicate",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The addition of wheat amylopectin promoted the most significant disulfide bond formation of ASG",
+            "page_idx": 0
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Empty reference list in trajectory",
+            "reason": "Source text Section 2.2.12 does not provide specific citations for statistical methods"
+          }
+        ],
+        "fix_suggestion": "No fix needed; consistent with source text which lacks citations for this step."
+      }
+    ],
+    "summary": {
+      "num_steps": 12,
+      "mean_score": 4.875,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

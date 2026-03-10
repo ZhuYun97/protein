@@ -1,0 +1,214 @@
+{
+  "paper_id": "10.1146_annurev-arplant-070522-052132",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 85.48,
+  "judge_result": {
+    "paper_id": "10.1146_annurev-arplant-070522-052132",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "TurboID... allows for highly efficient labeling in a timescale of minutes and a broader range of working temperatures.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "TurboID... has the highest activity of all biotin ligases and the broadest working temperature",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "fusing a genetically encoded proximity-labeling (PL) enzyme to a protein or a localization signal peptide",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "fused to a PL enzyme... at either the N or C terminus and expressed under the bait protein's native promoter at the endogenous level",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "less than 50 µM of biotin treatment are strongly recommended for experiments",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "shorter time of biotin treatment (≤ 1 h) is preferred... for more abundant proteins... longer biotin treatment (up to several hours) may be needed for less-abundant bait proteins",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 4,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "high-affinity streptavidin beads (Kd=10^-14 mol/L) under very harsh conditions",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "affinity of streptavidin (Kd=10^-14 mol/L) allows the capture of biotinylated proteins under very harsh conditions",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Ref 99 establishes streptavidin use",
+            "reason": "Text cites Ref 55 for BioID and does not explicitly link Ref 99 to streptavidin affinity claim in provided snippets, though Ref 99 is in bibliography."
+          }
+        ],
+        "fix_suggestion": "Cite the review text itself or Ref 55/101 which are more explicitly linked to PL principles in the text."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "most labs perform on-head digestions for elution in which the biotinylated proteins are eluted from the beads using a short (~3-h) trypsin digestion, followed by overnight full digestion",
+            "page_idx": 14
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "liquid chromatography–coupled tandem mass spectrometry (LC-MS/MS) analysis",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "all quantification data should be acquired on high-resolution/high-accuracy instruments",
+            "page_idx": 16
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "using the publicly available software Maxquant/Perseus",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Protein abundance is quantified using the sum of XICs of peptides at the MS1 level",
+            "page_idx": 17
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "To validate direct PPIs, bimolecular fluorescence complementation (BiFC) and yeast two-hybrid assays are commonly used",
+            "page_idx": 19
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 4.98,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

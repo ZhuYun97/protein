@@ -1,0 +1,169 @@
+{
+  "paper_id": "10.1121_10.0013994",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 73.99,
+  "judge_result": {
+    "paper_id": "10.1121_10.0013994",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The aquarium tanks were more than 10 meters in lateral extent and up to 5 meters deep.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "supplied with water continuously pumped from the North Sea.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The sounds from the haddock were especially interesting, as they varied between individuals, between males and females, and during different behavior patterns.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "We detected the haddock sounds using a hydrophone held beneath a travelling boat.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Balsfjord is a subarctic fjord (90 km2) with a shallow (30m) depth at the opening to its entrance, but with depths in the inner fjord dropping to 190m.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Long sequences of repeated knocks were heard at a particular deep location... At night, the sounds merged into a continuous and loud low-frequency rumble",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 3,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.5,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "Spawning haddock were later found at the same unique location in Balsfjord in several successive years.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "Casaretto et al., 2014",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "tool",
+            "claim": "chose to use Visual observation to perform spawning ground verification",
+            "reason": "The text states spawning haddock were 'found' but does not explicitly specify 'Visual observation' as the verification method."
+          }
+        ],
+        "fix_suggestion": "Change tool from 'Visual observation' to 'Field verification' or remove specific tool claim to match text stating they were 'found'."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "An acoustic range was set up at a depth of 21m.",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Underwater sound projectors, capable of generating frequencies down to about 30Hz",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "observation",
+            "quote": "cod and herring (and also the haddock, studied later) were sensitive to the sound pressure as well as the particle motion.",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The cod were tracked using a pulsed ultrasonic transmitter inserted into the stomach",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "depths between 10 and 20m",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The majority of Torridon cod were more active during the day rather than the night",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      }
+    ],
+    "summary": {
+      "num_steps": 5,
+      "mean_score": 4.8,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

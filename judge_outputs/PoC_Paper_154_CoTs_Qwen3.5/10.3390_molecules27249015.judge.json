@@ -1,0 +1,16 @@
+{
+  "paper_id": "10.3390_molecules27249015",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 38.9,
+  "judge_result": {
+    "paper_id": "10.3390_molecules27249015",
+    "step_scores": [],
+    "summary": {
+      "num_steps": 0,
+      "mean_score": 0.0,
+      "median_score": 0.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

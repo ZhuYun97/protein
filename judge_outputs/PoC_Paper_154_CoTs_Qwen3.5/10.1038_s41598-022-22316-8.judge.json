@@ -1,0 +1,421 @@
+{
+  "paper_id": "10.1038_s41598-022-22316-8",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 112.82,
+  "judge_result": {
+    "paper_id": "10.1038_s41598-022-22316-8",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Rho^{P23H/P23H} or Rho^{+/+} mice in C57BL/J6 background... euthanized at P15... rd8 absence was confirmed in mice by RT-PCR",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "collected retinas at an earlier post-natal day 15 (P15)... pooled and solubilized retinas from either 24 Rho^{+/+} or 40 Rho^{P23H/P23H} mice",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Sakami, S. et al. J. Biol. Chem. 286, 10551–10567 (2011)",
+            "reason": "Reference 14 is cited in text but full citation not in provided reference list (only 1-13, 64-75 provided)"
+          }
+        ],
+        "fix_suggestion": "Cite reference as 'Ref 14' or ensure full citation is available in input text."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "lysed in 1 ml of PBSD (PBS containing 1.0% n-dodecyl-β-D-maltoside and protease and phosphatase inhibitor mixture) and sonicated",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "generate retinal protein lysates... from either 24 Rho^{+/+} or 40 Rho^{P23H/P23H} mice",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "preincubated with 1D4 anti-rhodopsin antibody... incubated at 4°C overnight... eluted from the beads using an elution buffer (PBS containing 8 M urea and 0.5% n-dodecyl-β-Dmaltoside) at 80°C",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "immunoprecipitated wild-type rhodopsin and P23H rhodopsin from lysates using 1D4 anti-rhodopsin antibody",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Molday, R.S. & MacKenzie, D. Biochemistry 22, 653–660 (1983)",
+            "reason": "Reference 39/40 cited in text for 1D4, but full citation not in provided reference list"
+          }
+        ],
+        "fix_suggestion": "Cite reference as 'Ref 39,40' or ensure full citation is available in input text."
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "1D4 anti-rhodopsin antibody... at 1:1000 dilution... incubated with a horseradish peroxidase-coupled secondary antibody... SuperSignal West chemiluminescence substrate",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Immunoblotting for rhodopsin confirmed abundant recovery of wild-type and P23H rhodopsin protein",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "LTQOrbitrap mass spectrometer... 2.4-kV spray voltage... 50 ppm peptide mass tolerance... 400 ppm for fragment ions... Sequencing Grade Modified Trypsin... Integrated Proteomics Pipeline (IP2)... ProLuCID and DTASelect2",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "identified 276 proteins in the wild-type rhodopsin LC–MS/MS and 286 proteins in the P23H rhodopsin LC–MS/MS",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 6,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "LC–MS/MS on triplicate samples of mouse embryonic fibroblast (MEF) protein lysate eluates immunopurified with 1D4",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "MEF LC–MS/MS, which showed no rhodopsin protein fragments... vast majority of the proteins identified in our wild-type and P23H rhodopsin interactomes were absent",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "used gProfiler... across four different gene/protein function annotation databases... Gene Ontology Biological Processes (GO-BP)... Reactome... GO Molecular Functions (GO-MF)... KEGG... significant (p<0.05)",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "GO-BP analysis of the P23H rhodopsin interactome revealed significant association with translation... ER protein folding; ER stress; and ER-associated protein degradation... wild-type rhodopsin interactome... detection of visible light and protein folding",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "imported into Cytoscape and visualization of all terms into enrichment map was done by Cytoscape plug-in, Enrichment Map",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "74. Merico, D., Isserlin, R., Stueker, O., Emili, A. & Bader, G. D. Enrichment map... PLoS ONE 5, e13984... (2010).",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 9,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Terms were grouped together into clusters by Cytoscape plug-in, clusterMaker2... dependent on similarity of node attributes",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Terms were grouped together into clusters",
+            "page_idx": 11
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "references",
+            "claim": "Morris, J.H. et al. F1000Res 5, 1717 (2016)",
+            "reason": "Provided text Ref 75 is Kucera et al. (same journal/vol/page), not Morris. Reference 75 cited for clusterMaker2 in text but details mismatch trajectory."
+          }
+        ],
+        "fix_suggestion": "Align reference with provided text (Ref 75 Kucera et al.) or note text inconsistency."
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "labeled by Cytoscape plug-in, Auto Annotate; labeling is dependent on word frequencies of the terms",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "75. Kucera, M.... AutoAnnotate... F1000Res 5, 1717... (2016).",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Key themes... included eukaryotic translation, ER stress, ubiquitination, and synapses",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 11,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "generated protein–protein interaction (PPI) networks using STRING... confidence score of >0.400... 173 proteins unique to P23H rhodopsin",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Found 741 interactions between the 173 proteins unique to P23H rhodopsin",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Szklarczyk, D. et al. Nucleic Acids Res. 47, D607–D613 (2019)",
+            "reason": "Reference 55 cited in text but not in provided reference list"
+          }
+        ],
+        "fix_suggestion": "Cite reference as 'Ref 55'."
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "MCODE parameters were set as degree cutoff = 2, K-Core = 2, and Node Score Cutoff = 0.2... MCODE >20",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Only one PPI module was identified at high stringency settings (MCODE >20 ) composed of 20 highly interconnected proteins",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Bader, G.D. & Hogue, C.W. BMC Bioinformatics 4, 1 (2003)",
+            "reason": "Reference 56 cited in text but not in provided reference list"
+          }
+        ],
+        "fix_suggestion": "Cite reference as 'Ref 56'."
+      },
+      {
+        "step_index": 13,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "discovery of hub genes was determined by plug-in of cytoHubba... degree method... determine which 10 proteins had the highest connectivity",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Seven of the hub genes were also present in the ribosome-related PPI module... (Ubb, Uba52, Rps6, Eef1a2, Plec, Rps8, and Rpl19)... remaining 3 hub genes encoded Actb... DHX9... and Rack1",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Chin, C.H. et al. BMC Syst Biol 8, S11 (2014)",
+            "reason": "Reference 58 cited in text but not in provided reference list"
+          }
+        ],
+        "fix_suggestion": "Cite reference as 'Ref 58'."
+      },
+      {
+        "step_index": 14,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "used the gene ontology cellular compartment (GO-CC) database to identify the subcellular distribution",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "observation",
+            "quote": "marked increase of P23H rhodopsin interacting proteins in synapse, cytoskeleton, and axon compartments compared to wild-type... marked increase in P23H rhodopsin interacting proteins in the ribosome",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Gene Ontology Consortium. Nucleic Acids Res. 49, D325–D334 (2021)",
+            "reason": "Reference 51 cited in text for GO but specific 2021 citation not in provided reference list"
+          }
+        ],
+        "fix_suggestion": "Cite reference as 'Ref 51'."
+      }
+    ],
+    "summary": {
+      "num_steps": 14,
+      "mean_score": 4.4,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

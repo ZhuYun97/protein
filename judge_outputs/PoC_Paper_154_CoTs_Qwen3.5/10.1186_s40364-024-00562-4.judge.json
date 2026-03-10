@@ -1,0 +1,275 @@
+{
+  "paper_id": "10.1186_s40364-024-00562-4",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 186.23,
+  "judge_result": {
+    "paper_id": "10.1186_s40364-024-00562-4",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.5,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "harvesting cells after stalling ribosome translocation using elongation inhibitors such as cycloheximide or flash freezing",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "Ingolia NT, Ghaemmaghami S, Newman JR, Weissman JS. Science. 2009",
+            "page_idx": 16
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.inhibitors",
+            "claim": "inhibitors: cycloheximide, emetine, lactimidomycin",
+            "reason": "Text specifies cycloheximide or flash freezing for ribosome profiling (p3). Emetine is mentioned for polysome profiling (p1). Lactimidomycin is for TIS enrichment (p14)."
+          },
+          {
+            "type": "unsupported",
+            "field": "parameters.condition",
+            "claim": "condition: proliferating stage",
+            "reason": "Text mentions 'proliferating stage' for polysome profiling (p1), not explicitly for ribosome profiling harvesting (p3)."
+          }
+        ],
+        "fix_suggestion": "Limit inhibitors to cycloheximide or flash freezing for general ribosome profiling. Remove 'proliferating stage' unless referring to polysome profiling."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "digesting the cell lysates with ribonuclease (RNase)",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mRNA fragments of approximately 30 nucleotides are protected from nuclease digestion by translating ribosomes",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.enzyme",
+            "claim": "enzyme: RNase I or micrococcal nuclease (MNase)",
+            "reason": "Text says 'ribonuclease (RNase)' for general ribosome profiling (p3). MNase is specified for scRibo-seq (p4). RNase I is not explicitly named for general protocol in text."
+          }
+        ],
+        "fix_suggestion": "Specify 'RNase' generally, or note MNase is for scRibo-seq variant."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "collecting ribosome-protected RNA fragments through ultracentrifugation with sucrose gradient solutions or a simpler sucrose cushion",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "sucrose gradient solutions or a simpler sucrose cushion",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "depleting contaminating rRNAs to avoid mapping distortion",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "removing ribosomes to collect ribosome-protected fragments (RPFs)",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 5,
+        "score": 4.3,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "library generation",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "ligating obtained RPFs to adaptors containing priming sites and a unique molecular identifier (UMI)",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.components",
+            "claim": "components: adaptors containing priming sites and a unique molecular identifier (UMI)",
+            "reason": "Text explicitly links UMI to scRibo-seq protocol (p4), not the general ribosome profiling steps (p3)."
+          },
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "citation: VanInsberghe M, et al. Nature. 2021",
+            "reason": "Reference 53 is for scRibo-seq, not general ribosome profiling library generation."
+          }
+        ],
+        "fix_suggestion": "Clarify that UMI is specific to scRibo-seq or remove UMI mention for general workflow."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "deep-sequencing of RPFs",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "only footprints, whose length are approximately 28-30nt, are kept for downstream alignment",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "RNA-seq is usually performed in parallel with ribosome profiling",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "FPKM in RNA-seq",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "TE = (RPKM in Ribo-seq) / (FPKM in RNA-seq)",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "ratio of translating mRNAs to total mRNAs of a gene",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Scikit-ribo, an open-source analysis package was developed by Fang H's team",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "tool",
+            "quote": "Riboformer, a deep learning-based framework, was invented",
+            "page_idx": 14
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      }
+    ],
+    "summary": {
+      "num_steps": 9,
+      "mean_score": 4.8,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

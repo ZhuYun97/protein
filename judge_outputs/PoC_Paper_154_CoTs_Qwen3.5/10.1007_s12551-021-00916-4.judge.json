@@ -1,0 +1,509 @@
+{
+  "paper_id": "10.1007_s12551-021-00916-4",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 127.7,
+  "judge_result": {
+    "paper_id": "10.1007_s12551-021-00916-4",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "PCSs may be incorporated into structure refinement tools, i.e., Xplor-NIH... as distance and angular constraints",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "the structure of each individual Ub was refined by using paramagnetic data with Xplor-NIH",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "PCSs may be incorporated into structure refinement tools, i.e., ... and CYANA",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "If the structure of the metal-bearing domain had never been characterized in advance, the Δχ tensor and metal positions are concurrently determined during the structure calculation with Rosetta",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "REFMAC5, part of the CCP4 suite, is a powerful tool for joint structural refinement in the combination of X-ray data and paramagnetic NMR restraints",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "the AIDA program provides fast docking for domain assembly",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "structure model of linear Ub2 was obtained by assembling two Ubs with AIDA",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Some programs, e.g., pyDockTET... are also able to assemble structures of isolated domains into a multi-domain molecule",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Some programs, e.g., ... and Rosetta... are also able to assemble structures of isolated domains into a multi-domain molecule",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Generation of the conformational pool... is typically achieved by treating all domains as rigid domains and randomizing the backbone torsion angles of several residues in the linkers... The programs RanCh",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "PDB Generator module of MESMER... are the two simplest tools for pool generation in the case that residues comprising the linkers are placed neither in alpha helices nor in beta sheets",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 10,
+        "score": 4.6,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.1
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Furthermore, the utilization of molecular dynamics (MD) is helpful in sampling a more physically realistic set of conformations",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Ihms and Foster 2015 Provides evidence for using MD",
+            "reason": "Text cites Ihms and Foster 2015 for 'incorporation of complementary high-resolution constraints', not specifically for MD usage in the preceding sentence."
+          }
+        ],
+        "fix_suggestion": "Remove specific citation for MD or clarify citation applies to complementary constraints mentioned in the same paragraph."
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "determination of the Δχ tensor and metal positions by fitting data against the available structure with firmly established programs, i.e., NUMBAT",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "RDCs from the metal-bearing domain can be analyzed together with PCSs through fitting against the available structure model with the programs FANTEN",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 13,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "and PARAMAGPY (Orton et al. 2020)",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "e.g., PALES (Zweckstetter 2008)... for RDC analysis",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 15,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "PATI (Berlin et al. 2009)... for RDC analysis",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 16,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "REDCAT (Valafar and Prestegard 2004)... for RDC analysis",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 17,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "and MODULE (Dosset et al. 2001) for RDC analysis",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 18,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "PyParaTools python library... is a powerful tool that has been involved in some reweighting programs... such as MESMER",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 19,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "MESMER... The optimal ensemble is iteratively selected via a genetic algorithm",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "MESMER selected a minimal ensemble comprising seven conformations",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 20,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The Sparse Ensemble Selection (SES) method... provides a deterministic solution",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 21,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "MaxOcc analysis can be performed by the MATLAB script",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "observation",
+            "quote": "MaxOcc of top 1,000 conformers calculated",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 22,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "maximum and minimum occurrence of defined regions, MaxOR and MinOR",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 23,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "dissociation constant (Kd) increased by over 14-fold for E16Rp and decreased by fivefold for E18Rp",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "references",
+            "quote": "HOIL-1L-NZF (PDB code: 3b0a) (Sato et al. 2011)",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      }
+    ],
+    "summary": {
+      "num_steps": 23,
+      "mean_score": 4.98,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "paper_id": "10.1093_bioadv_vbac015",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 139.35,
+  "judge_result": {
+    "paper_id": "10.1093_bioadv_vbac015",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 0.5,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "clustered using CD-HIT (Fu et al., 2012)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Resolution better than 4A and complete heavy and light variable chains and antigen length greater than or equal to 60 amino acids",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "85% identity threshold",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "This filtering resulted in 722 nonredundant antibody–antigen model pairs",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "622 antibody–antigen pairs with known structure were used as inputs",
+            "page_idx": 0
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "observation",
+            "claim": "reduced to 622 after excluding pairs with RMSD > 6A",
+            "reason": "Text states RMSD exclusion (>6A) occurred on the 1862 pool (Section 2.2) before the 722 count (Section 2.3). The specific reason for the reduction from 722 to 622 is not explicitly defined as RMSD exclusion in the provided text."
+          }
+        ],
+        "fix_suggestion": "State that 722 pairs were obtained after redundancy filtering, and the final 622 pairs were used for LOOCV, without attributing the 722->622 reduction specifically to RMSD > 6A exclusion in this step."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Antibody variable regions were modeled using Repertoire Builder",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "templates with a sequence identity of 90% or higher were blacklisted",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mean and median Calpha RMSDs of paratope residues upon superposition were 2.71A",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Template alignments were computed by Forte",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Antigen templates were restricted to PDB entries that either did not have a bound antibody or whose bound antibody overlapped <50% with the residues of the native epitope",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "rendered in 3D using Spanner",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "side chain replacement by SCWRL4",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "those of the epitope residues were 1.18A",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "For paratope and epitope prediction, a deep neural network (DNN) was designed",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Subsequent 7 (11) hidden layers for the paratope (epitope) predictor",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mean ROC AUCs for the training (92.5%) and test (89.8%)",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Subsequent 7 (11) hidden layers for the paratope (epitope) predictor",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mean ROC AUCs dropped from 0.683",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Piper version 1.2 was run",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "All 70 000 poses were evaluated",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "596/622 (95.8%)",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Piper_Docking_ML",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "XGBoost Python module XGBClassifier... Poses were randomly downsampled to 10 000",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mean ROC AUCs for the Piper_Docking_ML for these 596 queries was 0.692",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Hex... was used for local antibody–antigen docking",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "patches of radius 20A... distance between patch centers at least 10A... constrained to +/-30 degrees",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "median (IQR) values of 472 087... 583/622 (93.7%)",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Hex_Docking_ML",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mean ROC AUCs for the Hex_Docking_ML... was 0.599",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "coclustered progressively by IRMSD",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "IRMSD clustering cutoff (10A)",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "drop in the enrichment of True poses to 3.9%",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 13,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Piper_Hex_Docking_ML... XGBRegressor",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "target function given by: 1/IRMSD^2",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "550/622 (88.4%)... median (IQR) value of 22",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Final_Epitope_ML... DNN designed with seven fully connected (dense) hidden layers",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "median ROC AUC increased from 0.679 to 0.720 in cross-validation and from 0.694 to 0.730 in the holdout set",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      }
+    ],
+    "summary": {
+      "num_steps": 14,
+      "mean_score": 4.9,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

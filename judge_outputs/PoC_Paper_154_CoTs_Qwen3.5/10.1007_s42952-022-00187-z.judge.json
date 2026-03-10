@@ -1,0 +1,264 @@
+{
+  "paper_id": "10.1007_s42952-022-00187-z",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 122.46,
+  "judge_result": {
+    "paper_id": "10.1007_s42952-022-00187-z",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Following the idea of the MAVE in Xia et al. (2002) and Feng and Xue (2015)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "traditional MAVE... is based on QL, which is sensitive to the outliers",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "Zhao et al. (2017) obtained estimates... by the minimum average variance estimation (MAVE) method",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "using the exponential squared loss (ESL) function",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "denote φ_γ(t)=exp(-t^2/γ)",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "references",
+            "quote": "Wang et al. (2013) proposed a robust estimation method... by using the exponential squared loss (ESL) function",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "we extend the MM algorithm to maximize (6) in this section",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Step 1 Given θ=θ^(k)... Step 2 Update the estimator of θ_0... standardize θ^(k+1)",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "observation",
+            "quote": "weighting scheme allows the robust MAVE to reduce the effect of observations far away",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "possible values for γ can be γ=0.5σ̂×0.2^j, j=0,...,k",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "find the minimum value γ̂_opt of R̂(γ)",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "γ_opt does not depend on n",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "ĥ_opt = R̂(γ̂_opt)^(1/5) ĥ_MAVE",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "optimal bandwidth ĥ_MAVE is selected to minimize the following CV statistic",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "references",
+            "quote": "asymptotic variance... in Feng and Xue (2015) and Zhao et al. (2017)",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Simulation studies... over 500 replications",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "three types of error distribution... (1) N(0,1); (2) t(3); (3) 0.95N(0,1)+0.05N(0,10^2)",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "estimators are asymptotically normal under all these error settings",
+            "page_idx": 9
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "parameters.sample_sizes",
+            "claim": "sample_sizes: n = 200",
+            "reason": "Table 1 shows n=100, text implies multiple n ('as sample size n increases'). n=200 is only for Figs 1-2."
+          }
+        ],
+        "fix_suggestion": "Update sample_sizes to include multiple values (e.g., n=100, 200, ...) or specify n=200 is for figure generation."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "outliers in the predictors... mixture of bivariate normal distribution 0.95N_2(0, I_2) + 0.05N_2(0, 10^2 × I_2)",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "eslMAVE improves the efficiency and robustness... when there are outliers in the predictors",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "506 observations and 14 variables... 306 observations... training set... 200 observations... test set",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "predictors B and LSTAT as X, and the predictors RM, DIS, PTRATIO is chosen as Z",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mean and standard deviation of MAPE by eslMAVE and MAVE are (0.2485, 0.0201) and (0.2647, 0.0226)",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "references",
+            "quote": "initially studied by Harrison and Rubinfeld (1978)",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 4.9,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "paper_id": "10.1007_s11095-023-03628-4",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 81.26,
+  "judge_result": {
+    "paper_id": "10.1007_s11095-023-03628-4",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "A total of 157 therapeutic recombinant antibody products that received FDA approval up to May 2023 were compiled using Microsoft Excel",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "based on an internal product list that tracks Biologic License Applications (BLAs) for biotechnology products, maintained at the FDA's Office of Biotechnology Products (OBP)",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "extracted from public databases including the FDA Label database (http://fdalabel.fda.gov/fdalabel-r/ui/search) and the Antibody Therapeutics Product Data database managed by the Antibody Society",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "CHO (76%), NS0 (11%), and Sp2/0 (6%)... IgG1 constitutes the majority (78%), followed by IgG2 (7%), IgG4 (13%), and hybrid IgG1/2 and IgG2/4 (2%)",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "obtained from the drug substance release specifications and characterization section of the electronic common technical document (eCTD)",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters|observation",
+            "quote": "extracted quantitative N-glycan profiles from 119 eCTDs... CHO (n=95), NS0 (n=16), and sp2/0 (n=8)... excluded... other three cell lines (n=10)... coformulation products... (n=6)... non-glycosylated (n=5), afucosylated (n=4), and low fucosylated (n=3)",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "CHO (n=95), which was further divided into five subgroups... (A) typical IgG1 mAbs (n=57), (B) IgG1 reference products (n=4) and biosimilars (n=23)... (C) other types of IgG1s... (n=10), (D) non-IgG1 antibodies... (n=24), and (E) IgG1 Fc-fusion proteins (n=4)",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "percentage values... were rounded to whole numbers above 1%, to one decimal place for values between 0.5% and 1%, and to zero for values less than 0.5%",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "individual glycan species were sorted based on their mean relative abundance",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "visually represented in a scatter plot using GraphPad Prism 9.5.1",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "N-glycan structures were drawn following the Symbol Nomenclature for Glycans (SNFG) guidelines [14]",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "14. Neelamegham S... Updates to the Symbol Nomenclature for Glycans guidelines. Glycobiology. 2019",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "identified nine prevalent glycan epitopes... terminal N-acetylglucosamine, core fucose, terminal galactose, high mannose, α-galactose, terminal α2,3-linked N-acetylneuraminic acid, terminal... N-glycolylneuraminic acid, triantennary structure, and bisecting N-acetylglucosamine",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "terminal NGNA with mostly α2,6- linkage",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "25. Ghaderi D... Implications of the presence of N-glycolylneuraminic acid... 28. Ferrara C... Unique carbohydrate-carbohydrate interactions...",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 7,
+      "mean_score": 4.6,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

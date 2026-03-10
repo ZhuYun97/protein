@@ -1,0 +1,927 @@
+{
+  "total": 153,
+  "ok": 153,
+  "failed": 0,
+  "skipped_existing": 0,
+  "dry_run_ok": 0,
+  "items": [
+    {
+      "paper_id": "10.1007_s00035-021-00263-w",
+      "status": "ok",
+      "elapsed_seconds": 103.42,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00035-021-00263-w.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00253-022-12324-z",
+      "status": "ok",
+      "elapsed_seconds": 134.64,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00253-022-12324-z.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00253-023-12443-1",
+      "status": "ok",
+      "elapsed_seconds": 126.84,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00253-023-12443-1.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00366-021-01561-x",
+      "status": "ok",
+      "elapsed_seconds": 92.17,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00366-021-01561-x.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00371-022-02470-w",
+      "status": "ok",
+      "elapsed_seconds": 96.48,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00371-022-02470-w.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00439-023-02601-w",
+      "status": "ok",
+      "elapsed_seconds": 97.6,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00439-023-02601-w.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00449-023-02896-z",
+      "status": "ok",
+      "elapsed_seconds": 107.43,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00449-023-02896-z.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00520-022-07404-9",
+      "status": "ok",
+      "elapsed_seconds": 70.79,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00520-022-07404-9.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00521-021-06500-x",
+      "status": "ok",
+      "elapsed_seconds": 83.99,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00521-021-06500-x.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00521-024-10905-9",
+      "status": "ok",
+      "elapsed_seconds": 112.66,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00521-024-10905-9.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00607-023-01186-6",
+      "status": "ok",
+      "elapsed_seconds": 100.31,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00607-023-01186-6.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00607-024-01264-3",
+      "status": "ok",
+      "elapsed_seconds": 84.9,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00607-024-01264-3.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00723-023-01576-1",
+      "status": "ok",
+      "elapsed_seconds": 117.83,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00723-023-01576-1.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00894-023-05525-4",
+      "status": "ok",
+      "elapsed_seconds": 88.18,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00894-023-05525-4.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s00894-023-05723-0",
+      "status": "ok",
+      "elapsed_seconds": 110.49,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s00894-023-05723-0.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10006-022-01049-y",
+      "status": "ok",
+      "elapsed_seconds": 51.02,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10006-022-01049-y.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10048-021-00671-4",
+      "status": "ok",
+      "elapsed_seconds": 89.93,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10048-021-00671-4.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10291-023-01534-1",
+      "status": "ok",
+      "elapsed_seconds": 63.14,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10291-023-01534-1.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10409-023-22357-x",
+      "status": "ok",
+      "elapsed_seconds": 85.29,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10409-023-22357-x.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10489-024-05531-w",
+      "status": "ok",
+      "elapsed_seconds": 57.39,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10489-024-05531-w.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10586-023-04022-w",
+      "status": "ok",
+      "elapsed_seconds": 69.89,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10586-023-04022-w.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10798-021-09670-w",
+      "status": "ok",
+      "elapsed_seconds": 23.06,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10798-021-09670-w.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10930-022-10075-4",
+      "status": "ok",
+      "elapsed_seconds": 112.08,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10930-022-10075-4.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s10930-023-10148-y",
+      "status": "ok",
+      "elapsed_seconds": 118.81,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s10930-023-10148-y.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s11033-022-07590-z",
+      "status": "ok",
+      "elapsed_seconds": 91.14,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s11033-022-07590-z.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s11069-023-06026-6",
+      "status": "ok",
+      "elapsed_seconds": 87.58,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s11069-023-06026-6.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s11095-023-03628-4",
+      "status": "ok",
+      "elapsed_seconds": 81.26,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s11095-023-03628-4.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s11103-023-01335-7",
+      "status": "ok",
+      "elapsed_seconds": 118.9,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s11103-023-01335-7.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s11253-023-02203-9",
+      "status": "ok",
+      "elapsed_seconds": 92.51,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s11253-023-02203-9.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s11440-021-01418-z",
+      "status": "ok",
+      "elapsed_seconds": 126.74,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s11440-021-01418-z.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12020-022-03244-z",
+      "status": "ok",
+      "elapsed_seconds": 86.13,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12020-022-03244-z.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12036-022-09867-y",
+      "status": "ok",
+      "elapsed_seconds": 92.07,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12036-022-09867-y.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12042-023-09328-y",
+      "status": "ok",
+      "elapsed_seconds": 104.08,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12042-023-09328-y.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12083-023-01479-9",
+      "status": "ok",
+      "elapsed_seconds": 96.62,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12083-023-01479-9.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12094-022-03027-y",
+      "status": "ok",
+      "elapsed_seconds": 122.06,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12094-022-03027-y.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12094-023-03109-5",
+      "status": "ok",
+      "elapsed_seconds": 109.86,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12094-023-03109-5.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12274-022-4742-3",
+      "status": "ok",
+      "elapsed_seconds": 119.83,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12274-022-4742-3.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12539-023-00582-y",
+      "status": "ok",
+      "elapsed_seconds": 122.71,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12539-023-00582-y.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s12551-021-00916-4",
+      "status": "ok",
+      "elapsed_seconds": 127.7,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s12551-021-00916-4.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s13042-024-02183-7",
+      "status": "ok",
+      "elapsed_seconds": 86.76,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s13042-024-02183-7.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s13204-023-02821-6",
+      "status": "ok",
+      "elapsed_seconds": 93.08,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s13204-023-02821-6.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s13205-023-03724-7",
+      "status": "ok",
+      "elapsed_seconds": 112.01,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s13205-023-03724-7.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s13369-022-07153-1",
+      "status": "ok",
+      "elapsed_seconds": 115.67,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s13369-022-07153-1.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s13538-023-01269-x",
+      "status": "ok",
+      "elapsed_seconds": 112.23,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s13538-023-01269-x.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s40588-023-00212-7",
+      "status": "ok",
+      "elapsed_seconds": 106.91,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s40588-023-00212-7.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s40684-023-00591-8",
+      "status": "ok",
+      "elapsed_seconds": 128.32,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s40684-023-00591-8.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s42250-022-00414-4",
+      "status": "ok",
+      "elapsed_seconds": 113.57,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s42250-022-00414-4.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s42486-022-00116-3",
+      "status": "ok",
+      "elapsed_seconds": 116.13,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s42486-022-00116-3.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s42764-023-00105-5",
+      "status": "ok",
+      "elapsed_seconds": 117.02,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s42764-023-00105-5.judge.json"
+    },
+    {
+      "paper_id": "10.1007_s42952-022-00187-z",
+      "status": "ok",
+      "elapsed_seconds": 122.46,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1007_s42952-022-00187-z.judge.json"
+    },
+    {
+      "paper_id": "10.1017_qrd.2022.13",
+      "status": "ok",
+      "elapsed_seconds": 97.2,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1017_qrd.2022.13.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41467-021-23388-2",
+      "status": "ok",
+      "elapsed_seconds": 34.97,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41467-021-23388-2.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41467-022-32423-9",
+      "status": "ok",
+      "elapsed_seconds": 224.59,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41467-022-32423-9.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41467-022-33173-4",
+      "status": "ok",
+      "elapsed_seconds": 145.21,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41467-022-33173-4.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41467-023-36549-2",
+      "status": "ok",
+      "elapsed_seconds": 203.08,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41467-023-36549-2.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41467-023-39869-5",
+      "status": "ok",
+      "elapsed_seconds": 90.35,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41467-023-39869-5.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41467-025-58728-z",
+      "status": "ok",
+      "elapsed_seconds": 110.49,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41467-025-58728-z.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41598-022-22316-8",
+      "status": "ok",
+      "elapsed_seconds": 112.82,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41598-022-22316-8.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41598-022-22545-x",
+      "status": "ok",
+      "elapsed_seconds": 114.19,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41598-022-22545-x.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41598-023-30770-1",
+      "status": "ok",
+      "elapsed_seconds": 78.09,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41598-023-30770-1.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41598-023-32022-8",
+      "status": "ok",
+      "elapsed_seconds": 124.97,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41598-023-32022-8.judge.json"
+    },
+    {
+      "paper_id": "10.1038_s41746-022-00719-1",
+      "status": "ok",
+      "elapsed_seconds": 71.37,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1038_s41746-022-00719-1.judge.json"
+    },
+    {
+      "paper_id": "10.1039_d1cp05670k",
+      "status": "ok",
+      "elapsed_seconds": 77.25,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1039_d1cp05670k.judge.json"
+    },
+    {
+      "paper_id": "10.1039_d2an01508k",
+      "status": "ok",
+      "elapsed_seconds": 116.18,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1039_d2an01508k.judge.json"
+    },
+    {
+      "paper_id": "10.1039_d2lc01096h",
+      "status": "ok",
+      "elapsed_seconds": 162.57,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1039_d2lc01096h.judge.json"
+    },
+    {
+      "paper_id": "10.1039_d2ob01574a",
+      "status": "ok",
+      "elapsed_seconds": 104.48,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1039_d2ob01574a.judge.json"
+    },
+    {
+      "paper_id": "10.1039_d2sc05709c",
+      "status": "ok",
+      "elapsed_seconds": 134.17,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1039_d2sc05709c.judge.json"
+    },
+    {
+      "paper_id": "10.1039_d2sc06116c",
+      "status": "ok",
+      "elapsed_seconds": 127.23,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1039_d2sc06116c.judge.json"
+    },
+    {
+      "paper_id": "10.1073_pnas.2209304119",
+      "status": "ok",
+      "elapsed_seconds": 117.53,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1073_pnas.2209304119.judge.json"
+    },
+    {
+      "paper_id": "10.1093_bib_bbac632",
+      "status": "ok",
+      "elapsed_seconds": 89.99,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_bib_bbac632.judge.json"
+    },
+    {
+      "paper_id": "10.1093_bib_bbad052",
+      "status": "ok",
+      "elapsed_seconds": 140.39,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_bib_bbad052.judge.json"
+    },
+    {
+      "paper_id": "10.1093_bioadv_vbac015",
+      "status": "ok",
+      "elapsed_seconds": 139.35,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_bioadv_vbac015.judge.json"
+    },
+    {
+      "paper_id": "10.1093_brain_awad101",
+      "status": "ok",
+      "elapsed_seconds": 124.96,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_brain_awad101.judge.json"
+    },
+    {
+      "paper_id": "10.1093_ecco-jcc_jjac190.0145",
+      "status": "ok",
+      "elapsed_seconds": 72.28,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_ecco-jcc_jjac190.0145.judge.json"
+    },
+    {
+      "paper_id": "10.1093_jb_mvac080",
+      "status": "ok",
+      "elapsed_seconds": 123.61,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_jb_mvac080.judge.json"
+    },
+    {
+      "paper_id": "10.1093_jb_mvac101",
+      "status": "ok",
+      "elapsed_seconds": 147.83,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_jb_mvac101.judge.json"
+    },
+    {
+      "paper_id": "10.1093_nsr_nwac072",
+      "status": "ok",
+      "elapsed_seconds": 105.8,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_nsr_nwac072.judge.json"
+    },
+    {
+      "paper_id": "10.1093_ofid_ofad054",
+      "status": "ok",
+      "elapsed_seconds": 110.66,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_ofid_ofad054.judge.json"
+    },
+    {
+      "paper_id": "10.1093_zoolinnean_zlab121",
+      "status": "ok",
+      "elapsed_seconds": 238.37,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1093_zoolinnean_zlab121.judge.json"
+    },
+    {
+      "paper_id": "10.1101_2024.01.20.576386",
+      "status": "ok",
+      "elapsed_seconds": 88.79,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1101_2024.01.20.576386.judge.json"
+    },
+    {
+      "paper_id": "10.1101_2024.02.19.580970",
+      "status": "ok",
+      "elapsed_seconds": 120.31,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1101_2024.02.19.580970.judge.json"
+    },
+    {
+      "paper_id": "10.1107_s2059798323000025",
+      "status": "ok",
+      "elapsed_seconds": 90.54,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1107_s2059798323000025.judge.json"
+    },
+    {
+      "paper_id": "10.1121_10.0013994",
+      "status": "ok",
+      "elapsed_seconds": 73.99,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1121_10.0013994.judge.json"
+    },
+    {
+      "paper_id": "10.1126_science.ade2574",
+      "status": "ok",
+      "elapsed_seconds": 78.1,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1126_science.ade2574.judge.json"
+    },
+    {
+      "paper_id": "10.1126_science.adg7492",
+      "status": "ok",
+      "elapsed_seconds": 88.17,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1126_science.adg7492.judge.json"
+    },
+    {
+      "paper_id": "10.1126_sciimmunol.abi5072",
+      "status": "ok",
+      "elapsed_seconds": 268.07,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1126_sciimmunol.abi5072.judge.json"
+    },
+    {
+      "paper_id": "10.1136_heartjnl-2022-321867",
+      "status": "ok",
+      "elapsed_seconds": 95.88,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1136_heartjnl-2022-321867.judge.json"
+    },
+    {
+      "paper_id": "10.1140_epjc_s10052-024-12639-3",
+      "status": "ok",
+      "elapsed_seconds": 85.18,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1140_epjc_s10052-024-12639-3.judge.json"
+    },
+    {
+      "paper_id": "10.1145_3582493",
+      "status": "ok",
+      "elapsed_seconds": 117.45,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1145_3582493.judge.json"
+    },
+    {
+      "paper_id": "10.1146_annurev-arplant-070522-052132",
+      "status": "ok",
+      "elapsed_seconds": 85.48,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1146_annurev-arplant-070522-052132.judge.json"
+    },
+    {
+      "paper_id": "10.1146_annurev-ecolsys-102320-112153",
+      "status": "ok",
+      "elapsed_seconds": 79.34,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1146_annurev-ecolsys-102320-112153.judge.json"
+    },
+    {
+      "paper_id": "10.1146_annurev-statistics-033121-115326",
+      "status": "ok",
+      "elapsed_seconds": 74.48,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1146_annurev-statistics-033121-115326.judge.json"
+    },
+    {
+      "paper_id": "10.1155_2022_1851623",
+      "status": "ok",
+      "elapsed_seconds": 72.01,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1155_2022_1851623.judge.json"
+    },
+    {
+      "paper_id": "10.1155_2022_3228738",
+      "status": "ok",
+      "elapsed_seconds": 88.55,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1155_2022_3228738.judge.json"
+    },
+    {
+      "paper_id": "10.1162_ling_a_00468",
+      "status": "ok",
+      "elapsed_seconds": 87.18,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1162_ling_a_00468.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12014-023-09448-3",
+      "status": "ok",
+      "elapsed_seconds": 94.41,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12014-023-09448-3.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12859-022-04865-x",
+      "status": "ok",
+      "elapsed_seconds": 70.09,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12859-022-04865-x.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12859-023-05214-2",
+      "status": "ok",
+      "elapsed_seconds": 89.66,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12859-023-05214-2.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12859-023-05232-0",
+      "status": "ok",
+      "elapsed_seconds": 101.77,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12859-023-05232-0.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12859-023-05537-0",
+      "status": "ok",
+      "elapsed_seconds": 131.4,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12859-023-05537-0.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12860-024-00499-4",
+      "status": "ok",
+      "elapsed_seconds": 86.7,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12860-024-00499-4.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12870-022-04003-y",
+      "status": "ok",
+      "elapsed_seconds": 171.18,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12870-022-04003-y.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12870-023-04480-9",
+      "status": "ok",
+      "elapsed_seconds": 204.59,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12870-023-04480-9.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12911-023-02218-z",
+      "status": "ok",
+      "elapsed_seconds": 116.87,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12911-023-02218-z.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12915-023-01650-x",
+      "status": "ok",
+      "elapsed_seconds": 147.76,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12915-023-01650-x.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12915-023-01803-y",
+      "status": "ok",
+      "elapsed_seconds": 98.22,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12915-023-01803-y.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12920-022-01270-4",
+      "status": "ok",
+      "elapsed_seconds": 150.65,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12920-022-01270-4.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12929-023-00934-2",
+      "status": "ok",
+      "elapsed_seconds": 125.54,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12929-023-00934-2.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12944-023-01875-3",
+      "status": "ok",
+      "elapsed_seconds": 121.66,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12944-023-01875-3.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s12964-023-01409-5",
+      "status": "ok",
+      "elapsed_seconds": 169.33,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s12964-023-01409-5.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13046-023-02726-w",
+      "status": "ok",
+      "elapsed_seconds": 112.27,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13046-023-02726-w.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13058-024-01779-9",
+      "status": "ok",
+      "elapsed_seconds": 107.67,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13058-024-01779-9.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13068-024-02457-w",
+      "status": "ok",
+      "elapsed_seconds": 157.93,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13068-024-02457-w.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13073-023-01264-6",
+      "status": "ok",
+      "elapsed_seconds": 39.04,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13073-023-01264-6.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13256-024-04638-5",
+      "status": "ok",
+      "elapsed_seconds": 97.58,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13256-024-04638-5.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13550-023-00964-9",
+      "status": "ok",
+      "elapsed_seconds": 98.27,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13550-023-00964-9.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13568-024-01661-z",
+      "status": "ok",
+      "elapsed_seconds": 140.0,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13568-024-01661-z.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s13568-024-01666-8",
+      "status": "ok",
+      "elapsed_seconds": 95.33,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s13568-024-01666-8.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s40164-023-00436-9",
+      "status": "ok",
+      "elapsed_seconds": 144.57,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s40164-023-00436-9.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s40364-024-00562-4",
+      "status": "ok",
+      "elapsed_seconds": 186.23,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s40364-024-00562-4.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s40779-023-00446-y",
+      "status": "ok",
+      "elapsed_seconds": 115.23,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s40779-023-00446-y.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s40959-024-00215-3",
+      "status": "ok",
+      "elapsed_seconds": 121.12,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s40959-024-00215-3.judge.json"
+    },
+    {
+      "paper_id": "10.1186_s43141-023-00613-7",
+      "status": "ok",
+      "elapsed_seconds": 112.98,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1186_s43141-023-00613-7.judge.json"
+    },
+    {
+      "paper_id": "10.12688_wellcomeopenres.17160.2",
+      "status": "ok",
+      "elapsed_seconds": 100.45,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.12688_wellcomeopenres.17160.2.judge.json"
+    },
+    {
+      "paper_id": "10.1515_htmp-2022-0039",
+      "status": "ok",
+      "elapsed_seconds": 76.76,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.1515_htmp-2022-0039.judge.json"
+    },
+    {
+      "paper_id": "10.3390_biom11040576",
+      "status": "ok",
+      "elapsed_seconds": 117.21,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_biom11040576.judge.json"
+    },
+    {
+      "paper_id": "10.3390_biom12091290",
+      "status": "ok",
+      "elapsed_seconds": 85.11,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_biom12091290.judge.json"
+    },
+    {
+      "paper_id": "10.3390_biom13020301",
+      "status": "ok",
+      "elapsed_seconds": 105.11,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_biom13020301.judge.json"
+    },
+    {
+      "paper_id": "10.3390_biom13030466",
+      "status": "ok",
+      "elapsed_seconds": 110.17,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_biom13030466.judge.json"
+    },
+    {
+      "paper_id": "10.3390_cancers14030611",
+      "status": "ok",
+      "elapsed_seconds": 86.48,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_cancers14030611.judge.json"
+    },
+    {
+      "paper_id": "10.3390_cancers14122928",
+      "status": "ok",
+      "elapsed_seconds": 190.39,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_cancers14122928.judge.json"
+    },
+    {
+      "paper_id": "10.3390_cells12030353",
+      "status": "ok",
+      "elapsed_seconds": 118.81,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_cells12030353.judge.json"
+    },
+    {
+      "paper_id": "10.3390_chemosensors10080304",
+      "status": "ok",
+      "elapsed_seconds": 162.75,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_chemosensors10080304.judge.json"
+    },
+    {
+      "paper_id": "10.3390_e24050620",
+      "status": "ok",
+      "elapsed_seconds": 104.54,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_e24050620.judge.json"
+    },
+    {
+      "paper_id": "10.3390_fermentation8080372",
+      "status": "ok",
+      "elapsed_seconds": 72.2,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_fermentation8080372.judge.json"
+    },
+    {
+      "paper_id": "10.3390_foods12020414",
+      "status": "ok",
+      "elapsed_seconds": 124.07,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_foods12020414.judge.json"
+    },
+    {
+      "paper_id": "10.3390_ijerph191912548",
+      "status": "ok",
+      "elapsed_seconds": 153.05,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_ijerph191912548.judge.json"
+    },
+    {
+      "paper_id": "10.3390_ijms24021693",
+      "status": "ok",
+      "elapsed_seconds": 120.04,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_ijms24021693.judge.json"
+    },
+    {
+      "paper_id": "10.3390_ijms24032827",
+      "status": "ok",
+      "elapsed_seconds": 155.8,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_ijms24032827.judge.json"
+    },
+    {
+      "paper_id": "10.3390_ijms24054465",
+      "status": "ok",
+      "elapsed_seconds": 136.23,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_ijms24054465.judge.json"
+    },
+    {
+      "paper_id": "10.3390_ijms24076187",
+      "status": "ok",
+      "elapsed_seconds": 256.12,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_ijms24076187.judge.json"
+    },
+    {
+      "paper_id": "10.3390_jcm12010384",
+      "status": "ok",
+      "elapsed_seconds": 133.6,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_jcm12010384.judge.json"
+    },
+    {
+      "paper_id": "10.3390_jof8050478",
+      "status": "ok",
+      "elapsed_seconds": 92.12,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_jof8050478.judge.json"
+    },
+    {
+      "paper_id": "10.3390_life12030437",
+      "status": "ok",
+      "elapsed_seconds": 198.6,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_life12030437.judge.json"
+    },
+    {
+      "paper_id": "10.3390_life12050650",
+      "status": "ok",
+      "elapsed_seconds": 87.67,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_life12050650.judge.json"
+    },
+    {
+      "paper_id": "10.3390_ma15010344",
+      "status": "ok",
+      "elapsed_seconds": 778.4,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_ma15010344.judge.json"
+    },
+    {
+      "paper_id": "10.3390_magnetochemistry9030066",
+      "status": "ok",
+      "elapsed_seconds": 99.51,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_magnetochemistry9030066.judge.json"
+    },
+    {
+      "paper_id": "10.3390_math10091511",
+      "status": "ok",
+      "elapsed_seconds": 124.63,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_math10091511.judge.json"
+    },
+    {
+      "paper_id": "10.3390_metabo12070585",
+      "status": "ok",
+      "elapsed_seconds": 94.3,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_metabo12070585.judge.json"
+    },
+    {
+      "paper_id": "10.3390_metabo13010099",
+      "status": "ok",
+      "elapsed_seconds": 110.96,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_metabo13010099.judge.json"
+    },
+    {
+      "paper_id": "10.3390_molecules26206288",
+      "status": "ok",
+      "elapsed_seconds": 262.61,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_molecules26206288.judge.json"
+    },
+    {
+      "paper_id": "10.3390_molecules27249015",
+      "status": "ok",
+      "elapsed_seconds": 38.9,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.3390_molecules27249015.judge.json"
+    },
+    {
+      "paper_id": "10.7554_elife.72905",
+      "status": "ok",
+      "elapsed_seconds": 295.04,
+      "output": "judge_outputs/PoC_Paper_154_CoTs_Qwen3.5/10.7554_elife.72905.judge.json"
+    }
+  ]
+}

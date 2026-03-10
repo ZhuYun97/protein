@@ -1,0 +1,417 @@
+{
+  "paper_id": "10.3390_ijms24054465",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 136.23,
+  "judge_result": {
+    "paper_id": "10.3390_ijms24054465",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "differentiated by combined addition of 1 mmol/L dibutyryl cAMP (cAMP) and 0.001 mmol/L all-trans-retinoic acid (RA) for 48 h",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "observation",
+            "quote": "SN56 cells were verified by acetylcholine level measurement, which should be no less than 30 pmols/mg of protein",
+            "page_idx": 13
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "MEM medium containing 0.003 mmol/L of thiamine... recommended thiamine concentration in the culture medium is 0.009 mmol/L",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "control levels of ThDP in the N9 cells... were equal to 189.2 and 150 pmol/mg of protein, respectively",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "addition of amprolium of up to 10 mmol/L to the medium... after 24 h exposure",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "80% decrease in intracellular ThDP content in N9 caused by 10 mmol/L amprolium",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "borderline 0.10 mmol/L Zn concentrations... 10% FBS, present in culture media",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Zn inhibited SN56 PDHC, aconitase and ICDH-NADP activities by 56, 67 and 85%, respectively",
+            "page_idx": 5
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "microglial N9 cells (3x10^5) were seeded on 3 cm diameter inserts... 3 inserts were placed on each 10 cm plate",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "microglial inserts decreased the basal Zn level in SN56 by 45%",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Step JSON contains no references, though method is described in text"
+          }
+        ],
+        "fix_suggestion": "Add reference to Methods section 4.1 or relevant citation if available in text."
+      },
+      {
+        "step_index": 6,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "0.4%(w/v) isotonic trypan blue solution... counted after 2 min in Fuchs-Rosenthal haemocytometer",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "viability [of N9] by 5%... SN56... 12% increase in TB-positive cells",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Step JSON contains no references"
+          }
+        ],
+        "fix_suggestion": "Add reference to Methods section 4.2."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "0.5% trichloroacetic acid was added to the cells and incubated on ice for 1 h... centrifugation at 5000g for 60 s",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "ThDP levels: N9 control 189.2 pmol/mg protein, TD 150 pmol/mg",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "PDHC activity was assayed by the citrate synthase coupled method... 0.25 mL of incubation media",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "At a 10 mmol/L amprolium concentration, their activities were inhibited by 65%",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "incubation media for aconitase at the final volume of 0.80 mL consisted of (in mmol/L) 50 Tris/HCl pH=7.4",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "aconitase activities... inhibited by... 40%",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "incubation media for ICDH-NADP at the final volume of 0.70 mL",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "ICDH-NADP activities in N9 were not affected by intracellular ThDP shortages",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Acetyl-CoA level was estimated by the cycling method... deproteinized with 0.20 mL 4% HClO4",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "10 mmol/L amprolium decreased acetyl-CoA levels in N9 cells by 30%",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "modified fluorimetric method with N-(6-methoxy-8-quinolyl)-p-toluenesulfonamide (TSQ)",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "microglial inserts decreased the basal Zn level in SN56 by 45%",
+            "page_idx": 7
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 13,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "commercial Platinum ELISA kits (eBioscience, Bender MedSystems GmbH, Vienna, Austria)",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Concentrations of IL-6... remained at similar levels irrespective of experimental conditions",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Step JSON contains no references"
+          }
+        ],
+        "fix_suggestion": "Add reference to Methods section 4.8."
+      },
+      {
+        "step_index": 14,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "commercial Platinum ELISA kits",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "addition of N9 inserts resulted in a 10-fold increase in accumulated TNF-a",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Step JSON contains no references"
+          }
+        ],
+        "fix_suggestion": "Add reference to Methods section 4.8."
+      },
+      {
+        "step_index": 15,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "lipopolysaccharide 0.1 mmol/L was added",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "observation",
+            "quote": "70-fold and 825-fold increases in IL-6 and TNF-a levels in the N9 culture medium, respectively",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Step JSON contains no references"
+          }
+        ],
+        "fix_suggestion": "Add reference to Results section 2.4 or Methods 4.8."
+      }
+    ],
+    "summary": {
+      "num_steps": 15,
+      "mean_score": 4.8,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

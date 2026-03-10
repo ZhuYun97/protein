@@ -1,0 +1,386 @@
+{
+  "paper_id": "10.1007_s00449-023-02896-z",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 107.43,
+  "judge_result": {
+    "paper_id": "10.1007_s00449-023-02896-z",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "sequence blast in the NCBI database was conducted using CsCE (NCBI accession number YP_001179132.1) as the query sequence",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Caldicellulosiruptor morganii (CmCE, 70.8% identity) were found",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "using the sequence of biochemically characterized CsCE as the query sequence [26]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "homology structure of CmCE was generated using Alphafold 2.0 server [20, 21] and the X-ray diffraction model of CsCE (4z4l) as the template",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "3D structure was generated using Chem 3D ultra 12.0 software",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "The intermediate I of α-lactose... is the substrate during the limiting step of catalysis [22]",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None needed."
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "AutoDockTools was used to prepare the protein and ligand, water molecules were removed and polar hydrogen atoms were added. The grid box was set to contain the crucial residues of H377, H188 and H247",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step metadata",
+            "reason": "Text does not cite a specific reference for AutoDockTools usage."
+          }
+        ],
+        "fix_suggestion": "Add reference if available or accept D=0."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "Docking was conducted with AutoDock Vina and the docking conformation with the lowest binding energy was confirmed",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step metadata",
+            "reason": "Text does not cite a specific reference for AutoDock Vina."
+          }
+        ],
+        "fix_suggestion": "Add reference if available or accept D=0."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "FoldX 4.0 algorithm was applied... setting the in silico temperature at 298 K, all the 395 amino acids... FoldX-function BuildModel... top 20 mutations... within a 5 Å scope... were excluded",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "FoldX is a commercial software... [16]... ΔΔG... [30]",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None needed."
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "50 μL PCR mixture consisted of... Phanta Max Super-Fidelity DNA Polymerase... 30 cycles (95°C 15 s, 57°C 15 s, 72°C 6 min)... pET28b/CmCE plasmid",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The 16 mutants were constructed",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step metadata",
+            "reason": "Text does not cite a specific reference for PCR method."
+          }
+        ],
+        "fix_suggestion": "Add reference if available or accept D=0."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "plate was heated at 79.2°C for 15 min... D226G was the only positive mutant, which could retain 69.8% of its original activity",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "fitted to a four-parameter Boltzmann sigmoidal function... [24]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None needed."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Site-directed saturation mutagenesis on site 226 was also conducted",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "ensure the integrity of the screening results [37]",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None needed."
+      },
+      {
+        "step_index": 10,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "mutant D226G still possessed the optimum stability performance among these mutants",
+            "page_idx": 5
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step metadata",
+            "reason": "Text does not cite a specific reference for this screening comparison."
+          }
+        ],
+        "fix_suggestion": "Add reference if available or accept D=0."
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "measuring activities at different temperatures ranging from 40 to 90°C... pHs between 5.0 and 9.0... incubated at 65, 70 and 75°C... t1/2 values of D226G were determined to be 149.7... min, higher than 71.8... those of CmCE",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "relative remaining activity... [25]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None needed."
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "kinetic parameters... determined... adjusting lactose concentration from 50 to 800 mM... fitting with the Michaelis–Menten plot using Origin 2018... Km of 60.2 mM of D226G... 1.27 mM-1 min-1 of kcat/Km",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step metadata",
+            "reason": "Text does not cite a specific reference for Origin software."
+          }
+        ],
+        "fix_suggestion": "Add reference if available or accept D=0."
+      },
+      {
+        "step_index": 13,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "reacting system was composed of... 100 g/L lactose... 70°C for 135 min... yield of synthesizing lactulose catalyzed by D226G reached 45.5%, higher than the 35.9% achieved with CmCE",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step metadata",
+            "reason": "Text does not cite a specific reference for HPLC method."
+          }
+        ],
+        "fix_suggestion": "Add reference if available or accept D=0."
+      },
+      {
+        "step_index": 14,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "MD simulation was performed using YASARA software with an Amber19 force field. The simulated temperature was 343 K... simulation time was 30,000 ps in total... RMSD and... RMSF values",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step metadata",
+            "reason": "Text does not cite a specific reference for YASARA software."
+          }
+        ],
+        "fix_suggestion": "Add reference if available or accept D=0."
+      }
+    ],
+    "summary": {
+      "num_steps": 14,
+      "mean_score": 4.75,
+      "median_score": 4.75,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

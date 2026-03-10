@@ -1,0 +1,522 @@
+{
+  "paper_id": "10.1186_s13568-024-01661-z",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 140.0,
+  "judge_result": {
+    "paper_id": "10.1186_s13568-024-01661-z",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The 3D structure of the catalytic domain of κ-carrageenase from Pseudoalteromonas porphyrae LL1 was constructed by the online AlphaFold2 system.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The overall structure of P. porphyrae κ-carrageenase KCgCD was predicted to fold a β-sandwich formed by tightly packed and curved antiparallel β-sheets, with catalytic active centers (E162-D164-E167) located inside the pocket.",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Intramolecular interactions were analyzed using Ring-3.0 online server (https://ring.biocomputingup.it/) (Clementel et al. 2022)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "By Ring-3.0 server analysis, the van der Waals force was found between Q170 and the catalytic residue E167",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "AutoDock Vina 1.1.2 software was used for the molecular docking of κ-neocarratetraose and κ-carrageenase (Trott and Olson 2010).",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "κ-neocarratetraose interacted with 8 residues in WT (Q101, R150, E167, H182, W193, R195, R259, and N268) through 11 hydrogen bonds.",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The hydrogen bonds and hydrophobic interactions between κ-neocarratetraose and κ-carrageenase were analyzed using LigPlot+ online server (Laskowski and Swindells 2011).",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The interactions between WT or S190R and κ-neocarratetraose were shown as... 2D schematics (Fig. 5c and d).",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Under the force field of GROMOS96 54a7, GROMACS 5.1.4 software was used to conduct 20 ns unconstrained molecular dynamics simulation of κ-carrageenase.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "The amino acid residues with RMSF > 0.3 were selected.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "FoldX 5.0 was used to estimate the mutational impact as a change in folding free energy for κ-carrageenase KCgCD (Delgado et al. 2019).",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Here we selected the mutants with the predicted ΔΔG values below - 0.5 kcal/mol.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The enzyme was predicted for residue conservation using the ConSurf server (http://consurfdb.tau.ac.il/) (Ben Chorin et al. 2020; Celniker et al. 2013).",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "The conservative residues and amino acid residues within the range of 5 Å of the predicted catalytic triad (E162-D164-E167) of KCgCD were excluded.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "15 mutants were selected for further screening, including S76M, G96M, C97K, Q100M, T151S, L152R, T153L, E154R, N155L, S190R, T192R, G197M, E201P, T202M, and E279D.",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The wide-type gene of the catalytic domain of P. porphyrae κ-carrageenase (WT) was synthesized by BGI Genomics Co., Ltd. (Shenzhen, China) and inserted into the pET-28a (+) vector",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Then the Mutant Express II rapid mutation kit V2 (Vazyme, Nanjing, China) was used for site-directed mutagenesis.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "PCR reaction parameters: 95°C for 30 s; 95°C for 15 s, 62°C for 15 s, 72°C for 1 min, 30 cycles; 72°C for 5 min... 2 μL Dpn I (10 U/μL) was added and the mixture was digested at 37°C for 1 h.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The engineered E. coli BL21 cells containing the κ-carrageenase gene were cultured at 37°C in 300 mL LB medium containing 50 μg/mL kanamycin. After the OD600 reached 0.8, these cells were induced with 0.075 mM isopropyl-β-D-thiogalactopyranoside (IPTG) at 4°C for 16 h.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The crude protein was purified using Ni Sepharose 6 Fast Flow (GE Healthcare Life Science, Uppsala, Sweden) affinity chromatography",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The mutants were analyzed using SDS-PAGE and showed a single band (about 35.0 kDa), which was consistent with that of WT",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 13,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The activity of κ-carrageenase was determined by measuring the concentration of released reducing sugars using 3,5-dinitrosalicylic acid (DNS) method (Miller 1959).",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Compared with WT, the enzyme activities of T151S, E154R, and T192R were increased, the activities of T153L and S190R remained basically unchanged, while the activities of other mutants were decreased",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "To determine the enzymatic thermostability, the κ-carrageenase was preincubated at different temperatures (45, 50, 55, and 60°C) for 30 min.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "After incubation at 50 and 60°C for 30 min, the residual activities of S190R were 63.7% and 18.3%, respectively. They were 25.7% and 10.5% higher than that of WT, respectively. The T50^30 value of S190R was 52.0°C with 2.3°C higher than that of WT",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 15,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Melting temperature (Tm) of κ-carrageenase was measured using Discovery SDT 650 (Taber, New York, USA).",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The results of DSC analysis displayed that the Tm values of S190R and WT were 66.2°C and 64.4°C, respectively",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 16,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "The optimal reaction temperature for S190R was 50°C, which was 10°C higher than that of WT... Km values of WT and S190R were calculated to be 2.87 mg/mL and 7.00 mg/mL, while the Vmax values of WT and S190R were calculated to be 625 U/mg and 1250 U/mg",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 17,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The fluorescence spectrum of κ-carrageenase (0.2 mg/mL) was acquired by a Cary Eclipse fluorescence spectrophotometer... excitation wavelength of 317 nm, with a scanning range of 330-500 nm. The excitation slit width and emission slit width were both 5 nm.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "the mutant S190R and WT shared the same maximum fluorescence emission wavelength at 390 nm",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 18,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "the digestion products were analyzed using the mass spectrometer (MS) analysis system TSQ Altis Triple Quadruple (Thermo Fisher Science, Waltham, MA, USA). In the negative ion mode",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The mass spectrum peaks of mutant S190R included 394 m/z and 403 m/z, respectively, symbolizing [(An-G4S)2]2- (κ-carrageenan tetrasaccharide) and [(An-G4S)]- (κ-carrageenan disaccharide)",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 19,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "50 μL of κ-carrageenan oligosaccharides solution at different concentrations was mixed with 50 μL of 0.05 U/mL XOD... and incubated at 37°C for 30 min. Then, 150 μL of xanthine at the concentration of 0.42 mM was added. At last, the absorbance was recorded at 292 nm every 40 s for 6 min.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The half inhibitory concentration (IC50) of enzymatic hydrolysis products was 3.7 mg/mL, much lower than 9.9 mg/mL of the untreated κ-carrageenan",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 20,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "As shown in Fig. 6a, the average RMSD values for S190R and WT were 0.30 nm and 0.28 nm at 323 K, respectively. At 323 K, the overall average Rg value of WT (1.84 nm) was smaller than that of S190R (1.92 nm)",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The rigidity of most residues (V186–M194 and P196–G197) in F5 finger was improved significantly after the mutation. The increased rigidity in the F5 finger and the key residue R150 might attributed to the improvement in thermostability",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 21,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "MD simulations on the κ-neocarratetraose-enzyme complex at 323 K was performed... After combination with the κ-neocarratetraose substrate, the flexibility of S190R was significantly reduced compared to that of WT",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "For example, for the original structures of WT and S190R, there was β-sheet at residues H204-H208. However, this sheet was lost at all the three time points (10 ns, 15 ns, and 20 ns) in WT, but it remained folded in S190R",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      }
+    ],
+    "summary": {
+      "num_steps": 21,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

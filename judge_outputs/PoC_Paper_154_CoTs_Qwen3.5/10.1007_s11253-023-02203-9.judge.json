@@ -1,0 +1,327 @@
+{
+  "paper_id": "10.1007_s11253-023-02203-9",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 92.51,
+  "judge_result": {
+    "paper_id": "10.1007_s11253-023-02203-9",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "the required assertion immediately follows from the Cauchy integral formula",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "E[X^p]=γ^p for |p|<1",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "this idea was proposed by McCullagh [12]",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Proposition 2.2... variance of log X is v≡2 arg γ(π-arg γ)",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "g(p):=E[|X|^p]=E[e^{p log|X|}] is the moment generating function of log|X|",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "references",
+            "quote": "explicit formula of E[|X|^p] is given by [18... derivation... is very complicated",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "complex version of the delta-method [15, Theorem 1.12]... Lemma 3.2",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Applying the complex delta-method to a complex function f(z):=e^z",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "references",
+            "quote": "[15, Theorem 1.12]",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Lemma 3.4... V_N... unbiased and consistent estimator",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "V_N converges to 2 arg γ(π-arg γ)",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "√N(P_N-γ)/√(V_N/2) converges to standard complex normal",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Theorem 3.1... asymptotic confidence disc",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "R_α=√(-log α)... B(p,r) denotes a disc",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "lim P(γ∈B(P_N, R_α√(V_N/N))) = 1-α",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Corollary 3.1... asymptotic confidence square",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "β=1/2(1-√(1-α))",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "square... somewhat smaller than the disc",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "μ=0, σ=1, N=1000, α=0.05; Ten Trials",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "symbols ○ indicate the center of the disc containing the true value, while ▽ is the point that fails",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "μ=5, σ=1, N=1000... arg(5 + i) = tan−1 1/5",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Var(log X)∼1.162... radius of the confidence discs increases as |μ| increases",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "μ=0, σ=1, N=30, α=0.05, 1000 Trials",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "observation",
+            "quote": "only 925 trials out of 1,000 contain the true value",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "subtract the median med(X_1,...,X_N) from all X_i's",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "observation",
+            "quote": "X_i−med(X_1,...,X_N) are neither Cauchy, nor independent",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "ten samples; each of these samples contains 100 values... replace each 100th datum with 5",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "confidence intervals computed by using Corollary 3.2 are not so strongly affected by the outliers",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "references",
+            "quote": "Hinkley [8... gave confidence regions... related to the likelihood-ratio test",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 11,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

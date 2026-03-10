@@ -1,0 +1,257 @@
+{
+  "paper_id": "10.1007_s13205-023-03724-7",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 112.01,
+  "judge_result": {
+    "paper_id": "10.1007_s13205-023-03724-7",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "The condon-optimized gene fragment of cIL-31 (amino acids 25–159, GenBank: NP_001159386.1) was inserted into pET21a and then transformed into Escherichia coli (E. coli) BL21 (DE3). Recombinant cIL-31 proteins were expressed in the form of inclusion bodies",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|references",
+            "quote": "refolding buffer ( 100-mM Tris, 2-mM EDTA, 400-mM l-arginine, 5-mM reduced glutathione, 0.5-mM oxidized glutathione, pH 8.0 ) and kept on stirring for overnight... according the method previously described (Xiao et al. 2019)",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "purified by sizeexclusion chromatography on a HiLoad 16/600 Superdex™ 75 PG column (Cytiva) and then further recycled using Superdex™ 75 10/300 GL (Cytiva)",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "biotinylated using the EZ-LinkTM NHS-PEG4-Biotin Biotinylation Kit... 1.5 mg/ml of rcIL-31... incubated at room temperature (RT) for more than 30 min... desalted with a PD MiniTrap™ G-25 column",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "CD spectra were collected with a Chirascan CD spectropolarimeter... 0.1 mg/ml in PBS... 190-260 nm at 25.0°C for an average of three scans with a bandwidth of 1.0 nm and a sensitivity of 0.5 s time-per-point... characteristic α-helix signature peaks at 192, 208 and 222 nm",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "analyzed by submitting the raw data to the software CDNN using the CDNN algorithm with a reference set... about 96.10% of amino acids of refolded rcIL-31 are folded into α-helices",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|references",
+            "quote": "3D model structure of cIL-31 predicted by AlphaFold (Fig. 1d)... AF-C7G0W1-F1-model_v4... (Jumper et al. 2021)",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "transiently transfected into HEK293T cells using linear polyethylenimine (PEI, Mw 40,000, Polysciences)... pEGFP-N1 vector... At 48 h post-transfection",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "analyzed by flow cytometry (Beckman MoFlo XDP)... incubated with various concentrations of biotinylated rcIL-31... at RT for 1 h... EC50... were 8.54 µg/ml and 0.81 µg/ml",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "SPR assay using Biacore T200... immobilized to the streptavidin (SA) biosensor chip... concentrations of 7.81... 250 nM... 5 min... KD value of 35.9 nM",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|references",
+            "quote": "AlphaLISA® SureFire Ultra™ HV kits... DH-82 cells... stimulated... for 5-10 min... STAT3 (Y705) and STAT/5 (Y694/699)... (Hwang et al. 2021)",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "Lasergene Megalign program (Version 7.1, DNASTAR Inc.)... CLC Sequence Viewer... canine and feline share much higher identities... which are 75.7%, 89.9%, and 83.8%",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      }
+    ],
+    "summary": {
+      "num_steps": 12,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

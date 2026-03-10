@@ -1,0 +1,273 @@
+{
+  "paper_id": "10.1093_bib_bbac632",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 89.99,
+  "judge_result": {
+    "paper_id": "10.1093_bib_bbac632",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The segmentation network architecture separates density maps that allow each pipeline to model its respective macromolecule in the DeepTracer-2.0 pipeline.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "Mostosi P, Schindelin H, Kollmannsberger P, et al. Haruspex: a neural network for the automatic identification of oligonucleotides and protein secondary structure in Cryo-electron microscopy maps. Angew Chem Int Ed Engl 2020;59:14788–95.",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.input_voxel_segments",
+            "claim": "input_voxel_segments: 40³ voxels",
+            "reason": "Text explicitly attributes 40³ voxels input to Haruspex, not DeepTracer-2.0 segmentation network directly, though implied by context."
+          }
+        ],
+        "fix_suggestion": "Clarify that segmentation architecture is based on or similar to Haruspex, or remove specific voxel dimensions if not explicitly stated for DeepTracer-2.0."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "normalize the density value of each voxel from a range of 0 to 1 and resize each map into a 64 [3] voxel size.",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step",
+            "reason": "Step lacks citations despite claims being supported by text."
+          }
+        ],
+        "fix_suggestion": "Add reference to the section describing preprocessing (e.g., [p3] text)."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The initial amino acid network was trained with 1800 experimental maps and their corresponding deposited model structures [5].",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "tool",
+            "quote": "the amino acid U-Net determines the positions of the Cα and other backbone atoms",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "For the nucleotide network training, 293 EMDB/PDB pairs were selected... resolution was 4 Å or better... one nucleotide chain that is at least 20 base pairs or larger",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "The atoms for the nucleotide UNet focus on whether each voxel contains a phosphate atom (P), a carbon one atom (C1'), a carbon four atom (C4') or no atom. This has a total of four channel outputs.",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The backbone U-Net determines if each voxel is part of the sugar phosphate backbone, part of the nitrogenous base or not in either group. This has three different channel outputs.",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step",
+            "reason": "Step lacks citations."
+          }
+        ],
+        "fix_suggestion": "Add reference to the section describing Nucleic acid network architecture."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "postprocessing model allows phosphate atoms that are within 8 Å from each other.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Most DNA and RNA conformations fall within the 5.9 Å range",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "tool",
+            "quote": "The Brickworx model then uses the P atoms and Cryo-EM map to finish modeling the nucleotide.",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 7,
+        "score": 2.5,
+        "label": "partially_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 0.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "each macromolecular type requires corresponding steps to connect the backbone atoms correctly.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters.matching_threshold",
+            "claim": "matching_threshold: Cα position within 3 Å of model",
+            "reason": "Text defines 3 Å threshold under 'Evaluation metrics' for matching percentage calculation, not as a postprocessing parameter for chain connection."
+          },
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step",
+            "reason": "Step lacks citations."
+          }
+        ],
+        "fix_suggestion": "Remove 3 Å threshold from parameters or clarify it is an evaluation metric, not a processing parameter. Add references."
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "When both predictions finish, the protein and DNA/RNA structures can be combined to give a final prediction of the macromolecular model",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step",
+            "reason": "Step lacks citations."
+          }
+        ],
+        "fix_suggestion": "Add reference to Figure 3 description or pipeline overview section."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The 20 selected cryoEM maps... fall within the resolution of 2-4 Å",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "nucleotide chains are at least 10 nucleic acids or larger.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "tool",
+            "quote": "Phenix's map_to_model in their version 1.19 of the Phenix Suite",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      }
+    ],
+    "summary": {
+      "num_steps": 9,
+      "mean_score": 4.5,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

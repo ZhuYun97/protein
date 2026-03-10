@@ -1,0 +1,229 @@
+{
+  "paper_id": "10.1007_s00366-021-01561-x",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 92.17,
+  "judge_result": {
+    "paper_id": "10.1007_s00366-021-01561-x",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 0.8,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "In this paper, the dynamic responses of the EMB are simulated by Ansoft Maxwell",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "3-D structure can be simplified into a 2-D structure for analysis, which discretizes the structure with triangular elements... mesh density of the inner cylinder is increased",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "time nodes of the damping force peak obtained by FEM are consistent with the experimental results",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "observation",
+            "claim": "time nodes of damping force peak obtained by FEM are consistent with experimental results",
+            "reason": "This observation is technically the result of Step 2 (Validation/Impact tests, p4), not Step 1 (Modeling, p3). Step 1 should only claim FEM data generation."
+          }
+        ],
+        "fix_suggestion": "Modify observation to state 'FEM model constructed and dynamic responses simulated' and move consistency claim to Step 2."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "A high-speed camera is used to measure the buffer displacement. A force sensor is used to measure the damping force.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "a total of four impact tests under four different loads are carried out",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "simulation model can correctly characterize the dynamic responses of EMB",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "the Chebyshev polynomial expansion is formulated to convert the cost functions... into explicit expressions",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "third-order Chebyshev polynomial is chosen... generate 168 sampling points... optimal Latin hypercube method",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "Chebyshev polynomial expansion [48–51]... balancing the expansion accuracy and computation burden [54]",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Using the affine arithmetic, the uncertainty quantity is re-written into affine form",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "thickness of the outer tube u1 and u2 are set as uncertain parameters... noise symbol whose value is uncertain but lies in [-1, 1]",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "observation",
+            "quote": "worst-case scenario of the cost function can be directly obtained... avoids the double-loop nested optimization",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Tang and Zhang [41, 42] proposed an iterative Nash equilibrium algorithm",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "sequential quadratic programming (SQP) is employed as the optimizer... after 8 iterations, the results... are consistent",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "Nishimura et al. [38] studied the Nash game problem with uncertainty and defined the robust Nash equilibrium",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "the double-loop approach is used to solve the robust Nash equilibrium",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "observation",
+            "quote": "computation time of the double-loop approach is 28.60 s; in sharp contrast, the proposed approach only needs 1.38 s",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "references",
+            "quote": "Aghassi and Bertsimas [32] presented a robust matrix game with reference to the worst-case analysis method",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "uncertain parameters that take the nominal values are used to reconstruct the EMB model",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "observation",
+            "quote": "first peak Fe_max drops from 356 to 330 kN and the second peak Ff_max drops from 356 to 331 kN... eddy current density is declined... a decrease of 59.42%",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 7,
+      "mean_score": 4.97,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

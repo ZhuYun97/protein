@@ -1,0 +1,402 @@
+{
+  "paper_id": "10.1007_s00253-023-12443-1",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 126.84,
+  "judge_result": {
+    "paper_id": "10.1007_s00253-023-12443-1",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "the amino acid sequence of GmASNase was submitted to the Consensus Finder online server for prediction... residues with consensus threshold above 30% were selected... substitution sites within 6-Å distance from the active site (Thr12, Thr84) of GmASNase were chosen for avoiding catalytic interruption. Finally, 17 residues... were selected",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "Jones et al. 2020",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Random mutagenesis libraries were prepared by the whole plasmid PCR method and 2x Phanta@ Master Mix using plasmid pET 30a-GmASNase as the template... digested with 2 μL DpnI... for 2 h",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in JSON",
+            "reason": "Text cites Chi et al. 2021 for plasmid template source, but JSON omitted this reference."
+          }
+        ],
+        "fix_suggestion": "Add Chi et al. 2021 to references."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "The high-throughput screening was conducted according to the method of Lu et al.... plate B was treated at 45/50/55°C for 30 min, followed by a 30-min bath on ice... 200 μL reactions",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "Lu et al. 2019",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "The activity of ASNase was measured using the Nessler method... 900 μL of PBS buffer 50 mM, pH 8.0... 20 mM substrate L-ASN reacted at 37°C for 10 min... 100 μL of 25% TCA... OD436",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "thermal stability of mutant G97T was greatly improved with half-life of 990.21±5.99 min... 29.57 times than that of wild-type",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "random mutations of residues Asn159, Val230, Ala172, Arg134, Glu249, and Val163 were applied in template mutant G97T... mutants G97T/V230A... G97T/N159Y",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty",
+            "reason": "Methodology described in text but no specific citation provided in JSON."
+          }
+        ],
+        "fix_suggestion": "No specific citation needed if general method, but could reference Chi et al. 2021 for plasmid basis."
+      },
+      {
+        "step_index": 6,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "half-life at 45°C of mutant G97T/N159Y was 16.43 and 135.03-fold higher than that of parent G97T and wild-type GmASNase, respectively",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty",
+            "reason": "Results are from the study itself, no external ref needed, but D score lowered for empty field."
+          }
+        ],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "continuing random mutageneses of residues Val230, Ala172, Arg134, Glu249, and Val163 were introduced in parent TY... mutants TY/V230T... TY/E249Q",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "half-lives at 50°C of these mutants were... 5.46-... fold higher than that of parent TY... specific activities... 1.28... times higher",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "enzymes were incubated with 50 mM PBS buffer (pH 8.0) at 40, 45, 50, and 55 °C... t1/2 value was calculated from the equation t1/2=ln2/kd",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "TYQ displayed significantly superior thermostability with half-life values of 61.65±8.69 min at 50 °C and 5.12±1.66 min at 55°C... TYQ maintained more than 206.25 times higher t1/2 than wild-type",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 10,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Tm values... determined using a Protein Thermal Shift™ Dye Kit... 1.0 μg... StepOne real-time PCR system... Tm value of mutant TYQ significantly increased by 8.59 °C from that of wild-type",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty",
+            "reason": "Kit and method described in text, no external citation in JSON."
+          }
+        ],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 11,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "reaction temperatures were set at 35 to 55 °C with a temperature interval of 5°C... pH 6.0-12.0... Mutants G97T, TY, and TYQ displayed the same optimum reaction temperature of 50°C... maximum activities at alkaline pH (pH 9.0)",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 12,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "kinetic parameters... analyzed in the presence of 1-10 mM L-ASN for 2 min under standard assay conditions (pH 8.0, 37°C)... mutant TYQ displayed slightly higher catalytic efficiency than wild-type and highest specific activity",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 13,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "crystal structure of ASNase from Helicobacter pylori (PDB: 2wlt) was used as the template to build the 3D structure model... on the Swiss-Model online website",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 14,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "For the site Gly97, a hydrogen bond was formed with residue Leu94... more hydrogen bonds were formed with residues Leu94 and Trp93... Asn159... formed hydrophobic interactions... Glu249... positive potential distribution",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "observation",
+            "claim": "Text has a typo 'Gly to Tyr' for G97T site in p8, but JSON correctly uses G97T",
+            "reason": "Paper text contains a likely typo ('Gly to Tyr' instead of 'Gly to Thr' for G97T), but JSON is factually consistent with the rest of the paper."
+          }
+        ],
+        "fix_suggestion": "No changes needed, JSON correctly identifies mutant."
+      },
+      {
+        "step_index": 15,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "All-atom molecular dynamics simulations... using AMBER 18 software... ff14SB protein force field... TIP3P solvent box... distance of 10Å... 200-ps ramp... 500-ps NVT... 50-ns equilibrium... Tracks were saved every 5 ps",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "Salomon-Ferrer et al. 2013... Maier et al. 2015",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 16,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "additional hydrogen bonds, increased hydrophobic interactions, and favorable electrostatic potential were essential for TYQ being in a more rigid state",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "references",
+            "quote": "Pace et al. (2011)... Zhou et al. 2019",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 16,
+      "mean_score": 4.86,
+      "median_score": 4.8,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

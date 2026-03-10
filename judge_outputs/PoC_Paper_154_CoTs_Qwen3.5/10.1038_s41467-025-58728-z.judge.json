@@ -1,0 +1,164 @@
+{
+  "paper_id": "10.1038_s41467-025-58728-z",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 110.49,
+  "judge_result": {
+    "paper_id": "10.1038_s41467-025-58728-z",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "MSFragger-DDA+ performs a full isolation window search... uses hyperscore... detects and extracts XICs... Kullback–Leibler divergence... greedy algorithm",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Step describes the paper's own method, so no external citation is strictly needed, but per rubric empty references list yields 0 for dimension D."
+          }
+        ],
+        "fix_suggestion": "Add citations for Hyperscore [11,33], KL divergence [35], and greedy algorithm [29] to improve traceability."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Searle et al. ... five samples with different NCE: 22, 27, 32, 37, and 42... MSFragger-DDA+ identified 57% more peptide sequences... four times faster",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "entrapment database search... generated an entrapment sequence for each target protein sequence by random shuffling... similarly low FDP as MSFragger",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Wang et al. ... A549 and K562 ... three biological replicates ... four technical replicates ... 16-19% more proteins without MBR",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Truong et al. ... 29 low-input samples ... Matzinger et al. ... 43 samples ... at least 20 times faster",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Sacco et al. ... six replicates ... 0.75 localization probability cut-off ... ~5% more phosphosites and ~14% more phosphosequences",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Glioma study ... 42 samples ... 935 more proteins than MSFragger ... FragPipe-Analyst",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      }
+    ],
+    "summary": {
+      "num_steps": 7,
+      "mean_score": 4.9,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

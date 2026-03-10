@@ -1,0 +1,446 @@
+{
+  "paper_id": "10.1093_bib_bbad052",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 140.39,
+  "judge_result": {
+    "paper_id": "10.1093_bib_bbad052",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "The keyword combination '((cross AND (talk OR regulate OR link)) OR interplay) AND post translational modification' was adopted to search the PubMed database. We obtained 37 cross-talk pairs in interproteins by reading 735 associated articles from 2017 to 2022.",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "We followed the steps proposed by Huang et al. [18] to collect the experimentally verified PTM cross-talk pairs.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "In addition, 199 cross-talk pairs before 2017 collected by Huang et al. [18] were also used in this work.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "We downloaded protein sequences of the 104 human proteins from the UniProt database [40]",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "searched all PTM sites from the PhosphoSitePlus database [41]",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "we downloaded the PDB files of the 104 human proteins from AlphaFold database... the residues with AlphaFold confidence score (pLDDT) less than 50 were removed.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "found the PPI information between these 104 proteins from the four databases, including STRING [48] (with a composite score of more than 900), HPRD [49], I2D [50] and BioGrid [51]... Finally, there were 852 interacting edges between these 104 proteins",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "the evolutionary information between protein pairs was calculated by Evol [52] in ProDy (Python package).",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "The network features based on the 3D structures of proteins were calculated by NACEN (R package) [53].",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references.citation_title",
+            "claim": "Reference [53] title is 'The bio3d packages...' while tool is 'NACEN'",
+            "reason": "Paper text links NACEN to citation [53] which is Bio3d. This is an internal paper inconsistency, but the step is consistent with the text provided."
+          }
+        ],
+        "fix_suggestion": "No changes needed as step matches provided text."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "A series of dynamic features were calculated with ENMs in ProDy [54]... a feature vector (32) representing each residue underlying PTM cross-talk was used",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "the feature vector obtained after pre-processing is called the W weight vector (Fw).",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "FEGS [55] was used to encode the protein sequence and extract the corresponding feature vector (578)... the 578-dimensional vector fp was finally obtained",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "encode the PPI graph by SDNE [56]... the features generated from protein sequence coding by FEGS were added as the features of each node of PPIs",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 13,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "the cross-talk graph contains 104 nodes (proteins) and 101 edges with weight... Fp = W1 × fp. Then, the cross-talk graph was encoded by Linear_VAE",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "HRF net used bilinear feature module to capture the complex correlation between heterogeneous Fw features and Fpair features... reconstructed into one-dimensional tensor fC",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 15,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "In HRF net, we compared the RF method with other methods, including GBDT, CNN, FNN, Decision Trees (DT) and Adaboost. The results showed that RF outperformed other methods, especially for the AUC (0.869) and AUPR (0.852) values",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "where Wc is the weight matrix of the classification model, similar to the weight matrix of the Softmax function.",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 16,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "we used 10-fold cross-validation (10-CV)... There were 236 positive samples and 9470 negative samples... 50 training subsets were generated from one part and 10 test subsets were generated from the other",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 17,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "We subsequently compared PPICT and PTM-X face to face... PPICT has improved the predictive performance compared with PTM-X. Specifically... PTM-X (0.774)... PPICT (AUC: 0.869)",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 18,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "The web server named DAVID Bioinformatics Resources [58, 59] was used for GO and KEGG pathway enrichment analysis. The hypergeometric test was adopted... Benjamini method was used to correct the P-value",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Kinase- and HAT- substrates share the same most significant pathway, namely, 'Prostate cancer'. In addition, two pathways of 'Pathways in cancer' and 'Hepatitis B' are enriched",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 19,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "Figure 4D... ranked Kinase sets n=2000... HAT sets n=1586) and E3 sets n=2667)... When we used 0.5 as the threshold of determined cross-talk, it turned out that almost all kinase-substrate crosstalks cored greater than 0.5.",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 20,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "we conducted PPICT in four other versions: (1) W_PPI... (2) W_CT... (3) PPICT*... (4) PPICT_Seq... W_PPI (AUC: 0.864)... W_CT (AUC: 0.855)... PPICT (AUC: 0.869)... AUC: from 0.859 of PPICT* to 0.869 of PPICT... AUC value (0.806) of PPICT_Seq",
+            "page_idx": 5
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "valid",
+            "claim": "Input JSON has valid: false",
+            "reason": "Step content is factually consistent with paper text. The valid:false flag in input appears to be an error."
+          }
+        ],
+        "fix_suggestion": "No changes needed to content."
+      }
+    ],
+    "summary": {
+      "num_steps": 20,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

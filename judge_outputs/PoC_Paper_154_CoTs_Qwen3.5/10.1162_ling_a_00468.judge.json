@@ -1,0 +1,222 @@
+{
+  "paper_id": "10.1162_ling_a_00468",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 87.18,
+  "judge_result": {
+    "paper_id": "10.1162_ling_a_00468",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Assuming Grosu's (1973) decomposition of Ross's (1967) Coordinate Structure Constraint into the Conjunct Constraint and the Element Constraint",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "the CSC is not a unified principle; instead, it must be decomposed into two principles... the Coordinand Constraint and the Element Constraint. (5) Coordinand Constraint (CC) No coordinand may be moved. (6) Element Constraint (EC) No element may be moved out of a coordinand.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "providing a categorematic definition of coordinator that can be very naturally expressed using the formalism of Categorial Grammar.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "(10) $​﻿\\mathbf{Coord}:=(X/X)/X$ ... Coord is thus interpreted as a function that selects an argument $​﻿\\beta$ of category $X$ ... and yields as output a coordinate phrase of category $X.$",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "The term coordination refers to a linguistic operation that combines two or more constituents... (Zamparelli 2019:135)",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Definition of generalized categorial feature $​﻿\\mathcal{F}$ is a categorial feature of a syntactic constituent $​﻿\\alpha$ if and only if it determines the syntactic distribution of $​﻿\\alpha.$",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "I will consider [D], [P], and [C] to be categorial features... include [I]... add [V] and [Adj]... I will consider bar-level features to be [projected] and [maximal], following Muysken's (1982) system",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "(22) Coordinability Condition Two syntactic constituents $​﻿\\alpha$ and $​﻿\\beta$ can be coordinated if and only if $​﻿\\mathcal{C F}(\\alpha)=\\mathcal{C F}(\\beta)$ and $B\\mathcal{F}(\\alpha)=B\\mathcal{F}(\\beta)$ .",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "I adopt Chomsky's Minimalist approach to internal Merge (see particularly Chomsky 2000)... investigate probe-goal relationships",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Illustration 1: A Single Coordinand Cannot Be Wh-Moved... who is a [+wh] phrase... a girl, which lacks the categorial wh-feature. Illustration 2: A Single Coordinand Cannot Be Focalized or Dislocated... [+focus] phrase... [+topic] phrase",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "This situation is incompatible with the categorematic definition of Coord (10): the coordinands are of different categories and no category can be projected to the coordinate structure",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "(50) Integrity Condition on Coordinate Structures... a probe $​﻿\\mathcal{H}$ searching for a $[+\\mathcal{F}]$ category can target the coordinate structure $X.$ , but not any $[+\\mathcal{F}]$ category contained within $X.$",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "the former is the source for the impossibility of extracting coordinands when they are categorially identical",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "references",
+            "quote": "Russian allows multiple $w h$ -movement in general (51a), but not out of a coordinate structure (51b)... (Zhang 2010:66)",
+            "page_idx": 17
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "(71) Prohibition against Self-Coordination A syntactic constituent cannot be coordinated to itself",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "the Prohibition against Self-Coordination is a syntax-semantics interface condition, quite similar in nature to the Prohibition against Vacuous Quantification (Chomsky 1982, 1991, Kratzer 1995).",
+            "page_idx": 25
+          },
+          {
+            "supports_field": "observation",
+            "quote": "All the strings under consideration are problematic for the same reason: they involve a vacuous coordination of a syntactic constituent to itself.",
+            "page_idx": 24
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "(79) Least Effort Principle Grammatical derivations contain no vacuous or superfluous steps.",
+            "page_idx": 27
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "the Coordinand Constraint is deduced, ultimately, from the Least Effort Principle.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Therefore, the CC effects can be deduced, ultimately, from a very general linguistic principle: the Least Effort Principle.",
+            "page_idx": 28
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 7,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

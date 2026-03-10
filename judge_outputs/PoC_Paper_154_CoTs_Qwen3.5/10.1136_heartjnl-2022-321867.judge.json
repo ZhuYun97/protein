@@ -1,0 +1,137 @@
+{
+  "paper_id": "10.1136_heartjnl-2022-321867",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 95.88,
+  "judge_result": {
+    "paper_id": "10.1136_heartjnl-2022-321867",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "maximal plasma high-­sensitivity cardiac troponin I concentration (ARCHITECT STAT Troponin I Assay; Abbott Laboratories, Abbott Park, Illinois)",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "low concentration (<5 ng/L...) and intermediate concentration (between 5 ng/L and the sex-­specific 99th centile)... below the 99th centile upper reference limit 34 ng/L for men and 16 ng/L for women",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Patients with plasma cardiac troponin I concentration ≥5 ng/L (n=161 )... compared with those with concentrations <5 ng/L (n=81)",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all facts align with the source text."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "CT coronary angiography using a 128-­slice scanner (Biotech mCT, Siemens Healthcare)",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "A tube voltage of 100 kVp was used for patients with a body mass index of <25 kg/m2 and 120 kVp for those over 25 kg/m2... 0.75 mm slice thickness at 0.5 mm increments",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Of the 250 study participants, 242 scans were of sufficient quality to undertake plaque analysis",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all facts align with the source text."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Quantitative plaque analysis was performed using semiautomated software (AutoPlaque V.2.5; Cedars-­Sinai Medical Center, Los Angeles, USA)",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Low-­attenuation plaque was defined by a fixed HU threshold of <30 HU... plaque burden was calculated by dividing plaque volume by the analysed vessel volume... and multiplying by 100",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "low-­attenuation ( 1% (IQR 0–3) vs 0% IOR 0-1) ) coronary plaque burden compared with those with concentrations <5 ng/L... p≤0.001 for all",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all facts align with the source text."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "All statistical analyses were performed using R (V.4.0.2; R Foundation for Statistical Computing, Vienna, Austria)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "multivariable model was also created... adjusting for age... sex, smoking history, hypertension, diabetes mellitus, estimated glomerular filtration rate, plaque volume... log-­transformed (log2 of 1 plus the plaque variable)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "adjusted OR per doubling 1.62 ( 95% CI 1.17 to 2.32), p=0.005",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all facts align with the source text (Abstract values used for observation)."
+      }
+    ],
+    "summary": {
+      "num_steps": 4,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

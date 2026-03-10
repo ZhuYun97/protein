@@ -1,0 +1,212 @@
+{
+  "paper_id": "10.3390_ijms24076187",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 256.12,
+  "judge_result": {
+    "paper_id": "10.3390_ijms24076187",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "In 2019, using the FTMap and its modified version FTSite, a large-scale study was carried out to identify allosteric sites in 17 GPCRs... For allosteric sites located within the TMD... the predictive ability of the FTMap and FTSite was 80 and 88%, respectively.",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "references",
+            "quote": "[84]",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "predictive ability of the FTMap and FTSite was 80 and 88%, respectively.",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "Molecular dynamics methods can also be used to search for allosteric sites... identification and study of allosteric sites located on the outer-lateral surface of the TM7 bundle... as was recently shown for beta2-AR, glucagon receptor, M2-muscarinic receptor, P2Y1 purinergic receptor, D2-dopamine receptor, type 2 proteinase-activated receptor (PAR2), and C5a anaphylatoxin chemotactic 1 receptor",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "using the in-silico docking of small molecules probes, during which 557 GPCR structures for 113 receptors were studied [61]... for receptors of the largest class A... up to 11 allosteric sites were identified... and up to 8 sites that can be considered as potential allosteric sites.",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "the most important of which is the negatively charged aspartic acid located in TM2... and the replacement of aspartic acid with alanine blocks the NAM activity of these ions",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 0.25,
+        "label": "unsupported_or_contradicted",
+        "dimension_scores": {
+          "A_core_fact": 0.0,
+          "B_parameters": 0.0,
+          "C_observation": 0.0,
+          "D_references": 0.25
+        },
+        "evidence": [
+          {
+            "supports_field": "references",
+            "quote": "340. Latif, R... A Gq Biased Small Molecule Active at the TSH Receptor.",
+            "page_idx": 48
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.ligand",
+            "claim": "Ligand: MSq1",
+            "reason": "The specific ligand 'MSq1' and its binding site details (TM1, TM2, TM3, TM7) are not mentioned in the provided source text. The text mentions TSHR but the specific section body is missing."
+          },
+          {
+            "type": "unsupported",
+            "field": "observation",
+            "claim": "MSq1 binds to a site formed by TM1, TM2, TM3, and TM7",
+            "reason": "No evidence in provided text supports this specific docking result."
+          }
+        ],
+        "fix_suggestion": "Remove specific ligand name 'MSq1' and binding site details unless found in the provided text. Generalize to 'small molecule agonists' based on reference titles only."
+      },
+      {
+        "step_index": 7,
+        "score": 1.25,
+        "label": "weakly_supported",
+        "dimension_scores": {
+          "A_core_fact": 0.5,
+          "B_parameters": 0.0,
+          "C_observation": 0.5,
+          "D_references": 0.25
+        },
+        "evidence": [
+          {
+            "supports_field": "references",
+            "quote": "423. Ahn, S... Small-Molecule Positive Allosteric Modulators of the beta2-Adrenoceptor Isolated from DNA-Encoded Libraries. 424. Meng, K... Cmpd-15 Derivatives as Negative Allosteric Modulators for the beta2-Adrenergic Receptor.",
+            "page_idx": 52
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.compound_identified",
+            "claim": "compound 15 (Cmpd-15)... from DNA-encoded small-molecule library",
+            "reason": "Reference 423 links DNA-encoded libraries to PAMs. Reference 424 links Cmpd-15 to NAMs. The provided text does not explicitly link Cmpd-15 to the DNA-encoded library method."
+          }
+        ],
+        "fix_suggestion": "Separate the claims: DNA-encoded libraries identified PAMs (Ref 423), and Cmpd-15 is a NAM (Ref 424). Do not claim Cmpd-15 came from DEL without text evidence."
+      },
+      {
+        "step_index": 8,
+        "score": 2.5,
+        "label": "partially_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 0.5,
+          "C_observation": 0.5,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Ladarixin, a potent allosteric inhibitor of CXCR1 and CXCR2, is highly effective IC50 of about 0.1 nM",
+            "page_idx": 15
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.readouts",
+            "claim": "testosterone levels, gene_expression: thyroglobulin, thyroperoxidase",
+            "reason": "While references exist (e.g., 394, 336), the body text describing these specific functional assays for TSHR/LHR is not present in the provided source text (sections missing)."
+          }
+        ],
+        "fix_suggestion": "Limit claims to Ladarixin IC50 which is supported by body text. Remove testosterone/gene expression claims or mark as based on references only."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 3.6,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [
+        6,
+        7
+      ],
+      "hallucination_risk": "medium"
+    }
+  }
+}

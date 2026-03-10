@@ -1,0 +1,222 @@
+{
+  "paper_id": "10.1007_s10489-024-05531-w",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 57.39,
+  "judge_result": {
+    "paper_id": "10.1007_s10489-024-05531-w",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "For the visual aspect, 2,048-dimensional extracted features by ResNet-101 are regarded as visual features",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "positive pairs are obtained by augmentations",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "hyperspherical latent space with the same dimension D=2048... dimension of latent features z is 512",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Gaussian potential kernel(i.e.,Radial Basis Function kernel, RBF)... Here, we simply adopt t = 2",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "We finally chose K=32... On AwA2, APY and CUB, our method achieves the best results when tau=0.1. And the method achieves the best result when tau=1 on FLO",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "tool",
+            "quote": "mapping the latent features to nonlinear layer (lower dimension e.g., 512)",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "RNet includes 4096 dimensional hidden layers and sigmoid function, and the output dimension is 1",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "The learning rate of the calibrator and RNet is 0.001 and 0.0001, respectively",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Regressor is performed by Ridge regression, or alternatively training a single hidden layer(512 dimension) neural network",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "on AwA2 and APY, our method achieves the best results when omega=0.001, and the performance on fine-grained SUN, CUB and FLO peaks when omega=0.01",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Calibrator is performed by a softmax classifier with 2048 dimensional hidden layers equipped with CrossEntropy Loss",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "The learning rate of the calibrator... is 0.001",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "optimal result can be found with [0.2, 0]",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "apply this domain prior knowledge to the output rij of hierarchical contrastive learning",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "phi1, phi2 are hyperparameters for threshold",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "our model achieves the state-of-the-art (SoTA) results on SUN and FLO, and obtain second best results on AwA2 and APY",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "ZSL setting focuses on the classification ability... GZSL focuses more on the comprehensive performance... H=(2xSxU)/(S+U)",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "paper_id": "10.1007_s11440-021-01418-z",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 126.74,
+  "judge_result": {
+    "paper_id": "10.1007_s11440-021-01418-z",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Four advanced constitutive models are considered in this study: two bounding surface elastoplasticity and two hypoplasticity models",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Toyoura sand has a maximum void ratio emax=0.977... Karlsruhe fine sand (KFS)... emax=1.054",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "A simulation example on Karlsruhe fine sand using the HP+IS model... loose sample (e0=0.98) with isotropic consolidation (p0'=200 kPa)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The level of the simulated overshooting decreases with the increasing amplitude of reverse loading",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Toyoura sand... initial mean stress p0'=100 kPa and relative density Dr=16%",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The simulated stress-strain curve... for the DM04... presenting the overshooting response",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "The simulated stress-strain curve and stress path are quite similar for the DM04 and SANISAND-MSf models, both presenting the overshooting response",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "The simulation results of the HP+ISA model... do not indicate the issue of overshooting but the path after each loading cycle stays below the monotonic one, which can be termed as 'undershooting'",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "An undrained cyclic triaxial test of qamp=60 kPa on Karlsruhe fine sand with initial mean stress p0'=200 kPa and Dr=67%",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The simulated stress-strain loops of DM04... manifest an unrealistic one-way ratcheting",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "The SANISAND-MSf is the only model able to reproduce the increasing double amplitude of cyclic shear strains",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Samples were categorized in three range of densities... mean relative densities of 26, 63, and 81%... p0'=100 kPa",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "DM04 simulations show much steeper strength curves... DM04 simulations do not reach the eps1DA=5%",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "The SANISAND-MSf simulations show a significantly improved performance for all three criteria... reach the eps1DA=5%",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "dense sample of Karlsruhe fine sand with initial mean stress p0'=700 kPa and relative density Dr=101%... eps1amp=1%",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The DM04... able to capture the attractor p'=q=0... stress path and stress-strain loops get lockup after the first loading cycle",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "SANISAND-MSf... captures the progressive reduction of qamp and degradation of stress-strain loops",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "initial conditions of the sample follow sigma1=283.0 kPa sigma2=sigma3=158.5 kPa and e0=0.857",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Unlike the experiment, all the simulations exhibit significant accumulations of plastic strain... except the HP+ISA model",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 13,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "From the four selected models, this is the only one able to deactivate completely the plastic strain rate under such path",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "e0=0.8894, Dr=44%, sigma1=0.221 kPa... loading/reloading paths increases the axial stress to: (a) 20.53 kPa, (b) 55.72 kPa...",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "DM04 and SANISAND-MSf models showed in general a stiffer behavior... not generating any plasticity under constant stress ratio loading",
+            "page_idx": 15
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 15,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "The HP+IS and HP+ISA models perform better in regard to stiffness... While overshooting is observed on the HP+IS model for all cases",
+            "page_idx": 15
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      },
+      {
+        "step_index": 16,
+        "score": 4.9,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 0.9,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Undrained triaxial test with isotropic (q=0) drained preloading to p'=800 kPa... Dr=31%, p0'=300 kPa",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Simulations show that the SANISAND-MSf and HP+IS are the only ones to capture partly well the influence of the drained preloading effect",
+            "page_idx": 16
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "observation",
+            "claim": "reproduces the influence of the deviatoric preloading due to the introduction of memory surface",
+            "reason": "Text links memory surface explanation specifically to deviatoric preloading, while step parameters describe isotropic preloading. Main outcome (captures effect) is supported."
+          }
+        ],
+        "fix_suggestion": "Clarify that memory surface explains deviatoric preloading capture, while isotropic capture is generally attributed to the model's capabilities."
+      },
+      {
+        "step_index": 17,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "The DM04 model has a similar effect as the HP+ISA model, because its yield surface is narrow, and lacks of memory effects on cycles of larger amplitudes",
+            "page_idx": 16
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None"
+      }
+    ],
+    "summary": {
+      "num_steps": 17,
+      "mean_score": 4.99,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

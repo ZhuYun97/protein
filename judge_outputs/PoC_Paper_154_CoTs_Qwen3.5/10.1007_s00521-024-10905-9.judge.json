@@ -1,0 +1,257 @@
+{
+  "paper_id": "10.1007_s00521-024-10905-9",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 112.66,
+  "judge_result": {
+    "paper_id": "10.1007_s00521-024-10905-9",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "we established eight constraint models: similarity, H-measure, melting temperature, continuity, GC-pair content, hairpin structure, ion-bridge RS, and HG-quadruplex. The last two are novel.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "where DS=0.17, CS=6... where DH=0.17, CH=6... Pmin and Rmin... both values are 6... p and r are usually not less than 4.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "11. Yang GJ... (2017)... 27. Guo YJ... (2020)",
+            "page_idx": 19
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "we propose the dynamic virus spread (DVS) algorithm, which simulates the spread of viruses in communities.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "We maintain T x E = 500... B=4... DT... set to 60... PAerosol... define as 0.5... IW1 = 0.7, IW2 = 0.3... Pinf is reached (set to 0.3)... Im (set to 0.8)... Xmask is defined as NumX/10... probability 0.7... probability 0.3... probability of becoming a Type-A infection as 0.7",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "references",
+            "quote": "The virus spread model [32]... coronavirus herd immunity optimizer (CHIO) [33]",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "evaluated it using 23 well-known benchmark functions.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Run independently 30 times... DVS has demonstrated excellent performance in eight functions... F9–F11 and F16–F20... good results in F1–F4.",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "23 benchmark functions [47]",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "our algorithm outperformed eight popular swarm evolutionary algorithms in eight dominant results.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Comparing the algorithm with eight advanced evolutionary algorithms, resulting in eight optimal solutions and four suboptimal solutions.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "CHIO [33], SCSO [40], MRFO [41], ASO [42], GWO [43], SSA [44], WOA [45], and SCA [46]",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Tri-base sequence design (Scene 1) is ideal for situations requiring low complementary sequence design.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "optimization objectives of low complementarity and low Tm difference... compared this strategy with HSWOA [14], NCIWO [11] and IBPSO [17]... six common constraints... similarity, H-measure, continuity, hairpin, GC, and Tm.",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "references",
+            "quote": "HSWOA [14], NCIWO [11] and IBPSO [17]",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "ion-bridge mismatch sequence design (Scene 2) is tailored for selective ion regulation pairing... detecting specific heavy metal ions",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Previous studies utilized the sequences I1 [48], I2 [25], I3 [49], and I4 [50]... silver and mercury ions selected in this article.",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "references",
+            "quote": "I1 [48], I2 [25], I3 [49], and I4 [50]",
+            "page_idx": 15
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "sequences featuring restriction endonuclease recognition domains (Scene 3) are empowering the design of molecular logic gates, autocatalysis, and signal amplification",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Table 5 and Fig. S8 present the sequence design results with four common restriction endonuclease recognition domains... They exhibit low complementarity characteristics... (e.g., AluI)",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "references",
+            "quote": "26. Pan LQ... (2017)... 51. Zhang XK... (2020)",
+            "page_idx": 20
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Hoogsteen sequence [27] (Scene 4) is a universal tool for pH-dependent applications",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "rules C+·G≡C, T·A=T, and A·A=T... H1 [27] and H3 [52] have been previously utilized",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "references",
+            "quote": "27. Guo YJ... (2020)... 52. Qi HJ... (2018)",
+            "page_idx": 20
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

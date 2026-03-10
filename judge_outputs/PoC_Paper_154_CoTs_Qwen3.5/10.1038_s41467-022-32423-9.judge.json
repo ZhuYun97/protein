@@ -1,0 +1,544 @@
+{
+  "paper_id": "10.1038_s41467-022-32423-9",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 224.59,
+  "judge_result": {
+    "paper_id": "10.1038_s41467-022-32423-9",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "primers: HA-P17-BamHI-fwd... and pET28-DraIII-rev... digestion with BamHI and DraIII",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "cultured in LB media containing 0.5 mM... IPTG at 30°C for 16 h",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "solubility of G12-scFv-HA and G12-scFv-HA-P17 proteins was 14.9% and 45.0%",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "G12-scFv-HA-P17 protein remained insoluble in this strain",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 5,
+        "score": 4.3,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "− below the detection limit",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 6,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "recombinant pET28-derived plasmids were constructed to express three additional scFvs: VRC01-scFv... ADRI-scFv... and MA18/7-scFv",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 3.8,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 0.5,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "fusion with the P17 tag increased in all cases solubility from 2.4 to 6.5-fold",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "observation",
+            "claim": "P17 tag increased solubility of other scFvs from 2.4 to 11.6-fold",
+            "reason": "Text states 2.4 to 6.5-fold for the three additional scFvs (Fig 1d). 11.6-fold is for MA18/7 N-terminal fusion (Fig 2)."
+          }
+        ],
+        "fix_suggestion": "Change range to 2.4 to 6.5-fold for C-terminal fusions of VRC01, ADRI, MA18/7."
+      },
+      {
+        "step_index": 8,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "To construct pET28a-His-P17-MA18/7-scFv-HA plasmid",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 9,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "P17 tag significantly improved solubility at both N- and C-positions by 11.6- and 10.2-fold",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 10,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "To construct pET28a-his-G12-scFv-MBP... GST-G12-scFv-HA protein",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 11,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "MBP fusion increased the solubility of G12-scFv by 1.4-fold... P17 tag fusion increased the solubility of G12-scFv by 1.7-fold",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 12,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "pET28a-His-MA18/7-scFv-2xP17 plasmid was constructed... 3xP17 plasmid was then obtained",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 13,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "two and three copies enhanced solubility by only 6.6- and 3.8-fold, respectively",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "JPred4... predicted a single region within the P17 tag to have some alpha-helix propensity, namely residues 22–29",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 15,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "AlphaFold2 predicted local Distance Difference Test (plDDT) score in this region was below 70",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 16,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "To construct pET28a-His-MA18/7-scFv-HA-P17-A25P plasmid... alanine (A) at position 25 substituted by proline (P)",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 17,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "both the wild-type (wt) and A25P mutant P17 tag increased protein solubility by around fourfold",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 18,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "To construct pET28a-His-G12-scFv-HA-P17-C8del and... C15del... N8del, N14del, and N18del",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 19,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "P17-N18del maintains only 15 aa of the P17 tag but promoted scFv solubility as strongly as the wt tag",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 20,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "D23 and E24... replaced by alanines, lysine (K) at position 26 and arginine (R) at position 27 substituted by alanines",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 21,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "solubility-enhancing abilities... were reduced by 12%, 42%, and 58%, respectively",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 22,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "G12-scFv-HA-P17 displayed a 2.3°C higher Tm than G12-scFv-HA",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 23,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "A 2.2-fold lower Kd (0.79x10^-10 M versus 1.77x10^-10 M)",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 24,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "ELISA A450nm value of G12-scFv-HA-P17 reacting with HBsAg positive sera was significantly... approximately twofold higher",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 25,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "50% inhibitory concentrations at 2.91 nM versus 6.74 nM",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 26,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "P17 tag neither resulted in oligomerization of G12-scFv nor did it alter the equilibrium between monomeric and dimeric forms",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      }
+    ],
+    "summary": {
+      "num_steps": 26,
+      "mean_score": 4.8,
+      "median_score": 4.8,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

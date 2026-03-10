@@ -1,0 +1,551 @@
+{
+  "paper_id": "10.3390_ijerph191912548",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 153.05,
+  "judge_result": {
+    "paper_id": "10.3390_ijerph191912548",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "QIAamp® Blood Mini Kit... ≥500 ng needed per reaction at a concentration of ≥50 ng/μL in a final volume of ≥20 μL, A260/280 = 1.7–2",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "Paper text mentions kit but provides no bibliography citation; D score 0 is consistent."
+          }
+        ],
+        "fix_suggestion": "No fix needed; consistent with paper."
+      },
+      {
+        "step_index": 2,
+        "score": 4.3,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 0.8,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Illumina HiSeq 2500... paired-end reads of 150 base pairs... average coverage depth of approximately 100×",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "observation",
+            "claim": "Sequencing completed with 99.8% aligned reads",
+            "reason": "Alignment stats (99.8%) are generated after mapping (Step 4), not sequencing; paper states mapping resulted in 99.8%."
+          }
+        ],
+        "fix_suggestion": "Change observation to reflect sequencing output (e.g., libraries sequenced) and move alignment stats to mapping step."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Bases and reads with a quality score below 30 were trimmed off",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "Burrows-Wheeler Aligner (BWA, version 0.7.7) [17]... 99.8%",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "PCR duplicates were then flagged with Picard",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "SAMtools (version 0.1.19) [18]",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Genome Analysis Tool Kit (GATK, version 4.1.6.1)... joint variant calling strategy",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "annotated with ANNOVAR using... gnomAD... 1000 Genomes Project... ExAC, Clinvar, HGMD, and OMIM",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 9,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "SIFT (https://sift.jcvi.org/ (accessed on 1 February 2022))",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 10,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "PolyPhen2 (https://genetics.bwh.harvard.edu/pph2/ (accessed on 1 February 2022))",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 11,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "MutationTaster (https://www.mutationtaster.org/ (accessed on 1 February 2022))",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "CADD score (http://cadd.gs.washington.edu/snv (accessed on 1 February 2022))",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 13,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Primer3.0 (http://bioinfo.ut.ee/primer3-0.4.0 (accessed on 1 February 2022))",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 14,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Primer blast on the NCBI genome browser (https://www.ncbi.nlm.nih.gov/tools/primer-blast/)",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 15,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "ABI-3130 DNA sequencer... MOXD1 variant... co-segregating... SYNE2... excluded",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 16,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "AlphaFold Protein Structure Database... [19]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 17,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "DynaMut2 [20]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 18,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "SDM [21]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 19,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "mCSM [22]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 20,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "DUET [23]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 21,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "DeepDDG [24]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 22,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation|references",
+            "quote": "Missense 3D tool [25]... expansion of cavity volume... 147.96 Å³",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 23,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|references",
+            "quote": "Schrodinger's Protein Preparation Wizard [26,27]... pH 7... 0.3 Å RMSD",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 24,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|references",
+            "quote": "BioLuminate modeling platform [28]... cutoff of 5 Å",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 25,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "cDART database [29]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      },
+      {
+        "step_index": 26,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|references",
+            "quote": "PyMOL was used to generate figures [30]",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No fix needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 26,
+      "mean_score": 4.7,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

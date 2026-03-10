@@ -1,0 +1,231 @@
+{
+  "paper_id": "10.3390_life12030437",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 198.6,
+  "judge_result": {
+    "paper_id": "10.3390_life12030437",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation|references",
+            "quote": "Investigations using locus-specific branch-length testing of single-nucleotide polymorphism (SNP) data have revealed positive selection for NOTCH1, alongside numerous HIF pathway candidate genes, in Andeans living above 3600m [33].",
+            "page_idx": 3
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation|references",
+            "quote": "Examination of the chromatin accessibility and transcriptional landscape in Tibetans residing at 3680 m, performed using human umbilical vein endothelial cells (HUVECs), identified two structural variants within the upstream regulatory element of NOTCH1... [34]",
+            "page_idx": 3
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation|references",
+            "quote": "in Tibetan chickens, whole-genome resequencing identified NOTCH2 as being under positive selection [35]",
+            "page_idx": 3
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation|references",
+            "quote": "application of a γ-secretase inhibitor, which significantly reduced survival and life span in hypoxia [44].",
+            "page_idx": 3
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation|references",
+            "quote": "hypoxia induces expression of NOTCH1 and targets such as HES1, as shown initially in human neuroblastoma cells cultured in 1% O2 [92]. ... expression of Notch ligands Jagged2 [89,90] ... are upregulated in hypoxia.",
+            "page_idx": 6
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation|references",
+            "quote": "LINE1 methylation was greater in native Andean Quechua, compared with those of European ancestry [52,53]. ... An Andean Quechua resident at 4388m showed decreased EPAS1 methylation ... [52] ... EPO methylation decreased in subjects of European ancestry ... [53].",
+            "page_idx": 7
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 7,
+        "score": 4.8,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.25
+        },
+        "evidence": [
+          {
+            "supports_field": "observation|references",
+            "quote": "induction of miR-210 was linked to upregulation of the Notch1 protein ... [125]. ... Cassette exon skipping leads to several splice isoforms of HIF-1α [110–112]",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "miR-4673, miR-4674, miR-34a targets and mechanisms",
+            "reason": "Step references only list [125] and [111]. Text cites [127], [130], [131] for these specific miRNAs, which are missing from step references."
+          }
+        ],
+        "fix_suggestion": "Add references [127], [130], [131] to support miR-4673, miR-4674, and miR-34a claims."
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation|references",
+            "quote": "assessment of protein expression in placentas of Andean pregnancies revealed lower levels of the antiangiogenic factor sFlt-1 ... [157]. ... Expression of Notch3 mRNA and Notch3 ICD were increased in lung tissue obtained from PH patients ... [61].",
+            "page_idx": 10
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 9,
+        "score": 4.8,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.25
+        },
+        "evidence": [
+          {
+            "supports_field": "observation|references",
+            "quote": "higher lactate dehydrogenase (LDH) enzyme activity [12]. ... activation of the Notch system was associated with decreased glutamine consumption ... [72]",
+            "page_idx": 12
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "PGC1α declined following prolonged extreme high-altitude exposure",
+            "reason": "Step references list [12] and [72]. Text cites [74] for PGC1α decline in skeletal muscle, which is missing from step references."
+          }
+        ],
+        "fix_suggestion": "Add reference [74] to support the PGC1α decline claim."
+      },
+      {
+        "step_index": 10,
+        "score": 4.8,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.25
+        },
+        "evidence": [
+          {
+            "supports_field": "observation|references",
+            "quote": "sustained exposure of lowlanders to high-altitude ... led to a sharp rise in circulating interleukin (IL)-6 ... [65]. ... Notch1 signaling via Nrf2 decreased ROS production ... [87]",
+            "page_idx": 14
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "no such change observed in an adapted Sherpa population; Increased oxidative stress in Andeans",
+            "reason": "Step references list [65] and [87]. Text cites [12] for Sherpa data and [212, 213] for Andean oxidative stress, which are missing from step references."
+          }
+        ],
+        "fix_suggestion": "Add references [12], [212], [213] to support Sherpa and Andean oxidative stress claims."
+      }
+    ],
+    "summary": {
+      "num_steps": 10,
+      "mean_score": 4.9,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

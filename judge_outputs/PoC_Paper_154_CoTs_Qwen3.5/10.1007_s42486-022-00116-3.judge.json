@@ -1,0 +1,199 @@
+{
+  "paper_id": "10.1007_s42486-022-00116-3",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 116.13,
+  "judge_result": {
+    "paper_id": "10.1007_s42486-022-00116-3",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "we apply Lyapunov optimization and define a user processing queue for each user... U Q_{j}(t)",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "d_{j}^{t} denotes the processing ability... threshold A_{i} called the invalid threshold",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "references",
+            "quote": "By the queue stability theorem (Neely 2010)",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "construct the double-queue Lyapunov optimization function and drift-plus-penalty function",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "control parameter V\\geq0... Theorem 2 (Drift-plus-penalty bound)",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "references",
+            "quote": "Neely (2010)",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "design a strategy called Fairness Task Assignment Strategy (FTAS) to minimize (18)",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "find j = argminj∈U(UQj(t) − SQi (t)+\\frac{V}{k}\\cdot c_{j}^{t})",
+            "page_idx": 10
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Reference: Liu et al. 2020",
+            "reason": "Text states 'We design a strategy called... FTAS' (p10), implying it is the authors' contribution (Algorithm 1). Liu et al. 2020 is cited as a baseline comparison in Section 6.2 (p14), not as the source of the internal FTAS algorithm design."
+          }
+        ],
+        "fix_suggestion": "Clarify that FTAS (Algorithm 1) is the proposed sub-algorithm in this paper, or remove the specific citation to Liu et al. 2020 for this design step unless explicitly stated as an adaptation."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "introduce a Fairness Task Assignment Strategy with Distance constraint (FTAS-D) based on simulated annealing algorithm",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "temperature T is updated as \\gamma\\times T... temperature will increase when the temperature is lower than 0.01",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "(Liu et al. 2019)",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Changchun/taxi... select 250 traces... Epfl/mobility... approximately 500 taxis... Feeder... select 200 taxi traces",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "simulation experiments are repeated 500 times",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "references",
+            "quote": "Michal Piorkowski and Sarafijanovic 2009... Zhang et al. 2015",
+            "page_idx": 14
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "value of V increasing from 1 to 10",
+            "page_idx": 18
+          },
+          {
+            "supports_field": "observation",
+            "quote": "proven that there is an approximate [O(1/V),O(V)] trade-off",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "illustrate that there is [O(1/V),O(V)] trade-off",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 6,
+      "mean_score": 4.97,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

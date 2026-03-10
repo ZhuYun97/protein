@@ -1,0 +1,418 @@
+{
+  "paper_id": "10.1007_s00439-023-02601-w",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 97.6,
+  "judge_result": {
+    "paper_id": "10.1007_s00439-023-02601-w",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "WES was performed on the Broad Institute Genomics Platform and processed using GATK best practices",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The jointly called VCF files were then analyzed",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "McKenna et al. 2010",
+            "page_idx": 7
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "analyzed using the integrative database framework, GEMINI v.0.19.1",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "Step JSON lacks citation though fact is supported in text"
+          }
+        ],
+        "fix_suggestion": "Add reference for GEMINI if available or leave as internal tool."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Variant annotation was noted with the Ensembl Variant Effect Predictor (VEP) against the GRC37/hg19 reference Human Genome",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "reported on transcript ENST00000447712.6",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "Step JSON lacks citation"
+          }
+        ],
+        "fix_suggestion": "Add reference for VEP if available."
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "minor allele frequencies (MAF) of <0.1% in the genome Aggregation Database (gnomAD) browser in all ethnic groups",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "A total of 143 FGFR1 RSVs were identified in 175 IHH probands (n=95 missense, n=48 proteintruncating variants)",
+            "page_idx": 0
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "Step JSON lacks citation"
+          }
+        ],
+        "fix_suggestion": "Add reference for gnomAD if available."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "All RSVs identified by WES were confirmed using bi-directional Sanger sequencing",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Sanger sequencing was performed by the Center for Computational and Integrative Biology (CCIB) DNA Core Facility",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "Step JSON lacks citation"
+          }
+        ],
+        "fix_suggestion": "Add reference for Sanger method if available."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "40 were classified as pathogenic/likely pathogenic (PLP), 54 were deemed variants of uncertain significance (VUS), and only 1 was classified as benign",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "recessive disease categories (BP1 and PM3)... (BP1, BP2 and BP5)... BA1/ BS1, and BS2... PS4",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "Richards et al. 2015",
+            "page_idx": 7
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Prediction RSVs impact on protein function utilized PolyPhen2",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "Adzhubei et al. 2013",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "parameters",
+            "claim": "Specific version or threshold not detailed",
+            "reason": "Text only states 'utilized PolyPhen2' without version/config"
+          }
+        ],
+        "fix_suggestion": "Specify that version/threshold is not detailed in text."
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "utilized PolyPhen2 and SIFT",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "Ng and Henikoff 2003",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "parameters",
+            "claim": "Specific version or threshold not detailed",
+            "reason": "Text only states 'utilized... SIFT' without version/config"
+          }
+        ],
+        "fix_suggestion": "Specify that version/threshold is not detailed in text."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "computational prediction tool REVEL was used to assess for differences between variant classes",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "FGFR1 missense VUS reclassified as likely pathogenic or pathogenic (PLP) were more damaging by REVEL... than the FGFR1 missense that remained assigned as VUS",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "non-parametric Kruskal–Wallis test with Dunn's post-test was used",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "Ioannidis et al. 2016; Tian et al. 2019",
+            "page_idx": 7
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 10,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "FGFR1 RSVs domain locations were determined according to UniProt",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "D1, D2, D3, and TK domains and linker regions (D2–D3, TM–TK)",
+            "page_idx": 0
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "Step JSON lacks citation"
+          }
+        ],
+        "fix_suggestion": "Add reference for UniProt if available."
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Domain-specific burden testing was also performed using Fisher's exact test... with adjustment using Bonferroni correction",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "D1 domain (p=6.0E-4), D2 domain (p=3.7E-19)... TK domain (p=2.6E-34)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "Guo et al. 2018",
+            "page_idx": 7
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 12,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "reclassifies 37% (20/54) of FGFR1 missense VUS as pathogenic or likely pathogenic (PLP)",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "integrated regional genetic enrichment as 'moderate evidence'",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "Kelly et al. 2018",
+            "page_idx": 7
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 13,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "76.9% vs 34.7%, p=0.035",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Chi-square or Fisher exact was used in phenotype analyses",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "Step JSON lacks citation"
+          }
+        ],
+        "fix_suggestion": "Add reference for statistical method if available."
+      }
+    ],
+    "summary": {
+      "num_steps": 13,
+      "mean_score": 4.7,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

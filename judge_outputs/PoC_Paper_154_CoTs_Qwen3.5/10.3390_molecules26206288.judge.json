@@ -1,0 +1,284 @@
+{
+  "paper_id": "10.3390_molecules26206288",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 262.61,
+  "judge_result": {
+    "paper_id": "10.3390_molecules26206288",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "dissolving 25 mg alpha-amylase in a solution consisting of 48 mL of distilled water and 2 mL of phosphate buffer... electrodes with a 4 mm gap",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "10 μs of pulse width... same input energy with 720 J",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "residual activity of α-amylase decreased with PEF strength at the same input energy",
+            "page_idx": 14
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "monitored by fluorescence spectra at a 280 nm wavelength of excitation light",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "tertiary structure (mainly tryptophan; Trp) of α-amylase also decreased with PEF strength",
+            "page_idx": 14
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "heating up to 70°C... treatment time of 40 min",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "protein concentration of heat-treated α-amylase solution decreased to approximately 37%",
+            "page_idx": 14
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "PEF treatment with 12 kV/cm strength, 50 Hz repetition rate and 30 s exposure",
+            "page_idx": 15
+          },
+          {
+            "supports_field": "observation",
+            "quote": "activity of thermally denatured peroxidase recovered to 60% of its initial activity",
+            "page_idx": 15
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "applying PEF of 12 kV/cm with intermittent as 50% duty (30 min versus 30 min of off)",
+            "page_idx": 21
+          },
+          {
+            "supports_field": "observation",
+            "quote": "extraction of α-amylase was approximately 30% of total α-amylase production",
+            "page_idx": 21
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "polyphenol extraction was enhanced with an increasing pulse width",
+            "page_idx": 22
+          },
+          {
+            "supports_field": "observation",
+            "quote": "membranes of anthocyanoplasts were raptured by PEF exposure, and the red-colored pigments... were extracted",
+            "page_idx": 22
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "evaluated as the gallic acid concentration in the solvent (water) by Folin–Ciocalteu analysis",
+            "page_idx": 22
+          },
+          {
+            "supports_field": "observation",
+            "quote": "energy required for polyphenol extraction decreased with an increasing pulse width",
+            "page_idx": 22
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "SiC-MOSFET PEF generator to produce PEFs with 1 μs in pulse width... 2.8 kV/cm... 27.1 kJ/kg",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "spinach leaves that had not been soaked in water",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "observation",
+            "quote": "drying rate for PEF samples was increased compared to CONT and HW samples",
+            "page_idx": 24
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 9,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "spinach during hot-air drying",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "observation",
+            "quote": "drying rate for PEF samples was increased compared to CONT and HW samples",
+            "page_idx": 24
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "tool.name",
+            "claim": "Hot-Air Dryer",
+            "reason": "Text specifies 'hot-air drying' process but does not explicitly name the device 'Hot-Air Dryer' for spinach (unlike kiwifruit section)."
+          }
+        ],
+        "fix_suggestion": "Change tool name to 'Hot-Air Drying Process' to match text exactly."
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "quality parameters (degradation of L-ascorbic acid, L-AsA, and color)",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "observation",
+            "quote": "inhibited shrinkage during drying... degradation of L-AsA and the surface color of the PEF samples were significantly inhibited",
+            "page_idx": 24
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      }
+    ],
+    "summary": {
+      "num_steps": 10,
+      "mean_score": 4.95,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

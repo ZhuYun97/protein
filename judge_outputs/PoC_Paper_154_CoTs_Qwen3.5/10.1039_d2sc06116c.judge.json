@@ -1,0 +1,481 @@
+{
+  "paper_id": "10.1039_d2sc06116c",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 127.23,
+  "judge_result": {
+    "paper_id": "10.1039_d2sc06116c",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "based on the structure of the alkyne-functionalized probe YnMyr... inspection of our previously reported structure of the human NMT1 (HsNMT1):Myr-CoA complex (PDB:4C2Y)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "diazirine moiety at specific positions along the 14-carbon fatty acid chain... omega-alkyne group between carbons 13 and 14",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references.citation",
+            "claim": "Fedoryshchak et al., 2021 (this paper)",
+            "reason": "Paper year not explicitly stated in header (DOI suggests 2022), and PDB:4C2Y is cited as 'previously reported' (Ref 31/20), not this paper's primary data."
+          }
+        ],
+        "fix_suggestion": "Update citation to reflect the actual publication year or reference the specific prior work (e.g., Thinon et al., 2014 or Dian et al., 2020) for PDB:4C2Y."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "For X3 synthesis, 10-bromodecanoic acid was reacted with trimethylsilylacetylene... Masamune procedure... treated with ammonia followed by hydroxylamine-o-sulfonic acid... oxidized to the diazirine using iodine in 20-42% yields",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided for synthesis protocol, though details are in text."
+          }
+        ],
+        "fix_suggestion": "Add reference to ESI or relevant synthesis protocol section in text."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "synthesis of ketone precursors 10 and 13 for probes X8... and X10... Pd(0) catalyzed coupling was performed by adding the respective chloroanhydrides to alkyl zinc iodides... by Cu-Zn couple... moderate yields",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Add reference to ESI or Scheme 1 description."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "added to HeLa cells in culture and incubated for 24h... X3/X8/X10 at 100 uM, or YnMyr at 5 uM concentration... CuAAC ligation... to azido-TAMRA (AzT)",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "YnMyr... has previously been applied to the identification of the N-myristoylated proteome... (ref. 31)",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "in situ irradiation with UV light at 365 nm (+UV; 5 min)",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Upon UV-irradiation... number and intensity of fluorescent bands was greatly increased",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 1C/D description in text."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "NMT inhibitor (NMTi) IMP-366... with increasing NMTi concentration... 0.5 uM NMT inhibitor IMP-366",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "IMP-366 (ref. 40 and 41)",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "ligated proteins... to an azido-TAMRA-biotin (AzTB) capture reagent followed by streptavidin-conjugated magnetic bead enrichment... PSMC1",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Equivalent blotting for NMT1 labeling... shows photocrosslinking-dependent enrichment only with denaturation at 95 C",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 1E description."
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "heavy arginine and lysine (R10K8)-containing media... light media (R0K0)... neutravidin enrichment... 0.5 uM NMT inhibitor IMP-366",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Pearson correlation >0.9 between the samples treated with YnMyr vs. X10 or X8, and 0.84 vs. X3",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 2 description."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "PEAKS de novo sequencing analysis package",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "identified 121 peptide spectrum matches (PSMs) with Myr' modification corresponding to 28 known myristoylated proteins... 140 PSMs for 33 proteins with Myr-Xlink modification",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "PEAKS de novo sequencing analysis package42",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "fluorogenic reaction with 7-diethylamino-3-(4-maleimidophenyl)-4-methylcoumarin (CPM)... HsNMT1 and HsNMT2... c-Src N-terminal peptide",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "references",
+            "quote": "CPM),45",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 11,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "solve the structure at 2.37A resolution... PDB accession for HsNMT1:X10-CoA crystal structure: 5NPQ",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "observation",
+            "quote": "diazirine is situated at hydrogen bonding distance from the T268 side-chain hydroxyl... RMSD 0.587A over 355 Ca atoms",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "PDB ID 5NPQ is in Data Availability (p9), not cited in step references."
+          }
+        ],
+        "fix_suggestion": "Add Data Availability section reference for PDB ID."
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "HEK293 cells were transfected with twenty different myristoylated proteins engineered to bear a C-terminal Twin-Strep-tag (TST)... mCitrine-TST as a non-myristoylated negative control... 100 uM X10 for 24 h",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 5A description."
+      },
+      {
+        "step_index": 13,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "lysate with a buffer containing 1% SDS and heated at 95 C for 10 min... enriched at ambient temperature with Strep-Tactin resin, digested with trypsin",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 5A description."
+      },
+      {
+        "step_index": 14,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "Label-free quantification was used to determine the fold change... against the combined data of the 19 other protein constructs... DDX46 (Fig. 5C) and FSP1 (Fig. 5D) showing the highest hit rates",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 5 description."
+      },
+      {
+        "step_index": 15,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "DDX46-TST or its myristoylation-deficient G2A mutant... interacted with TRA2B to a similar extent (Fig. 5E)",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "aTubulin or GAPDH were used as loading controls",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 5E description."
+      },
+      {
+        "step_index": 16,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "TOMM40 co-immunoprecipitated with FSP1, which was strongly suppressed in a myristoylation-deficient FSP1 G2A mutant (to 22% of WT FSP1), whilst NMT inhibition... reduced immunoprecipitation to 28% of WT (Fig. 5F)",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Data are shown as mean +/- s.e.m., n=3-4",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No citation provided."
+          }
+        ],
+        "fix_suggestion": "Reference Fig. 5F description."
+      }
+    ],
+    "summary": {
+      "num_steps": 16,
+      "mean_score": 4.6,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

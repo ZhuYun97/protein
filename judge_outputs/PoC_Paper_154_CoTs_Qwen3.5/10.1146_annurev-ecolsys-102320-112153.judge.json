@@ -1,0 +1,199 @@
+{
+  "paper_id": "10.1146_annurev-ecolsys-102320-112153",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 79.34,
+  "judge_result": {
+    "paper_id": "10.1146_annurev-ecolsys-102320-112153",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "For a fitness landscape with L=10 loci and two alleles per locus, resulting in 2^L=1,024 genotypes",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "1,000 simulations of random adaptive walks were performed",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "epistasis introduces the potential for parallel fitness evolution toward different adapted genotypes... increasing number of peaks in the landscape decreases the length of adaptive trajectories",
+            "page_idx": 3
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "under the assumption of a Gaussian fitness function (i.e., there is stabilizing selection for an optimum phenotype)",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mutations that are additive on the phenotypic level can be epistatic on the fitness level",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "strong epistasis can occur when the same mutation finds itself on nearby genetic backgrounds close to the phenotypic optimum",
+            "page_idx": 5
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "only 18 out of 120 possible evolutionary trajectories... were accessible... (Weinreich et al. 2006)",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Bank et al. (2016) studied the complete fitness landscape of 640 genotypes in S. cerevisiae",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "85% of substitutions depending on genetic background (Pokusaeva et al. 2019)",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.measurement_type",
+            "claim": "640 genotypes... measurement_type: ... colony size",
+            "reason": "Text links 'colony size' to Bank et al. (2015) with ~1,000 interactions, while 640 genotypes is linked to Bank et al. (2016) without explicit measure specification in the snippet."
+          }
+        ],
+        "fix_suggestion": "Specify 'competitive fitness' for Bank et al. (2016) 640 genotypes, or attribute 'colony size' to Bank et al. (2015)."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "dissected the epistatic evolutionary trajectory of the human influenza nucleoprotein (NP) between 1968 and 2007",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "strong positive epistasis for toxin tolerance... order at which substitutions could accumulate was found to be constrained by epistasis (Karageorgi et al. 2019)",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "references",
+            "quote": "Martin & Wainwright (2013) mapped the phenotype–fitness landscape of hybrids of three recently diverged pupfish ecotypes",
+            "page_idx": 11
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Hall et al. (2019) competed the 32 E. coli genotypes... across eight different environments",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "fitness landscapes differ significantly across environments... epistasis was shown to be both strong and environment specific",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "references",
+            "quote": "Li & Zhang (2018) also reported a widespread environment dependence of epistasis",
+            "page_idx": 13
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "How can the existing fitness landscape theory be applied... to cases of diploid/recombining/polymorphic/small populations that evolve in changing environments",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Das et al. (2021) found that a genotype can carry information about its ecological history",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "references",
+            "quote": "Gavrilets's (2004) holey fitness landscape model",
+            "page_idx": 15
+          }
+        ],
+        "issues": []
+      }
+    ],
+    "summary": {
+      "num_steps": 6,
+      "mean_score": 4.9,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "paper_id": "10.3390_biom12091290",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 85.11,
+  "judge_result": {
+    "paper_id": "10.3390_biom12091290",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "The first step of our method is to describe the EM map as a weighted graph $G(V,E)$ . The vertices $v\\in V$ are the grid points of the EM map, and the edges $e\\in E$ are the 26 direct neighbors in the grid. The weight $w_{i,j}$ ... is defined as the inverse of the product of the map density ... $w_{i,j}=(d_{i}\\times d_{j})^{\\bar{-}1}$ .",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "results in a grid of $80\\times74\\times76$ grid points with a spacing of $1.32\\mathring{\\mathrm{A}}$ .",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Step contains no citations in 'references' field",
+            "reason": "Dimension D score is 0 because no references are provided in the step JSON, although the facts are supported by the text."
+          }
+        ],
+        "fix_suggestion": "Add reference to the method description section (e.g., Section 2.1) or cite the paper itself if referring to the authors' own method."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "We use the Kruskal algorithm [20] to build this tree from a graph $G$ built on the EM density.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "20. Kruskal, J.B. On the shortest spanning subtree of a graph and the traveling salesman problem. Proc. Am. Math. Soc. 1956, 7, 48–50.",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "the tree is pruned by removing portions of the graph until the maximal degree of the graph, i.e., the maximal number of edges per vertex, is three. ... because $C\\alpha$ atoms are covalently bonded to three non-hydrogen atoms at most.",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Step contains no citations in 'references' field",
+            "reason": "Dimension D score is 0 because no references are provided in the step JSON."
+          }
+        ],
+        "fix_suggestion": "Add reference to Section 2.1 where the pruning rule is described."
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Starting from remaining vertices of degree three ... vertices coordinates are refined to get as many vertices separated by $3.8\\mathring\\mathrm{A}$ as possible—i.e., the average distance between two consecutive $C\\alpha$ carbons",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Step contains no citations in 'references' field",
+            "reason": "Dimension D score is 0 because no references are provided in the step JSON."
+          }
+        ],
+        "fix_suggestion": "Add reference to Section 2.1 where the refinement is described."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Figure 1. Fork pruning procedure. ... (c) The shortest path graph $(P2)$ is removed to solve the fork. However, a pruning threshold $(T_{p})$ is defined ... If the length of the path graph is lower than this threshold, the path graph is removed",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Step contains no citations in 'references' field",
+            "reason": "Dimension D score is 0 because no references are provided in the step JSON."
+          }
+        ],
+        "fix_suggestion": "Add reference to Figure 1 caption or Section 2.1."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "We used the Raptorx ContactMap server [25] to predict the contacts. ... used a cutoff of 0.5 ... ending up with 658, 343, and 563 predicted contacts for chains A, B, and C, respectively.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "25. Wang, S.; Sun, S.; Li, Z.; Zhang, R.; Xu, J. Accurate De Novo Prediction of Protein Contact Map by Ultra-Deep Learning Model. PLoS Comput. Biol. 2017, 13, e1005324.",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "This part of the procedure is based on the map_align algorithm developed by Ovchinnikov et al. [21]. ... use a distance cutoff of $8\\mathring{\\mathrm{A}}$ between $C\\alpha$ atoms. ... used a probability threshold of 0.5",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "21. Ovchinnikov, S.; ... Protein structure determination using metagenome sequence data. Science 2017, 355, 294–298.",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "we developed an algorithm that iteratively concatenates the fragments ... Dynamic programming allowed us to find the subset of fragments ... the algorithm found 18 fragments (Figure 2c) with an average accuracy of $1.2\\mathring\\mathrm{A}$",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Chains A, B, and C were detected automatically without any prior segmentation of the EM density map.",
+            "page_idx": 5
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "Step contains no citations in 'references' field",
+            "reason": "Dimension D score is 0 because no references are provided in the step JSON."
+          }
+        ],
+        "fix_suggestion": "Add reference to Section 2.2 or Figure 2 caption."
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "In the final step, we use Modeller [23] to obtain a full-atom model of the structure.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "23. Eswar, N.; ... Comparative protein structure modeling using Modeller. Curr. Protoc. Bioinform. 2006, 15, 5–6.",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 10,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "The obtained model is further refined in the EM map by using the real_space_refine tool [24] from the Phenix suite. ... secondary structures are optimized by using an optional feature in Phenix that annotates secondary structure based on $C\\alpha$ positions.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "24. Afonine, P.V.; ... New tool: Phenix real space refine. Comput. Crystallogr. Newsl. 2013, 4, 43–44.",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      }
+    ],
+    "summary": {
+      "num_steps": 10,
+      "mean_score": 4.75,
+      "median_score": 4.75,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

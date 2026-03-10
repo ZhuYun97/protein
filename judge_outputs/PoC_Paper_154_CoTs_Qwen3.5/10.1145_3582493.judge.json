@@ -1,0 +1,306 @@
+{
+  "paper_id": "10.1145_3582493",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 117.45,
+  "judge_result": {
+    "paper_id": "10.1145_3582493",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The results presented below were obtained with MUMPS version 5.4.0",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "We used the Metis [40] tool version 5.1.0... All experiments were done using 18 threads per MPI process... use 2 or 4 MPI processes",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Table 1 shows the matrices coming from the SuiteSparse Matrix Collection... and industrial applications... (ElectroPhys10M, DrivAer6M...)",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "references",
+            "quote": "[8] Patrick R. Amestoy... 2001. A fully asynchronous multifrontal solver... [20] Timothy A. Davis and Yifan Hu. 2011. The university of florida sparse matrix collection.",
+            "page_idx": 26
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "In all experiments, the working precision is set to double (u = d)... factorization precision (uf)... may vary... letters s, d, and Q to refer to single, double, and quadruple precision",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "LU-IR variants with single-precision factorization generally achieve the lowest execution times... lowest memory consumption... reduce the time and memory by up to 2x",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "observation",
+            "quote": "variants that achieve a forward error equivalent to that obtained with the double-precision direct solver DMUMPS (the ones using ur = d) and... order 10^-16... (the ones using ur = Q)",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "references",
+            "quote": "[18] Erin Carson and Nicholas J. Higham. 2018. Accelerating the solution of linear systems by iterative refinement in three precisions.",
+            "page_idx": 27
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "we set τg, the threshold used to stop GMRES, to 10^-6 in all the experiments",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "GMRES is used in fixed precision (ug = up)... focus on variants where up >= u",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "We have found GMRES-IR to usually be more expensive but also more robust, which allows it to converge on very ill-conditioned problems",
+            "page_idx": 25
+          },
+          {
+            "supports_field": "references",
+            "quote": "[17] Erin Carson and Nicholas J. Higham. 2017. A new analysis of iterative refinement... [3] Patrick Amestoy... 2021. Five Precision GMRES-based Iterative Refinement.",
+            "page_idx": 26
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "we specifically use the left-looking UFSC+LUA variant described in [7]",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "We choose to work with the default BLR settings of MUMPS, in which case the data in the active memory is not compressed",
+            "page_idx": 20
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The use of BLR with a good choice of compression threshold τb generally results in substantial reductions... largest τb value for which convergence is achieved depends on the matrix condition number",
+            "page_idx": 20
+          },
+          {
+            "supports_field": "references",
+            "quote": "[4] Patrick R. Amestoy... 2015. Improving multifrontal methods by means of block low-rank representations. [35] Nicholas J. Higham and Theo Mary. 2021. Solving block low-rank linear systems...",
+            "page_idx": 26
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "when a pivot is found to be too small with respect to a prescribed threshold τs‖A‖_∞, it is replaced with τs‖A‖_∞",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "static pivoting is often used in combination with appropriate graph matching and matrix scaling algorithms",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "static pivoting slightly accelerates the factorization without excessively deteriorating the convergence... there is an optimal value of τs, which is clearly problem dependent",
+            "page_idx": 22
+          },
+          {
+            "supports_field": "references",
+            "quote": "[42] Xiaoye S. Li and James W. Demmel. 1998. Making sparse gaussian elimination scalable by static pivoting. [25] Iain S. Duff and Stéphane Pralot. 2007. Towards stable mixed pivoting strategies...",
+            "page_idx": 27
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 4.7,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.2,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "for different values of the BLR compression threshold τb and a fixed value of the static pivoting perturbation τs",
+            "page_idx": 23
+          },
+          {
+            "supports_field": "observation",
+            "quote": "convergence conditions should be affected by the largest perturbations max(τs, τb) and the term ρn uf",
+            "page_idx": 23
+          },
+          {
+            "supports_field": "observation",
+            "quote": "reductions in execution time obtained by using static pivoting... are larger for the BLR factorization",
+            "page_idx": 23
+          },
+          {
+            "supports_field": "references",
+            "quote": "[7] Patrick R. Amestoy... 2019. Performance and scalability of the block low-rank multifrontal factorization on multicore architectures.",
+            "page_idx": 26
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.static_pivot_threshold",
+            "claim": "τs fixed at 10^-6",
+            "reason": "Text states 'fixed value' but does not explicitly specify 10^-6 in the paragraph; value inferred from Table 5 snippet."
+          }
+        ],
+        "fix_suggestion": "Specify that τs was fixed at a value (e.g., 10^-6 as per Table 5) rather than implying it is explicitly defined in the main text."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Theorem 4.1 applies with ε = τb... ε = τs... ε = τb + τs",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Our error analysis uses the ∞-norm",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "observation",
+            "quote": "instabilities introduced by element growth and numerical approximations combine additively, rather than multiplicatively (there is no ερn term)",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "references",
+            "quote": "[18] Erin Carson and Nicholas J. Higham. 2018... [3] Patrick Amestoy... 2021. Five Precision GMRES-based Iterative Refinement.",
+            "page_idx": 26
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "All the experiments were run on the Olympe supercomputer... 2 Intel Skylake 6140 processors",
+            "page_idx": 12
+          },
+          {
+            "supports_field": "observation",
+            "quote": "We obtain at best on lfm_aug5M a reduction of 5.6x in time and on thmgas a reduction of 4.4x in memory",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "observation",
+            "quote": "All variants are stopped when they reach a forward error on the solution equivalent to the one of DMUMPS",
+            "page_idx": 24
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step JSON",
+            "reason": "Step 8 JSON has empty references list."
+          }
+        ],
+        "fix_suggestion": "Add references to Section 5.5 or Table 6 in the paper (e.g., Amestoy et al., 2023, Section 5.5)."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 4.9,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

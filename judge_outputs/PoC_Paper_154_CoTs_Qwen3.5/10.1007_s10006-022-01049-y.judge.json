@@ -1,0 +1,141 @@
+{
+  "paper_id": "10.1007_s10006-022-01049-y",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 51.02,
+  "judge_result": {
+    "paper_id": "10.1007_s10006-022-01049-y",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "A systematic search was carried out using the PubMed, Science Direct, Scopus, Cochrane Library and EMBASE databases, based on records published until July 2020.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Of the 464 articles initially found by the two reviewers... 33 articles in PubMed, 42 in Scopus, 158 in Science Direct, no articles in Cochrane and 231 articles in EMBASE, totalling 464 articles.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "Step describes the paper's own methodology; no external citation provided in JSON references field, though content is verifiable in text."
+          }
+        ],
+        "fix_suggestion": "Add a self-reference to the paper's Methods section or leave empty if describing own process, but ensure consistency with scoring rubric."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "After reading the full texts, only 4 studies met the inclusion criteria, while 44 were excluded... The 4 selected articles were comprised of 2 retrospective cohorts [2, 8] and 2 case series [3, 9].",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Both reviewers extracted data from the selected studies independently... through the RYYAN ® program.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citations provided in JSON references field for the selection process."
+          }
+        ],
+        "fix_suggestion": "Include reference to the paper's Results section or the PRISMA flowchart description."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|references",
+            "quote": "The quality of the included studies was assessed using the Cochrane Handbook for Systematic Reviews of Interventions.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "references",
+            "quote": "7. Higgins J, Thomas J, editors. Cochrane handbook for systematic reviews of interventions [Internet]. Version 6,2019",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "92.4% of subnasal lip lift cases were performed in women with an age range between 21 and 65 years (mean of 36.6 years).",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Lee et al. [8] and Pan [9] reported that 92.1% and 96.1% of patients, respectively, were satisfied... Jung et al. [3] revealed that 100% of patients expressed satisfaction",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "maintaining results for varying periods of time (from 12 to 59.1 months).",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "references",
+            "quote": "2. Holden PK... 3. Jung JA... 8. Lee DE... 9. Pan BL",
+            "page_idx": 6
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 4,
+      "mean_score": 4.75,
+      "median_score": 4.75,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

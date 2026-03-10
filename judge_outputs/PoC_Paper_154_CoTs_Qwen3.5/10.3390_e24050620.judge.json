@@ -1,0 +1,222 @@
+{
+  "paper_id": "10.3390_e24050620",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 104.54,
+  "judge_result": {
+    "paper_id": "10.3390_e24050620",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The missing parts were repaired by Modeller software [36].",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "PDB ID: 7DF3, 7DK3, and 7DF4",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "All the ligands were removed, and the proteins were trimmed to the same length.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "36. Webb, B.; Sali, A. Comparative Protein Structure Modeling Using MODELLER.",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "targeted molecular simulation (TMD) [37] was conducted to construct the conformational pathways",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "harmonic restraints with a force constant of 100.0 kcal/mol/Å²",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "sample a series of intermediate conformations representing the transition process.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "37. Schlitter, J.; Engels, M.; Krüger, P. Targeted molecular dynamics...",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "the Monte Carlo Proton Transfer (MCPT) method is utilized.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "determine the ionization states of protein residues under given pH and temperature",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "the ionization states of the protein residues are obtained to evaluate the CG free energy.",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "32. Beroza, P.; Fredkin, D.R.; Okamura, M.Y.; Feher, G. Protonation of interacting residues...",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "All simulations were completed by Molaris-XG software [31].",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Scaling coefficients c1, c2, and c3 have values of 0.10, 0.25, and 0.15, respectively",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "the CG free energy was calculated to obtain the conformational free energy profiles.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "31. Lee, F.S.; Chu, Z.T.; Warshel, A. Microscopic and semimicroscopic calculations...",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The membrane was added by Molaris-XG software [31].",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "hydrophobic contributions are scaled down by a factor of ~3.6 and does not consider the polar contribution of sidechains",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "observation",
+            "quote": "membrane particles were added, and molecular dynamics relaxation was carried out to attain energy convergence.",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "16. Vorobyov, I.; Kim, I.; Chu, Z.T.; Warshel, A. Refining the treatment of membrane proteins...",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "including the opening of receptor binding domain (RBD) of spike protein, the phospholipid transportation of P4-ATPase, and the loop translocation of ACLY.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "a coupling pathway (pathway 1) and two cascade pathways (pathway 2, pathway 3) were constructed",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Both the energy change and energy barrier between endpoint structures provide reasonable mechanism explanations",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 6,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

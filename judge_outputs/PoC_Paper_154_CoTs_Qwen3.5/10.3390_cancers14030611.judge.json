@@ -1,0 +1,206 @@
+{
+  "paper_id": "10.3390_cancers14030611",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 86.48,
+  "judge_result": {
+    "paper_id": "10.3390_cancers14030611",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "A previous chemistry-based functional proteomic screen identified active ubiquitin-specific proteases (USP) in EBV-infected cells [9]. USP5/IsoT, USP7/HAUSP, USP9, and USP15i are higher expressed in EBV-transformed lymphoblastoid cell line (LCL) than in the Burkitt's lymphoma cell line Raji [9].",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "9. Ovaa, H., ... Proc. Natl. Acad. Sci. USA 2004, 101, 2253–2258.",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "Using affinity chromatography in vitro and tandem affinity purification (TAP)-tagging in vivo approaches, the EBV nuclear antigen 1 (EBNA1) was identified to be associated with several cellular proteins, such as USP7/HAUSP, CK2, PRMT5 [10].",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "10. Holowaty, M.N., ... J. Biol. Chem. 2003, 278, 29987–29994.",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "Using affinity chromatography in vitro and tandem affinity purification (TAP)-tagging in vivo approaches, the EBV nuclear antigen 1 (EBNA1) was identified to be associated with several cellular proteins, such as USP7/HAUSP, CK2, PRMT5 [10].",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "10. Holowaty, M.N., ... J. Biol. Chem. 2003, 278, 29987–29994.",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "A screen using co-immunoprecipitation coupled with mass spectrometry (IP-MS) showed that LMP1 can interact with 19 E3 ligases, including CHIP and TRAFD1 [55].",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "55. Xu, C., ... Front. Immunol. 2018, 9, 1446.",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "Bortezomib suppressed the growth of EBV-positive Burkitt's lymphoma in a murine xenograft model. Moreover, the tumor growth was almost completely halted after treatment with Bortezomib followed by the nucleoside analogue [131I]PHAU [103,104].",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "references",
+            "quote": "103. Fu, D.X., ... Clin. Cancer Res. 2007... 104. Fu, D.X., ... Nat. Med. 2008.",
+            "page_idx": 12
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.combination",
+            "claim": "combination: [131I]PHAU",
+            "reason": "Text specifies 'followed by' (sequential), while step parameter says 'combination' which can imply concurrent administration. Minor semantic deviation."
+          }
+        ],
+        "fix_suggestion": "Change parameter 'combination' to 'sequential treatment' or 'followed by' to match text."
+      },
+      {
+        "step_index": 6,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "A high throughput screening of small molecule compounds identified five tetrahydrocarboline derivatives that effectively reactivated the lytic cycle... Among these compounds, C60 consistently stimulated EBV lytic reactivation... [120].",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "references",
+            "quote": "120. Tikhmyanova, N., ... ACS Chem. Biol. 2014, 9, 785–795.",
+            "page_idx": 12
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "dry_experiment",
+            "reason": "Text describes screening for biological reactivation ('effectively reactivated the lytic cycle'), which implies wet laboratory assays (cell-based), not dry (computational) experiments. Classifying as 'dry_experiment' is factually inconsistent with the nature of the assay described."
+          }
+        ],
+        "fix_suggestion": "Change action from 'dry_experiment' to 'wet_experiment' or 'screening'."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "A following biochemical affinity purification assay showed that C60 can directly target the Cullin exchange factor CAND1 [121].",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "references",
+            "quote": "121. Tikhmyanova, N., ... PLoS Pathog. 2017, 13, e1006517.",
+            "page_idx": 12
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 7,
+      "mean_score": 4.8,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

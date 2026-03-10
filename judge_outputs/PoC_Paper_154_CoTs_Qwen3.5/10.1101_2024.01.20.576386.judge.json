@@ -1,0 +1,198 @@
+{
+  "paper_id": "10.1101_2024.01.20.576386",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 88.79,
+  "judge_result": {
+    "paper_id": "10.1101_2024.01.20.576386",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "AFM-RL was benchmarked on a dataset of 57 protein complexes with six to twenty (6-20) chains.",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "We evaluated AFM-RL on the same dataset as MoLPC. We selected complexes with 6 to 15 chains... We have 57 complexes in total.",
+            "page_idx": 17
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Text states dataset is same as MoLPC (Ref [23]), but step does not cite it. D score reduced."
+          }
+        ],
+        "fix_suggestion": "Add citation for MoLPC dataset source (Ref [23]) to references."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "AlphaFold-Multimer (AFM) was used to generate candidate decoys... provided A1B3... outputs 25 candidate pairs, which are then multiplied by 3... resulting in 75 candidates",
+            "page_idx": 18
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Overall, the average interacting pairwise coverage for the redundant pair... is 88.29%",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "references",
+            "quote": "21. Evans, R. et al. Protein complex prediction with AlphaFold-Multimer. bioRxiv (2021).",
+            "page_idx": 17
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "UCB policy... C is a hyper-parameter, which was set to 1.0... e-greedy... set e to 1.0... atom clash is recognized if two heavy atoms are closer than 3 Å... threshold (n-1) * 100",
+            "page_idx": 20
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "full reward of 100 points... reward of 10 points is provided if the model does not pass the metropolis criterion... penalty reward of -2... kbT, which was set to 6.0... decays from 1.0 to 1.0 * 0.85^(episode/1000)... discount rate... set to 0.25",
+            "page_idx": 22
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Typically, 1500 to 12,000 models are generated for a target complex.",
+            "page_idx": 24
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.reward_accepted",
+            "claim": "reward_accepted: 10 points",
+            "reason": "Text specifies 10 points for models that 'do not pass the metropolis criterion' but are geometrically possible, whereas 'accepted' usually implies passing Metropolis. Value is correct, terminology slightly imprecise."
+          }
+        ],
+        "fix_suggestion": "Clarify that 10 points reward applies to geometrically valid models that fail the Metropolis criterion."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "They are clustered by LB3DClust 27",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "references",
+            "quote": "27. Terashi, G. et al. LB3D: A Protein Three-Dimensional Substructure Search Program... (2012).",
+            "page_idx": 17
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "ranked by the sum of score ranks by the scoring function mentioned above and the VoroMQA score 28. For each cluster, the best scoring model was selected as the representative.",
+            "page_idx": 24
+          },
+          {
+            "supports_field": "references",
+            "quote": "28. Olechnovič, K. & Venclovas, Č. VoroMQA: Assessment of protein structure quality... (2017).",
+            "page_idx": 17
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Partial RMSD, on the other hand, is using MMAlign to calculate the RMSD and TM-score.",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The average root mean square deviation (RMSD) and TM-SCORE of the best-assembled model across all targets are 10.09 Å and 0.81, respectively.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Text mentions MMAlign but does not provide a specific citation number in the snippet. D score reduced."
+          }
+        ],
+        "fix_suggestion": "If MMAlign has a specific citation in the full paper, add it. Otherwise, no change needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 6,
+      "mean_score": 4.8,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

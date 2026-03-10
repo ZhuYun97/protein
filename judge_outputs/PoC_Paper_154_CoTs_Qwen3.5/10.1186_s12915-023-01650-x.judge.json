@@ -1,0 +1,615 @@
+{
+  "paper_id": "10.1186_s12915-023-01650-x",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 147.76,
+  "judge_result": {
+    "paper_id": "10.1186_s12915-023-01650-x",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "Among the 95,327 predicted coding sequences, 8383 proteins were identified with a signal peptide sequence using SignalP 5.0 [53].",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "SignalP software (version 5.0; d-Score cutoff set to 0.500)",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "references",
+            "quote": "53. Almagro Armenteros JJ... SignalP 5.0 improves signal peptide predictions... Nat Biotechnol. 2019",
+            "page_idx": 20
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "An overlapping 3879 proteins had characteristics of extracellular localization as predicted with the plant model in WolfPsort [54].",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "54. Horton P... WoLF PSORT: protein localization predictor. Nucleic Acids Res. 2007",
+            "page_idx": 20
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "74,991 and 76,025 proteins were identified without transmembrane (TM) motifs by TMHMM 2.0 and Phobius [55, 56]",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "55. Möller S... Evaluation of methods for the prediction of membrane spanning regions. Bioinformatics. 2011",
+            "page_idx": 20
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "74,991 and 76,025 proteins were identified without transmembrane (TM) motifs by TMHMM 2.0 and Phobius [55, 56]",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "56. Käll L... Advantages of combined transmembrane topology and signal peptide prediction–the Phobius web server. Nucleic Acids Res. 2007",
+            "page_idx": 20
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation|parameters",
+            "quote": "Combining these data, 2085 genes (2.19%) were predicted to encode secreted proteins that have a signal peptide, lack a transmembrane domain, and were predicted as extracellular",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "ortholog groups among the encoded proteins of the ZZM genome were clustered using two strategies in OrthoMCL [91]... inflation value (2I) of 1.5",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "references",
+            "quote": "91. Li L... OrthoMCL: identification of ortholog groups for eukaryotic genomes. Genome Res. 2003",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Pairwise sequence similarities... (parameters: E-values <1e-25; match length and identities were both 30%, 50%, and 70%)",
+            "page_idx": 16
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 8,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The synteny of orthologs among chromosomes were drawn by the Circos program using their physical position on chromosomes [93].",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "references",
+            "quote": "93. Krzywinski M... Circos: an information aesthetic for comparative genomics. Genome Res. 2009",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 9,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "Prediction of the conserved domains revealed that 1495 genes have 443 conserved domains/motifs (IPR accessions)... InterProScan (incorporated InterPro, GO, and KEGG pathway annotation) [98]",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "references",
+            "quote": "98. Jones P... InterProScan 5: genome-scale protein function classification. Bioinformatics. 2014",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 10,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "The DEGs were analyzed using Gene Ontology (GO) analysis in the GO-seq package... Significant GO catalogs... selected by the Pearson chi-square test (P<0.05)",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "observation",
+            "quote": "high ratio of secreted protein enriched in carbohydrate binding, peroxidase activity, and response to stress",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|observation",
+            "quote": "KEGG Orthologous (KO)-Based Annotation System (KOBAS) was employed... KEGG network analysis showed that only 613 genes were matched to 63 pathway accessions",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "references",
+            "quote": "99. Kanehisa M, Goto S. KEGG: Kyoto Encyclopedia of Genes and Genomes. Nucleic Acids Res. 2000",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "Strand-specific sequencing was performed on an Illumina HiSeq 2000 platform, which generated 150 bp paired-end reads... A total of 12 samples were selected... with three biological replicates",
+            "page_idx": 16
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 13,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "mapped onto the reference genome... by Tophat2 (v2.0.9) [94]",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "references",
+            "quote": "94. Kim D... TopHat2: accurate alignment of transcriptomes... Genome Biol. 2013",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "and Bowtie 2 (v2.2.9) [95]",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "references",
+            "quote": "95. Langmead B, Salzberg SL. Fast gapped-read alignment with bowtie 2. Nat Methods. 2012",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 15,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Cuffdiff (v2.1.1) was used to calculate the FPKM of genes in each sample [96]",
+            "page_idx": 16
+          },
+          {
+            "supports_field": "references",
+            "quote": "96. Trapnell C... Transcript assembly and quantification by RNA-Seq... Nat Biotechnol. 2010",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 16,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "627 members of the predicted encoded secretome were differentially expressed (DEGs, |log2FoldChange|>=1.0 and adjusted P<0.05)",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 17,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "cloned separately into the PVX vector pGR107 with the ClonExpress II one-step cloning kit... arrived at 213 representative secretome members",
+            "page_idx": 17
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 18,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "A. tumefaciens strain GV3101... resuspended to an optical density at 600 nm (OD600) of 0.8... performed using 4-week-old N. benthamiana plant leaves",
+            "page_idx": 17
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 19,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "RT-qPCR analyses were conducted using the SYBR Premix Ex Taq kit (Takara) on a QuantStudio 6 Flex Real-Time PCR System... NbEF-1α gene was used as an internal control... 2^-ΔΔCt method",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "observation",
+            "quote": "28 randomly selected members... immunity marker gene NbHIN1, the salicylic acid marker gene NbPR1, and the jasmonic acid marker gene NbLOX4",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "101. Livak KJ, Schmittgen TD. Analysis of relative gene expression data... Methods. 2001",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 20,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "approximately 500-bp fragments... integrated into the pTRV2 vector... combined with strains harboring the pTRV1 vector in a 1:1 ratio... 2-week-old G. hirsutum cv. Zhongzhimian No.2 seedling... CLA1 as a control",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "observation",
+            "quote": "selected 13 secretome members",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "102. Gao XQ... Agrobacterium-mediated virus-induced gene silencing assay in cotton. J Vis Exp. 2011",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 21,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "inoculated with 5.0 mL of V. dahliae Vd991 conidial suspension (5x10^6 conidia/mL) using the root-dip method... Approximately 14 days following co-infiltration",
+            "page_idx": 17
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step",
+            "reason": "Step lacks citations despite claims being supported by paper text"
+          }
+        ]
+      },
+      {
+        "step_index": 22,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "disease severity scores... divided into five grades: 0=healthy... 4=whole plant dead... 3 weeks after inoculation... 12 plants were used in three replicates... paired Student's t-tests with P<=0.05",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "observation",
+            "quote": "11 of the secretome gene silenced plants exhibited symptoms... conversely of GhSec011 and GhSec039 silenced plant displayed higher resistance",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "references",
+            "quote": "103. Fan R... Vayg1 is required for microdeterotium formation... Fungal Genet Biol. 2017",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 23,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters",
+            "quote": "lignin histochemistry was examined using the Wiesner reagent [104]... phloroglucinol solution (2% in 95% ethanol) for 10 min, and treated with 18% HCl for 5 min... Leica fluorescence microscope (DM2500...)",
+            "page_idx": 17
+          },
+          {
+            "supports_field": "observation",
+            "quote": "higher lignification in the xylem vessels and interfacicular fibers in the resistant cultivar ZZM2 than in the susceptible cultivar Junmian No.1",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "references",
+            "quote": "104. Pomar F... O-4-Linked coniferyl and sinapyl aldehydes in lignifying cell walls... Protoplasma. 2002",
+            "page_idx": 21
+          }
+        ],
+        "issues": []
+      }
+    ],
+    "summary": {
+      "num_steps": 23,
+      "mean_score": 4.8,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "paper_id": "10.3390_math10091511",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 124.63,
+  "judge_result": {
+    "paper_id": "10.3390_math10091511",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool|parameters|observation",
+            "quote": "Set c=0 initially. Then, the value of c will be increased by 1, if f(x_km) < f(x_km-1) and f(x_km) < f(x_km+1)... Normalizing c by dividing the population size... phi = c / N",
+            "page_idx": 6
+          },
+          {
+            "supports_field": "references",
+            "quote": "Shen et al. [14] introduced a simple approach to count the number of optima in the landscape",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "N^init = 25 log(D) sqrt(D)... N^min = 4... FES_t = 1/2 * FES_max is the default setting... Equation (16)",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "No references provided in step",
+            "reason": "Step does not cite LSHADE [29] which is mentioned in text for LPSR part of FL-APS."
+          }
+        ],
+        "fix_suggestion": "Add reference to LSHADE [29] for the linear reduction component."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The ratio of top superior individuals in archive chest is set to pc = 0.3",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "tool|observation",
+            "quote": "DE/current-to-pcbest/1 strategy is proposed... x_cbest^p is randomly chosen as one of the top 100p% individuals in archive cbest",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters.pc",
+            "claim": "pc = 0.3",
+            "reason": "Paper has internal inconsistency: p9 states pc = 0.03, while p13 (experimental settings) states pc = 0.3. Step aligns with p13."
+          }
+        ],
+        "fix_suggestion": "Clarify that pc=0.3 is the experimental setting despite p9 description."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Set the other parameters to be the same as in LSHADE: H = 6, set all values in M_CR, M_F to 0.5... FES_max = 10,000 x D",
+            "page_idx": 9
+          },
+          {
+            "supports_field": "references",
+            "quote": "FL-ADE is applied the same correction dismiss strategy for dealing with infeasible solutions performed in LSHADE [29]",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "experiments are conducted on f1-f30 benchmarks of CEC2014 on 10-D... 51 runs were conducted... FES_max = 10,000 x D... Table 3",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 6,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "30D optimization... detailed comparison results are shown in Table 4",
+            "page_idx": 17
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "50D optimization... detailed comparison results are shown in Table 5",
+            "page_idx": 20
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "seven high-performing state-of-art DE variants... EPSDE... MPEDE... CoBiDE... SHADE... LSHADE... LSHADE_cnEpSin... PaDE",
+            "page_idx": 11
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 9,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "Wilcoxon rank-sum test is employed... significance level alpha = 0.05... FL-ADE algorithm achieves 26 better or similar results out of 30 benchmarks",
+            "page_idx": 13
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 10,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "FL-ADE with FL-APS obtains 26 better or similar performances in comparison with FL-ADE_linear on 10D, 26... on 30D, and 23... on 50D",
+            "page_idx": 24
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "valid_flag",
+            "claim": "Input JSON marks step as valid: false",
+            "reason": "Text fully supports the observation claims. The input valid flag contradicts the paper evidence."
+          }
+        ],
+        "fix_suggestion": "Update input valid flag to true based on paper evidence."
+      },
+      {
+        "step_index": 11,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "DE/best/1, DE/best/2, DE/rant-to-best/1, DE/current-to-best/1 and DE/current-to-pbest/1 are employed... CR = 0.9, scaling factor F = 0.5, and the population N = 100... DE/current-to-pcbest/1 gets the first ranking",
+            "page_idx": 24
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "valid_flag",
+            "claim": "Input JSON marks step as valid: false",
+            "reason": "Text fully supports the observation claims."
+          }
+        ],
+        "fix_suggestion": "Update input valid flag to true."
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "FL-ADE with five different N_init... and three FES_t... conducted on the 30D benchmark functions... N=25log(D)sqrt(D) and FES_t=(1/2)*FES_max achieve a better average ranking",
+            "page_idx": 28
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "valid_flag",
+            "claim": "Input JSON marks step as valid: false",
+            "reason": "Text fully supports the observation claims."
+          }
+        ],
+        "fix_suggestion": "Update input valid flag to true."
+      },
+      {
+        "step_index": 13,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "pc=0.3 saw the best average ranking",
+            "page_idx": 29
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "FL-ADE configured with three different pc was conducted",
+            "page_idx": 28
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters.pc_values",
+            "claim": "three different pc",
+            "reason": "Text paragraph says 'three different pc', but Table 9 shows 5 values (0.1, 0.2, 0.3, 0.4, 0.5). Internal paper inconsistency."
+          },
+          {
+            "type": "unsupported",
+            "field": "valid_flag",
+            "claim": "Input JSON marks step as valid: false",
+            "reason": "Text supports the observation."
+          }
+        ],
+        "fix_suggestion": "Clarify parameter count to match Table 9 (5 values) instead of text description (3 values)."
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters|observation",
+            "quote": "MATLAB R2018b... Intel Core i7-9700... 8 GB of RAM... Windows 10... T0 is the computing time to run the code in Algorithm 4 [49]... FL-ADE inherits the linear complexity",
+            "page_idx": 29
+          },
+          {
+            "supports_field": "references",
+            "quote": "Algorithm 4 [49]",
+            "page_idx": 29
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 14,
+      "mean_score": 4.6,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

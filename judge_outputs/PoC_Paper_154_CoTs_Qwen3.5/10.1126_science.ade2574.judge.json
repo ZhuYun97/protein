@@ -1,0 +1,217 @@
+{
+  "paper_id": "10.1126_science.ade2574",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 78.1,
+  "judge_result": {
+    "paper_id": "10.1126_science.ade2574",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "We trained a family of transformer protein language models, ESM-2, at scales from 8 million parameters up to 15 billion parameters.",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Comparisons are performed at 270,000 training steps for all models in this section.",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The 15 billion parameter model reaches a TM-score of 0.72 on the CAMEO test set and 0.55 on the CASP14 test set",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "We developed ESMFold, a fully end-to-end single-sequence structure predictor, by training a folding head for ESM-2",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "We train the folding head on ~25,000 clusters covering a total of ~325,000 experimentally determined structures from the PDB",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "ESMFold achieves an average TM-score of 0.83 on CAMEO and 0.68 on CASP14.",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The CAMEO test set consists of 194 structures... the CASP14 test set consists of 51 publicly released structures",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "ESMFold achieves an average TM-score of 0.83 on CAMEO and 0.68 on CASP14.",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "On the CAMEO test set, language model perplexity has a Pearson correlation of -0.52 with the TMscore... on CASP14, the correlation is -0.71",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "folds practically all sequences in MGnify90 (32), >617 million proteins.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "sequences of length 20 to 1024 and covers 99% of all the sequences in MGnify90.",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "complete this characterization in 2 weeks on a heterogeneous cluster of 2000 graphics processing units (GPUs)",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "We use Foldseek (53) to compare the predicted structures with known structures in the PDB.",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "At thresholds of 0.7 and 0.5 TM-score, Foldseek reports 25.4% (253,905 proteins) and 12.6% (125,765 proteins) without a match",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "76.8% (767,580) of the proteins have a sequence identity below 90% to any sequence in UniRef90",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "For 3.4% (33,521 proteins), no match is found in UniRef90 at all",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "tool",
+            "quote": "according to a blastp (60) search.",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "On a random subset of ~4000 metagenomic sequences, there is a high correlation (Pearson r=0.79) between ESMFold pLDDT and the LDDT to AlphaFold2 predictions",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "When confidence is very high (pLDDT >0.9), predictions have median all-atom RMSD95 of 1.42 Å",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      }
+    ],
+    "summary": {
+      "num_steps": 7,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

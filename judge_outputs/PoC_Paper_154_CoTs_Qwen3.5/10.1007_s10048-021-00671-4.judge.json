@@ -1,0 +1,189 @@
+{
+  "paper_id": "10.1007_s10048-021-00671-4",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 89.93,
+  "judge_result": {
+    "paper_id": "10.1007_s10048-021-00671-4",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "we screened 28 ALS patients (21 FALS index patients and seven affected relatives) with a known FUS mutation",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "A prior screening for C9ORF72 had been unsuspicious in these patients",
+            "page_idx": 1
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 2,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Whole-exome sequencing, read mapping, and variant calling were performed on HiSeq2000/2500 systems (Illumina)",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "references",
+            "quote": "as described previously [11]",
+            "page_idx": 5
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references.citation",
+            "claim": "Brenner et al., 2015 (reference 11)",
+            "reason": "Reference 11 in the paper is 'Freischmidt A... (2015)', not 'Brenner et al.'. Author name in citation is incorrect though ID [11] is locatable."
+          }
+        ],
+        "fix_suggestion": "Correct the citation author to 'Freischmidt et al., 2015' to match Reference 11 in the paper."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "we found two additional familial ALS patients with FUS/TBK1 double mutations... In addition, we found FUS mutations to co-occur with missense variants in ANXA11... and SETX",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty",
+            "reason": "Step JSON contains no references, though the fact is supported by text on page 1."
+          }
+        ],
+        "fix_suggestion": "Add reference to the main paper (Brenner et al., 2021) or the specific results section to improve traceability."
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "We performed Sanger sequencing... and identified two additional FUS/TBK1 double-mutant ALS patients. This resulted in a group of four... patients A II.4, B II.3, B II.5, and B III.2",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty",
+            "reason": "Step JSON contains no references, though the fact is supported by text on page 2."
+          }
+        ],
+        "fix_suggestion": "Add reference to the main paper (Brenner et al., 2021) or the specific results section to improve traceability."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "mean age at onset of ALS of 42±3.5 (SD) vs. 39.97±16.2 years (p=0.8) and a mean disease duration... of 57.8±53.3 vs. 41.9±43.6 months (p=0.48)",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "Compared to an international cohort of 188 FUS-ALS patients [14]",
+            "page_idx": 2
+          }
+        ],
+        "issues": []
+      },
+      {
+        "step_index": 6,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "unpaired two-tailed Student's t test was used... Data are presented as means ± SEM in bar graphs",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "p=0.8... p=0.48",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters.data_presentation",
+            "claim": "means ± SEM",
+            "reason": "While Statistics section [p5] says SEM, the specific Results text [p2] for this comparison explicitly labels the values as SD ('42±3.5 (SD)')."
+          },
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty",
+            "reason": "Step JSON contains no references, though the fact is supported by text on page 5."
+          }
+        ],
+        "fix_suggestion": "Clarify that general graphs use SEM but specific text values were reported as SD, or align parameter with the specific result description (SD)."
+      }
+    ],
+    "summary": {
+      "num_steps": 6,
+      "mean_score": 4.6,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

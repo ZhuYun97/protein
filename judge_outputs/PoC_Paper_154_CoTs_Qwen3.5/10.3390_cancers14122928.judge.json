@@ -1,0 +1,268 @@
+{
+  "paper_id": "10.3390_cancers14122928",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 190.39,
+  "judge_result": {
+    "paper_id": "10.3390_cancers14122928",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "high expression of TS is a crucial determinant of CRC resistance to 5-FU... high expression of DPD mRNA can confer resistance to 5-FU... lower expression of these metabolic enzymes [OPRT, UMPS, UMPK] is associated with 5-FU resistance",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "references",
+            "quote": "[4,9,10]",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "action: wet_experiment",
+            "reason": "The paper is a review article ('This article reviews the findings'), not a primary study performing wet experiments."
+          },
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Salonga et al., 2000; Soong et al., 2008",
+            "reason": "Author names and years are not present in the provided text, only reference numbers [9,10]."
+          }
+        ],
+        "fix_suggestion": "Change action to 'literature_review' and remove specific author names from references if not in text."
+      },
+      {
+        "step_index": 2,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "cryptotanshinone... can reverse the sensitivity to doxorubicin and irinotecan by downregulating the expression of P-gp mRNA and protein in CRC cell lines [12]",
+            "page_idx": 8
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "action: wet_experiment",
+            "reason": "The paper is a review article."
+          },
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Hu et al., 2014",
+            "reason": "Author names not in provided text."
+          }
+        ],
+        "fix_suggestion": "Change action to 'literature_review'."
+      },
+      {
+        "step_index": 3,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "MM-151 is a drug consisting of three anti-EGFR mAbs... CRC with resistance... is sensitive to EGFR blockade by MM-151 [19]. A Phase I clinical trial reported that MM-151 has an acceptable tolerability profile... [64]",
+            "page_idx": 9
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "action: wet_experiment",
+            "reason": "The paper is a review article."
+          }
+        ],
+        "fix_suggestion": "Change action to 'literature_review'."
+      },
+      {
+        "step_index": 4,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 1.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "encorafenib plus cetuximab improved OS, ORR and progression-free survival in 444 patients with previously treated BRAF V600E-mutant mCRC... [162]",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "references",
+            "quote": "162. Tabernero, J... J. Clin. Oncol. 2021",
+            "page_idx": 23
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "action: wet_experiment",
+            "reason": "The paper is a review article."
+          }
+        ],
+        "fix_suggestion": "Change action to 'literature_review'."
+      },
+      {
+        "step_index": 5,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "pharmacological inhibition of NOX4 restores the immunotherapeutic response of CAF-rich tumors [306]",
+            "page_idx": 19
+          },
+          {
+            "supports_field": "references",
+            "quote": "306. Ford, K... Cancer Res. 2020",
+            "page_idx": 26
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "action: wet_experiment",
+            "reason": "The paper is a review article."
+          },
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Hanley et al., 2018 [53]",
+            "reason": "Reference [53] details not in provided text (list starts at 158)."
+          }
+        ],
+        "fix_suggestion": "Change action to 'literature_review'."
+      },
+      {
+        "step_index": 6,
+        "score": 0.0,
+        "label": "unsupported_or_contradicted",
+        "dimension_scores": {
+          "A_core_fact": 0.0,
+          "B_parameters": 0.0,
+          "C_observation": 0.0,
+          "D_references": 0.0
+        },
+        "evidence": [],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters|observation",
+            "claim": "Atezolizumab plus Bevacizumab... disease control rate was 90%",
+            "reason": "Text mentions 'atezolizumab plus cobimetinib' [p15], not Bevacizumab. No 90% DCR stat for this combo in text."
+          },
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "[84], [85]",
+            "reason": "References [84], [85] are not in the provided text body or reference list (list starts at 158, body uses [82], [83] for Atezolizumab)."
+          }
+        ],
+        "fix_suggestion": "Correct drug combination to 'Atezolizumab plus Cobimetinib' and update stats based on [82], [83] in text."
+      },
+      {
+        "step_index": 7,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "autophagy inhibitors, such as chloroquine/3-methyladenine, can reverse CRC resistance by inhibiting 5-FU-induced activation of autophagy [43,44]... enhance the sensitivity of CRC cells to cetuximab-induced cell death [45,46]",
+            "page_idx": 17
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "action: wet_experiment",
+            "reason": "The paper is a review article."
+          }
+        ],
+        "fix_suggestion": "Change action to 'literature_review'."
+      },
+      {
+        "step_index": 8,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 1.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "in a Phase II clinical study, Sym004 effectively targeted cancer cells with EGFR ECD mutations, but did not improve the OS of mCRC [63]",
+            "page_idx": 9
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "action",
+            "claim": "action: wet_experiment",
+            "reason": "The paper is a review article."
+          }
+        ],
+        "fix_suggestion": "Change action to 'literature_review'."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 3.5,
+      "median_score": 4.0,
+      "critical_steps_below_2.5": [
+        6
+      ],
+      "hallucination_risk": "medium"
+    }
+  }
+}

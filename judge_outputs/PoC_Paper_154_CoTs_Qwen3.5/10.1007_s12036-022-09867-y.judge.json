@@ -1,0 +1,205 @@
+{
+  "paper_id": "10.1007_s12036-022-09867-y",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 92.07,
+  "judge_result": {
+    "paper_id": "10.1007_s12036-022-09867-y",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Stress mirror polishing, a novel technology is used to polish these aspherical M1 segments.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "optical surface figure errors relative to the theoretical surface is < 1.73 μm peak-to-valley (P–V)",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "The glass blanks from Ohara, Japan, are stored for polishing at ITOFF",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "citation: Skidmore et al. 2015",
+            "reason": "Text links Skidmore to science case requirements generally, but not explicitly to the 1.73 μm polishing spec."
+          }
+        ],
+        "fix_suggestion": "Clarify that Skidmore provides high-level requirements, while technical specs are from project documentation."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The polished roundels are hex-cut into hexagons ~1.44 m as measured across corners.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "six-fold symmetry each of 82 unique segment types",
+            "page_idx": 0
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No references provided in step, though text supports the claims."
+          }
+        ],
+        "fix_suggestion": "Add relevant citations if available in text (e.g., Reddy 2013 for fabrication context)."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "After hex-cutting, the segments go through ion beam figuring (IBF).",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "surface roughness of both front and back surfaces need to be 20 Å RMS",
+            "page_idx": 0
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references: []",
+            "reason": "No references provided in step."
+          }
+        ],
+        "fix_suggestion": "Add relevant citations if available in text."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Each of the mirror segment is supported by a SSA that will hold the segment in position with minimal gravity distortion.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "references",
+            "quote": "fabrication of SSA and the M1CS... carried out by the ITCC, through Indian Industrial contracts (Reddy 2013)",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The primary mirror control system (M1CS) maintains the overall shape of the segmented primary mirror",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "M1CS contains 1476 actuators and 2772 sensors",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "references",
+            "quote": "(Reddy 2013)",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "None."
+      },
+      {
+        "step_index": 6,
+        "score": 4.8,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.3
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The final surface figure error, which is < 2 nm after IBF and SSA corrections need to be achieved.",
+            "page_idx": 0
+          },
+          {
+            "supports_field": "observation",
+            "quote": "India TMT Co-ordinating Center (ITCC) has already successfully completed polishing a segment at the training site in USA.",
+            "page_idx": 0
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "references",
+            "claim": "citation: Skidmore et al. 2015",
+            "reason": "Text links Skidmore to science cases, not specifically to the 2 nm error spec or ITCC completion status."
+          }
+        ],
+        "fix_suggestion": "Use Reddy 2013 for fabrication/technical specs or remove citation if not directly linked in text."
+      }
+    ],
+    "summary": {
+      "num_steps": 6,
+      "mean_score": 4.77,
+      "median_score": 4.8,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "paper_id": "10.1007_s10930-023-10148-y",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 118.81,
+  "judge_result": {
+    "paper_id": "10.1007_s10930-023-10148-y",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The amino acid sequences of AAIs (NCBI ID: XP_021744610.1, accession number: MT627440) and a predicted AAI from Beta vulgaris (BvAI) (GenBank accession No. XP_010672947.1) were retrieved from the NCBI database.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step, though action is supported by text."
+          }
+        ],
+        "fix_suggestion": "Add relevant citation or note that NCBI is a standard database without specific paper citation."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Multiple sequence alignment of BvAI was done with reported AAIs using the Clustal omega tool [18]",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "phylogenetic analysis was performed by MEGA-X software [19]. As an outgroup, Actin from Dictyostelium discoidum (UniProtKB ID: P07830) was used.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The EsPript3 server was used to illustrate secondary structural features [20].",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Amplicons were cloned in expression vector pET28a (Novagen, Madison, WI, USA), consisting of N-terminal 6X His-tag.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable or leave empty if standard protocol."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "transformed into SHuffle T7 cells... induced with 1 mM Isopropylβ-d-1-thiogalactopyranoside (IPTG). The induced culture was incubated at 16 °C, 180 rpm for 14 h.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 7,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "binding to previously equilibrated Ni–NTA resin... washed with an increasing concentration of imidazole (10 mM, 25 mM, and 50 mM)... Protein was eluted with a buffer containing 250 mM imidazole.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable."
+      },
+      {
+        "step_index": 8,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "Molecular weight of AsAI_P and CqAI_P proteins was 9694 Da (m/z) and 11761 Da (m/z)",
+            "page_idx": 4
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable."
+      },
+      {
+        "step_index": 9,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "All inhibitory assays were carried out using DNSA assay as described earlier [1].",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference [1] or [22] as per text."
+      },
+      {
+        "step_index": 10,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The library of protein chimeras was made by exchanging propeptides of AhAI, AhAI2, AsAI, CqAI, and BvAI with mature peptides of AhAI2, CqAI, BvAI, and AsAI",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable."
+      },
+      {
+        "step_index": 11,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Three-dimensional structural models of precursor and chimeric AAIs were predicted using the I-TASSER server [24].",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 12,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "SWISS-MODEL [25] was used to model TcAmy, CcAmy [using TMA crystal structure (PDB ID: 1CLV, chain A) as a template] and BvAI_M [using AhAI (PDB ID: 1CLV, chain I) as a template].",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters.template",
+            "claim": "template: TMA crystal structure (PDB ID: 1CLV, chain A) for targets TcAmy, CcAmy, BvAI_M",
+            "reason": "Text states BvAI_M used AhAI (1CLV, chain I) as template, not TMA (1CLV, chain A)."
+          }
+        ],
+        "fix_suggestion": "Specify distinct templates for BvAI_M (AhAI 1CLV chain I) vs TcAmy/CcAmy (TMA 1CLV chain A)."
+      },
+      {
+        "step_index": 13,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The inhibitor binding with target amylases was predicted using the Z-dock server [26].",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference [26]."
+      },
+      {
+        "step_index": 14,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The energy of docked complexes was minimized using UCSF chimera 1.10.2 software [27].",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 15,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "The interaction energy was calculated using the PDBe-PISA server [1].",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "references",
+            "claim": "citation: Pires DEV, et al. (2014)... [28]",
+            "reason": "Reference [28] in text is for DUET server. PDBe-PISA is cited as [1] in section 2.7 or [30, 31] in 2.9."
+          }
+        ],
+        "fix_suggestion": "Update reference to [1] or [30, 31] for PDBe-PISA."
+      },
+      {
+        "step_index": 16,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "crisscross constructs AsCqAI and CqBvAI were made by overlap extension PCR using overhang primers... extended by five PCR cycles.",
+            "page_idx": 1
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable."
+      },
+      {
+        "step_index": 17,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "IC50 value was reduced from 41.06 to 13.51 μM... CqBvAI is 7.6 and 4.26 times more potent",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable."
+      },
+      {
+        "step_index": 18,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Each of the 32 amino acids was individually mutated... by DUET server [28]. Mutants with positive free energy (ddG) ≥ 0.5 kcal/mol were selected",
+            "page_idx": 2
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 19,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Selected mutants... were docked with TMA, TcAmy and HPA by the Z-DOCK server [26].",
+            "page_idx": 2
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference [26]."
+      },
+      {
+        "step_index": 20,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "GROMACS(version 2020.1) performed a 10 ns production run... equilibrated for 1250 ps at 303.15 K using Nosé–Hoover thermostat.",
+            "page_idx": 3
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": ""
+      },
+      {
+        "step_index": 21,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Site-directed mutagenesis of AhAl was performed using Quikchange Lightning site-directed mutagenesis kit... digested by DpnI at 37 °C for 5 min",
+            "page_idx": 3
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable."
+      },
+      {
+        "step_index": 22,
+        "score": 4.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "IC50 values of AhAI_M, AhAI_N6M, and AhAI_N6A are 5.012 μM, 1.358 μM, and 16.75 μM, respectively... AhAI_N6M is around three times more potent",
+            "page_idx": 11
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references array is empty",
+            "reason": "No citation provided in JSON step."
+          }
+        ],
+        "fix_suggestion": "Add reference if applicable."
+      }
+    ],
+    "summary": {
+      "num_steps": 22,
+      "mean_score": 4.68,
+      "median_score": 4.5,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

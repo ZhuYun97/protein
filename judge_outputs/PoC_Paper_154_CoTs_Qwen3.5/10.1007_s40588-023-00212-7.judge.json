@@ -1,0 +1,197 @@
+{
+  "paper_id": "10.1007_s40588-023-00212-7",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 106.91,
+  "judge_result": {
+    "paper_id": "10.1007_s40588-023-00212-7",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Most antibodies against SARS-CoV-2 targeted a spike (S) protein to block the viral attachment or entry into host cells... NTD and RBD were reported as therapeutic antibody targets",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Therapeutic conventional (full-length) antibodies against spike protein constitute a significant group of FDA-approved SARS-CoV-2 antibodies",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "32. Westendorf K... LY-CoV1404 (bebtelovimab) potently neutralizes SARS-CoV-2 variants. Cell Rep. 2022",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Amino acid substitutions at positions S477N, T478K, F486V, and E484A decrease the activity... RBM is a mutation hotspot... non-RBM part of the RBD is conserved",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Bebtelovimab... binds to conserved RBD epitopes, demonstrated cross-variant protection... Anti-RBD spike antibody S2H97... demonstrated broad neutralization",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "references",
+            "quote": "38. Starr TN... SARS-CoV-2 RBD antibodies that maximize breadth and resistance to escape. Nature. 2021",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Mutations at these positions, such as LALA-PG (L234A/L235A/P329G) or TM (L234F/L235E/P331S)... YTE (M252Y/S254T/T256E)... to increase serum half-life",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Mutations... decreased the binding affinity of IgG1 to the Fc receptor and C1q molecule... and diminished the Fc effector function in vitro",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "140. Loo YM... The SARS-CoV-2 monoclonal antibody combination, AZD7442... has an extended half-life in humans. Sci Transl Med. 2022",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "The camelids have a particular type of antibody... heavy chain antibodies... The size is ten times lower than conventional antibodies... stable in harsh environments such as acidic, ionic strength, heat, proteolysis, and pH",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Long CDR3 and the small size of the nanobody may facilitate the single-domain antibody to the epitope that is hiding... lack of the Fc portion, reducing the risk of Fc-associated ADE",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "references",
+            "quote": "34. Xu J... Nanobodies from camelid mice and llamas neutralize SARS-CoV-2 variants. Nature. 2021",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 5,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Linking the antigen-binding domains of the antibody with the self-assembly protein or protein scaffold... p53 tetramerizing domain... apoferritin",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "The bispecific antibody to different epitopes of the spike protein increased neutralization potency and resistance to mutational escape... The multibody overcomes the point mutation",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "references",
+            "quote": "157. De Gasparo R... Bispecific IgG neutralizes SARS-CoV-2 variants and prevents escape in mice. Nature. 2021",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      },
+      {
+        "step_index": 6,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Tocilizumab, a humanized anti-IL-6 receptor IgG1... repurposed to treat COVID-19... A humanized anti-CD147 antibody, meplazumab... repurposed for the treatment of COVID-19",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Tocilizumab... found to reduce disease severity and hospitalization time... no effect of tocilizumab on reducing COVID-19 mortality is inconclusive... Meplazumab... effectively improving disease severity and mortality while reducing viral load",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "117. Wang K... CD147-spike protein is a novel route for SARS-CoV-2 infection to host cells. Signal Transduct Target Ther. 2020",
+            "page_idx": 7
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed; all claims are supported by the text."
+      }
+    ],
+    "summary": {
+      "num_steps": 6,
+      "mean_score": 5.0,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

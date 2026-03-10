@@ -1,0 +1,240 @@
+{
+  "paper_id": "10.1007_s40684-023-00591-8",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 128.32,
+  "judge_result": {
+    "paper_id": "10.1007_s40684-023-00591-8",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "constraint conditions for drilling machining mainly include: single tool drilling quantity constraint, cutting parameter constraint, machine tool rated power consumption constraint, tool strength constraint, tool change frequency constraint",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "observation",
+            "quote": "A unified mathematical model for multi-objective optimization of drilling parameters has been established",
+            "page_idx": 0
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No major issues. Ensure references field is populated with specific section numbers for better traceability."
+      },
+      {
+        "step_index": 2,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "the wear rate K_VB adopts a quadratic power law. b_VB, which has a relatively simple impact, adopts first-order power-law regression",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "when the tool wear reaches the threshold of 150 μm, 130 μm, 110 μm, 90 μm",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No major issues."
+      },
+      {
+        "step_index": 3,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Drilling's total energy consumption... mainly includes cutting, idle, and tool change standby energy consumption",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "P_idle = g(n) is idle power consumption",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No major issues."
+      },
+      {
+        "step_index": 4,
+        "score": 3.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 0.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "12 sets of full factors drilling tests were arranged in the experiment, using three spindle speeds and four feed speeds (see Table 1)",
+            "page_idx": 7
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "Table 1... 550 rpm: 44, 60.5, 77, 93.5",
+            "page_idx": 7
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters.feed_speeds",
+            "claim": "4 levels (44 mm/min, 70 mm/min, 92 mm/min, 144 mm/min)",
+            "reason": "Table 1 shows calibration feed speeds as 44, 60.5, 77, 93.5 etc. The values 70, 92, 144 appear in optimization/validation sections (Section 6), not the 12-set calibration experiment."
+          }
+        ],
+        "fix_suggestion": "Update feed_speeds to match Table 1 values (e.g., 44, 60.5, 77, 93.5 for 550 rpm) or clarify these are optimization range limits."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "prediction error of tool wear rate K_VB is below 10%, with an average prediction error of 5.00%... initial tool wear b_VB is below 20%, with an average prediction error of 10.45%",
+            "page_idx": 9
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No major issues."
+      },
+      {
+        "step_index": 6,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.0,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "Table 7 lists the average prediction error... with an average error of 0.99%",
+            "page_idx": 11
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "drilling length L = 928 mm (58 holes)",
+            "page_idx": 12
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.validation_drilling_length",
+            "claim": "928 mm (58 holes) as calibration parameter",
+            "reason": "928 mm is used for Validation Test 2 (Table 8) to verify optimization, not for the initial model calibration (which used 12 sets)."
+          }
+        ],
+        "fix_suggestion": "Clarify that 928 mm is for validation of the optimization result, not model calibration."
+      },
+      {
+        "step_index": 7,
+        "score": 3.5,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 0.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "Table 10... Population size 200",
+            "page_idx": 13
+          },
+          {
+            "supports_field": "observation",
+            "quote": "a Pareto solution set containing 60 solutions is obtained",
+            "page_idx": 13
+          }
+        ],
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "parameters.population_size",
+            "claim": "60 solutions",
+            "reason": "Table 10 sets Population size to 200. 60 is the size of the resulting Pareto solution set, not the algorithm population size parameter."
+          }
+        ],
+        "fix_suggestion": "Set population_size to 200 and note that 60 solutions were obtained in the Pareto set."
+      },
+      {
+        "step_index": 8,
+        "score": 4.0,
+        "label": "mostly_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 0.5,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "observation",
+            "quote": "prediction errors of processing energy consumption for three different parameters are 5.86%, 1.57%, and 4.51%",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "observation",
+            "quote": "increase the total drilling length by 40%",
+            "page_idx": 10
+          }
+        ],
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "observation",
+            "claim": "Optimized parameters increased total drilling length by 40% compared to non-optimal parameters (in Step 8 context)",
+            "reason": "The 40% improvement claim is from Section 6.1 (Single-objective Tool Life Validation), while Step 8 follows Step 7 (Multi-objective NSGA-II Validation, Section 6.3) which focuses on prediction error accuracy."
+          }
+        ],
+        "fix_suggestion": "Separate the 40% tool life improvement claim (Section 6.1) from the Multi-objective verification results (Section 6.3)."
+      }
+    ],
+    "summary": {
+      "num_steps": 8,
+      "mean_score": 4.1,
+      "median_score": 4.2,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}

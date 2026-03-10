@@ -1,0 +1,241 @@
+{
+  "paper_id": "10.1007_s10291-023-01534-1",
+  "model": "qwen3.5-397b-a17b",
+  "elapsed_seconds": 63.14,
+  "judge_result": {
+    "paper_id": "10.1007_s10291-023-01534-1",
+    "step_scores": [
+      {
+        "step_index": 1,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "z(j) would obey the Bernoulli distribution",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "non-informative priors can be used here simply",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "maximum number of suspected outlier number q_max for the above methods are all set as m-n-1",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 2,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "Maximum a posteriori (MAP) estimate is a classic point estimate method in Bayesian statistics",
+            "page_idx": 1
+          },
+          {
+            "supports_field": "observation",
+            "quote": "model selection by DIA-MAP and UMPI test yields identical results",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "estimated unknown parameter of DIA-MAP is the same as that of BLUE",
+            "page_idx": 4
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 3,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "hyperparameter determination method based on supervised learning is proposed",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "5% for training and 95% for testing",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "optimal ε̂ ... usually decreases as the gross error size increases",
+            "page_idx": 8
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 4,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "confusion matrix, also known as the error matrix, is given in Table 1",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "consider the outliers as the positive samples and the inliers as the negative samples",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "TPR can be used to describe the correct detection rate for outliers",
+            "page_idx": 5
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      },
+      {
+        "step_index": 5,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "simulation time 1x10^6 independent experiments",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "gross error rates ε(10^-3, 10^-2, 10^-1)",
+            "page_idx": 5
+          },
+          {
+            "supports_field": "observation",
+            "quote": "DIA-MAP consistently achieves the highest correct detection rate",
+            "page_idx": 6
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step JSON",
+            "reason": "Step JSON contains empty references list despite factual claims being present in the text."
+          }
+        ],
+        "fix_suggestion": "Add relevant citations (e.g., p5 for MCS parameters) to the references field."
+      },
+      {
+        "step_index": 6,
+        "score": 4.5,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.0
+        },
+        "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "BeiDou Navigation Satellite System (BDS) SPP examples",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "sample intervals are 30 seconds",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "improvements of around 71%, 60%, and 23%",
+            "page_idx": 9
+          }
+        ],
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references field is empty in step JSON",
+            "reason": "Step JSON contains empty references list despite factual claims being present in the text."
+          }
+        ],
+        "fix_suggestion": "Add relevant citations (e.g., p8-p9 for BDS experiment details) to the references field."
+      },
+      {
+        "step_index": 7,
+        "score": 5.0,
+        "label": "fully_supported",
+        "dimension_scores": {
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
+          "C_observation": 1.0,
+          "D_references": 0.5
+        },
+        "evidence": [
+          {
+            "supports_field": "parameters",
+            "quote": "comparison with the other three conventional used DIA methods",
+            "page_idx": 10
+          },
+          {
+            "supports_field": "observation",
+            "quote": "DIA-MAP always shows higher resistance to the effect of multiple outliers",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "observation",
+            "quote": "robustness of the conventionally used methods would severely degrade",
+            "page_idx": 10
+          }
+        ],
+        "issues": [],
+        "fix_suggestion": "No changes needed."
+      }
+    ],
+    "summary": {
+      "num_steps": 7,
+      "mean_score": 4.86,
+      "median_score": 5.0,
+      "critical_steps_below_2.5": [],
+      "hallucination_risk": "low"
+    }
+  }
+}
