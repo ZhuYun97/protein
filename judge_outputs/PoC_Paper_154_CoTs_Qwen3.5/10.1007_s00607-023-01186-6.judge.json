@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1007_s00607-023-01186-6",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 100.31,
+  "elapsed_seconds": 72.72,
   "judge_result": {
     "paper_id": "10.1007_s00607-023-01186-6",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "In this paper, we propose a data anomaly detection framework for edge-cloud based on iterative optimization.",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "For the large amount of data collected by the underlying sensor network...",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "traditional outlier detection methods often fail to reach a satisfactory points in terms of latency and accuracy, affecting the decision-making of the IoT systems.",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "improves the accuracy of anomaly detection while maintaining the low latency of industrial sensor-cloud systems.",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; all fields are accurately supported by the Abstract and Introduction."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -18,17 +52,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "sensor nodes are aggregated into clusters by clustering algorithms, such as the adaptive k-means algorithm [36]",
+            "quote": "sensor nodes are aggregated into clusters by clustering algorithms, such as the adaptive k-means algorithm [36].",
             "page_idx": 5
           },
           {
             "supports_field": "parameters",
-            "quote": "the number of initial clusters in this paper is set to 4",
+            "quote": "the number of initial clusters in this paper is set to 4.",
             "page_idx": 19
           },
           {
             "supports_field": "observation",
-            "quote": "clustering are also introduced to reduce the communication cost and response latency",
+            "quote": "Edge computing [35] and clustering are also introduced to reduce the communication cost and response latency",
             "page_idx": 5
           }
         ],
@@ -48,13 +82,13 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Principal component score difference is developed to obtain training data",
+            "quote": "Principal component score difference is developed to obtain training data.",
             "page_idx": 0
           },
           {
             "supports_field": "parameters",
-            "quote": "applies T^2 and SPE statistics to monitor the status... threshold T_f^2 and SPE_f are derived",
-            "page_idx": 10
+            "quote": "two statistics, T^2 and SPE, are applied to monitor the sample state",
+            "page_idx": 9
           },
           {
             "supports_field": "observation",
@@ -78,17 +112,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "The detection model is constructed by Multi-Kernel Support Vector Data Description(MKSVDD)",
+            "quote": "The detection model is constructed by Multi-Kernel Support Vector Data Description(MKSVDD).",
             "page_idx": 0
           },
           {
             "supports_field": "parameters",
-            "quote": "Gauss kernel function... and Sigmoid kernel function... are used... a>0, b>0 and a+b=1",
+            "quote": "Gauss kernel function... and Sigmoid kernel function... are used in this paper.",
             "page_idx": 9
           },
           {
             "supports_field": "observation",
-            "quote": "detection results show an accuracy of 92.79%",
+            "quote": "the detection results show an accuracy of 92.79%",
             "page_idx": 14
           }
         ],
@@ -108,12 +142,12 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Particle Swarm Optimization(PSO) algorithm [38] is used to optimize the penalty factor, the multicore kernel function coefficients, and the MKSVDD kernel parameters",
+            "quote": "In this paper, the Particle Swarm Optimization(PSO) algorithm [38] is used to optimize the penalty factor...",
             "page_idx": 9
           },
           {
-            "supports_field": "observation",
-            "quote": "obtained optimal parameters are used in further data cleaning",
+            "supports_field": "parameters",
+            "quote": "optimize the penalty factor, the multicore kernel function coefficients, and the MKSVDD kernel parameters.",
             "page_idx": 9
           }
         ],
@@ -123,7 +157,7 @@
       {
         "step_index": 5,
         "score": 4.5,
-        "label": "fully_supported",
+        "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
@@ -133,12 +167,12 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "stochastic gradient descent (SGD) is used to solve the optimization problem",
+            "quote": "In the training update, stochastic gradient descent (SGD) is used to solve the optimization problem...",
             "page_idx": 11
           },
           {
             "supports_field": "parameters",
-            "quote": "500 data are extracted from the S14 column for each iteration... until the detection accuracy m... reaches or exceeds the desired threshold M",
+            "quote": "500 data are extracted from the S14 column for each iteration",
             "page_idx": 15
           },
           {
@@ -152,10 +186,10 @@
             "type": "missing",
             "field": "references",
             "claim": "references list is empty",
-            "reason": "No citation number is provided for SGD in the text, resulting in empty references field which lowers traceability score."
+            "reason": "While the text mentions SGD, no specific citation number is provided for it in the snippet, leading to an empty reference list in extraction."
           }
         ],
-        "fix_suggestion": "Add a reference to the paper section describing SGD (e.g., Section 3.3) if possible, or acknowledge no external citation exists."
+        "fix_suggestion": "Consider adding a reference to Section 3.3 or a standard SGD citation if external knowledge were allowed, but strictly based on text, the reference field is empty because the text lacks a citation number for SGD."
       },
       {
         "step_index": 6,
@@ -170,17 +204,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Simulations were performed using PyCharm Community Edition 2021.3.2... quad-core (2.30-GHz) CPU, 8.0-GB RAM, and Windows 10",
+            "quote": "The simulations were performed using PyCharm Community Edition 2021.3.2",
             "page_idx": 12
           },
           {
             "supports_field": "parameters",
-            "quote": "IBRL [40] dataset... experiments are set up using columns S13 and S14. S13 are normal data... Column S14 has obvious anomalies",
+            "quote": "IBRL [40] dataset... 54 sensors... every 31 s",
             "page_idx": 12
           },
           {
             "supports_field": "observation",
-            "quote": "detection accuracy reaches 96.70%... CPCA... latency is gradually kept low",
+            "quote": "accuracy of 96.70%... low latency compared to TCM, ABODM, MDCM",
             "page_idx": 15
           }
         ],
@@ -188,11 +222,42 @@
         "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "validation_technique",
+          "quote": "Simulations were performed on a real dataset... IBRL [40] dataset",
+          "page_idx": 12
+        },
+        {
+          "supports_field": "metrics.accuracy",
+          "quote": "detection accuracy reaches 96.70%, an improvement of 4.2%",
+          "page_idx": 15
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "proposed anomaly detection framework possesses high classification results, in addition to improved accuracy and low latency",
+          "page_idx": 22
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 6,
       "mean_score": 4.9,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

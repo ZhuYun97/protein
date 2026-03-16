@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1007_s10586-023-04022-w",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 69.89,
+  "elapsed_seconds": 110.19,
   "judge_result": {
     "paper_id": "10.1007_s10586-023-04022-w",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "proposes a knowledge-based multi-objective estimation of distribution algorithm (KMOEDA)",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "Directed acyclic graphs (DAGs) are applied to define the common workflow model... Cloud service providers deploy numerous virtual machines",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "To solve the RCMOWSP... improve the global search ability... reliability-aware local search strategy is designed",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "objectives of minimum execution cost and time... satisfy the predefined reliability constraints",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; all fields are accurately supported by the text."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -17,45 +51,52 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "This paper focuses on a reliability constrained multi-objective workflow scheduling problem (RCMOWSP) with the objectives of minimum execution cost and time.",
-            "page_idx": 0
+            "supports_field": "parameters",
+            "quote": "RCMOWSP involves three aspects, i.e., resource rental scheme, task allocation scheme, and task permutation",
+            "page_idx": 1
           },
           {
             "supports_field": "parameters",
-            "quote": "Workflow model is denoted by the directed acyclic graph (DAG), G = <T, E, W, D>",
-            "page_idx": 2
+            "quote": "hourly billing mechanism is used... failure of virtual machines follows Poisson distribution",
+            "page_idx": 3
           }
         ],
         "issues": [
           {
             "type": "contradicted",
-            "field": "references.citation",
+            "field": "references",
             "claim": "Buyya et al., 2009 [5, 6]",
-            "reason": "Paper reference list defines [5] as Du et al. and [6] as Lin et al., not Buyya et al."
+            "reason": "Provided text Reference list shows [5] as Du et al. (2020) and [6] as Lin et al. (2019), not Buyya et al. (2009)."
           }
         ],
-        "fix_suggestion": "Update reference metadata to match the paper's bibliography (e.g., Du et al. [5], Lin et al. [6])."
+        "fix_suggestion": "Update references to match the provided text's reference list (e.g., Du et al. [5], Lin et al. [6]) or remove specific author names if not verifiable from text."
       },
       {
         "step_index": 2,
-        "score": 5.0,
-        "label": "fully_supported",
+        "score": 4.8,
+        "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.5
+          "D_references": 0.3
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "First, all tasks are deployed to the same resource for execution. For k available instances, we can obtain k init solutions. Second, a solution is constructed based on the popular HEFT algorithm. Therefore, the initial external archive contains k+1 solutions.",
+            "quote": "initial external archive contains k+1 solutions... all tasks are deployed to the same resource... solution is constructed based on the popular HEFT algorithm",
             "page_idx": 9
           }
         ],
-        "issues": [],
-        "fix_suggestion": "No changes needed."
+        "issues": [
+          {
+            "type": "contradicted",
+            "field": "references",
+            "claim": "Shao et al., 2020 [44, 45]",
+            "reason": "Provided text Reference [45] is Zhao et al. (2020), not Shao et al."
+          }
+        ],
+        "fix_suggestion": "Correct reference [45] to Zhao et al. or separate citations."
       },
       {
         "step_index": 3,
@@ -69,14 +110,9 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "KMOEDA apply the estimation of distribution algorithm (EDA)... to be the global search strategy.",
-            "page_idx": 1
-          },
-          {
             "supports_field": "parameters",
-            "quote": "As the probability model in KMOEDA is a univariate model, the proposed KMOEDA is univariate.",
-            "page_idx": 4
+            "quote": "probability model in KMOEDA is a univariate model... PBIL is applied for updating... reference template-based sampling approach",
+            "page_idx": 6
           }
         ],
         "issues": [],
@@ -84,131 +120,100 @@
       },
       {
         "step_index": 4,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "A reliability-aware local search strategy is designed to performs local search around the solutions that violate reliability constraint.",
-            "page_idx": 0
-          },
-          {
             "supports_field": "parameters",
-            "quote": "the reliability constraint can be converted to a weighted execution time constraint.",
+            "quote": "reliability constraint can be converted to a weighted execution time constraint... resources are sorted according to Delta wt(rj)",
             "page_idx": 7
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references provided for local search strategy.",
-            "reason": "While the method is proposed in the paper, adding internal section references would improve traceability."
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 4.3 in the paper."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 5,
-        "score": 4.5,
+        "score": 4.8,
         "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.3
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "An elite enhancement strategy with a task perturbation operator and a resource perturbation operator is introduced",
-            "page_idx": 0
-          },
-          {
             "supports_field": "parameters",
-            "quote": "In each iteration, two random solutions in L are carried out to perform the elite enhancement strategy.",
+            "quote": "elite enhancement strategy consists of two perturbation operators, i.e., task perturbation and resource perturbation",
             "page_idx": 8
           }
         ],
         "issues": [
           {
-            "type": "contradicted",
-            "field": "references.citation",
-            "claim": "Shao et al., 2019 [43] ... introduced in global search context.",
-            "reason": "Reference [43] is cited in Section 4.2.3 (Global Search), not Section 4.4 (Elite Enhancement)."
+            "type": "unsupported",
+            "field": "references",
+            "claim": "Shao et al., 2019 [43]... introduced in global search context",
+            "reason": "Reference [43] is cited in Section 4.2.3 (Global Search) in the text, not in Section 4.4 (Elite Enhancement) where this step's content comes from."
           }
         ],
-        "fix_suggestion": "Remove external citation for Elite Enhancement or cite Section 4.4."
+        "fix_suggestion": "Remove reference [43] from this step or move it to Step 3 (Global Search)."
       },
       {
         "step_index": 6,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "All configurations are run on the Montage workflow with 25 tasks, and each configuration run 5 times independently.",
+            "quote": "ps={5,10,15,20,25,30}, rs={10,20,30,40,50,60}, d={0.1,0.2,0.3,0.4,0.5,0.6}, and alpha={0.3,0.4,0.5,0.6,0.7,0.8}",
             "page_idx": 11
           },
           {
             "supports_field": "observation",
-            "quote": "the parameters are set as follows: ps=10, rs=40, d=0.1, and alpha=0.4.",
+            "quote": "parameters are set as follows: ps=10, rs=40, d=0.1, and alpha=0.4",
             "page_idx": 13
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references provided for parameter calibration.",
-            "reason": "Standard practice, but internal section reference would be better."
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 5.3."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 7,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The CyberShake, Inspiral, Montage, and Sipht with 100 tasks are carried out to be the benchmark.",
+            "quote": "four variants of KMOEDA are constructed... KNI... KNG... KNL... KNR",
             "page_idx": 13
           },
           {
             "supports_field": "observation",
-            "quote": "It can be seen from Table 4 that the average hypervolume of KMOEDA is superior to the other variants.",
+            "quote": "average hypervolume of KMOEDA is superior to the other variants... KNG performs the poorest",
             "page_idx": 13
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references provided.",
-            "reason": "Internal section reference recommended."
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 5.4."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 8,
@@ -223,13 +228,8 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "compares the proposed KMOEDA with five multi-objective optimization algorithms: EMS-C [16], NSGA-II [46], MOHEFT [35] ch-PICEA-g [38], and I_MaOPSO [39]",
+            "quote": "compared the proposed KMOEDA with several related algorithms... EMS-C [16], NSGA-II [46], MOHEFT [35] ch-PICEA-g [38], and I_MaOPSO [39]",
             "page_idx": 13
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "termination criterion of each run is set to 100n",
-            "page_idx": 11
           }
         ],
         "issues": [],
@@ -237,42 +237,61 @@
       },
       {
         "step_index": 9,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "we apply Wilcoxon's test to verify the significant difference",
-            "page_idx": 16
-          },
-          {
             "supports_field": "observation",
-            "quote": "Since the p-values between KMOEDA and other compared algorithms are less than 0.05, it can be concluded that KMOEDA is significantly superior",
+            "quote": "apply Wilcoxon's test to verify the significant difference... p-values <0.05... KMOEDA is significantly superior",
             "page_idx": 16
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references provided.",
-            "reason": "Internal section reference recommended."
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 5.5."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "validation_technique",
+          "quote": "applies hypervolume and set coverage to measure the non-dominated solutions... apply Wilcoxon's test",
+          "page_idx": 11
+        },
+        {
+          "supports_field": "metrics",
+          "quote": "closer the hypervolume value is to 1.44, the better S is... C(A,B)... closer... to 1... p-values <0.05",
+          "page_idx": 11
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "KMOEDA significantly outperforms several relative multi-objective workflow scheduling approaches in solving the RCMOWSP",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 9,
-      "mean_score": 4.7,
-      "median_score": 4.5,
+      "mean_score": 4.9,
+      "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

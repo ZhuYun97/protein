@@ -18,7 +18,7 @@ _thread_local = threading.local()
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Threaded batch judge for extracted trajectory steps."
+        description="Threaded batch judge for extracted initial request, trajectory, and verification."
     )
     parser.add_argument(
         "--extracted-dir",

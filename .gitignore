@@ -5,6 +5,7 @@ logs/
 request.sh
 server.sbatch
 server.sh
+judge_outputs_no0103
 
 # Python
 *.py[cod]
@@ -35,3 +36,4 @@ env/
 # 系统
 .DS_Store
 Thumbs.db
+
