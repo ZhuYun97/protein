@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1121_10.0013994",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 73.99,
+  "elapsed_seconds": 87.28,
   "judge_result": {
     "paper_id": "10.1121_10.0013994",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "The importance of sound to the Atlantic cod, Gadus morhua, and the Atlantic haddock, Melanogrammus aeglefinus",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "Different sounds are produced in different behavioral contexts and are emitted almost continuously by cod and haddock, especially throughout the spawning season",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "Listening for the cod and haddock sounds provides a reliable, non-invasive technique for detecting their locations, and especially their spawning areas, and enables them to be protected well.",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "Listening for the cod and haddock sounds provides a reliable, non-invasive technique for detecting their locations",
+          "page_idx": 1
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; all fields are well-supported by the abstract and introduction."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -18,22 +52,22 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The aquarium tanks were more than 10 meters in lateral extent and up to 5 meters deep.",
-            "page_idx": 2
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "supplied with water continuously pumped from the North Sea.",
+            "quote": "The aquarium tanks were more than 10 meters in lateral extent and up to 5 meters deep... supplied with water continuously pumped from the North Sea.",
             "page_idx": 2
           },
           {
             "supports_field": "observation",
-            "quote": "The sounds from the haddock were especially interesting, as they varied between individuals, between males and females, and during different behavior patterns.",
+            "quote": "The haddock produced a range of sounds in different contexts in the aquarium at the MLA. Both male and female haddock produced short sequences of repeated 'knocks'",
+            "page_idx": 3
+          },
+          {
+            "supports_field": "references",
+            "quote": "Atlantic haddock (Hawkins and Chapman, 1966) and the Atlantic cod (Chapman and Hawkins, 1973)",
             "page_idx": 2
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 2,
@@ -47,31 +81,31 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "We detected the haddock sounds using a hydrophone held beneath a travelling boat.",
-            "page_idx": 4
-          },
-          {
             "supports_field": "parameters",
-            "quote": "Balsfjord is a subarctic fjord (90 km2) with a shallow (30m) depth at the opening to its entrance, but with depths in the inner fjord dropping to 190m.",
+            "quote": "Balsfjord is a subarctic fjord (90 km2) with a shallow (30m) depth at the opening to its entrance, but with depths in the inner fjord dropping to 190m. We detected the haddock sounds using a hydrophone held beneath a travelling boat.",
             "page_idx": 4
           },
           {
             "supports_field": "observation",
-            "quote": "Long sequences of repeated knocks were heard at a particular deep location... At night, the sounds merged into a continuous and loud low-frequency rumble",
+            "quote": "Long sequences of repeated knocks were heard at a particular deep location in the fjord... At night, the sounds merged into a continuous and loud low-frequency rumble",
+            "page_idx": 4
+          },
+          {
+            "supports_field": "references",
+            "quote": "Casaretto et al., 2014",
             "page_idx": 4
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 3,
-        "score": 4.0,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
-          "A_core_fact": 1.5,
-          "B_parameters": 1.0,
+          "A_core_fact": 2.0,
+          "B_parameters": 1.5,
           "C_observation": 1.0,
           "D_references": 0.5
         },
@@ -87,15 +121,8 @@
             "page_idx": 4
           }
         ],
-        "issues": [
-          {
-            "type": "unsupported",
-            "field": "tool",
-            "claim": "chose to use Visual observation to perform spawning ground verification",
-            "reason": "The text states spawning haddock were 'found' but does not explicitly specify 'Visual observation' as the verification method."
-          }
-        ],
-        "fix_suggestion": "Change tool from 'Visual observation' to 'Field verification' or remove specific tool claim to match text stating they were 'found'."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 4,
@@ -110,22 +137,22 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "An acoustic range was set up at a depth of 21m.",
+            "quote": "An acoustic range was set up at a depth of 21m. Underwater sound projectors, capable of generating frequencies down to about 30Hz",
             "page_idx": 6
           },
           {
-            "supports_field": "parameters",
-            "quote": "Underwater sound projectors, capable of generating frequencies down to about 30Hz",
-            "page_idx": 7
+            "supports_field": "observation",
+            "quote": "Fish hearing thresholds were determined over a range of pure tone frequencies, providing audiograms from several marine fishes, including the cod... and later the haddock.",
+            "page_idx": 6
           },
           {
-            "supports_field": "observation",
-            "quote": "cod and herring (and also the haddock, studied later) were sensitive to the sound pressure as well as the particle motion.",
-            "page_idx": 7
+            "supports_field": "references",
+            "quote": "Hawkins and Chapman (1975); Hawkins and Johnstone, 1978",
+            "page_idx": 6
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 5,
@@ -139,30 +166,68 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "The cod were tracked using a pulsed ultrasonic transmitter inserted into the stomach",
-            "page_idx": 8
-          },
-          {
             "supports_field": "parameters",
-            "quote": "depths between 10 and 20m",
+            "quote": "The cod were tracked using a pulsed ultrasonic transmitter inserted into the stomach... movements of cod in enclosed sea-lochs (Loch Beag and Loch Torridon)... depths between 10 and 20m",
             "page_idx": 8
           },
           {
             "supports_field": "observation",
-            "quote": "The majority of Torridon cod were more active during the day rather than the night",
+            "quote": "moving within restricted home ranges... The majority of Torridon cod were more active during the day rather than the night",
+            "page_idx": 8
+          },
+          {
+            "supports_field": "references",
+            "quote": "Hawkins et al., 1974... Hawkins et al., 1980",
             "page_idx": 8
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 4.5,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 1.5,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "validation_technique",
+          "quote": "Spawning haddock were later found at the same unique location in Balsfjord in several successive years.",
+          "page_idx": 4
+        },
+        {
+          "supports_field": "metrics.tracking_depth_range",
+          "quote": "depths between 10 and 20m",
+          "page_idx": 8
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "Listening for the cod and haddock sounds provides a reliable, non-invasive technique for detecting their locations, and especially their spawning areas, and enables them to be protected well.",
+          "page_idx": 1
+        }
+      ],
+      "issues": [
+        {
+          "type": "unsupported",
+          "field": "metrics.sound_detection_accuracy.value",
+          "claim": "100%",
+          "reason": "The text states the technique is 'reliable' and fish were found at the same location, but does not quantify accuracy as '100%'."
+        }
+      ],
+      "fix_suggestion": "Change '100%' to 'high reliability' or remove specific percentage to match the qualitative description in the text."
+    },
     "summary": {
       "num_steps": 5,
-      "mean_score": 4.8,
+      "mean_score": 5.0,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 4.5,
+      "overall_score": 4.8,
       "hallucination_risk": "low"
     }
   }

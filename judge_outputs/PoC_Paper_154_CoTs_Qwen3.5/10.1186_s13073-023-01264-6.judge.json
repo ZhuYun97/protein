@@ -1,16 +1,70 @@
 {
   "paper_id": "10.1186_s13073-023-01264-6",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 39.04,
+  "elapsed_seconds": 76.56,
   "judge_result": {
     "paper_id": "10.1186_s13073-023-01264-6",
+    "initial_request_score": {
+      "score": 0.0,
+      "label": "unsupported_or_contradicted",
+      "dimension_scores": {
+        "A_target_name": 0.0,
+        "B_input_data": 0.0,
+        "C_user_intent": 0.0,
+        "D_quantifiable_goal": 0.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "No source text provided",
+          "page_idx": 0
+        }
+      ],
+      "issues": [
+        {
+          "type": "missing",
+          "field": "01_initial_request",
+          "claim": "Empty extraction object {}",
+          "reason": "No source text provided to verify any claims; extracted result is empty"
+        }
+      ],
+      "fix_suggestion": "Provide source text and extract actual target name, input data, intent, and goals from the paper"
+    },
     "step_scores": [],
+    "success_verification_score": {
+      "score": 0.0,
+      "label": "unsupported_or_contradicted",
+      "dimension_scores": {
+        "A_validation_technique": 0.0,
+        "B_metrics": 0.0,
+        "C_final_verdict": 0.0
+      },
+      "evidence": [
+        {
+          "supports_field": "validation_technique",
+          "quote": "No source text provided",
+          "page_idx": 0
+        }
+      ],
+      "issues": [
+        {
+          "type": "missing",
+          "field": "03_success_verification",
+          "claim": "Empty extraction object {}",
+          "reason": "No source text provided to verify validation methods or metrics; extracted result is empty"
+        }
+      ],
+      "fix_suggestion": "Provide source text and extract actual validation techniques, metrics, and final verdict from the paper"
+    },
     "summary": {
       "num_steps": 0,
       "mean_score": 0.0,
       "median_score": 0.0,
       "critical_steps_below_2.5": [],
-      "hallucination_risk": "low"
+      "initial_request_score": 0.0,
+      "success_verification_score": 0.0,
+      "overall_score": 0.0,
+      "hallucination_risk": "high"
     }
   }
 }

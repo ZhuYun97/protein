@@ -1,9 +1,45 @@
 {
   "paper_id": "10.3390_fermentation8080372",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 72.2,
+  "elapsed_seconds": 112.92,
   "judge_result": {
     "paper_id": "10.3390_fermentation8080372",
+    "initial_request_score": {
+      "score": 4.7,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.2,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "Adaptive Laboratory Evolution of Yeasts for Aroma Compound Production",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "due to consumer demand for yeast strains in the industry... enhance the production of aroma compounds",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "Saccharomyces cerevisiae produces most of the aroma compounds... recent advances of yeast strains obtained by adaptive laboratory evolution (ALE)",
+          "page_idx": 0
+        }
+      ],
+      "issues": [
+        {
+          "type": "missing",
+          "field": "input_data",
+          "claim": "Saccharomyces cerevisiae yeast strains",
+          "reason": "Review explicitly includes Non-Conventional Yeasts (Section 5 Title), extraction focuses primarily on S. cerevisiae in this field though covered in trajectory."
+        }
+      ],
+      "fix_suggestion": "Include 'and Non-Conventional Yeasts' in input_data to fully match the review's scope."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -17,23 +53,23 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters",
-            "quote": "UV- or EMS-mutagenized populations are used as a starting population to increase genetic variability in the ALE method",
+            "supports_field": "tool",
+            "quote": "UV- or EMS-mutagenized populations are used as a starting population",
             "page_idx": 5
           },
           {
-            "supports_field": "parameters|observation",
-            "quote": "Yeast cells were subjected to atmospheric and room-temperature plasma (ARTP)... Wickerhamomyces anomalus",
+            "supports_field": "parameters",
+            "quote": "ARTP mutagenesis was used to improve salt-tolerant Z. rouxii",
             "page_idx": 8
           },
           {
-            "supports_field": "parameters|observation",
-            "quote": "ARTP mutagenesis was used to improve salt-tolerant Z. rouxii",
-            "page_idx": 8
+            "supports_field": "references",
+            "quote": "[38] Steensels, J., et al. 2014; [69] Li, Y.-C., et al. 2021",
+            "page_idx": 10
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 2,
@@ -47,28 +83,23 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|method",
-            "quote": "It is performed by serial passages",
-            "page_idx": 3
+            "supports_field": "parameters",
+            "quote": "serial batch transfer fermentation over 200 generations",
+            "page_idx": 8
           },
           {
-            "supports_field": "parameters|generations",
+            "supports_field": "parameters",
             "quote": "long-term adaptive evolution (1200 generations) at 39.5 °C",
             "page_idx": 7
           },
           {
-            "supports_field": "parameters|pH",
-            "quote": "The evolved strain can grow at pH 2.5, while the survival rate of the parental strain is very low (9.73%)",
-            "page_idx": 8
-          },
-          {
-            "supports_field": "parameters|ethanol",
-            "quote": "Ethanol content upon completion of the fermentation process was 20% (v/v)... over 200 generations",
+            "supports_field": "observation",
+            "quote": "evolved strain can grow at pH 2.5, while the survival rate of the parental strain is very low (9.73%)",
             "page_idx": 8
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 3,
@@ -82,28 +113,23 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters|thresholds",
+            "supports_field": "parameters",
             "quote": "higher alcohols effuse a pleasant aroma when the concentration is about 300 mg/L... exceed 400 mg/L",
             "page_idx": 1
           },
           {
-            "supports_field": "parameters|thresholds",
-            "quote": "ethyl acetate exceeds 200 mg/L... spoiled... below 150 mg/L... desirable",
-            "page_idx": 1
-          },
-          {
-            "supports_field": "observation|glycerol",
-            "quote": "an evolved strain produced more glycerol (46%)",
+            "supports_field": "observation",
+            "quote": "evolved strain produced more glycerol (46%)",
             "page_idx": 7
           },
           {
-            "supports_field": "observation|ethanol",
-            "quote": "Ethanol yield was increased by 10%",
+            "supports_field": "observation",
+            "quote": "ethanol yield was increased by 10%",
             "page_idx": 7
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 4,
@@ -117,30 +143,61 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|scope",
-            "quote": "The whole genome of the evolved strain can be sequenced",
-            "page_idx": 5
-          },
-          {
-            "supports_field": "parameters|genes",
-            "quote": "In evolved lineages, PBS2, HOG1 and GUT1 are observed to be mutated",
+            "supports_field": "parameters",
+            "quote": "PBS2, HOG1 and GUT1 are observed to be mutated",
             "page_idx": 7
           },
           {
-            "supports_field": "parameters|genes",
+            "supports_field": "parameters",
             "quote": "YALIOF19492g is the key beneficial gene",
             "page_idx": 9
+          },
+          {
+            "supports_field": "references",
+            "quote": "[57] Li, J., et al. 2021; [58] Strucko, T., et al. 2018",
+            "page_idx": 10
           }
         ],
         "issues": [],
-        "fix_suggestion": "No changes needed; all claims are supported by the text."
+        "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics",
+          "quote": "produced more glycerol (46%)",
+          "page_idx": 7
+        },
+        {
+          "supports_field": "metrics",
+          "quote": "ethanol yield was increased by 10%",
+          "page_idx": 7
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "Adaptive laboratory evolution offers a method to generate novel yeast strains to improve both yeast strain performance and production of aroma compounds",
+          "page_idx": 10
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 4,
       "mean_score": 5.0,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 4.7,
+      "success_verification_score": 5.0,
+      "overall_score": 4.9,
       "hallucination_risk": "low"
     }
   }

@@ -1,19 +1,53 @@
 {
   "paper_id": "10.1007_s13042-024-02183-7",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 86.76,
+  "elapsed_seconds": 107.57,
   "judge_result": {
     "paper_id": "10.1007_s13042-024-02183-7",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "Encoder–Decoder–SLSTM (ED-SLSTM) model is compared with LightGBM, LSTM, Bi-LSTM, LSTM-Attention and CEEMDAN-LSTM models",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "data of gas multi-parameter time series are processed... accurate prediction of the gas concentration in the future period must be based on the historical observation data",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "solve the problems of low prediction accuracy and inability to achieve long-term prediction... achieve early prediction and warning of gas disaster",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "ED-SLSTM has higher prediction accuracy and better prediction effect... evaluation index in ED-SLSTM is closer to the real value",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with the paper."
+    },
     "step_scores": [
       {
         "step_index": 1,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
@@ -22,25 +56,18 @@
             "page_idx": 2
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step data does not provide citations, limiting traceability score"
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 2 Data sources where Lagrange interpolation is mentioned."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 2,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
@@ -49,96 +76,68 @@
             "page_idx": 2
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step data does not provide citations, limiting traceability score"
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 2 Data sources where PCA is mentioned."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 3,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Finally, the min–max normalization method is used to process the time series",
+            "quote": "min–max normalization method is used to process the time series",
             "page_idx": 2
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step data does not provide citations, limiting traceability score"
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 2 Data sources where normalization is mentioned."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 4,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The average value of all sample data within 10 min in the original sample is calculated... the maximum, minimum and variance of the above samples are all taken as the input data",
+            "quote": "average value of all sample data within 10 min... maximum, minimum and variance... taken as the input data",
             "page_idx": 2
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step data does not provide citations, limiting traceability score"
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 3.1 TP-TPP where framework details are described."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 5,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Different from the trend prediction, the time point prediction framework... Firstly, the missing data and data redundancy in the original data samples were eliminated",
+            "quote": "time point prediction framework... Firstly, the missing data and data redundancy in the original data samples were eliminated",
             "page_idx": 2
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step data does not provide citations, limiting traceability score"
-          }
-        ],
-        "fix_suggestion": "Add reference to Section 3.1 TP-TPP where time point prediction is described."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 6,
@@ -152,18 +151,13 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "c2 = 0.05",
-            "page_idx": 3
-          },
-          {
             "supports_field": "references",
-            "quote": "Snake Optimizer (SO) is a new meta-heuristic algorithm proposed by Ashim and Ussien in 2022 [18]... The introduction of random disturbance factors improves the search range of individuals [20]",
+            "quote": "Snake Optimizer (SO) is a new meta-heuristic algorithm proposed by Ashim and Ussien in 2022 [18]... c2 = 0.05",
             "page_idx": 3
           }
         ],
         "issues": [],
-        "fix_suggestion": "None needed."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 7,
@@ -177,18 +171,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "3.3.2 Opposition learning resets the worst value... Where \\overline{{x_{i}^{\\alpha}}}=\\gamma*(l_{i}+u_{i})-x_{i}^{\\alpha}",
-            "page_idx": 5
-          },
-          {
             "supports_field": "references",
-            "quote": "According to previous studies [23]... avoid the algorithm falling into local optimum [24]",
+            "quote": "Opposition learning resets the worst value... [23]... [24]",
             "page_idx": 5
           }
         ],
         "issues": [],
-        "fix_suggestion": "None needed."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 8,
@@ -203,17 +192,12 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "we constructed new gated structural units in the SLSTM model, which were select gate, forget gate and update gate",
-            "page_idx": 6
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "The input data of SLSTM model at time t include C_{t-1}, h_{t-1} and x_{t}",
+            "quote": "constructed new gated structural units in the SLSTM model, which were select gate, forget gate and update gate... [28]",
             "page_idx": 6
           }
         ],
         "issues": [],
-        "fix_suggestion": "None needed."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 9,
@@ -228,44 +212,32 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "SLSTM neural network as the encoder of the network, LSTM neural network as the decoder of the network",
-            "page_idx": 1
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "At time t_{1}, when the decoder has no input yet, the starting signal of the decoder is filled with zero values",
-            "page_idx": 7
+            "quote": "SLSTM neural network as the encoder of the network, LSTM neural network as the decoder... [15]... [31]",
+            "page_idx": 2
           }
         ],
         "issues": [],
-        "fix_suggestion": "None needed."
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 10,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Then the modified Snake Optimizer (SO) algorithm is used to simplify the parameter adjustment process of neural network",
+            "quote": "modified Snake Optimizer (SO) algorithm is used to simplify the parameter adjustment process of neural network",
             "page_idx": 0
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step data does not provide citations, limiting traceability score"
-          }
-        ],
-        "fix_suggestion": "Add reference to Abstract or Section 1 Introduction where SO usage is mentioned."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 11,
@@ -279,25 +251,51 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "The evaluation indexes used in this study are mean absolute percentage error, root mean square error and R^{2}",
-            "page_idx": 7
-          },
-          {
-            "supports_field": "observation",
-            "quote": "control the value of MAPE within 5%... R^{2} value of this model can still remain above 0.85",
-            "page_idx": 11
+            "supports_field": "parameters",
+            "quote": "compared with LightGBM, LSTM, Bi-LSTM, LSTM-Attention and CEEMDAN-LSTM models... evaluation indexes... mean absolute percentage error, root mean square error and R² [30]",
+            "page_idx": 0
           }
         ],
         "issues": [],
-        "fix_suggestion": "None needed."
+        "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics.MAPE",
+          "quote": "In the TPP prediction framework, even if the prediction step reaches 6, the model can still control the value of MAPE within 5%",
+          "page_idx": 11
+        },
+        {
+          "supports_field": "metrics.R²",
+          "quote": "When the prediction step reaches 6, the R² value of this model can still remain above 0.85",
+          "page_idx": 11
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "ED-SLSTM has higher prediction accuracy and better prediction effect",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 11,
-      "mean_score": 4.7,
-      "median_score": 4.5,
+      "mean_score": 5.0,
+      "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

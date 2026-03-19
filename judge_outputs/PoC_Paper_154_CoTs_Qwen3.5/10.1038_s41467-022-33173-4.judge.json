@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1038_s41467-022-33173-4",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 145.21,
+  "elapsed_seconds": 331.24,
   "judge_result": {
     "paper_id": "10.1038_s41467-022-33173-4",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "GPR110 (ADGRF1), a member of aGPCR",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "GPR110 gene (residues 567-873)... Gq, Gs, Gi, G12 and G13... insect Sf9 cells",
+          "page_idx": 6
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "report the cryo-electron microscopy structures... reveal distinctive ligand engaging model and activation conformations",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "global resolutions... are 2.85 A, 2.84 A, 3.09 A, 2.8 A and 2.66 A",
+          "page_idx": 2
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with source text."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -17,8 +51,8 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters",
-            "quote": "The codon-optimized human GPRI10 gene (residues 567-873) was fused with a LgBiT fusion to its C-terminus, followed by a Tobacco etch virus (TEV) cutting site and 2x maltose-binding protein (MBP) was cloned in pFastBac1 baculovirus expression vector.",
+            "supports_field": "parameters",
+            "quote": "human GPR110 gene (residues 567-873) was fused with a LgBiT fusion... TEV cutting site and 2x maltose-binding protein (MBP)",
             "page_idx": 6
           }
         ],
@@ -38,7 +72,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The C-terminus HiBiT fusion of human Gβ1 was cloned into pFastBac plasmid as the VIP1R paper15. The mini-Gαq and mini-Gαs constructs are adopted from the ghrelin receptor/Gq complex paper16 and the melanocortin receptor 1/Gs complex paper17... For Gαi, we use a dominant-negative human Gαi1 (G203A, A326S)... For Gα12, the 'GGSGG' linker of mini-Gα128 was swapped with the Gαi AHD domain",
+            "quote": "mini-Gaq and mini-Gas constructs are adopted from the ghrelin receptor/Gq complex paper and the melanocortin receptor 1/Gs complex paper",
             "page_idx": 6
           }
         ],
@@ -58,7 +92,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "baculovirus encoding the GPR110, Gα..., Gβ1, and Gγ2 were co-infected into the Spodoptera frugiperda (Sf9) cells (2×10^6 cells per ml) at a ratio of 1:100... cells were harvested 48 h postinfection. Nb35 is added in the mini-Gs and mini-Gq complex assembling, and scFv16 was added in the Gi, G12 and G13 complex assembling.",
+            "quote": "Sf9 cells (2x10^6 cells per ml) at a ratio of 1:100... harvested 48 h postinfection",
             "page_idx": 7
           }
         ],
@@ -78,7 +112,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Panobody-35 (Nb35)22 bearing a C-terminal His-tag was expressed in the periplasm of E. coli BL21, and grown in a TB culture medium with 100 μg/mL ampicillin... When OD600 reached 0.7–0.9, 1 mM IPTG was added... Induced cultures were grown 4-6 h at 28°C... Nb35 was purified by nickel affinity chromatography.",
+            "quote": "E. coli BL21... TB culture medium with 100 ug/mL ampicillin... OD600 reached 0.7-0.9, 1 mM IPTG",
             "page_idx": 7
           }
         ],
@@ -98,7 +132,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Cell pellets were resuspended in 20 mM Hepes buffer, 150 mM NaCl, 10 mM MgCl2, 20 mM KCl, 5 mM CaCl2, pH 7.5, with 0.5 mU/ml apyrase... 0.5% (w/v) lauryl maltose neopentylglycol (LMNG)... 0.1% (w/v) cholesteryl hemisuccinate TRIS salt (CHS) were added to solubilize the membrane at 4°C for 2 h. Then the lysis was ultracentrifuged at 65,000 g at 4°C for 40 min.",
+            "quote": "20 mM Hepes buffer, 150 mM NaCl... 0.5% (w/v) lauryl maltose neopentylglycol (LMNG)... 0.1% (w/v) cholesteryl hemisuccinate TRIS salt (CHS)",
             "page_idx": 7
           }
         ],
@@ -118,7 +152,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The supernatant was incubated with amylose column for 2 h then washed with a buffer of 20 mM Hepes, pH 7.5, 150 mM NaCl and 0.01% LMNG/ 0.002% CHS, and eluted with the same buffer plus 10 mM maltose.",
+            "quote": "incubated with amylose column for 2 h... eluted with the same buffer plus 10 mM maltose",
             "page_idx": 7
           }
         ],
@@ -138,7 +172,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The elution was concentrated and cut with homemade TEV overnight at 4°C, then separated on a Superdex 200 Increase 10/300 GL... with a buffer of 20 mM Hepes, pH 7.5, 150 mM NaCl and 0.00075% (w/v) LMNG, 0.00025% glyco-diosgenin (GDN), 0.0002% (w/v) CHS... concentrated at about 10 mg/ml",
+            "quote": "cut with homemade TEV overnight at 4 C, then separated on a Superdex 200 Increase 10/300 GL",
             "page_idx": 7
           }
         ],
@@ -158,7 +192,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "A 3 μl receptor/G-protein complex sample (~10 mg/ml) was applied to a glow-charged quantifoil R1.2/1.3 Cu holey carbon grids... vitrified in liquid ethane on a Vitrobot Mark IV... at setting of blot force of 10, blot time of 5 s, humidity of 100%, temperature of 4°C.",
+            "quote": "3 ul receptor/G-protein complex sample (~10 mg/ml)... Vitrobot Mark IV... blot force of 10, blot time of 5 s",
             "page_idx": 7
           }
         ],
@@ -178,7 +212,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "transferred to a FEI 300 kV Titan Krios TEM equipped with a Gatan Quantum energy filter. Images were taken by a Gatan K2 direct electron detector at magnitude of 64,000... pixel size of 0.55 Å, the energy filter slit was set to 20 eV. Each image was dose-fractionated in 40 frames using a total exposure time of 7.3 second at a dose rate of 1.5 e/Å²/s (total dose 60 e/Å²)... nominal defocus value varied from -1.2 to -2.2 μm.",
+            "quote": "FEI 300 kV Titan Krios TEM... Gatan K2 direct electron detector... pixel size of 0.55 A",
             "page_idx": 8
           }
         ],
@@ -198,7 +232,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "For the Gq, Gs and Gi complex, a total of 2000–2300 raw movies (0.55 Å) were binned (1.1 Å) and motion-corrected using MotionCor235; for the G12 and G13 complex, a total of 3200–34000 raw movies (0.54 Å) were binned (1.08 Å) and motion-corrected using MotionCor2.",
+            "quote": "For the Gq, Gs and Gi complex, a total of 2000-2300 raw movies... for the G12 and G13 complex, a total of 3200-34000 raw movies",
             "page_idx": 8
           }
         ],
@@ -218,7 +252,7 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Then the motion-corrected movies were processed by CTF estimation by CTFFIND 4.136.",
+            "quote": "CTF estimation by CTFFIND 4.1",
             "page_idx": 8
           }
         ],
@@ -238,7 +272,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Particles (-1.5-4.0 million) were picked by crYOLO37",
+            "quote": "Particles (-1.5-4.0 million) were picked by crYOLO",
             "page_idx": 8
           }
         ],
@@ -258,7 +292,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "extracted by RELION38 (version 3.1) and subjected to reference-free 2D classification in RELION. Good classes (-0.7-1.3 million particles)",
+            "quote": "Good classes (-0.7-1.3 million particles)... passed to next round",
             "page_idx": 8
           }
         ],
@@ -278,7 +312,7 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "The initial model was generated by cryoSPARC39 ab initio.",
+            "quote": "initial model was generated by cryoSPARC ab initio",
             "page_idx": 8
           }
         ],
@@ -298,7 +332,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The model was used as reference in RELION 3D classification (-5 classes). The best class (-500,000) that showed clear secondary structure features was selected",
+            "quote": "RELION 3D classification (-5 classes). The best class (-500,000)",
             "page_idx": 8
           }
         ],
@@ -317,8 +351,8 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "selected for a 3D refinement in RELION, followed by a Baysian polishing40, then a 3D refinement and a CTF refinement in RELION.",
+            "supports_field": "parameters",
+            "quote": "3D refinement in RELION, followed by a Baysian polishing, then a 3D refinement and a CTF refinement",
             "page_idx": 8
           }
         ],
@@ -337,8 +371,8 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "yield a class of about 260,000–500,000 particles for final refinement by the cryoSPARC Non-uniform Refinement, which generated a map of 2.66-3.09 Å, based on the gold standard Fourier Shell Correlation (FSC) = 0.143 criterion.",
+            "supports_field": "observation",
+            "quote": "cryoSPARC Non-uniform Refinement, which generated a map of 2.66-3.09 A",
             "page_idx": 8
           }
         ],
@@ -358,8 +392,13 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "The final map was post-processed by DeepMinancer41.",
+            "quote": "final map was post-processed by DeepMinancer",
             "page_idx": 8
+          },
+          {
+            "supports_field": "references",
+            "quote": "Reference 41... DeepEMhancer",
+            "page_idx": 10
           }
         ],
         "issues": [],
@@ -378,7 +417,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The AlphaFold42 structures of human GPR1I0 (AF-Q5T6I0-F1) and the Gi protein complex from the D2R (PDB 6vms and 7jvr)26,43 or Gs protein complex from MIR (PDB 7f4q)7 were used as initial models... All models were docked into the electron microscopy density map using UCSF Chimera44",
+            "quote": "AlphaFold structures of human GPR110... Gi protein complex from the D2R (PDB 6vms and 7jvr)",
             "page_idx": 8
           }
         ],
@@ -398,7 +437,7 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "then subjected to iterative manual adjustment in Coot45",
+            "quote": "iterative manual adjustment in Coot",
             "page_idx": 8
           }
         ],
@@ -418,7 +457,7 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "followed by a rosetta cryoEM refinement46 at relax model",
+            "quote": "rosetta cryoEM refinement at relax model",
             "page_idx": 8
           }
         ],
@@ -438,7 +477,7 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "and Phenix real space refinement47.",
+            "quote": "Phenix real space refinement",
             "page_idx": 8
           }
         ],
@@ -458,7 +497,7 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "The model statistics were validated using MolProbity48.",
+            "quote": "model statistics were validated using MolProbity",
             "page_idx": 8
           }
         ],
@@ -478,7 +517,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "AD293 cells were split into 24 well plate at a density of 40,000 per well then transfected with 100 ng of SRE-Luc... 10 ng of pcDNA3-GPR1I0... 10 ng of phRGtkRenilla plasmids (Promega) by X-tremeGENE HP (Roche) at a ratio 3:1 to DNA amount after one day of growth on 37°C at 5% CO2. 24 h after transfection",
+            "quote": "AD293 cells were split into 24 well plate at a density of 40,000 per well... 100 ng of SRE-Luc",
             "page_idx": 8
           }
         ],
@@ -497,9 +536,9 @@
         },
         "evidence": [
           {
-            "supports_field": "observation",
-            "quote": "the BRET assay data also shows that Gq, G13 and Gs have strong coupling activity to GPR110, while Gi has the weakest coupling activity (Fig. 6a)",
-            "page_idx": 5
+            "supports_field": "tool",
+            "quote": "BRET assay using tricistronic activity sensors",
+            "page_idx": 9
           }
         ],
         "issues": [],
@@ -518,7 +557,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Using CHARMM-GUI55,6, the receptor was inserted into a bilayer lipid contain POPC... and cholesterol at ratio of 4:1, the membrane size is 65x65 Å with 22.5 Å water and ion 0.15 M KCl... temperature 303.15 K. The Amber force fields were set to: protein FF19SB, lipid LIPID17, and water TIP3P.",
+            "quote": "CHARMM-GUI... bilayer lipid contain POPC... and cholesterol at ratio of 4:1",
             "page_idx": 9
           }
         ],
@@ -537,8 +576,8 @@
         },
         "evidence": [
           {
-            "supports_field": "observation",
-            "quote": "The simulations were performed by Amber20 package67... heat to 300 K in 300 ps and then equilibrated for 700 ps, followed by three independent production runs of 200 ns... A triplicated 200 ns run of MD simulation shows that the S570stalk and H8207,39 do form hydrogen bond in the simulation",
+            "supports_field": "parameters",
+            "quote": "Amber20 package... three independent production runs of 200 ns",
             "page_idx": 9
           }
         ],
@@ -558,7 +597,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Cortices were isolated from PI pups and digested with 0.25% trypsin... for 20 min at 37°C... seeded in poly-D-lysine-coated... chamber slides in 24-well plates (2.5x10^4 cells per well)... treated with 1 μM DHA, 100 μM stalk-peptide or vehicle to each group separately on day 1 in vitro for 24 h.",
+            "quote": "Pregnant female C57BL/6 mice... P1 pups... 1 uM DHA, 100 uM stalk-peptide",
             "page_idx": 8
           }
         ],
@@ -578,7 +617,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "fixed with 4% Paraformaldehyde at room temperature for 15 min. ... blocked by PBS containing 0.2% Triton X-100... and 10% goat serum for 1 h. ... primary antibody used was rabbit anti-MAP2 antibody (1:2000)... overnight at 4°C. ... donkey anti-rabbit secondary antibody (1:1000)... for 1 h... DAPI... for 10 min... Zeiss, LSM880... 60-120 neurons per group... 5 images containing 4-8 MAP2-positive neurons per image",
+            "quote": "rabbit anti-MAP2 antibody (1:2000)... Zeiss, LSM880",
             "page_idx": 8
           }
         ],
@@ -586,11 +625,42 @@
         "fix_suggestion": ""
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics.cryo_EM_resolution",
+          "quote": "global resolutions... are 2.85 A, 2.84 A, 3.09 A, 2.8 A and 2.66 A",
+          "page_idx": 2
+        },
+        {
+          "supports_field": "metrics.G_protein_interface_area",
+          "quote": "overall receptor interface for Gq,Gs,Gi,G12 and G13 are 991, 1020, 853, 1056, and 988 A2",
+          "page_idx": 4
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "GPR110 is a pluripotent GPCR that is able to couple all 4 major G-protein pathways",
+          "page_idx": 5
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with source text."
+    },
     "summary": {
       "num_steps": 29,
       "mean_score": 5.0,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

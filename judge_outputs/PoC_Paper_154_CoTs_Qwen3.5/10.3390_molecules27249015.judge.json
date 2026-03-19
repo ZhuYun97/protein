@@ -1,16 +1,88 @@
 {
   "paper_id": "10.3390_molecules27249015",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 38.9,
+  "elapsed_seconds": 70.09,
   "judge_result": {
     "paper_id": "10.3390_molecules27249015",
+    "initial_request_score": {
+      "score": 0.0,
+      "label": "unsupported_or_contradicted",
+      "dimension_scores": {
+        "A_target_name": 0.0,
+        "B_input_data": 0.0,
+        "C_user_intent": 0.0,
+        "D_quantifiable_goal": 0.0
+      },
+      "evidence": [],
+      "issues": [
+        {
+          "type": "missing",
+          "field": "target_name",
+          "claim": "Field missing in extracted_result_json",
+          "reason": "No source evidence text provided and extraction object is empty"
+        },
+        {
+          "type": "missing",
+          "field": "input_data",
+          "claim": "Field missing in extracted_result_json",
+          "reason": "No source evidence text provided and extraction object is empty"
+        },
+        {
+          "type": "missing",
+          "field": "user_intent",
+          "claim": "Field missing in extracted_result_json",
+          "reason": "No source evidence text provided and extraction object is empty"
+        },
+        {
+          "type": "missing",
+          "field": "quantifiable_goal",
+          "claim": "Field missing in extracted_result_json",
+          "reason": "No source evidence text provided and extraction object is empty"
+        }
+      ],
+      "fix_suggestion": "Populate 01_initial_request with target_name, input_data, user_intent, and quantifiable_goal based on actual paper content."
+    },
     "step_scores": [],
+    "success_verification_score": {
+      "score": 0.0,
+      "label": "unsupported_or_contradicted",
+      "dimension_scores": {
+        "A_validation_technique": 0.0,
+        "B_metrics": 0.0,
+        "C_final_verdict": 0.0
+      },
+      "evidence": [],
+      "issues": [
+        {
+          "type": "missing",
+          "field": "validation_technique",
+          "claim": "Field missing in extracted_result_json",
+          "reason": "No source evidence text provided and extraction object is empty"
+        },
+        {
+          "type": "missing",
+          "field": "metrics",
+          "claim": "Field missing in extracted_result_json",
+          "reason": "No source evidence text provided and extraction object is empty"
+        },
+        {
+          "type": "missing",
+          "field": "final_verdict",
+          "claim": "Field missing in extracted_result_json",
+          "reason": "No source evidence text provided and extraction object is empty"
+        }
+      ],
+      "fix_suggestion": "Populate 03_success_verification with validation_technique, metrics, and final_verdict based on actual paper content."
+    },
     "summary": {
       "num_steps": 0,
       "mean_score": 0.0,
       "median_score": 0.0,
       "critical_steps_below_2.5": [],
-      "hallucination_risk": "low"
+      "initial_request_score": 0.0,
+      "success_verification_score": 0.0,
+      "overall_score": 0.0,
+      "hallucination_risk": "high"
     }
   }
 }

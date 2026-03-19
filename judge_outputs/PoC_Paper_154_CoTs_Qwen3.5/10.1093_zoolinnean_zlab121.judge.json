@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1093_zoolinnean_zlab121",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 238.37,
+  "elapsed_seconds": 389.1,
   "judge_result": {
     "paper_id": "10.1093_zoolinnean_zlab121",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "Shell features and anatomy of the springsnail genus Radomaniola",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "mitochondrial (COI and 16S) and nuclear (28S) sequences of 15 recognized species... 40 continuous shell and anatomical characters",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "assess the evolutionary correlation, pace and mode of 40 continuous shell and anatomical characters... taxonomy is discussed here",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "inferring a phylogeny and a time-calibrated species tree... assess the evolutionary correlation, pace and mode",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with the paper."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -17,12 +51,18 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "collected specimens from 53 sites... permits URN.  517-07-1-1-1-16-3... and R. 07/1.30/625-282/16... preserved in 80 and 96% ethanol... spans the entire distributional range of Radomaniola (except records from Turkey)",
+            "supports_field": "parameters",
+            "quote": "collected specimens from 53 sites... permits URN. 517-07-1-1-1-16-3... R. 07/1.30/625-282/16",
+            "page_idx": 2
+          },
+          {
+            "supports_field": "observation",
+            "quote": "collected specimens from 53 sites",
             "page_idx": 2
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 2,
@@ -36,12 +76,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
+            "supports_field": "parameters",
             "quote": "Total genomic DNA was extracted from 92 whole snails using a hexadecyltrimethylammonium bromide (CTAB) protocol... and the DNeasy Blood & Tissue kit",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 3,
@@ -55,66 +96,53 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "primer pairs COIF14... and COR722b... for COI, 16Sar-L and16Sbr-H... for16S, and F63.2 and LSU3... for 28S. Amplification conditions for COI and 16S... using an annealing temperature of 50 °C... COI (658 bp) and 16S (510 bp)... 28S 1052 bp",
+            "supports_field": "parameters",
+            "quote": "primer pairs COIF14... and COR722b... for COI, 16Sar-L and16Sbr-H... for 16S, and F63.2 and LSU3... for 28S... annealing temperature of 50 °C",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 4,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation",
-            "quote": "Sequencing was conducted on an ABI 3730 XL sequencer... using a Big Dye Terminator kit v.3.1 (Life Technologies)",
+            "supports_field": "parameters",
+            "quote": "Sequencing was conducted on an ABI 3730 XL sequencer... using a Big Dye Terminator kit v.3.1",
             "page_idx": 3
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step does not provide citations, though text mentions manufacturer."
-          }
-        ],
-        "fix_suggestion": "Add reference to Life Technologies or indicate text location."
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 5,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation",
-            "quote": "assembled and edited and ambiguous ends were trimmed in SEQUENCHER v.4.1.4... deposited in GenBank",
+            "supports_field": "parameters",
+            "quote": "assembled and edited... in SEQUENCHER v.4.1.4",
             "page_idx": 3
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step does not provide citations, though text mentions software."
-          }
-        ],
-        "fix_suggestion": "Add reference to Gene Codes or indicate text location."
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 6,
@@ -128,12 +156,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "COI gene fragments were aligned manually in MEGA v.7.0.14 (Kumar et al., 2016)",
+            "supports_field": "parameters",
+            "quote": "COI gene fragments were aligned manually in MEGA v.7.0.14",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 7,
@@ -147,12 +176,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "MAFFT v.7.402 (Katoh & Standley, 2013) with default settings for gap penalties (gap opening penalty = 1.53) for the ribosomal DNA fragments",
+            "supports_field": "parameters",
+            "quote": "MAFFT v.7.402... gap opening penalty = 1.53",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 8,
@@ -166,12 +196,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "jModelTest v.2.1.7 (Darriba et al., 2012) with the corrected Akaike information criterion (AICc... HKY... +I... +G... GTR... +I+G, TPM2uf... +I+G and TIM2... +I+G",
+            "supports_field": "parameters",
+            "quote": "jModelTest v.2.1.7... corrected Akaike information criterion (AICc)",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 9,
@@ -185,12 +216,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "RAxML BlackBox webserver... ten random starting trees... rapid bootstrapping (BS) with an automatic cut-off (Stamatakis et al., 2008)",
+            "supports_field": "parameters",
+            "quote": "RAxML BlackBox webserver... ten random starting trees... rapid bootstrapping (BS)",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 10,
@@ -204,12 +236,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "MrBayes v.3.2.7a (Ronquist et al., 2012)... two independent runs of four Metropolis-coupled Markov chains (MCMCs) for five million generations each, with a sampling frequency of 1000... first 10%... discarded as burn-in",
+            "supports_field": "parameters",
+            "quote": "MrBayes v.3.2.7a... two independent runs of four Metropolis-coupled Markov chains (MCMCs) for five million generations",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 11,
@@ -223,12 +256,18 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "ABGD... Pmin = 0.001, Pmax = 0.01, steps = 10, relative gap width (X) = 1.00 and Nb bins = 20... ABGD identified 28 putative species... barcode gap of 0.9%",
+            "supports_field": "parameters",
+            "quote": "ABGD... Pmin=0.001, Pmax=0.01, steps=10, relative gap width=1.00 and Nb bins=20",
             "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "ABGD identified 28 putative species... barcode gap of 0.9%",
+            "page_idx": 6
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 12,
@@ -242,12 +281,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "BEAST v.1.8.4 (Drummond et al., 2012)... Chain length was 75 million generations sampling every 2000th tree (10% discarded as burn-in)... calibrated in relative time",
+            "supports_field": "parameters",
+            "quote": "BEAST v.1.8.4... 75 million generations sampling every 2000th tree (10% discarded as burn-in)",
             "page_idx": 4
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 13,
@@ -261,12 +301,18 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "bGMYC; Reid & Carstens, 2012... R v.4.1.0... 30 000 MCMC generations, sampling every 50th generation after a burn-in of 10 000... bGMYC retrieved 30 groups",
+            "supports_field": "parameters",
+            "quote": "bGMYC... R v.4.1.0... 30 000 MCMC generations, sampling every 50th generation after a burn-in of 10 000",
             "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "bGMYC retrieved 30 groups",
+            "page_idx": 6
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 14,
@@ -280,12 +326,18 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "bPTP; Zhang et al., 2013... uploaded to the Webserver... default parameters... bPTP... suggested 28... species",
+            "supports_field": "parameters",
+            "quote": "bPTP... Webserver... default parameters",
             "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "bPTP... suggested 28... species",
+            "page_idx": 6
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 15,
@@ -299,12 +351,18 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "mPTP v.0.1.1 (Kapli et al., 2017)... -multi option and a minimum branch length of 0.0000001... one million generations, sampling every 10 000 and discarding the first 100 000 generations as burn-in... mPTP... suggested... 11 species",
+            "supports_field": "parameters",
+            "quote": "mPTP v.0.1.1... -multi option... minimum branch length of 0.0000001... one million generations",
             "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "mPTP... 11 species",
+            "page_idx": 6
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 16,
@@ -318,12 +376,18 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "*BEAST (Heled & Drummond, 2010), available in BEAST v.1.8.4... relaxed molecular clock (the uncorrelated log-normal model)... rate was 0.81±0.24%... birth–death model... 100 million generations... sampled every 2000 steps... burn-in 10%... Radomaniola s.s.... started to diverge ~5.5 Mya",
+            "supports_field": "parameters",
+            "quote": "*BEAST... BEAST v.1.8.4... uncorrelated log-normal model... 0.81±0.24% substitutions per lineage per million years",
             "page_idx": 4
+          },
+          {
+            "supports_field": "observation",
+            "quote": "Radomaniola s.s.... most probably started to diverge ~5.5 Mya",
+            "page_idx": 8
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 17,
@@ -337,12 +401,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "Keyence VHX2000E digital microscope... VHX-2000 Communication software v.2.3.5.0 (Keyence Corporation, 2009–2012)... 40 continuous traits... 445 shells... 197 soft bodies",
+            "supports_field": "parameters",
+            "quote": "Keyence VHX2000E digital microscope... VHX-2000 Communication software v.2.3.5.0... 40 continuous traits... 445 shells... 197 soft bodies",
             "page_idx": 5
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 18,
@@ -356,12 +421,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "mvMORPH v.1.1.4 package (Clavel et al., 2015)... BM model with ML",
+            "supports_field": "parameters",
+            "quote": "mvMORPH v.1.1.4 package... fitted the BM model with ML",
             "page_idx": 5
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 19,
@@ -375,46 +441,81 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|observation|references",
-            "quote": "spBayes package v.0.4.3 (Finley et al., 2015)... MCMC sampling for 12 500 generations and discarded the first 50% as burn-in",
+            "supports_field": "parameters",
+            "quote": "spBayes package v.0.4.3... MCMC sampling for 12 500 generations and discarded the first 50% as burn-in",
             "page_idx": 5
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 20,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
-          "C_observation": 0.5,
+          "C_observation": 1.0,
           "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters|references",
-            "quote": "mvMORPH... ten models... AICc... MCC tree and a random sample of 100 post-burn-in posterior trees... shell and radula... (OU model)... female genitalia... (WN model)",
-            "page_idx": 5
-          }
-        ],
-        "issues": [
+            "supports_field": "parameters",
+            "quote": "fitted all ten models of trait evolution... in mvMORPH and compared the model fit with the AICc",
+            "page_idx": 6
+          },
           {
-            "type": "unsupported",
-            "field": "observation",
-            "claim": "genitalia evolved rapidly (WN)",
-            "reason": "Text specifies female genitalia for WN model; male genitalia followed OUshift model."
+            "supports_field": "observation",
+            "quote": "shell and radula shared a single morphological optimum... (OU model)... female genitalia... (WN model)",
+            "page_idx": 8
           }
         ],
-        "fix_suggestion": "Specify 'female genitalia' for WN model observation."
+        "issues": [],
+        "fix_suggestion": "None."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics.brownian_motion_rate",
+          "quote": "They evolved significantly faster by 18 and eight times, respectively, than the slowest group (i.e. the nervous system)",
+          "page_idx": 8
+        },
+        {
+          "supports_field": "metrics.divergence_time",
+          "quote": "Radomaniola s.s.... most probably started to diverge ~5.5 Mya",
+          "page_idx": 8
+        },
+        {
+          "supports_field": "metrics.species_count",
+          "quote": "we consider that our dataset comprises 21 Radomaniola species",
+          "page_idx": 7
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "Shell features... show a different pace and mode of evolution... morphological stasis model. Anatomical traits diverged rapidly",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with the paper."
+    },
     "summary": {
       "num_steps": 20,
-      "mean_score": 4.9,
+      "mean_score": 5.0,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

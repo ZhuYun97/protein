@@ -1,24 +1,58 @@
 {
   "paper_id": "10.1515_htmp-2022-0039",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 76.76,
+  "elapsed_seconds": 116.38,
   "judge_result": {
     "paper_id": "10.1515_htmp-2022-0039",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "ash melting characteristics of blended coal",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "Bu Lian Ta (BLT) bituminous coal... Three kinds of anthracites... Yang Quan (YQ), Lu An (LA), and Jiao Zuo (JZ)",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "improve the high temperature melting characteristics of bituminous coal with low ash melting point... to meet the requirement of blast furnace injection",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "ash melting point of blended coal cannot meet the requirements of blast furnace injection (below 1,533 K)",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with the source text."
+    },
     "step_scores": [
       {
         "step_index": 1,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters",
-            "quote": "industrial analysis and elemental analysis of four pulverized coal ash were analyzed... according to the national standards (GB/T 212-2008 and GB/T 31391-2015)",
+            "supports_field": "tool",
+            "quote": "industrial analysis and elemental analysis... according to the national standards (GB/T 212-2008 and GB/T 31391-2015)",
             "page_idx": 1
           },
           {
@@ -27,121 +61,83 @@
             "page_idx": 1
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references listed in step JSON",
-            "reason": "Step JSON has empty reference list, limiting D score to 0 despite standards being cited in parameters"
-          }
-        ],
-        "fix_suggestion": "Add references to national standards GB/T 212-2008 and GB/T 31391-2015 in the references field to gain D points."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 2,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "four ratios of 5:5, 6:4, 7:3, and 8:2 of anthracite to bituminous coal were mixed",
-            "page_idx": 1
-          },
-          {
-            "supports_field": "observation",
-            "quote": "volatile fraction content of blended coal was controlled between 11 and 20%",
+            "quote": "four ratios of 5:5, 6:4, 7:3, and 8:2... volatile fraction content of blended coal was controlled between 11 and 20%",
             "page_idx": 1
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references listed in step JSON",
-            "reason": "Step JSON has empty reference list, limiting D score to 0"
-          }
-        ],
-        "fix_suggestion": "Include references for blending standards or methodology if available."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 3,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters",
+            "supports_field": "parameters",
             "quote": "put into a muffle furnace for complete ashing at 1,088 K",
             "page_idx": 2
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references listed in step JSON",
-            "reason": "Step JSON has empty reference list, limiting D score to 0"
-          }
-        ],
-        "fix_suggestion": "Add reference for ashing standard if applicable."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 4,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters",
-            "quote": "measured by the melting point and rate measuring instrument according to the Chinese patent (CN 201910105185.5)",
+            "supports_field": "tool",
+            "quote": "melting point and rate measuring instrument... Chinese patent (CN 201910105185.5)",
             "page_idx": 1
           },
           {
             "supports_field": "parameters",
             "quote": "temperature of the sample increased from 1,273 to 1,673 K",
             "page_idx": 2
-          },
-          {
-            "supports_field": "observation",
-            "quote": "minimum softening temperature was higher than 1,533 K",
-            "page_idx": 3
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references listed in step JSON",
-            "reason": "Step JSON has empty reference list, limiting D score to 0"
-          }
-        ],
-        "fix_suggestion": "Add the patent CN 201910105185.5 to the references field to gain D points."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 5,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
@@ -155,15 +151,8 @@
             "page_idx": 2
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "No references listed in step JSON",
-            "reason": "Step JSON has empty reference list, limiting D score to 0"
-          }
-        ],
-        "fix_suggestion": "Add reference for XRF analysis method if applicable."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 6,
@@ -177,18 +166,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters",
-            "quote": "Select the Equilib module... Select the FTOxid oxide database... FToxid-SLAGA... to the 'P' option",
-            "page_idx": 8
-          },
-          {
-            "supports_field": "observation",
-            "quote": "Calculation value of complete melting temperature of coal ash... shown in Table 6",
-            "page_idx": 5
+            "supports_field": "tool",
+            "quote": "FactSage thermodynamic calculation software... Equilib module... FTOxid oxide database",
+            "page_idx": 2
           },
           {
             "supports_field": "references",
-            "quote": "Li's study [21]... Shu used FactSage Software... [22]. Song used FactSage Software... [23]",
+            "quote": "Li's study [21]... Shu used... [22]. Song used... [23,24]",
             "page_idx": 4
           }
         ],
@@ -207,30 +191,56 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "exclude the four groups of data... 'YQ,' 'JZ,' 'LA,' and 'A4.'",
-            "page_idx": 5
-          },
-          {
             "supports_field": "observation",
-            "quote": "relationship... obtained as: T_ST = 0.7098 T_C + 257.98",
+            "quote": "relationship... is obtained as: T_ST = 0.7098 T_C + 257.98",
             "page_idx": 6
           },
           {
-            "supports_field": "references",
-            "quote": "Li's study [21] found that the ash liquid temperature can be used to predict ash melting temperature",
-            "page_idx": 4
+            "supports_field": "parameters",
+            "quote": "exclude the four groups of data... YQ, JZ, LA, and A4",
+            "page_idx": 5
           }
         ],
         "issues": [],
         "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics",
+          "quote": "ash melting point of the blended coal was increased by 98, 136, 149, and 170 K, respectively",
+          "page_idx": 6
+        },
+        {
+          "supports_field": "metrics",
+          "quote": "minimum softening temperature was higher than 1,533 K",
+          "page_idx": 3
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "All the blended coals met the minimum requirements of pulverized coal ash melting point for blast furnace injection",
+          "page_idx": 3
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 7,
-      "mean_score": 4.6,
-      "median_score": 4.5,
+      "mean_score": 5.0,
+      "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

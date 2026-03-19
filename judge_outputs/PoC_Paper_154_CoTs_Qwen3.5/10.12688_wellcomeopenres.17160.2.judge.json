@@ -1,23 +1,57 @@
 {
   "paper_id": "10.12688_wellcomeopenres.17160.2",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 100.45,
+  "elapsed_seconds": 116.49,
   "judge_result": {
     "paper_id": "10.12688_wellcomeopenres.17160.2",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "Bclaf1, Erh and Thrap3 interact closely with each other, suggesting they might form a novel complex, hereby referred to as TEB complex.",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "We performed XL-MS using MS-cleavable crosslinker disuccinimidyl sulfoxide (DSSO) after immunoprecipitation of endogenous BRG/Brahma-associated factors (BAF) complex and copurifying proteins.",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "characterise in detail the topology and interaction surfaces of endogenous protein complexes without the need for overexpression.",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "The crosslink distance constraint was changed from 37 Å to a more stringent value of 32 Å.",
+          "page_idx": 2
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; all fields are consistent with the provided Version 2 text."
+    },
     "step_scores": [
       {
         "step_index": 1,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool|parameters",
+            "supports_field": "parameters",
             "quote": "Mouse embryonic stem cells (mESCs) were cultured by StemCell Technologies Inc. (Cambridge, UK).",
             "page_idx": 9
           }
@@ -27,18 +61,18 @@
       },
       {
         "step_index": 2,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Nuclear extraction was performed with isotonic buffer containing 10mM Tris-HCl, 10mM NaCl, 1.5mM MgCl2, 0.34M Sucrose, 1mM dithiothreitol (DTT), Halt Protease inhibitors (Thermo Scientific) and 0.05% NP-40. Nuclei were lysed for 10 minutes on ice with lysis buffer composed of 50 mM TrisHCl pH 8.0, 450 mM NaCl, 1 mM EDTA, 1 mM DTT, Halt Protease inhibitors (Thermo Scientific).",
+            "quote": "Nuclear extraction was performed with isotonic buffer containing 10mM Tris-HCl, 10mM NaCl, 1.5mM MgCl2, 0.34M Sucrose, 1mM dithiothreitol (DTT), Halt Protease inhibitors (Thermo Scientific) and 0.05% NP-40.",
             "page_idx": 9
           }
         ],
@@ -58,12 +92,12 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Protein G-Dynabeads (#10004D, Invitrogen) were prepared by coupling to antibodies... IP was performed from 10-60 mg protein depending on the experiment for 1–2 hours at 4°C. NaCl was diluted to 150mM for immunoprecipitation (IP) for experiments 1-3 and 5, but kept at 450mM for experiment 4.",
+            "quote": "NaCl was diluted to 150mM for immunoprecipitation (IP) for experiments 1-3 and 5, but kept at 450mM for experiment 4.",
             "page_idx": 9
           },
           {
             "supports_field": "references",
-            "quote": "The strategy was based on immunoprecipitation of Arid1a, considered to be a scaffolding/bridging component of the complex (Han et al., 2020; He et al., 2020; Mashtalir et al., 2018)",
+            "quote": "immunoprecipitation of Arid1a, considered to be a scaffolding/bridging component of the complex (Han et al., 2020; He et al., 2020; Mashtalir et al., 2018)",
             "page_idx": 2
           }
         ],
@@ -83,7 +117,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Crosslinking reagent disuccinimidyl sulfoxide (DSSO) (#A33545, ThermoFisher) was dissolved in DMSO at 50mM. The crosslinking was performed at 1mM (experiments 1-4) or 5mM (experiment 5)... with DMSO final concentration being 2% at RT for 1 hour. The reaction was quenched with 125mM Tris-HCl pH 8.0 at RT for 15 minutes.",
+            "quote": "The crosslinking was performed at 1mM (experiments 1-4) or 5mM (experiment 5)... at RT for 1 hour. The reaction was quenched with 125mM Tris-HCl pH 8.0 at RT for 15 minutes.",
             "page_idx": 9
           },
           {
@@ -108,7 +142,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "The beads were washed three times with IPP150 (150mM NaCl, 10mM Tris-HCl, 0.1% NP40)... modified digestion schedule: Lys C digestion overnight, followed by Trypsin for approximately 4 hours, two times and a Trypsin overnight digestion.",
+            "quote": "Lys C digestion overnight, followed by Trypsin for approximately 4 hours, two times and a Trypsin overnight digestion.",
             "page_idx": 9
           }
         ],
@@ -117,18 +151,18 @@
       },
       {
         "step_index": 6,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Peptides generated by trypsin digestion were fractionated with the Pierce High pH Reversed-Phase Peptide Fractionation Kit (#84868, ThermoFisher)... and eight fractions were collected and dried.",
+            "quote": "Peptides generated by trypsin digestion were fractionated with the Pierce High pH Reversed-Phase Peptide Fractionation Kit... and eight fractions were collected",
             "page_idx": 9
           }
         ],
@@ -137,18 +171,18 @@
       },
       {
         "step_index": 7,
-        "score": 4.5,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.0
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Liquid chromatography mass spectrometry (LC-MS) analysis was performed on the Dionex UltiMate 3000 UHPLC system coupled with the Orbitrap Lumos Mass Spectrometer... EASY-Spray C18 capillary column (75 μm×50 cm, 2 μm)... gradient... 300 nL/min... MS scans were acquired at a mass resolution of 120,000",
+            "quote": "LC-MS analysis was performed on the Dionex UltiMate 3000 UHPLC system coupled with the Orbitrap Lumos Mass Spectrometer... MS scans were acquired at a mass resolution of 120,000",
             "page_idx": 9
           }
         ],
@@ -168,7 +202,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "MS raw data from mESCs. IPs was analysed using Proteome Discoverer 2.4... XLinkX was used to search crosslinked peptides pairs... at 1% FDR. Precursor mass tolerance set to 20ppm... searches were performed against full UniProt Mouse database (August 2019) together with cRAP contaminant database.",
+            "quote": "analysed using Proteome Discoverer 2.4... XLinkX was used to search crosslinked peptides pairs... at 1% FDR.",
             "page_idx": 10
           },
           {
@@ -193,12 +227,12 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Structural models of Bclaf1 and Thrap3 were predicted by Robetta online tool with TrRefineRosetta modelling method for Bclaf1, and comparative modelling and ab initio modelling for Thrap3",
-            "page_idx": 10
+            "quote": "we used online modelling tool Robetta for de novo modelling... and five predicted structures were rendered for each protein.",
+            "page_idx": 7
           },
           {
             "supports_field": "observation",
-            "quote": "five predicted structures were rendered for each protein. In all models Thrap3 appeared to be largely unfolded and flexible... stretching from 330-725aa... predicted structures for Bclaf1 appeared generally much more folded",
+            "quote": "In all models Thrap3 appeared to be largely unfolded and flexible... predicted structures for Bclaf1 appeared generally much more folded",
             "page_idx": 7
           }
         ],
@@ -218,29 +252,60 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "visualised using UCSF Chimera package... crosslinks were mapped using a Chimera plug-in Xlink Analyzer",
-            "page_idx": 10
+            "quote": "Cross-linking data was mapped using Chimera with distance constraint set at 32Å",
+            "page_idx": 8
           },
           {
             "supports_field": "observation",
             "quote": "5 out of the 5 crosslinks we detected satisfied the more restrictive distance threshold of 32 Å... in models 2, 3 and 5, whilst 4 out 5 did in models 1 and 4.",
             "page_idx": 7
-          },
-          {
-            "supports_field": "observation",
-            "quote": "We utilised available Erh homodimer protein structure PDB:1WZ7... self-link at the position 90 involves two Erh molecules.",
-            "page_idx": 6
           }
         ],
         "issues": [],
         "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics.unique_crosslink_sites",
+          "quote": "We detected 24 unique XL sites",
+          "page_idx": 4
+        },
+        {
+          "supports_field": "metrics.total_CSMs",
+          "quote": "and a total of 121 CSMs across all five experiments.",
+          "page_idx": 4
+        },
+        {
+          "supports_field": "metrics.TEB_complex_XL_percentage",
+          "quote": "Specifically, 13% of all XLs identified in the five experiments involved these three proteins.",
+          "page_idx": 2
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "Our data shows that MS-cleavable crosslinker DSSO can be used to characterise in detail the topology and interaction surfaces of endogenous protein complexes without the need for overexpression.",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 10,
-      "mean_score": 4.8,
+      "mean_score": 5.0,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

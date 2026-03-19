@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1107_s2059798323000025",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 90.54,
+  "elapsed_seconds": 90.31,
   "judge_result": {
     "paper_id": "10.1107_s2059798323000025",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "Quantum Mechanical Restraints (QMR) procedure",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "ligand geometry is optimized in the binding pocket, thus considering the immediate surroundings such as neighboring protein residues and water molecules",
+          "page_idx": 3
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "In an effort to avoid these issues, the Quantum Mechanical Restraints (QMR) procedure optimizes the ligand geometry in situ",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "significantly reduces computing expense compared with optimizing the entire macromolecule, while also providing better restraints than in the GeoStd library",
+          "page_idx": 3
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; all fields are accurately supported by the text."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -18,23 +52,18 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "without RNA/DNA, with deposited X-ray diffraction data up to at least 3 A resolution and a molecular weight of less than 2000 kDa.",
-            "page_idx": 4
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "map–model correlation of at least 0.7, number of non-H atoms between eight and 40, a total charge of -1, 0 or +1 and a mean r.m.s.d. of at least 0.2 A for bonds, 5 degrees for angle or 30 degrees for torsion angles",
+            "quote": "protein models that had at least one ligand, without RNA/DNA, with deposited X-ray diffraction data up to at least 3 A resolution and a molecular weight of less than 2000 kDa",
             "page_idx": 4
           },
           {
             "supports_field": "observation",
-            "quote": "The filtering resulted in a set of test cases containing 2334 ligands in 1712 models.",
+            "quote": "The filtering resulted in a set of test cases containing 2334 ligands in 1712 models",
             "page_idx": 4
           },
           {
             "supports_field": "references",
-            "quote": "Protein Data Bank (PDB; Berman et al., 2000)",
-            "page_idx": 2
+            "quote": "Berman, H. M., ... (2000). Nucleic Acids Res. 28, 235–242",
+            "page_idx": 10
           }
         ],
         "issues": [],
@@ -42,38 +71,40 @@
       },
       {
         "step_index": 2,
-        "score": 5.0,
+        "score": 4.8,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
-          "B_parameters": 1.5,
+          "B_parameters": 1.3,
           "C_observation": 1.0,
           "D_references": 0.5
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "refined against the deposited diffraction data with phenix.refine using standard restraints.",
+            "supports_field": "parameters",
+            "quote": "refined with ten macrocycles of phenix.refine",
             "page_idx": 4
           },
           {
             "supports_field": "parameters",
-            "quote": "refined with ten macrocycles of phenix.refine.",
-            "page_idx": 4
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "For resolutions worse than 1.5 A, all atoms were refined with isotropic ADPs. For resolutions between 1.5 and 1.2 A, protein atoms were refined as anisotropic and other 'heavy' atoms... were refined as isotropic. For resolutions better than 1.2 A, all non-H atoms were refined with anisotropic ADPs.",
+            "quote": "Availability of QMR starts with Phenix version dev-4753",
             "page_idx": 4
           },
           {
             "supports_field": "references",
-            "quote": "phenix.refine (Afonine et al., 2012)... GeoStd database (N. W. Moriarty & P. D. Adams, manuscript in preparation)",
-            "page_idx": 4
+            "quote": "Afonine, P. V., ... (2012). Acta Cryst. D68, 352–367",
+            "page_idx": 10
           }
         ],
-        "issues": [],
-        "fix_suggestion": "No changes needed."
+        "issues": [
+          {
+            "type": "unsupported",
+            "field": "parameters.version",
+            "claim": "version: dev-4753",
+            "reason": "Text states QMR availability starts with this version, but does not explicitly state benchmark refinements used this specific version, though implied."
+          }
+        ],
+        "fix_suggestion": "Clarify that version is inferred from QMR availability section."
       },
       {
         "step_index": 3,
@@ -88,7 +119,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "within a cutoff radius around the ligand. The default radius parameter is 3.5 A",
+            "quote": "default radius parameter is 3.5 A",
             "page_idx": 3
           },
           {
@@ -97,14 +128,9 @@
             "page_idx": 3
           },
           {
-            "supports_field": "parameters",
-            "quote": "terminates these with charge-neutral moieties by default",
-            "page_idx": 3
-          },
-          {
             "supports_field": "references",
-            "quote": "MOPAC (Stewart, 1990, 2016)",
-            "page_idx": 3
+            "quote": "Stewart, J. J. P. (1990)... Stewart, J. J. P. (2016)",
+            "page_idx": 10
           }
         ],
         "issues": [],
@@ -122,18 +148,13 @@
         },
         "evidence": [
           {
-            "supports_field": "tool",
-            "quote": "refined the models again, this time using QMR restraints... Otherwise, the strategy was the same.",
+            "supports_field": "parameters",
+            "quote": "Otherwise, the strategy was the same",
             "page_idx": 4
           },
           {
-            "supports_field": "observation",
-            "quote": "As for the benchmark refinements, we extracted the minimum, maximum and mean r.m.s.d. values of bond lengths, angles and torsions for each ligand.",
-            "page_idx": 4
-          },
-          {
-            "supports_field": "references",
-            "quote": "phenix.refine (Afonine et al., 2012)",
+            "supports_field": "parameters",
+            "quote": "Availability of QMR starts with Phenix version dev-4753",
             "page_idx": 4
           }
         ],
@@ -142,25 +163,15 @@
       },
       {
         "step_index": 5,
-        "score": 4.8,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.3
+          "D_references": 0.5
         },
         "evidence": [
-          {
-            "supports_field": "parameters",
-            "quote": "high-resolution bin covering better than 1.4 A... medium-resolution bins covering 1.4–2 A and the medium- to low-resolution bins covering 2–3 A",
-            "page_idx": 5
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "The highest resolution bin is 0.8–1.4 A",
-            "page_idx": 6
-          },
           {
             "supports_field": "parameters",
             "quote": "performed a t-test and computed p-values",
@@ -168,26 +179,65 @@
           },
           {
             "supports_field": "observation",
-            "quote": "The usage of QMR restraints therefore leads to lower valence-angle and torsion-angle r.m.s.d. values overall.",
+            "quote": "QMR restraints therefore leads to lower valence-angle and torsion-angle r.m.s.d. values overall",
             "page_idx": 5
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "references",
-            "claim": "references list is empty",
-            "reason": "Step 5 does not list references, though the text mentions Supplementary Table S1 for t-test results. Minor traceability gap."
-          }
-        ],
-        "fix_suggestion": "Add reference to Supplementary Table S1 or the section describing statistical analysis in the references list."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics.torsion_angle_rmsd_geostd",
+          "quote": "mean r.m.s.d. for GeoStd restraints is 50–60 degrees",
+          "page_idx": 6
+        },
+        {
+          "supports_field": "metrics.torsion_angle_rmsd_qmr",
+          "quote": "while it is 10–20 degrees for QMR restraints",
+          "page_idx": 6
+        },
+        {
+          "supports_field": "metrics.valence_angle_improvement",
+          "quote": "r.m.s.d. improved by up to 2 degrees in more than 1500 ligands",
+          "page_idx": 5
+        },
+        {
+          "supports_field": "metrics.ligand_instances",
+          "quote": ">2330 ligand instances",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "metrics.qmr_minimization_time",
+          "quote": "typical running time of the QMR minimization is approximately 15 min on an M1 MacBookPro",
+          "page_idx": 10
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "QMR-restrained parameters generally have lower deviations from their ideal values compared with using conventionally generated restraints",
+          "page_idx": 10
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 5,
       "mean_score": 4.96,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1007_s42952-022-00187-z",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 122.46,
+  "elapsed_seconds": 83.9,
   "judge_result": {
     "paper_id": "10.1007_s42952-022-00187-z",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "a robust, efficient and easily implemented estimation procedure for single-index varying-coefficient models is proposed",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "Covariates X and Z... Y is the univariate response... Simulation studies and a real data example are conducted",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "combining minimum average variance estimation (MAVE) with exponential squared loss. The merit of the proposed method is robust against outliers or heavy-tailed error distributions while asymptotically efficient",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "asymptotically efficient as the original MAVE under the normal error case... asymptotic distributions of the resulting estimators are derived. Simulation studies... examine the finite sample performance",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with the abstract and introduction."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -18,17 +52,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Following the idea of the MAVE in Xia et al. (2002) and Feng and Xue (2015)",
-            "page_idx": 2
-          },
-          {
-            "supports_field": "observation",
-            "quote": "traditional MAVE... is based on QL, which is sensitive to the outliers",
+            "quote": "traditional MAVE in the above equation is based on QL, which is sensitive to the outliers",
             "page_idx": 3
           },
           {
+            "supports_field": "parameters",
+            "quote": "subject to θ^T θ = 1... w_ij >= 0 is a weight function",
+            "page_idx": 2
+          },
+          {
             "supports_field": "references",
-            "quote": "Zhao et al. (2017) obtained estimates... by the minimum average variance estimation (MAVE) method",
+            "quote": "Xia et al. (2002) and Feng and Xue (2015)... Zhao et al. (2017) obtained estimates... by the minimum average variance estimation (MAVE) method",
             "page_idx": 1
           }
         ],
@@ -48,17 +82,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "using the exponential squared loss (ESL) function",
-            "page_idx": 1
+            "quote": "replace the QL function in (4) with the ESL function",
+            "page_idx": 3
           },
           {
             "supports_field": "parameters",
-            "quote": "denote φ_γ(t)=exp(-t^2/γ)",
-            "page_idx": 16
+            "quote": "ESL function Ψ_γ(·) is defined in (2)... γ ∈ (0, ∞) is a tuning parameter",
+            "page_idx": 1
           },
           {
             "supports_field": "references",
-            "quote": "Wang et al. (2013) proposed a robust estimation method... by using the exponential squared loss (ESL) function",
+            "quote": "Wang et al. (2013) proposed a robust estimation method for linear models by using the exponential squared loss (ESL) function",
             "page_idx": 1
           }
         ],
@@ -83,12 +117,12 @@
           },
           {
             "supports_field": "parameters",
-            "quote": "Step 1 Given θ=θ^(k)... Step 2 Update the estimator of θ_0... standardize θ^(k+1)",
+            "quote": "Step 1 Given θ=θ^(k), calculate the solutions of (a_j, d_j)... Step 2 Update the estimator of θ_0... standardize θ^(k+1) = sgn_1(θ^(k+1))/||θ^(k+1)||",
             "page_idx": 7
           },
           {
             "supports_field": "observation",
-            "quote": "weighting scheme allows the robust MAVE to reduce the effect of observations far away",
+            "quote": "weight depends on both how close X_i is to X_j and how close Y_i... is to zero. This weighting scheme allows the robust MAVE to reduce the effect of observations far away",
             "page_idx": 7
           }
         ],
@@ -107,18 +141,18 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "possible values for γ can be γ=0.5σ̂×0.2^j, j=0,...,k",
+            "supports_field": "tool",
+            "quote": "a grid search method will be employed here",
             "page_idx": 8
           },
           {
             "supports_field": "parameters",
-            "quote": "find the minimum value γ̂_opt of R̂(γ)",
+            "quote": "possible values for γ can be γ=0.5σ̂×0.2^j, j=0,...,k, for some positive constant k (such as k=100)",
             "page_idx": 8
           },
           {
             "supports_field": "observation",
-            "quote": "γ_opt does not depend on n",
+            "quote": "γ_opt does not depend on n, which plays an important role in the efficiency and robustness",
             "page_idx": 8
           }
         ],
@@ -137,18 +171,18 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "ĥ_opt = R̂(γ̂_opt)^(1/5) ĥ_MAVE",
+            "supports_field": "tool",
+            "quote": "least squares cross-validation (CV) method can be used to select h_MAVE",
             "page_idx": 8
           },
           {
             "supports_field": "parameters",
-            "quote": "optimal bandwidth ĥ_MAVE is selected to minimize the following CV statistic",
-            "page_idx": 8
+            "quote": "ĥ_opt = R̂(γ̂_opt)^(1/5) ĥ_MAVE... ĝ_(-i)(·) and θ̂_(-i) are computed by using all the data except the i-th observation",
+            "page_idx": 9
           },
           {
             "supports_field": "references",
-            "quote": "asymptotic variance... in Feng and Xue (2015) and Zhao et al. (2017)",
+            "quote": "Feng and Xue (2015) and Zhao et al. (2017)",
             "page_idx": 8
           }
         ],
@@ -157,40 +191,33 @@
       },
       {
         "step_index": 6,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
-          "B_parameters": 1.0,
+          "B_parameters": 1.5,
           "C_observation": 1.0,
           "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "Simulation studies... over 500 replications",
+            "quote": "finite sample performance of θ̂_01 and θ̂_02 over 500 replications is assessed",
             "page_idx": 9
           },
           {
             "supports_field": "parameters",
-            "quote": "three types of error distribution... (1) N(0,1); (2) t(3); (3) 0.95N(0,1)+0.05N(0,10^2)",
+            "quote": "three types of error distribution of ε_i: (1) N(0,1); (2) t(3); (3) 0.95N(0,1)+0.05N(0,10^2)",
             "page_idx": 9
           },
           {
             "supports_field": "observation",
-            "quote": "estimators are asymptotically normal under all these error settings",
+            "quote": "eslMAVE has smaller Biases, SDs and RMSEs than the traditional MAVE... under the non-normal distributions",
             "page_idx": 9
           }
         ],
-        "issues": [
-          {
-            "type": "missing",
-            "field": "parameters.sample_sizes",
-            "claim": "sample_sizes: n = 200",
-            "reason": "Table 1 shows n=100, text implies multiple n ('as sample size n increases'). n=200 is only for Figs 1-2."
-          }
-        ],
-        "fix_suggestion": "Update sample_sizes to include multiple values (e.g., n=100, 200, ...) or specify n=200 is for figure generation."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 7,
@@ -204,13 +231,18 @@
         },
         "evidence": [
           {
+            "supports_field": "tool",
+            "quote": "Example 2 We now consider the settings that there are outliers in the predictors",
+            "page_idx": 12
+          },
+          {
             "supports_field": "parameters",
-            "quote": "outliers in the predictors... mixture of bivariate normal distribution 0.95N_2(0, I_2) + 0.05N_2(0, 10^2 × I_2)",
+            "quote": "drawn form a mixture of bivariate normal distribution 0.95N_2(0, I_2)+0.05N_2(0, 10^2 × I_2)",
             "page_idx": 12
           },
           {
             "supports_field": "observation",
-            "quote": "eslMAVE improves the efficiency and robustness... when there are outliers in the predictors",
+            "quote": "eslMAVE improves the efficiency and robustness of the parametric and nonparametric estimation",
             "page_idx": 12
           }
         ],
@@ -229,13 +261,13 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "506 observations and 14 variables... 306 observations... training set... 200 observations... test set",
+            "supports_field": "tool",
+            "quote": "apply our proposed estimation procedure to analyze the wellknown Boston housing price data",
             "page_idx": 12
           },
           {
             "supports_field": "parameters",
-            "quote": "predictors B and LSTAT as X, and the predictors RM, DIS, PTRATIO is chosen as Z",
+            "quote": "306 observations are used as a training set... rest 200 observations formed as a test set... predictors B and LSTAT as X, and the predictors RM, DIS, PTRATIO is chosen as Z",
             "page_idx": 14
           },
           {
@@ -245,7 +277,7 @@
           },
           {
             "supports_field": "references",
-            "quote": "initially studied by Harrison and Rubinfeld (1978)",
+            "quote": "Harrison and Rubinfeld (1978)... Shi et al. (2017)",
             "page_idx": 12
           }
         ],
@@ -253,11 +285,47 @@
         "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "validation_technique",
+          "quote": "Simulation studies and a real data example are conducted to examine the finite sample performance",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "metrics",
+          "quote": "Biases, SDs and RMSEs of the proposed eslMAVE method are slightly larger than those of the MAVE method based on QL... under the normal distributed... smaller Biases, SDs and RMSEs than the traditional MAVE... under the non-normal distributions",
+          "page_idx": 9
+        },
+        {
+          "supports_field": "metrics",
+          "quote": "mean and standard deviation of MAPE by eslMAVE and MAVE are (0.2485, 0.0201) and (0.2647, 0.0226)",
+          "page_idx": 15
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "proposed eslMAVE is more efficient than the existing MAVE based on QL when there are some outliers or the error distribution is heavy-tailed. Moreover, the proposed eslMAVE is comparable to the original MAVE when there are no outliers",
+          "page_idx": 16
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 8,
-      "mean_score": 4.9,
+      "mean_score": 5.0,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

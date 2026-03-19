@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1007_s42486-022-00116-3",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 116.13,
+  "elapsed_seconds": 83.44,
   "judge_result": {
     "paper_id": "10.1007_s42486-022-00116-3",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "Then we propose a Fairness Task Assignment Strategy with Distance constraint(FTAS-D)",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "extensive simulations have been conducted over three real-life mobility traces: Changchun/taxi, Epfl/mobility, and Feeder",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "investigate the fairness task assignment problem under distance constraint... ensure a long-term, double-fair and stable participatory sensing system",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "minimize the time average assignment cost, subject to... stability of the joint queue",
+          "page_idx": 8
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; all fields are accurately supported by the paper text."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -18,18 +52,13 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "we apply Lyapunov optimization and define a user processing queue for each user... U Q_{j}(t)",
-            "page_idx": 6
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "d_{j}^{t} denotes the processing ability... threshold A_{i} called the invalid threshold",
-            "page_idx": 6
+            "quote": "model two fairness constraints simultaneously by converting them to user processing queue and task virtual queue",
+            "page_idx": 0
           },
           {
             "supports_field": "references",
-            "quote": "By the queue stability theorem (Neely 2010)",
-            "page_idx": 6
+            "quote": "Neely (2010)",
+            "page_idx": 3
           }
         ],
         "issues": [],
@@ -48,18 +77,13 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "construct the double-queue Lyapunov optimization function and drift-plus-penalty function",
-            "page_idx": 8
+            "quote": "utilizes Lyapunov optimization technology to find a feasible assignment solution",
+            "page_idx": 0
           },
           {
             "supports_field": "parameters",
-            "quote": "control parameter V\\geq0... Theorem 2 (Drift-plus-penalty bound)",
+            "quote": "drift-plus-penalty function... Theorem 2",
             "page_idx": 9
-          },
-          {
-            "supports_field": "references",
-            "quote": "Neely (2010)",
-            "page_idx": 8
           }
         ],
         "issues": [],
@@ -67,35 +91,28 @@
       },
       {
         "step_index": 3,
-        "score": 4.8,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.3
+          "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "design a strategy called Fairness Task Assignment Strategy (FTAS) to minimize (18)",
+            "quote": "design a strategy called Fairness Task Assignment Strategy (FTAS) to minimize (18) to get a feasible solution",
             "page_idx": 10
           },
           {
-            "supports_field": "parameters",
-            "quote": "find j = argminj∈U(UQj(t) − SQi (t)+\\frac{V}{k}\\cdot c_{j}^{t})",
-            "page_idx": 10
+            "supports_field": "references",
+            "quote": "Fair Task Assignment Strategy (Liu et al. 2020) (FTAS)",
+            "page_idx": 14
           }
         ],
-        "issues": [
-          {
-            "type": "unsupported",
-            "field": "references",
-            "claim": "Reference: Liu et al. 2020",
-            "reason": "Text states 'We design a strategy called... FTAS' (p10), implying it is the authors' contribution (Algorithm 1). Liu et al. 2020 is cited as a baseline comparison in Section 6.2 (p14), not as the source of the internal FTAS algorithm design."
-          }
-        ],
-        "fix_suggestion": "Clarify that FTAS (Algorithm 1) is the proposed sub-algorithm in this paper, or remove the specific citation to Liu et al. 2020 for this design step unless explicitly stated as an adaptation."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 4,
@@ -110,17 +127,12 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "introduce a Fairness Task Assignment Strategy with Distance constraint (FTAS-D) based on simulated annealing algorithm",
-            "page_idx": 11
+            "quote": "introduce simulated annealing algorithm to iteratively find the best solution",
+            "page_idx": 0
           },
           {
             "supports_field": "parameters",
-            "quote": "temperature T is updated as \\gamma\\times T... temperature will increase when the temperature is lower than 0.01",
-            "page_idx": 11
-          },
-          {
-            "supports_field": "references",
-            "quote": "(Liu et al. 2019)",
+            "quote": "temperature T is updated as gamma * T... lower than 0.01",
             "page_idx": 11
           }
         ],
@@ -140,18 +152,13 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Changchun/taxi... select 250 traces... Epfl/mobility... approximately 500 taxis... Feeder... select 200 taxi traces",
+            "quote": "Changchun/taxi... select 250 traces... Epfl/mobility... 500 taxis... Feeder... 200 taxi traces",
             "page_idx": 13
-          },
-          {
-            "supports_field": "parameters",
-            "quote": "simulation experiments are repeated 500 times",
-            "page_idx": 14
           },
           {
             "supports_field": "references",
             "quote": "Michal Piorkowski and Sarafijanovic 2009... Zhang et al. 2015",
-            "page_idx": 14
+            "page_idx": 19
           }
         ],
         "issues": [],
@@ -159,40 +166,68 @@
       },
       {
         "step_index": 6,
-        "score": 5.0,
-        "label": "fully_supported",
+        "score": 4.5,
+        "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.5
+          "D_references": 0.0
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "value of V increasing from 1 to 10",
-            "page_idx": 18
-          },
-          {
-            "supports_field": "observation",
-            "quote": "proven that there is an approximate [O(1/V),O(V)] trade-off",
-            "page_idx": 2
-          },
-          {
-            "supports_field": "observation",
-            "quote": "illustrate that there is [O(1/V),O(V)] trade-off",
+            "quote": "there is [O(1/V),O(V)] trade-off... value of V increasing from 1 to 10",
             "page_idx": 13
           }
         ],
-        "issues": [],
-        "fix_suggestion": "No changes needed."
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Step 6 JSON contains an empty references list, though the facts are supported by Section 5 and 6 of the paper."
+          }
+        ],
+        "fix_suggestion": "Add references to Section 5 (Theorem 4/5) or Section 6.3.4 in the references field."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "validation_technique",
+          "quote": "extensive simulations have been conducted over three real-life mobility traces",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "metrics",
+          "quote": "FTAS-D achieves the minimum assignment cost... maintain the queue stability... value of V increasing from 1 to 10",
+          "page_idx": 14
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "proposed strategy outperforms the other baselines",
+          "page_idx": 19
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed."
+    },
     "summary": {
       "num_steps": 6,
-      "mean_score": 4.97,
+      "mean_score": 4.9,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

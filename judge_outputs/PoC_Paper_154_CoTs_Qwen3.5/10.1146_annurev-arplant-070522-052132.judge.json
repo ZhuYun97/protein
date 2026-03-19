@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1146_annurev-arplant-070522-052132",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 85.48,
+  "elapsed_seconds": 113.46,
   "judge_result": {
     "paper_id": "10.1146_annurev-arplant-070522-052132",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "In this review, we focus on biotin ligase-based PL-MS applications that have been, or are likely to be, adopted by the plant field.",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "In PL-MS, by fusing a genetically encoded proximity-labeling (PL) enzyme to a protein or a localization signal peptide...",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "powerful technique to dissect the complex cellular network at the molecular level.",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "Recently engineered PL enzymes such as TurboID have a much-improved enzymatic activity, enabling spatiotemporal mapping with a dramatically increased signal-to-noise ratio.",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; all fields are accurately supported by the Abstract and Introduction."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -18,17 +52,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "TurboID... allows for highly efficient labeling in a timescale of minutes and a broader range of working temperatures.",
-            "page_idx": 3
+            "quote": "Recently engineered PL enzymes such as TurboID have a much-improved enzymatic activity...",
+            "page_idx": 0
           },
           {
             "supports_field": "parameters",
-            "quote": "TurboID... has the highest activity of all biotin ligases and the broadest working temperature",
-            "page_idx": 11
+            "quote": "TurboID (10) allows for highly efficient labeling in a timescale of minutes and a broader range of working temperatures.",
+            "page_idx": 3
           }
         ],
         "issues": [],
-        "fix_suggestion": ""
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 2,
@@ -44,16 +78,16 @@
           {
             "supports_field": "tool",
             "quote": "fusing a genetically encoded proximity-labeling (PL) enzyme to a protein or a localization signal peptide",
-            "page_idx": 2
+            "page_idx": 0
           },
           {
             "supports_field": "parameters",
-            "quote": "fused to a PL enzyme... at either the N or C terminus and expressed under the bait protein's native promoter at the endogenous level",
+            "quote": "fused to a PL enzyme... at either the N or C terminus and expressed under the bait protein's native promoter at the endogenous level.",
             "page_idx": 5
           }
         ],
         "issues": [],
-        "fix_suggestion": ""
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 3,
@@ -67,50 +101,43 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "less than 50 µM of biotin treatment are strongly recommended for experiments",
-            "page_idx": 16
+            "supports_field": "tool",
+            "quote": "In the presence of applied biotin, this engineered promiscuous biotin ligase converts biotin...",
+            "page_idx": 2
           },
           {
             "supports_field": "parameters",
-            "quote": "shorter time of biotin treatment (≤ 1 h) is preferred... for more abundant proteins... longer biotin treatment (up to several hours) may be needed for less-abundant bait proteins",
-            "page_idx": 5
+            "quote": "less than 50 μM of biotin treatment are strongly recommended... shorter time of biotin treatment (≤ 1 h) is preferred... longer biotin treatment (up to several hours) may be needed",
+            "page_idx": 15
           }
         ],
         "issues": [],
-        "fix_suggestion": ""
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 4,
-        "score": 4.8,
+        "score": 5.0,
         "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
           "C_observation": 1.0,
-          "D_references": 0.3
+          "D_references": 0.5
         },
         "evidence": [
+          {
+            "supports_field": "tool",
+            "quote": "These biotinylated proteins can then be captured by streptavidin beads",
+            "page_idx": 0
+          },
           {
             "supports_field": "parameters",
             "quote": "high-affinity streptavidin beads (Kd=10^-14 mol/L) under very harsh conditions",
             "page_idx": 3
-          },
-          {
-            "supports_field": "observation",
-            "quote": "affinity of streptavidin (Kd=10^-14 mol/L) allows the capture of biotinylated proteins under very harsh conditions",
-            "page_idx": 4
           }
         ],
-        "issues": [
-          {
-            "type": "unsupported",
-            "field": "references",
-            "claim": "Ref 99 establishes streptavidin use",
-            "reason": "Text cites Ref 55 for BioID and does not explicitly link Ref 99 to streptavidin affinity claim in provided snippets, though Ref 99 is in bibliography."
-          }
-        ],
-        "fix_suggestion": "Cite the review text itself or Ref 55/101 which are more explicitly linked to PL principles in the text."
+        "issues": [],
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 5,
@@ -125,12 +152,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "most labs perform on-head digestions for elution in which the biotinylated proteins are eluted from the beads using a short (~3-h) trypsin digestion, followed by overnight full digestion",
+            "quote": "most labs perform on-head digestions for elution in which the biotinylated proteins are eluted from the beads using a short (~3-h) trypsin digestion",
+            "page_idx": 14
+          },
+          {
+            "supports_field": "parameters",
+            "quote": "short (~3-h) trypsin digestion, followed by overnight full digestion",
             "page_idx": 14
           }
         ],
         "issues": [],
-        "fix_suggestion": ""
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 6,
@@ -145,17 +177,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "liquid chromatography–coupled tandem mass spectrometry (LC-MS/MS) analysis",
-            "page_idx": 4
+            "quote": "identified and quantified by mass spectrometry",
+            "page_idx": 0
           },
           {
             "supports_field": "parameters",
-            "quote": "all quantification data should be acquired on high-resolution/high-accuracy instruments",
+            "quote": "all quantification data should be acquired on high-resolution/high-accuracy instruments.",
             "page_idx": 16
           }
         ],
         "issues": [],
-        "fix_suggestion": ""
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 7,
@@ -170,17 +202,17 @@
         "evidence": [
           {
             "supports_field": "tool",
-            "quote": "using the publicly available software Maxquant/Perseus",
+            "quote": "using the publicly available software Maxquant/Perseus for data search and statistical analysis",
             "page_idx": 16
           },
           {
             "supports_field": "parameters",
-            "quote": "Protein abundance is quantified using the sum of XICs of peptides at the MS1 level",
+            "quote": "Protein abundance is quantified using the sum of XICs of peptides at the MS1 level.",
             "page_idx": 17
           }
         ],
         "issues": [],
-        "fix_suggestion": ""
+        "fix_suggestion": "No changes needed."
       },
       {
         "step_index": 8,
@@ -197,17 +229,53 @@
             "supports_field": "tool",
             "quote": "To validate direct PPIs, bimolecular fluorescence complementation (BiFC) and yeast two-hybrid assays are commonly used",
             "page_idx": 19
+          },
+          {
+            "supports_field": "references",
+            "quote": "Literature Cited 72. Mair A, et al. 2019... (cited in text for BiFC)",
+            "page_idx": 24
           }
         ],
         "issues": [],
-        "fix_suggestion": ""
+        "fix_suggestion": "No changes needed."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "validation_technique",
+          "quote": "PL-MS shows advantages over AP-MS... BioID has a slow labeling kinetics... TurboID... has the highest activity",
+          "page_idx": 4
+        },
+        {
+          "supports_field": "metrics",
+          "quote": "dramatically increased signal-to-noise ratio... timescale of minutes... Kd=10^-14 mol/L",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "PL-MS has revolutionized the way we perform proteomics... Engineered high-activity TurboID has extended its applications",
+          "page_idx": 0
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; verification metrics and verdict align perfectly with the Abstract and Summary Points."
+    },
     "summary": {
       "num_steps": 8,
-      "mean_score": 4.98,
+      "mean_score": 5.0,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 5.0,
       "hallucination_risk": "low"
     }
   }

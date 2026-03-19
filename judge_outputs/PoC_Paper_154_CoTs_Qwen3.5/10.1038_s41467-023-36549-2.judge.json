@@ -1,9 +1,43 @@
 {
   "paper_id": "10.1038_s41467-023-36549-2",
   "model": "qwen3.5-397b-a17b",
-  "elapsed_seconds": 203.08,
+  "elapsed_seconds": 256.45,
   "judge_result": {
     "paper_id": "10.1038_s41467-023-36549-2",
+    "initial_request_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_target_name": 1.5,
+        "B_input_data": 1.5,
+        "C_user_intent": 1.0,
+        "D_quantifiable_goal": 1.0
+      },
+      "evidence": [
+        {
+          "supports_field": "target_name",
+          "quote": "rewiring of the insulin signaling network... dysregulated MARK2/3 and GSK3 activity",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "input_data",
+          "quote": "adipocyte cells and adipose tissue... 3T3-L1 adipocyte cell line... mouse adipose tissue",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "user_intent",
+          "quote": "delineate insulin signal transduction in adipocyte cells... Identifying dysregulated phosphosites",
+          "page_idx": 0
+        },
+        {
+          "supports_field": "quantifiable_goal",
+          "quote": "provide a quantitative atlas... Pharmacological inhibition of GSK3 partially reverses insulin resistance",
+          "page_idx": 1
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with the paper."
+    },
     "step_scores": [
       {
         "step_index": 1,
@@ -18,31 +52,32 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "Chronic insulin (CI) model... 10 nM insulin for 24 h... 20 nM dexamethasone (Dex)... maintained for 8 d... 2 ng/mL TNFα (TNF)... for 4 d... 50 nM antimycin A or 25 μM mPO for 1.5 h",
+            "quote": "10 nM insulin for 24 h... 20 nM dexamethasone... 8 d... 2 ng/mL TNFα... 4 d... 50 nM antimycin A or 25 μM mPO for 1.5 h",
             "page_idx": 11
           },
           {
             "supports_field": "observation",
-            "quote": "All five models conferred impaired uptake of radiolabeled 2-deoxyglucose (2DG)... confirming that cells were insulin resistant",
+            "quote": "All five models conferred impaired uptake of radiolabeled 2-deoxyglucose",
             "page_idx": 1
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 2,
-        "score": 4.5,
-        "label": "mostly_supported",
+        "score": 5.0,
+        "label": "fully_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
-          "B_parameters": 1.0,
+          "B_parameters": 1.5,
           "C_observation": 1.0,
           "D_references": 0.5
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "240 μg protein... LysC and trypsin (1:100 enzyme-protein ratio)... enriched according to the EasyPhos method",
+            "quote": "240 μg protein was reduced... EasyPhos method",
             "page_idx": 11
           },
           {
@@ -51,48 +86,35 @@
             "page_idx": 1
           }
         ],
-        "issues": [
-          {
-            "type": "unsupported",
-            "field": "parameters.enrichment",
-            "claim": "TiO2 phosphopeptide enrichment",
-            "reason": "Text states 'EasyPhos method' but does not explicitly mention 'TiO2' in the provided evidence."
-          }
-        ],
-        "fix_suggestion": "Change 'TiO2 phosphopeptide enrichment' to 'EasyPhos method enrichment' to match text exactly."
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 3,
-        "score": 3.5,
-        "label": "partially_supported",
+        "score": 4.5,
+        "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
-          "B_parameters": 0.5,
+          "B_parameters": 1.5,
           "C_observation": 1.0,
           "D_references": 0.0
         },
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "NCE of 27... resolution (15,000)",
+            "quote": "Q Exactive HF mass spectrometer... 3-19% buffer B over 60 min followed by 19-41% buffer B over 30 min",
             "page_idx": 12
           }
         ],
         "issues": [
           {
-            "type": "unsupported",
-            "field": "parameters.tool",
-            "claim": "Q Exactive HF",
-            "reason": "Text explicitly names 'Q Exactive HF' for tissue phosphoproteomes, but only 'Orbitrap mass analyzer' for the main 3T3-L1 phosphoproteome section."
-          },
-          {
-            "type": "unsupported",
-            "field": "parameters.gradient",
-            "claim": "Gradient 3-19% buffer B over 60 min...",
-            "reason": "This gradient is specified under 'DDA-MS (tissue phosphoproteomes)' section, not the main 3T3-L1 section."
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Extraction did not include references for this step, though facts are supported by text."
           }
         ],
-        "fix_suggestion": "Specify instrument as 'Orbitrap mass analyzer' and remove gradient details unless explicitly linked to 3T3-L1 in text."
+        "fix_suggestion": "Add relevant method references if available."
       },
       {
         "step_index": 4,
@@ -107,16 +129,12 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "MaxQuant (v1.6.0.9, v1.6.1.0 and v1.6.17.0... Mus musculus UniProt database",
+            "quote": "MaxQuant78 (v1.6.0.9, v1.6.1.0 and v1.6.17.0)",
             "page_idx": 12
-          },
-          {
-            "supports_field": "observation",
-            "quote": "7564 proteins... 39,846 phosphopeptides",
-            "page_idx": 1
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 5,
@@ -131,16 +149,17 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "adj. p < 0.05... log2 INS/BAS > 0.58",
+            "quote": "R version: 4.0.3... Limma (version: 3.14)... adj. p < 0.05... log2 INS/BAS > 0.58",
             "page_idx": 15
           },
           {
             "supports_field": "observation",
-            "quote": "1,951 insulin-regulated phosphopeptides in control cells",
+            "quote": "1,951 insulin-regulated phosphopeptides",
             "page_idx": 2
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 6,
@@ -154,17 +173,13 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "PhosphositePlus (version: Dec 2, 2019)... ksea... version: 0.1.2... 1000 permutations",
-            "page_idx": 15
-          },
-          {
             "supports_field": "observation",
             "quote": "GSK3 was erroneously reported by KSEA to be activated by insulin in control cells",
             "page_idx": 3
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 7,
@@ -188,7 +203,8 @@
             "page_idx": 6
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 8,
@@ -203,8 +219,8 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "motif of a GSK3 substrate (pS/T X(2-4) pS/T... priming phosphosite... 3-5 residues downstream",
-            "page_idx": 16
+            "quote": "motif of a GSK3 substrate (pS/T X(2-4) pS/T",
+            "page_idx": 6
           },
           {
             "supports_field": "observation",
@@ -212,12 +228,13 @@
             "page_idx": 6
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 9,
-        "score": 5.0,
-        "label": "fully_supported",
+        "score": 4.5,
+        "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
@@ -225,23 +242,26 @@
           "D_references": 0.0
         },
         "evidence": [
-          {
-            "supports_field": "parameters",
-            "quote": "191 corresponding phosphosites that decreased in abundance in response to insulin",
-            "page_idx": 7
-          },
           {
             "supports_field": "observation",
             "quote": "inactivation was attenuated across all insulin resistance models",
             "page_idx": 7
           }
         ],
-        "issues": []
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Extraction did not include references for this step."
+          }
+        ],
+        "fix_suggestion": "Add relevant method references if available."
       },
       {
         "step_index": 10,
-        "score": 5.0,
-        "label": "fully_supported",
+        "score": 4.5,
+        "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
@@ -251,21 +271,29 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "500 nM LY2090314 ('GSK3i')... 90 min",
+            "quote": "500 nM LY2090314... 10 μM CHIR99021... 10 μM AZD2858",
             "page_idx": 10
           },
           {
             "supports_field": "observation",
-            "quote": "GSK3 inhibition increased cell surface endogenous GLUT4 and HA-GLUT4-mRuby3 in control, TNF and DEX-treated cells",
+            "quote": "GSK3 inhibition increased cell surface endogenous GLUT4... in control, TNF and DEX-treated cells",
             "page_idx": 9
           }
         ],
-        "issues": []
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Extraction did not include references for this step."
+          }
+        ],
+        "fix_suggestion": "Add relevant method references if available."
       },
       {
         "step_index": 11,
-        "score": 5.0,
-        "label": "fully_supported",
+        "score": 4.5,
+        "label": "mostly_supported",
         "dimension_scores": {
           "A_core_fact": 2.0,
           "B_parameters": 1.5,
@@ -275,16 +303,24 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "[3H]2DG (0.25 μCi, 50 μM)... final 5 min",
-            "page_idx": 14
+            "quote": "2-[3H] deoxyglucose (2DG) (PerkinElmer)... (0.25 μCi, 50 μM)",
+            "page_idx": 12
           },
           {
             "supports_field": "observation",
-            "quote": "increased insulin-stimulated 2DG uptake at a submaximal insulin concentration (0.5 nM) in explants from HFD-fed mice",
+            "quote": "acute inhibition of GSK3 can ameliorate adipocyte insulin resistance... reversal... was only partial",
             "page_idx": 9
           }
         ],
-        "issues": []
+        "issues": [
+          {
+            "type": "missing",
+            "field": "references",
+            "claim": "references list is empty",
+            "reason": "Extraction did not include references for this step."
+          }
+        ],
+        "fix_suggestion": "Add relevant method references if available."
       },
       {
         "step_index": 12,
@@ -298,17 +334,13 @@
         },
         "evidence": [
           {
-            "supports_field": "parameters",
-            "quote": "final concentration of 50 nM/well... every 48 h for 5 days... TransIT-X2",
-            "page_idx": 13
-          },
-          {
             "supports_field": "observation",
             "quote": "siRNA-mediated knockdown of Mark2/3... increased insulin-stimulated GLUT4 translocation",
             "page_idx": 5
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       },
       {
         "step_index": 13,
@@ -323,7 +355,7 @@
         "evidence": [
           {
             "supports_field": "parameters",
-            "quote": "HFD for 14 d... switch the diet back to chow for a further 5 d... insulin (1 U/kg lean body mass)... 10 min",
+            "quote": "high-fat high sucrose diet (HFD) for 14 d... switched the diet back to chow for a further 5 d",
             "page_idx": 7
           },
           {
@@ -332,14 +364,51 @@
             "page_idx": 7
           }
         ],
-        "issues": []
+        "issues": [],
+        "fix_suggestion": "None."
       }
     ],
+    "success_verification_score": {
+      "score": 5.0,
+      "label": "fully_supported",
+      "dimension_scores": {
+        "A_validation_technique": 1.5,
+        "B_metrics": 2.0,
+        "C_final_verdict": 1.5
+      },
+      "evidence": [
+        {
+          "supports_field": "metrics.phosphopeptides_quantified",
+          "quote": "39,846 phosphopeptides",
+          "page_idx": 1
+        },
+        {
+          "supports_field": "metrics.insulin_regulated_sites",
+          "quote": "1,951 insulin-regulated phosphopeptides",
+          "page_idx": 2
+        },
+        {
+          "supports_field": "metrics.gsk3_substrate_sites",
+          "quote": "274 phosphosites on 184 proteins",
+          "page_idx": 6
+        },
+        {
+          "supports_field": "final_verdict",
+          "quote": "provide a quantitative atlas delineating the signaling dysregulation... Pharmacological inhibition of GSK3 partially reverses insulin resistance",
+          "page_idx": 1
+        }
+      ],
+      "issues": [],
+      "fix_suggestion": "No changes needed; extraction is fully consistent with the paper."
+    },
     "summary": {
       "num_steps": 13,
       "mean_score": 4.8,
       "median_score": 5.0,
       "critical_steps_below_2.5": [],
+      "initial_request_score": 5.0,
+      "success_verification_score": 5.0,
+      "overall_score": 4.9,
       "hallucination_risk": "low"
     }
   }
