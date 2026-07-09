@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-04-23T03:29:55.476504+00:00",
+  "schema_name": "protein",
+  "model": "qwen3.5-397b-a17b",
+  "paper_count": 2,
+  "average_score": 4.15,
+  "papers": [
+    {
+      "paper_id": "Decoding_the_secrets__how_conformational_and_structural_regulators_inhibit_the_human_20S_proteasome_208",
+      "summary": "Overall extraction quality is good with accurate core information (mutations, pocket volumes, structural mechanisms) but contains some unsupported quantitative claims and index system inconsistencies.",
+      "average_score": 4.0,
+      "entity_scores": [
+        {
+          "entity_file": "mutation_1.json",
+          "score": 4,
+          "consistency_judgment": "Mostly consistent with accurate pocket volumes and structural mechanisms, but contains some unsupported quantitative claims.",
+          "supported_points": [
+            "Correct mutation notation (Ala49Thr) and protein identification (β5 subunit)",
+            "Accurate paper metadata (DOI, year, journal)",
+            "Correct pocket volume values (WT: 775 Å³, Mutant: 920 Å³) matching Table 2",
+            "Accurate mechanism description (α-helix 1 pushed towards β6 subunit)",
+            "Structure assets correctly identify PDB codes 5LE5, 5LF3, 5L55"
+          ],
+          "problems": [
+            "H-bond count quantification (5→10) not explicitly supported in provided text",
+            "Some evidence document IDs reference content beyond provided text range",
+            "related_structures fields lack asset references (validation error)"
+          ]
+        },
+        {
+          "entity_file": "mutation_2.json",
+          "score": 3,
+          "consistency_judgment": "Partially consistent with correct core information but contains potentially hallucinated quantitative claims.",
+          "supported_points": [
+            "Correct mutation notation (Ala50Val) and protein identification",
+            "Accurate pocket volume values (WT: 775 Å³, Mutant: 742 Å³) matching Table 2",
+            "Correct structural changes (α-helix 1 length reduction, β-sheet 6 shortening)",
+            "Accurate RMSD values for most populated conformations"
+          ],
+          "problems": [
+            "~12 Å bortezomib pyrazine ring displacement claim not verifiable in provided text",
+            "Index system inconsistency: primary_index_system='pdb_resSeq' but position_index_system='uniprot'",
+            "related_structures fields lack asset references",
+            "Some evidence document IDs reference content beyond provided text range"
+          ]
+        },
+        {
+          "entity_file": "mutation_3.json",
+          "score": 4,
+          "consistency_judgment": "Mostly consistent with accurate pocket volumes and structural mechanisms described in the paper.",
+          "supported_points": [
+            "Correct mutation notation (Cys52Phe) and protein identification",
+            "Accurate pocket volume values (WT: 775 Å³, Mutant: 672 Å³) matching Table 2",
+            "Correct mechanism description (Phe52 rotates into pocket, pushes α-helix 1 away from Thr1)",
+            "Accurate description of local unfolding at residues 48-52",
+            "Correctly identifies this as the most disruptive mutant"
+          ],
+          "problems": [
+            "Specific H-bond loss claims with Thr1 not explicitly quantified in provided text",
+            "Index system inconsistency in structure_item str_005",
+            "related_structures fields lack asset references",
+            "Some evidence document IDs reference content beyond provided text range"
+          ]
+        },
+        {
+          "entity_file": "mutation_coverage.json",
+          "score": 5,
+          "consistency_judgment": "Highly consistent and accurate assessment of mutation coverage.",
+          "supported_points": [
+            "Correctly identifies three studied mutations (Ala49Thr, Ala50Val, Cys52Phe)",
+            "Accurately notes Met45Val and Thr21Ala are only mentioned as background literature mutations",
+            "Correct explanation that only computationally analyzed mutations were extracted as cases",
+            "Regex detection matches mutations mentioned in the paper text"
+          ],
+          "problems": []
+        }
+      ],
+      "paper_dir": "Decoding_the_secrets__how_conformational_and_structural_regulators_inhibit_the_human_20S_proteasome_208"
+    },
+    {
+      "paper_id": "Deep_intronic_founder_mutations_identified_in_the[!i]_ERCC4_XPF[!_i]_gene_are_potential_therapeutic_targets_for_a_high-_frequency_form_of_xeroderma_pi_1971",
+      "summary": "Overall extraction quality is high. The main pathogenic mutations (c.207+196T>A, c.1811+326C>T, p.*917Rext*83) are accurately captured with correct UDS values matching Table 1. Hypomorphic and refuted mutations are properly contextualized. Minor issues include perturbation_type classification for stop-loss variant and consistent index_system naming inconsistencies flagged in validation errors.",
+      "average_score": 4.3,
+      "entity_scores": [
+        {
+          "entity_file": "mutation_1.json",
+          "score": 5,
+          "consistency_judgment": "Highly consistent with paper content",
+          "supported_points": [
+            "All 15 UDS % values match Table 1 exactly (XP136KO:13%, XP37NG:21%, XP43NG:21%, etc.)",
+            "Mechanism (aberrant splicing, 192bp intron retention, NMD) accurately described per Docs 24-26",
+            "Mutation notation c.207+196T>A correctly extracted from Table 1 and text",
+            "Patient genotypes (homozygous vs heterozygous) correctly identified from Table 1"
+          ],
+          "problems": [
+            "Index system inconsistency flagged: primary_index_system='author_defined' but sequence_target uses 'cDNA'"
+          ]
+        },
+        {
+          "entity_file": "mutation_2.json",
+          "score": 5,
+          "consistency_judgment": "Highly consistent with paper content",
+          "supported_points": [
+            "UDS values for XP2YO (4%) and XP3YO (9%) match Table 1 Continued",
+            "Mechanism (alternative polyadenylation, truncation of exons 9-11) accurately described per Docs 24-25",
+            "Mutation notation c.1811+326C>T correctly extracted",
+            "Loss of nuclease and ERCC1-binding domains correctly stated per Doc 25"
+          ],
+          "problems": [
+            "Index system inconsistency flagged: primary_index_system='author_defined' but sequence_target uses 'cDNA'"
+          ]
+        },
+        {
+          "entity_file": "mutation_3.json",
+          "score": 4,
+          "consistency_judgment": "Mostly consistent with minor classification issue",
+          "supported_points": [
+            "Stop-loss variant p.*917Rext*83 correctly described per Doc 26",
+            "83 amino acid extension accurately captured",
+            "Protein instability correctly noted as per paper",
+            "Four cases with this variant (XP4NG, XP48NG, XP90NG, XP95NG) correctly identified in Doc 26"
+          ],
+          "problems": [
+            "perturbation_type classified as 'point_mutation' but should be 'stop_loss' or 'extension'",
+            "Index system inconsistency flagged"
+          ]
+        },
+        {
+          "entity_file": "mutation_4.json",
+          "score": 4,
+          "consistency_judgment": "Consistent with appropriate uncertainty marking",
+          "supported_points": [
+            "Hypomorphic nature of p.P379S correctly captured from Discussion (Doc 38)",
+            "Residual endonuclease activity and mild phenotype accurately described",
+            "Structural claims appropriately marked as 'speculative' since no structural data provided",
+            "MAF=0.0041 in GnomAD correctly referenced"
+          ],
+          "problems": [
+            "Index system inconsistency flagged: position_index_system='primary_index_system' is unclear",
+            "No quantitative data available in paper for this variant's activity"
+          ]
+        },
+        {
+          "entity_file": "mutation_5.json",
+          "score": 5,
+          "consistency_judgment": "Highly consistent - correctly identifies refuted mutation",
+          "supported_points": [
+            "Correctly identifies p.R490Q as previously reported but refuted per Doc 40",
+            "Attributes discrepancy to erroneous Sanger sequencing in Matsumura et al. paper",
+            "Appropriately marks mutation as absent with no structural consequences",
+            "Context about XP3YO cell line history accurately captured"
+          ],
+          "problems": [
+            "Index system inconsistency flagged: position_index_system='unspecified'"
+          ]
+        },
+        {
+          "entity_file": "mutation_6.json",
+          "score": 5,
+          "consistency_judgment": "Highly consistent - correctly identifies refuted mutation",
+          "supported_points": [
+            "Correctly identifies p.L608P as previously reported but refuted per Doc 40",
+            "Same context as p.R490Q - both from erroneous prior sequencing",
+            "Appropriately marks mutation as absent with no structural consequences",
+            "Confidence level 'established' is appropriate given direct sequencing confirmation"
+          ],
+          "problems": [
+            "Index system inconsistency flagged: position_index_system='primary_index_system' is unclear"
+          ]
+        },
+        {
+          "entity_file": "mutation_coverage.json",
+          "score": 4,
+          "consistency_judgment": "Useful meta-analysis with accurate coverage assessment",
+          "supported_points": [
+            "Correctly identifies S2A, S2C, etc. as figure references not mutations",
+            "Main pathogenic mutations correctly listed in llm_extracted",
+            "Explanation accurately describes why certain patterns were false positives",
+            "Refuted mutations (L608P, R490Q) appropriately included with context"
+          ],
+          "problems": [
+            "This is a coverage analysis file rather than a standard entity extraction",
+            "Format differs from schema description which expects protein entity structure"
+          ]
+        }
+      ],
+      "paper_dir": "Deep_intronic_founder_mutations_identified_in_the[!i]_ERCC4_XPF[!_i]_gene_are_potential_therapeutic_targets_for_a_high-_frequency_form_of_xeroderma_pi_1971"
+    }
+  ]
+}

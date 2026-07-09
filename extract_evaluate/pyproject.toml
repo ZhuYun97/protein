@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scientific-extraction-eval"
+version = "0.1.0"
+description = "Unified LLM-as-judge evaluation for scientific literature extraction results."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "openai>=1.30.0",
+]
+
+[project.scripts]
+scientific-eval = "scientific_eval.cli:main"
+scientific-quality-eval = "scientific_eval.quality_cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scientific_eval*"]

@@ -1,0 +1,86 @@
+{
+  "graph_metadata": {
+    "task_id": "demo_scientific_graph_001",
+    "source_docs": [
+      "demo_paper.txt"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "node_gene_ercc4",
+      "type": "Gene",
+      "name": "ERCC4/XPF",
+      "description": "ERCC4/XPF is a DNA repair gene associated with xeroderma pigmentosum group F when biallelic pathogenic variants disrupt its function.",
+      "properties": {},
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ]
+    },
+    {
+      "id": "node_mutation_intronic",
+      "type": "Mutation",
+      "name": "c.2251-15T>G",
+      "description": "c.2251-15T>G is a recurrent deep intronic founder mutation in ERCC4/XPF identified in affected individuals from the Canary Islands.",
+      "properties": {
+        "variant_type": "deep intronic founder mutation"
+      },
+      "evidence": [
+        "We identified a recurrent deep intronic ERCC4 variant, c.2251-15T>G, in affected individuals from the Canary Islands."
+      ]
+    },
+    {
+      "id": "node_disease_xpf",
+      "type": "Disease",
+      "name": "xeroderma pigmentosum group F",
+      "description": "Xeroderma pigmentosum group F is a disease caused by biallelic pathogenic variants in ERCC4/XPF.",
+      "properties": {
+        "abbreviation": "XP-F"
+      },
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ]
+    },
+    {
+      "id": "node_therapy_aso",
+      "type": "TherapeuticApproach",
+      "name": "antisense oligonucleotide splice correction",
+      "description": "Antisense oligonucleotides targeting the aberrant splice acceptor can restore normal ERCC4 splicing in patient-derived fibroblasts.",
+      "properties": {},
+      "evidence": [
+        "Antisense oligonucleotides targeting the aberrant splice acceptor restored normal ERCC4 splicing in patient-derived fibroblasts."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_mutation_intronic",
+      "target": "node_gene_ercc4",
+      "type": "LOCATED_IN",
+      "description": "The c.2251-15T>G deep intronic variant is located in the ERCC4/XPF gene.",
+      "properties": {},
+      "evidence": [
+        "We identified a recurrent deep intronic ERCC4 variant, c.2251-15T>G, in affected individuals from the Canary Islands."
+      ]
+    },
+    {
+      "source": "node_gene_ercc4",
+      "target": "node_disease_xpf",
+      "type": "ASSOCIATED_WITH",
+      "description": "Biallelic pathogenic variants in ERCC4/XPF cause xeroderma pigmentosum group F.",
+      "properties": {},
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ]
+    },
+    {
+      "source": "node_therapy_aso",
+      "target": "node_mutation_intronic",
+      "type": "TARGETS",
+      "description": "Antisense oligonucleotide splice correction targets the aberrant splice acceptor created by the deep intronic ERCC4 variant.",
+      "properties": {},
+      "evidence": [
+        "The c.2251-15T>G variant created an aberrant splice acceptor; antisense oligonucleotides targeting the aberrant splice acceptor restored normal ERCC4 splicing in patient-derived fibroblasts."
+      ]
+    }
+  ]
+}

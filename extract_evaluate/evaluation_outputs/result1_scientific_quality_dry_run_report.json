@@ -1,0 +1,583 @@
+{
+  "generated_at": "2026-06-10T12:49:55.389553+00:00",
+  "input_file": "/mnt/petrelfs/caojie1/projects/extract_evaluate/result1.json",
+  "model": "gpt-4.1",
+  "dry_run": true,
+  "evaluation_type": "scientific_quality",
+  "quality_scope_note": "Scientific quality is evaluated only from extracted nodes, edges, their evidence, optional factuality scores, and graph structure. No full-paper coverage claim is made.",
+  "target_kg_goal": "",
+  "factuality_report_file": null,
+  "graph_metadata": {
+    "task_id": "demo_scientific_graph_001",
+    "source_docs": [
+      "demo_paper.txt"
+    ]
+  },
+  "summary": {
+    "node_count": 4,
+    "edge_count": 3,
+    "unit_count": 7,
+    "validation_error_count": 0,
+    "weighted_average_unit_quality": null,
+    "mean_unit_quality": null,
+    "formula_graph_quality_score": null,
+    "final_adjusted_graph_quality_score": null,
+    "final_adjusted_decision": "not_scored"
+  },
+  "validation_errors": [],
+  "evidence_graph_profile": {
+    "profile_source": "graph_and_unit_evidence_only",
+    "coverage_confidence": "low",
+    "paper_or_study_type_guess": "",
+    "evidence_visible_topic": "",
+    "evidence_quality_score": null,
+    "evidence_visible_core_claims": [],
+    "major_limitations_from_available_evidence": [
+      "dry_run: profile request constructed, judge call skipped"
+    ],
+    "expected_kg_content": {
+      "important_node_types": [
+        "Disease",
+        "Gene",
+        "Mutation",
+        "TherapeuticApproach"
+      ],
+      "important_edge_types": [
+        "ASSOCIATED_WITH",
+        "LOCATED_IN",
+        "TARGETS"
+      ],
+      "must_capture_findings": [],
+      "must_capture_scope": [],
+      "optional_content": []
+    },
+    "rationale": "dry_run: request constructed, judge call skipped"
+  },
+  "unit_statistics": {
+    "unit_count": 7,
+    "scored_unit_count": 0,
+    "unscored_unit_count": 7,
+    "node_count": 4,
+    "edge_count": 3,
+    "mean_unit_quality": null,
+    "node_average_quality": null,
+    "edge_average_quality": null,
+    "weighted_average_unit_quality": null,
+    "high_quality_count": 0,
+    "medium_quality_count": 0,
+    "low_quality_count": 0,
+    "discard_count": 0,
+    "low_or_discard_count": 0,
+    "high_quality_ratio": null,
+    "medium_quality_ratio": null,
+    "low_quality_ratio": null,
+    "discard_ratio": null,
+    "factuality_gated_count": 0,
+    "issue_tag_counts": {},
+    "common_issues": []
+  },
+  "unit_quality_scores": [
+    {
+      "unit_id": "node_gene_ercc4",
+      "unit_kind": "node",
+      "source_index": 0,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_gene_ercc4",
+        "type": "Gene",
+        "name": "ERCC4/XPF",
+        "description": "ERCC4/XPF is a DNA repair gene associated with xeroderma pigmentosum group F when biallelic pathogenic variants disrupt its function.",
+        "properties": {}
+      },
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ]
+    },
+    {
+      "unit_id": "node_mutation_intronic",
+      "unit_kind": "node",
+      "source_index": 1,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_mutation_intronic",
+        "type": "Mutation",
+        "name": "c.2251-15T>G",
+        "description": "c.2251-15T>G is a recurrent deep intronic founder mutation in ERCC4/XPF identified in affected individuals from the Canary Islands.",
+        "properties": {
+          "variant_type": "deep intronic founder mutation"
+        }
+      },
+      "evidence": [
+        "We identified a recurrent deep intronic ERCC4 variant, c.2251-15T>G, in affected individuals from the Canary Islands."
+      ]
+    },
+    {
+      "unit_id": "node_disease_xpf",
+      "unit_kind": "node",
+      "source_index": 2,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_disease_xpf",
+        "type": "Disease",
+        "name": "xeroderma pigmentosum group F",
+        "description": "Xeroderma pigmentosum group F is a disease caused by biallelic pathogenic variants in ERCC4/XPF.",
+        "properties": {
+          "abbreviation": "XP-F"
+        }
+      },
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ]
+    },
+    {
+      "unit_id": "node_therapy_aso",
+      "unit_kind": "node",
+      "source_index": 3,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_therapy_aso",
+        "type": "TherapeuticApproach",
+        "name": "antisense oligonucleotide splice correction",
+        "description": "Antisense oligonucleotides targeting the aberrant splice acceptor can restore normal ERCC4 splicing in patient-derived fibroblasts.",
+        "properties": {}
+      },
+      "evidence": [
+        "Antisense oligonucleotides targeting the aberrant splice acceptor restored normal ERCC4 splicing in patient-derived fibroblasts."
+      ]
+    },
+    {
+      "unit_id": "edge_1:node_mutation_intronic->node_gene_ercc4:LOCATED_IN",
+      "unit_kind": "edge",
+      "source_index": 0,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": null,
+        "source": "node_mutation_intronic",
+        "target": "node_gene_ercc4",
+        "type": "LOCATED_IN",
+        "description": "The c.2251-15T>G deep intronic variant is located in the ERCC4/XPF gene.",
+        "properties": {}
+      },
+      "evidence": [
+        "We identified a recurrent deep intronic ERCC4 variant, c.2251-15T>G, in affected individuals from the Canary Islands."
+      ],
+      "source_node": {
+        "id": "node_mutation_intronic",
+        "type": "Mutation",
+        "name": "c.2251-15T>G",
+        "description": "c.2251-15T>G is a recurrent deep intronic founder mutation in ERCC4/XPF identified in affected individuals from the Canary Islands."
+      },
+      "target_node": {
+        "id": "node_gene_ercc4",
+        "type": "Gene",
+        "name": "ERCC4/XPF",
+        "description": "ERCC4/XPF is a DNA repair gene associated with xeroderma pigmentosum group F when biallelic pathogenic variants disrupt its function."
+      }
+    },
+    {
+      "unit_id": "edge_2:node_gene_ercc4->node_disease_xpf:ASSOCIATED_WITH",
+      "unit_kind": "edge",
+      "source_index": 1,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": null,
+        "source": "node_gene_ercc4",
+        "target": "node_disease_xpf",
+        "type": "ASSOCIATED_WITH",
+        "description": "Biallelic pathogenic variants in ERCC4/XPF cause xeroderma pigmentosum group F.",
+        "properties": {}
+      },
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ],
+      "source_node": {
+        "id": "node_gene_ercc4",
+        "type": "Gene",
+        "name": "ERCC4/XPF",
+        "description": "ERCC4/XPF is a DNA repair gene associated with xeroderma pigmentosum group F when biallelic pathogenic variants disrupt its function."
+      },
+      "target_node": {
+        "id": "node_disease_xpf",
+        "type": "Disease",
+        "name": "xeroderma pigmentosum group F",
+        "description": "Xeroderma pigmentosum group F is a disease caused by biallelic pathogenic variants in ERCC4/XPF."
+      }
+    },
+    {
+      "unit_id": "edge_3:node_therapy_aso->node_mutation_intronic:TARGETS",
+      "unit_kind": "edge",
+      "source_index": 2,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": null,
+        "source": "node_therapy_aso",
+        "target": "node_mutation_intronic",
+        "type": "TARGETS",
+        "description": "Antisense oligonucleotide splice correction targets the aberrant splice acceptor created by the deep intronic ERCC4 variant.",
+        "properties": {}
+      },
+      "evidence": [
+        "The c.2251-15T>G variant created an aberrant splice acceptor; antisense oligonucleotides targeting the aberrant splice acceptor restored normal ERCC4 splicing in patient-derived fibroblasts."
+      ],
+      "source_node": {
+        "id": "node_therapy_aso",
+        "type": "TherapeuticApproach",
+        "name": "antisense oligonucleotide splice correction",
+        "description": "Antisense oligonucleotides targeting the aberrant splice acceptor can restore normal ERCC4 splicing in patient-derived fibroblasts."
+      },
+      "target_node": {
+        "id": "node_mutation_intronic",
+        "type": "Mutation",
+        "name": "c.2251-15T>G",
+        "description": "c.2251-15T>G is a recurrent deep intronic founder mutation in ERCC4/XPF identified in affected individuals from the Canary Islands."
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "unit_id": "node_gene_ercc4",
+      "unit_kind": "node",
+      "source_index": 0,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_gene_ercc4",
+        "type": "Gene",
+        "name": "ERCC4/XPF",
+        "description": "ERCC4/XPF is a DNA repair gene associated with xeroderma pigmentosum group F when biallelic pathogenic variants disrupt its function.",
+        "properties": {}
+      },
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ]
+    },
+    {
+      "unit_id": "node_mutation_intronic",
+      "unit_kind": "node",
+      "source_index": 1,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_mutation_intronic",
+        "type": "Mutation",
+        "name": "c.2251-15T>G",
+        "description": "c.2251-15T>G is a recurrent deep intronic founder mutation in ERCC4/XPF identified in affected individuals from the Canary Islands.",
+        "properties": {
+          "variant_type": "deep intronic founder mutation"
+        }
+      },
+      "evidence": [
+        "We identified a recurrent deep intronic ERCC4 variant, c.2251-15T>G, in affected individuals from the Canary Islands."
+      ]
+    },
+    {
+      "unit_id": "node_disease_xpf",
+      "unit_kind": "node",
+      "source_index": 2,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_disease_xpf",
+        "type": "Disease",
+        "name": "xeroderma pigmentosum group F",
+        "description": "Xeroderma pigmentosum group F is a disease caused by biallelic pathogenic variants in ERCC4/XPF.",
+        "properties": {
+          "abbreviation": "XP-F"
+        }
+      },
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ]
+    },
+    {
+      "unit_id": "node_therapy_aso",
+      "unit_kind": "node",
+      "source_index": 3,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": "node_therapy_aso",
+        "type": "TherapeuticApproach",
+        "name": "antisense oligonucleotide splice correction",
+        "description": "Antisense oligonucleotides targeting the aberrant splice acceptor can restore normal ERCC4 splicing in patient-derived fibroblasts.",
+        "properties": {}
+      },
+      "evidence": [
+        "Antisense oligonucleotides targeting the aberrant splice acceptor restored normal ERCC4 splicing in patient-derived fibroblasts."
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "unit_id": "edge_1:node_mutation_intronic->node_gene_ercc4:LOCATED_IN",
+      "unit_kind": "edge",
+      "source_index": 0,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": null,
+        "source": "node_mutation_intronic",
+        "target": "node_gene_ercc4",
+        "type": "LOCATED_IN",
+        "description": "The c.2251-15T>G deep intronic variant is located in the ERCC4/XPF gene.",
+        "properties": {}
+      },
+      "evidence": [
+        "We identified a recurrent deep intronic ERCC4 variant, c.2251-15T>G, in affected individuals from the Canary Islands."
+      ],
+      "source_node": {
+        "id": "node_mutation_intronic",
+        "type": "Mutation",
+        "name": "c.2251-15T>G",
+        "description": "c.2251-15T>G is a recurrent deep intronic founder mutation in ERCC4/XPF identified in affected individuals from the Canary Islands."
+      },
+      "target_node": {
+        "id": "node_gene_ercc4",
+        "type": "Gene",
+        "name": "ERCC4/XPF",
+        "description": "ERCC4/XPF is a DNA repair gene associated with xeroderma pigmentosum group F when biallelic pathogenic variants disrupt its function."
+      }
+    },
+    {
+      "unit_id": "edge_2:node_gene_ercc4->node_disease_xpf:ASSOCIATED_WITH",
+      "unit_kind": "edge",
+      "source_index": 1,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": null,
+        "source": "node_gene_ercc4",
+        "target": "node_disease_xpf",
+        "type": "ASSOCIATED_WITH",
+        "description": "Biallelic pathogenic variants in ERCC4/XPF cause xeroderma pigmentosum group F.",
+        "properties": {}
+      },
+      "evidence": [
+        "Xeroderma pigmentosum group F (XP-F) is caused by biallelic pathogenic variants in the ERCC4/XPF gene."
+      ],
+      "source_node": {
+        "id": "node_gene_ercc4",
+        "type": "Gene",
+        "name": "ERCC4/XPF",
+        "description": "ERCC4/XPF is a DNA repair gene associated with xeroderma pigmentosum group F when biallelic pathogenic variants disrupt its function."
+      },
+      "target_node": {
+        "id": "node_disease_xpf",
+        "type": "Disease",
+        "name": "xeroderma pigmentosum group F",
+        "description": "Xeroderma pigmentosum group F is a disease caused by biallelic pathogenic variants in ERCC4/XPF."
+      }
+    },
+    {
+      "unit_id": "edge_3:node_therapy_aso->node_mutation_intronic:TARGETS",
+      "unit_kind": "edge",
+      "source_index": 2,
+      "factuality_score": null,
+      "scientific_value_score": null,
+      "evidence_strength_score": null,
+      "claim_evidence_alignment_score": null,
+      "scope_completeness_score": null,
+      "kg_reusability_score": null,
+      "final_unit_quality_score": null,
+      "decision": "dry_run",
+      "issue_tags": [],
+      "quality_issues": [],
+      "recommended_revision": "",
+      "rationale": "dry_run: request constructed, judge call skipped",
+      "content": {
+        "id": null,
+        "source": "node_therapy_aso",
+        "target": "node_mutation_intronic",
+        "type": "TARGETS",
+        "description": "Antisense oligonucleotide splice correction targets the aberrant splice acceptor created by the deep intronic ERCC4 variant.",
+        "properties": {}
+      },
+      "evidence": [
+        "The c.2251-15T>G variant created an aberrant splice acceptor; antisense oligonucleotides targeting the aberrant splice acceptor restored normal ERCC4 splicing in patient-derived fibroblasts."
+      ],
+      "source_node": {
+        "id": "node_therapy_aso",
+        "type": "TherapeuticApproach",
+        "name": "antisense oligonucleotide splice correction",
+        "description": "Antisense oligonucleotides targeting the aberrant splice acceptor can restore normal ERCC4 splicing in patient-derived fibroblasts."
+      },
+      "target_node": {
+        "id": "node_mutation_intronic",
+        "type": "Mutation",
+        "name": "c.2251-15T>G",
+        "description": "c.2251-15T>G is a recurrent deep intronic founder mutation in ERCC4/XPF identified in affected individuals from the Canary Islands."
+      }
+    }
+  ],
+  "graph_quality_report": {
+    "dimension_scores": {
+      "core_knowledge_coverage_score": null,
+      "scientific_value_density_score": null,
+      "claim_calibration_score": null,
+      "scope_and_context_preservation_score": null,
+      "structural_consistency_score": null,
+      "redundancy_noise_control_score": null,
+      "evidence_quality_distribution_score": null
+    },
+    "final_graph_quality_score": null,
+    "decision": "dry_run",
+    "unit_quality_distribution": {
+      "high_quality_units": 0,
+      "medium_quality_units": 0,
+      "low_quality_units": 0,
+      "discard_units": 0
+    },
+    "coverage_confidence": "low",
+    "major_strengths": [],
+    "major_quality_issues": [],
+    "missing_core_knowledge": [],
+    "overclaim_risks": [],
+    "scope_missing_issues": [],
+    "structural_issues": [],
+    "recommended_revision_priorities": [],
+    "rationale": "dry_run: graph quality request constructed, judge call skipped",
+    "coverage_scope_note": "Coverage score is evidence-scoped because full paper text is not provided.",
+    "formula_graph_quality_score": null,
+    "deterministic_adjustments": [],
+    "final_adjusted_graph_quality_score": null,
+    "final_adjusted_decision": "not_scored"
+  },
+  "final_adjusted_graph_quality_score": null
+}
